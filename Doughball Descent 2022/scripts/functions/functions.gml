@@ -1,0 +1,235 @@
+function markPoint(ix,iy){
+	instance_create_depth(ix,iy,depth,oPaEffect)
+}
+
+function instance_expunge(){
+	if(argument_count>0){
+		with(argument[0]){
+			//show_debug_message("expunging other")
+			onDestroy = false;
+			instance_destroy();
+		}
+	} else {
+		onDestroy = false;
+		instance_destroy();
+	}
+}
+
+function goToTally(){
+	
+	audio_stop_all()
+	currentMusic = musDeath
+	playMusic(currentMusic)
+	
+	instance_activate_object(oTally)
+	
+	instance_destroy(oSidebarL)
+	instance_destroy(oSidebarR)
+	instance_destroy()
+	
+	room_goto(rTally)
+}
+
+function spawnCorpse(){
+	var corpse = instance_create_depth(x,y,depth,oEnemyCorpse)
+	corpse.direction = point_direction(oPlayer.x,oPlayer.y,x,y)
+	corpse.speed = 4
+	corpse.vspeed-=3
+	corpse.sprite_index = sprite_index
+	corpse.image_index = image_index
+	corpse.gravity = 0.3	
+}
+
+function bgUpdate(argument0) {
+	with(oCamera) {
+		bgSprite = argument0
+
+		bgX = sprite_get_width(bgSprite)
+		bgY = sprite_get_height(bgSprite)
+
+		bgTilesX = 1+ceil(viewWidth/bgX)
+		bgTilesY = 1+ceil(viewHeight/bgY)
+	}
+}
+
+function soundRand(argument0) {
+	audio_stop_sound(argument0)
+	audio_sound_pitch(argument0,1+random_range(-0.2,0.2))
+	audio_play_sound(argument0,0,0)
+}
+
+function soundDist(sound,fullVol,noVol) {
+	//audio_stop_sound(sound)
+	var gain = audio_sound_get_gain(sound)
+	var dist = distance_to_object(oPlayer)
+	
+		if(dist<fullVol) gain = gain
+		else if(dist<noVol) {
+			gain = gain*(1-(dist-fullVol)/(noVol-fullVol))
+		} else return;
+	
+	//show_debug_message("Volume "+string(gain)+", Distance "+string(dist))
+	var play = audio_play_sound(sound,0,0)
+	audio_sound_gain(play,gain,0)
+	audio_sound_pitch(play,random_range(0.9,1.1))
+}
+
+function tRound(argument0,argument1){
+	return(floor(argument0/argument1)*argument1)
+}
+
+function breakBlock(argument0,argument1) {
+	var tap = tilemap_get_at_pixel(tileMap,argument0,argument1)
+	
+	switch(tap) {
+		case 0:
+		break;
+		case 1:
+		case 6:
+			
+			tilemap_set_at_pixel(tileMap,0,argument0,argument1)
+			with(instance_position(tRound(argument0,32)+16,tRound(argument1,32)-16,oHazBush)) instance_destroy()
+			//createParticles(argument0,argument1,6,sPaRock)
+			
+			//soundRand(sndBreak)
+			audio_stop_sound(sndBreak)
+			var pSound = audio_play_sound(sndBreak,0,0)
+			audio_sound_pitch(pSound,max(1-0.1*(crushes-crushMax),0.5))
+		break;
+		case 2:
+			tilemap_set_at_pixel(tileMap,6,argument0,argument1)
+			createEffect(floor(argument0/32)*32,floor(argument1/32)*32,sBlockHighlight)
+			//createParticles(argument0,argument1,3,sPaRock)
+			if(y<argument1) crushes = 0
+			else bashActive = 10
+			
+			soundRand(sndTileDamage)
+		break;
+		case 3:
+			//createParticles(argument0,argument1,3,sPaRock)
+			soundRand(sndTileInvulnerable)
+			if(y<argument1) {
+				crushes = 0
+				/*if(weight>500){
+					tilemap_set_at_pixel(tileMap,2,argument0,argument1)
+					createEffect(floor(argument0/32)*32,floor(argument1/32)*32,sBlockHighlight)	
+				}*/
+			} else bashActive = 10
+		break;
+	}
+	return(tap)
+}
+
+function breakLine(vy,vx1,vx2){
+	///@arg y
+	///@arg x1
+	///@arg x2
+	//show_debug_message("Breaking "+string(vx1)+", "+string(vy)+" to "+string(vx2)+", "+string(vy))
+		
+	//var width = ceil((abs(vx2-vx1))/32)-1
+	
+	var c1 = floor(vx1/32)
+	var c2 = floor(vx2/32)
+	
+	var i = 1
+	if(c2>c1) i  += c2-c1
+	
+	show_debug_message("Break "+string(c1)+" to "+string(c2)+". Width of "+string(i))
+	createParticles((vx1+vx2)/2,vy,6,sPaRock)
+	
+	while(i>0){
+		
+		i--
+		breakBlock(vx1+32*(i),vy)
+
+	}
+}
+
+function tsCheckEmpty(argument0,argument1) {
+	if(tilemap_get_at_pixel(tileMap,argument0,argument1)>0) return(true)
+	else return(false)
+}
+	
+function tsSpanEmpty(argument0,argument1,argument2) {
+	//Returns True if Span is Empty
+	///@arg y
+	///@arg startX
+	///@arg endX
+	//Check left
+	if (tilemap_get_at_pixel(tileMap,argument1,argument0)>0) return(false)
+	//Check right
+	if (tilemap_get_at_pixel(tileMap,argument2,argument0)>0) return(false)
+	var span = argument2-argument1
+	span = ceil(span/32)-1
+
+	while(span>0){
+		if (tilemap_get_at_pixel(tileMap,argument1+32*span,argument0)>0) return(false)
+		span--
+	}
+	
+	return(true)
+	
+}
+
+function createParticles(argument0,argument1,argument2,argument3) { 
+	///@arg x
+	///@arg y
+	///@arg amount
+	///@arg sprite
+	var creation
+	repeat(argument2){
+		creation = instance_create_depth(argument0,argument1,depth-2,oParticle)
+		creation.sprite_index = argument3
+		
+		if(argument3 = sPaRock) creation.drawCol = oSidebarR.colorA
+		if(argument3 = sPaMeat) creation.drawCol = oSidebarR.colorB
+
+		creation.speed = random(2)+2
+		creation.direction = random(360)
+	}
+}
+	
+function createEffect(putX,putY,sprite){
+	var effect = instance_create_depth(putX,putY,depth-1,oPaEffect)
+	effect.sprite_index = sprite
+	effect.image_index = 0
+	
+	return(effect)
+}
+
+
+function draw_text_outlined(argument0,argument1,argument2){
+	///@arg x
+	///@arg y
+	///@arg text
+	draw_set_color(c_black);
+	draw_text(argument0+1,argument1,argument2);
+	draw_text(argument0-1,argument1,argument2);
+	draw_text(argument0,argument1+1,argument2);
+	draw_text(argument0,argument1-1,argument2);
+	draw_set_color(c_white);
+	draw_text(argument0,argument1,argument2);
+}
+
+function pauseUnpause(){
+	with(oPause) event_user(0)
+}
+
+function playMusic(track) {
+	
+	if(oPause.menu[1,1]=0) { audio_group_stop_all(agMusic); exit; }
+	if(audio_is_playing(track)) exit;
+	
+	audio_group_stop_all(agMusic);
+	
+	currentMusic = track;
+	audio_play_sound(track,0,1);
+	
+	/*var musPrev = asset_get_index("musLevel"+string(trackNum-1))
+	if(musPrev>=0) audio_stop_sound(musPrev)
+	
+	var musCurrent = asset_get_index("musLevel"+string(trackNum))
+	audio_sound_gain(musCurrent,oPause.menu[1,1]/10,0) 
+	if(musCurrent!=-1 && !audio_is_playing(musCurrent)) audio_play_sound(musCurrent,-5,1)*/
+
+}
