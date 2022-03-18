@@ -1,0 +1,2 @@
+oTextBox.voice = voice
+oTextBox.announce(0,"Greetings, morsel. I can see the determination\n in your vacant expression. But what really makes the\ndifference is some good kit. Press SPACE to buy something from\nmy shop, or to chat with me")

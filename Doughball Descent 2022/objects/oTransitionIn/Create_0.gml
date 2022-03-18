@@ -1,0 +1,1 @@
+y = viewHeight + tranSpeed

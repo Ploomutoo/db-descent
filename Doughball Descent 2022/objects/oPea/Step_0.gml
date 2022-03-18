@@ -1,0 +1,1 @@
+if(tilemap_get_at_pixel(tileMap,x+hspeed,y)>0) instance_destroy()

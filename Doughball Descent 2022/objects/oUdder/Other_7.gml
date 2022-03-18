@@ -1,0 +1,1 @@
+canFire = true

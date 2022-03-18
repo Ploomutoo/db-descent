@@ -1,0 +1,1 @@
+if(!bought)draw_self()

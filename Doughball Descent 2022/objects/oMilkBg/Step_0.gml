@@ -1,0 +1,1 @@
+y = homeY + (oPlayer.y-homeY)/3
