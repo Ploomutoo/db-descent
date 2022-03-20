@@ -13,6 +13,19 @@ if(!paused) {
 	exit;
 }
 
+if(keyboard_check_direct(vk_lcontrol) && keyboard_check_pressed(ord("S"))) {
+	
+	//show_debug_message("Settings Reset");
+	if(file_exists("config.ini")) file_delete("config.ini");
+	settingsReset();
+	
+	playMusic(currentMusic);
+	
+	if(file_exists("progress.ini")) file_delete("progress.ini");
+	 
+	exit;
+}
+
 if(cUp) {
 	cursorOn--
 	if(cursorOn<0) cursorOn = array_length(menu)-1
@@ -66,6 +79,12 @@ if(cLeftPressed || cRightPressed){
 		
 		case 4:
 		
+			menu[cursorOn,1] = !menu[cursorOn,1]
+			ini_write_real("config","squashNstretch",menu[cursorOn,1])
+		break;
+		
+		case tspeedCoord:
+		
 			var cDir = 1
 			if(cLeftPressed) cDir = -1
 			menu[cursorOn,1] += cDir
@@ -75,10 +94,11 @@ if(cLeftPressed || cRightPressed){
 			
 			ini_write_real("config","textDelay",menu[cursorOn,1]) 
 			updateTextSpeed()
-			
 		break;
 		
 		default:
+		
+			show_debug_message("shit")
 		break;		
 	}
 	ini_close()
@@ -86,6 +106,7 @@ if(cLeftPressed || cRightPressed){
 }
 	
 if(cBash) {
+	
 	if(cursorOn = optionEnd) event_user(0)
 	if(cursorOn = optionEnd+1) {
 		if(menu[optionEnd+1,1]) goToTally()

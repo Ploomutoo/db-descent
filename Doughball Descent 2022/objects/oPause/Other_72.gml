@@ -1,1 +1,1 @@
-playMusic(currentMusic)
+playMusic(musLevel0)

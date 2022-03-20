@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.6,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndHTumOut.wav",
-  "duration": 0.456689,
+  "soundFile": "sndStompOld.wav",
+  "duration": 0.274649,
   "parent": {
-    "name": "itemPeriphery",
-    "path": "folders/items/itemPeriphery.yy",
+    "name": "sound",
+    "path": "folders/sound.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sndHTumOut",
+  "name": "sndStompOld",
   "tags": [],
   "resourceType": "GMSound",
 }

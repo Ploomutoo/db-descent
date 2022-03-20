@@ -76,7 +76,9 @@ altarInstantiate()
 	weightStages = sprite_get_height(sPlayerWalk)/playerSpriteHeight
 	//show_debug_message(string(weightStages)+" Weight Stages!")
 	
-	drawSurf = surface_create(32*girth,48)
+	drawSurf = surface_create(64,64)
+	dsScalex = 1; dsVelx = 0;
+	dsScaley = 1; dsVely = 0;
 	
 #endregion
 

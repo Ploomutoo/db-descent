@@ -1,5 +1,3 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function approach(start_val, end_val, increment)
 {
 	if(start_val < end_val)
@@ -9,5 +7,17 @@ function approach(start_val, end_val, increment)
 	else
 	{
 		return(max(start_val - increment, end_val));
+	}
+}
+
+function overshoot(in, towards, increment)
+{
+	if(in < towards)
+	{
+		return(in + increment);
+	}
+	else
+	{
+		return(in - increment);
 	}
 }

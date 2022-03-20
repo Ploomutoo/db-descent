@@ -1,3 +1,44 @@
+function tutorialPrompt(check,promptText){
+	
+	if (progReadAndDone(check)) {
+	
+		oTextBox.announce(0,promptText)
+		audio_play_sound(sndTutorial,5,0)
+		with(oTextBox) drawText = storedText
+	}
+}
+
+function progCheck(check){
+	
+	ini_open("progress.ini")
+	
+	var out = ini_read_real("general",check,devMode)
+	ini_close()
+	return(out)
+}
+function progSet(check,set){
+	
+	ini_open("progress.ini")
+	
+	ini_write_real("general",check,set)
+	ini_close()
+}
+function progReadAndDone(check){
+	
+	ini_open("progress.ini")
+	
+	var out = false
+	if(!ini_read_real("general",check,devMode)){
+		
+		ini_write_real("general",check,true);
+		out = true;
+	}
+	
+	ini_close()
+	return(out)
+}
+
+
 function takeDamage(){
 	
 	if(iframes>0 || cheat) exit

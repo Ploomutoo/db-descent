@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndMenuNext.mp3",
-  "duration": 0.1877,
+  "duration": 0.1827,
   "parent": {
     "name": "sound",
     "path": "folders/sound.yy",

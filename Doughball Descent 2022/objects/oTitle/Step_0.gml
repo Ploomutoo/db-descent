@@ -10,7 +10,6 @@ if(cUp) {
 	event_user(0)
 }
 
-
 if(aPos>=1) exit;
 
 aOutput = animcurve_channel_evaluate(aChannel,aPos)

@@ -2,6 +2,7 @@ switch(cursorOn){
 	case 0: //play
 	
 		//global.playerType = selection
+		if(!audio_group_is_loaded(agMusic)) exit;
 		audio_stop_sound(musLevel0)
 		
 		instance_create_layer(-280,0,"instances",oSidebarL)

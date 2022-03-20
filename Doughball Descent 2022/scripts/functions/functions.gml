@@ -134,7 +134,7 @@ function breakLine(vy,vx1,vx2){
 	var i = 1
 	if(c2>c1) i  += c2-c1
 	
-	show_debug_message("Break "+string(c1)+" to "+string(c2)+". Width of "+string(i))
+	//show_debug_message("Break "+string(c1)+" to "+string(c2)+". Width of "+string(i))
 	createParticles((vx1+vx2)/2,vy,6,sPaRock)
 	
 	while(i>0){
@@ -217,13 +217,15 @@ function pauseUnpause(){
 
 function playMusic(track) {
 	
+	//show_debug_message("Called by "+object_get_name(object_index))
+	
 	if(oPause.menu[1,1]=0) { audio_group_stop_all(agMusic); exit; }
 	if(audio_is_playing(track)) exit;
 	
 	audio_group_stop_all(agMusic);
 	
 	currentMusic = track;
-	audio_play_sound(track,0,1);
+	audio_play_sound(track,-2,1);
 	
 	/*var musPrev = asset_get_index("musLevel"+string(trackNum-1))
 	if(musPrev>=0) audio_stop_sound(musPrev)

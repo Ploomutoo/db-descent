@@ -5,9 +5,15 @@ if(true){
 	//draw_text_outlined(495,320,"xScale: "+string(image_xscale))
 	//draw_text_outlined(495,305,"Sprite: "+string(spritePart))
 	
+	/*
 	draw_text_outlined(495,335,"vSpeed: "+string(vspeed))
 	draw_text_outlined(495,320,"Grav: "+string(grav))
 	draw_text_outlined(495,305,"FallMax: "+string(fallMax))
+	*/
+	
+	draw_text_outlined(495,335,"dsScale: "+string(dsScalex))
+	draw_text_outlined(495,320,"dsVel: "+string(dsVelx))
+	
 	
 	/*
 	draw_text_outlined(495,335,"Protection: "+string(altarProtection))

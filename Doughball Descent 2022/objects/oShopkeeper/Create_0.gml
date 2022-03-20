@@ -4,7 +4,7 @@ altarList = ds_list_create()
 ds_list_add(altarList,0,1,2,3,4)
 
 voice = talkRough
-if (level = 1 && loop = 0) alarm[0] = 60
+if (progReadAndDone("shopTutorial")) alarm[0] = 60
 
 linePool = ds_list_create()
 

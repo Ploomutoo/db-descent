@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndFood.wav",
-  "duration": 0.390034,
+  "duration": 0.385034,
   "parent": {
     "name": "sound",
     "path": "folders/sound.yy",

@@ -51,7 +51,8 @@ while(option[0]=option[1]) option[1] = teDraw()
 oPlayer.tranRoom = rEvent;
 image_alpha = 0
 
-oCamera.yOffset=100
+if(!progCheck("tChoiceTutorial")) oCamera.yOffset = 100
+else oCamera.yOffset = 0
 
 setShopWidth()
 fastMode = false;

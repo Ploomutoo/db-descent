@@ -26,11 +26,12 @@ for(var i = 0; i<array_length(menu); i++){
 		break;
 		
 		case 3:
+		case 4:
 			if(menu[i,1]) drawText = drawText + "[On]"
 			else drawText = drawText + "[Off]"
 		break;
 		
-		case 4:
+		case tspeedCoord:
 			if(menu[i,1]=1) drawText+= " - Standard"
 			else if(menu[i,1]=2) drawText+= " - Fast"
 			else if(menu[i,1]=3) drawText+= " - Slow"
@@ -40,7 +41,7 @@ for(var i = 0; i<array_length(menu); i++){
 		break;
 	}
 	
-	draw_text_outlined(viewWidth/2,84+32*i,drawText)
+	draw_text_outlined(viewWidth/2,64+32*i,drawText)
 }
 
 draw_set_halign(fa_left)

@@ -13,6 +13,7 @@ if(weight!=lastWeight) {
 	else grav = baseGrav + 0.1 *(baseGrav*(weight/100-1))
 	
 	fallMax = 6+(grav-baseGrav)*10
+	if(fallMax>10) fallMax = 10
 	
 	spritePart = clamp(floor(weight/100)-1,-1,weightStages-2)
 	
@@ -32,6 +33,10 @@ if(weight!=lastWeight) {
 		var exGirth = girth-1.0625
 		girth = 1.0625 + exGirth/2
 	}
+	
+	var dsWidth = surface_get_width(drawSurf)
+	while(dsWidth<48*girth) dsWidth = dsWidth*2
+	surface_resize(drawSurf,64,64)
 	
 	// Hitbox = 16 px (10 x 1.6) at 100
 	//			18 px (10 x 1.8) at 200
@@ -56,11 +61,18 @@ if (grounded) {
 		y=round(y/16)*16+1
 		vspeed = -1
 		crushes--
+		dsScalex = 1.5; dsScaley = 0.6
 		
 		if(flopStacks>0) bellyFlopSplash(bbox_right-bbox_left+16,flopStacks)
 		
 	} else {
-		fallReset = 1
+		
+		if(!fallReset) {
+			
+			fallReset = 1;
+			hTumDuration = -1;
+			dsScalex = 1.5; dsScaley = 0.6
+		}
 		y=round(y/16)*16+1
 		vspeed = 0
 	}
@@ -68,9 +80,11 @@ if (grounded) {
 	
 	if(hTumStacks>0) {
 		
-		if(cJump && !hTumActive) {
+		if(cJump && !hTumActive && hTumDuration=-1) {
 			audio_play_sound(sndHTumIn,5,0)
 			vspeed = -1
+			hTumDuration = 30+(hTumStacks-1)*15 
+			dsVelx = 0.3; dsScaley = 1.2
 			hTumActive = true;
 		}
 	}
@@ -105,6 +119,7 @@ if (grounded) {
 				if(hTumDuration=0) {
 					vspeed = vspeed*2
 					hTumActive = false
+					dsVelx = -0.2
 					audio_play_sound(sndHTumOut,5,0)
 				}
 				
@@ -128,11 +143,6 @@ if(jumpedTimer>0 || autoJump){
 		vspeed = -(4+pKneesBonus)
 		jumpedTimer = 0
 		crushes = crushMax	
-		
-		if(hTumStacks>0) {
-			#macro hTumFormula 30+(hTumStacks-1)*15 
-			hTumDuration = hTumFormula;
-		}
 		
 	} else jumpedTimer--
 }

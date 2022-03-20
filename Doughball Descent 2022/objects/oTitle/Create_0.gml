@@ -18,7 +18,7 @@ alarm[0]=1
 
 cursorOn = 0
 menu[0] = "Play"
-menu[1] = "Help"
+menu[1] = "Help\n& Credits"
 menu[2] = "Settings"
 menu[3] = "Quit"
 

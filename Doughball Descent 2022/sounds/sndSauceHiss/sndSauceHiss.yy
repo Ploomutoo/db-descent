@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndSauceHiss.wav",
-  "duration": 0.903526,
+  "duration": 0.898526,
   "parent": {
     "name": "sound",
     "path": "folders/sound.yy",

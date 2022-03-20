@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"GMLive_nodeTools","path":"scripts/GMLive_nodeTools/GMLive_nodeTools.yy",},"order":3,},
+    {"id":{"name":"sndTutorial","path":"sounds/sndTutorial/sndTutorial.yy",},"order":50,},
     {"id":{"name":"vsEndR","path":"rooms/vsEndR/vsEndR.yy",},"order":19,},
     {"id":{"name":"oGoombaEmpty","path":"objects/oGoombaEmpty/oGoombaEmpty.yy",},"order":5,},
     {"id":{"name":"oiPowerKnees","path":"objects/oiPowerKnees/oiPowerKnees.yy",},"order":12,},
@@ -269,6 +270,7 @@
     {"id":{"name":"sThumbtack","path":"sprites/sThumbtack/sThumbtack.yy",},"order":12,},
     {"id":{"name":"sndGumballBounce","path":"sounds/sndGumballBounce/sndGumballBounce.yy",},"order":39,},
     {"id":{"name":"GMLive_thread","path":"scripts/GMLive_thread/GMLive_thread.yy",},"order":4,},
+    {"id":{"name":"sMenuMark","path":"sprites/sMenuMark/sMenuMark.yy",},"order":44,},
     {"id":{"name":"vsEventCave","path":"rooms/vsEventCave/vsEventCave.yy",},"order":35,},
     {"id":{"name":"v4Meatmaze","path":"rooms/v4Meatmaze/v4Meatmaze.yy",},"order":11,},
     {"id":{"name":"sndBash","path":"sounds/sndBash/sndBash.yy",},"order":3,},
@@ -282,6 +284,7 @@
     {"id":{"name":"approach","path":"scripts/approach/approach.yy",},"order":2,},
     {"id":{"name":"v4MeatballTower","path":"rooms/v4MeatballTower/v4MeatballTower.yy",},"order":29,},
     {"id":{"name":"sndEnemDie","path":"sounds/sndEnemDie/sndEnemDie.yy",},"order":8,},
+    {"id":{"name":"sndStompOld","path":"sounds/sndStompOld/sndStompOld.yy",},"order":49,},
     {"id":{"name":"sndPeaShot","path":"sounds/sndPeaShot/sndPeaShot.yy",},"order":14,},
     {"id":{"name":"svBrick3","path":"sprites/svBrick3/svBrick3.yy",},"order":20,},
     {"id":{"name":"sTransitionGlow","path":"sprites/sTransitionGlow/sTransitionGlow.yy",},"order":10,},

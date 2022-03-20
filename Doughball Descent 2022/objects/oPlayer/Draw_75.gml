@@ -17,7 +17,10 @@ if(tranLevel!=-1) {
 			case rTransition:
 			tranRoom = rEvent;
 			x = 190
-			y =-600
+			
+			if(!progCheck("tChoiceTutorial")) y = -600
+			else y = -96
+			
 			break;
 			
 			case rEvent:

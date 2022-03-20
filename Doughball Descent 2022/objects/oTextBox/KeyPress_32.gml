@@ -1,3 +1,5 @@
+//if(!keyboard_check_pressed(vk_space)) show_debug_message("Artificial Activation")
+
 if(string_length(drawText)<string_length(storedText)) {
 	
 	if(drawText != "") drawText = storedText

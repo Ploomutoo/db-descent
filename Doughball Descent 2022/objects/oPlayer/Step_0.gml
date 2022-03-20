@@ -1,6 +1,7 @@
 ///@description hMovement + Winstate
-
 if(dead) exit
+
+#region Movement
 if((cLeft)&& !(cRight)){
 	hFace = -1
 	hspeed = clamp(hspeed-1,-maxSpeed,2)
@@ -39,6 +40,9 @@ if(bashActive>0) {
 	soundRand(sndBash)
 	image_index = 1
 	
+	dsVelx = 0.3
+	dsVely = -0.15
+	
 	var effect = instance_create_layer(desX+16*hFace,y-16,layer,oPaEffect)
 	effect.sprite_index = sPaBash
 	effect.image_index = 0
@@ -64,7 +68,9 @@ if(bashActive>15){
 }
 
 if(mobile = false) speed = 0
+#endregion
 
+#region Cosmetics
 if(abs(hspeed)<1 || !grounded) {
 	if(drawSin>1) drawSin = drawSin*0.8
 	else drawSin = 0
@@ -78,6 +84,25 @@ if(abs(hspeed)<1 || !grounded) {
 image_angle = 4*dsin(drawSin)
 drawOffset = 4*dsin(drawSin*2)
 if(drawOffset<0) drawOffset = drawOffset/4
+
+// DS-Scaling
+
+	if(dsScalex>1) dsVelx-=0.05
+	else if(dsScalex<1) dsVelx+=0.05
+
+	dsScalex += dsVelx
+	if(dsVelx != 0) dsVelx = approach(dsVelx,0,0.03)
+	if(abs(dsScalex-1)<0.1) dsScalex = 1
+
+	//Y Zone
+	if(dsScaley>1) dsVely-=0.05
+	else if(dsScaley<1) dsVely+=0.05
+
+	dsScaley += dsVely
+	if(dsVely != 0) dsVely = approach(dsVely,0,0.03)
+	if(abs(dsScaley-1)<0.1) dsScaley = 1
+
+#endregion
 
 if(tranLevel = -1 && y>room_height+32) {
 	soundRand(sndLevelEnd)
