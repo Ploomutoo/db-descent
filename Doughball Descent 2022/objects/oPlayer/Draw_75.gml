@@ -15,22 +15,20 @@ if(tranLevel!=-1) {
 		switch(tranRoom) {
 			
 			case rTransition:
-			tranRoom = rEvent;
-			x = 190
-			
-			if(!progCheck("tChoiceTutorial")) y = -600
-			else y = -96
-			
+				tranRoom = rEvent;
+				x = 190
+				if(!progCheck("tChoiceTutorial")) y = -600
+				else y = -96
 			break;
 			
 			case rEvent:
-			tranRoom = rGame;
-			y = -96
+				tranRoom = rGame;
+				y = 0
 			break;
 			
 			default:
-			tranRoom = rTransition;
-			y = -96
+				tranRoom = rTransition;
+				y = -96
 			break;
 		}
 		

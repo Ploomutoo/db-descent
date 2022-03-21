@@ -31,7 +31,7 @@ function genShop(){ //Perform in shop room
 	var json_rooms = vaultdataShop()
 
 	ix = 5
-	iy = 0
+	iy = 3
 
 	#region Section Gen
 		
@@ -98,14 +98,8 @@ function genEvCave(){
 	ix = 5
 	iy = 0
 	
-	var name = "vsEndL"
-	room_pack_load_map(json_rooms[?name], ix*32, iy*32, room_pack_flag_instances);
-	ix+=5
 	var name = "vsEventCave"
 	room_pack_load_map(json_rooms[?name], ix*32, iy*32, room_pack_flag_instances);
 	ix+=15
-	var name = "vsEndR"
-	room_pack_load_map(json_rooms[?name], ix*32, iy*32, room_pack_flag_instances);
-	ix+=5
 	
 }

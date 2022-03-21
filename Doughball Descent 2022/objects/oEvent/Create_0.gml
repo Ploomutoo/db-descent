@@ -1,6 +1,6 @@
 depth+=4
 
-oPlayer.x = x-32
+oPlayer.x = x
 oCamera.x = oPlayer.x
 
 state = 0

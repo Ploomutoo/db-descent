@@ -7,5 +7,9 @@ if(x>180) {
 }
 
 option = op
+//show_debug_message("Option "+string(op))
+
+if(op>0) room_set_height(rEvent,512)
+else room_set_height(rEvent,384)
 
 //show_debug_message("X of "+string(oPlayer.x)+". Choice of "+script_get_name(option))
