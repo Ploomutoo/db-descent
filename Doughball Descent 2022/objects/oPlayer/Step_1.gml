@@ -36,7 +36,7 @@ if(weight!=lastWeight) {
 	
 	var dsWidth = surface_get_width(drawSurf)
 	while(dsWidth<48*girth) dsWidth = dsWidth*2
-	surface_resize(drawSurf,64,64)
+	surface_resize(drawSurf,dsWidth,64)
 	
 	// Hitbox = 16 px (10 x 1.6) at 100
 	//			18 px (10 x 1.8) at 200

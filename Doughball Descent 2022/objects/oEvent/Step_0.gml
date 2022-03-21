@@ -19,7 +19,7 @@ if(cBash) {
 		oPlayer.mobile = false;
 		
 		oTextBox.voice = talkEvent
-		oTextBox.announce(0,"A glimmer in the dark catches your eye. The cave passage is narrow\nbut maybe, just maybe?. Do you attempt to squeeze in?")
+		oTextBox.announce(0,event.txExposition)
 		state++
 	break;
 	case 1:
@@ -31,10 +31,10 @@ if(cBash) {
 	
 		oTextBox.voice = talkEvent
 		if(choice) {
-		oTextBox.announce(0,"You squoze")	
+		oTextBox.announce(0,event.txAttempt);
 		state++
 		} else {
-		oTextBox.announce(0,"You look yourself up and down\nand think against squeezing in")	
+		oTextBox.announce(0,event.txDecline);
 		exitEvent();
 		}
 	break;

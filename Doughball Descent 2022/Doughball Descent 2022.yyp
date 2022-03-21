@@ -40,6 +40,7 @@
     {"id":{"name":"musLevel4","path":"sounds/musLevel4/musLevel4.yy",},"order":23,},
     {"id":{"name":"sndGummyLand","path":"sounds/sndGummyLand/sndGummyLand.yy",},"order":43,},
     {"id":{"name":"txr_compile_setter","path":"scripts/txr_compile_setter/txr_compile_setter.yy",},"order":4,},
+    {"id":{"name":"eventStruct","path":"scripts/eventStruct/eventStruct.yy",},"order":22,},
     {"id":{"name":"sPlayerWalk","path":"sprites/sPlayerWalk/sPlayerWalk.yy",},"order":4,},
     {"id":{"name":"sMenuHierarchy","path":"sprites/sMenuHierarchy/sMenuHierarchy.yy",},"order":3,},
     {"id":{"name":"GMLive_token","path":"scripts/GMLive_token/GMLive_token.yy",},"order":7,},

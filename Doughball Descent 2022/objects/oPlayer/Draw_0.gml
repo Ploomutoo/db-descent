@@ -61,10 +61,6 @@ if(oPause.menu[4,1]=true) {
 	
 }
 
-
-//draw_text(x,y-48,string(image_angle))
 if(!cheat) exit;
-//draw_self();
-draw_set_color(c_yellow)
-//draw_rectangle(bbox_left+1,bbox_top+1,bbox_right-1,bbox_bottom-1,1)
-draw_set_color(c_white)
+draw_sprite(sPaMilkSpill,2,x+32,y-24)
+draw_sprite(sPaMilkSpill,1,x+32+belly_x,y-24+belly_y)

@@ -15,11 +15,13 @@ if(keyboard_check(vk_up)) {
 	//iframes = 3
 }
 
-if(keyboard_check(ord("Q"))) {
+/*if(keyboard_check(ord("Q"))) {
 	if(keyboard_check(vk_shift) && keyboard_check_pressed(ord("Q"))) weight = floor(weight/100+1)*100
 	else weight+=3
-}
+}*/
 
-if(keyboard_check_pressed(ord("B"))) {
-	//room_goto(rBazaar)
+if(keyboard_check_pressed(ord("Q"))) {
+	var i = get_integer("Set weight",100)
+	weight = i
+	oSidebarL.dWeight = i
 }
