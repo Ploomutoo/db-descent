@@ -11,8 +11,8 @@ if(true){
 	draw_text_outlined(495,305,"FallMax: "+string(fallMax))
 	*/
 	
-	draw_text_outlined(495,335,"dsScale: "+string(dsScalex))
-	draw_text_outlined(495,320,"dsVel: "+string(dsVelx))
+	//draw_text_outlined(495,335,"jiggleTo: "+string(dsScalex))
+	//draw_text_outlined(495,320,"jiggleAt: "+string(dsVelx))
 	
 	
 	/*

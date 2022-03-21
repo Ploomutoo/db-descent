@@ -16,14 +16,15 @@ if(iframes>0) {
 var finScale = hFace*girth
 
 #region jiggles
-var j_dir = point_direction(belly_x, belly_y, repX+drawOffset+belly_xoffset, repY+belly_yoffset);
-var j_dist = point_distance(belly_x, belly_y, repX+drawOffset+belly_xoffset, repY+belly_yoffset);
+
+var j_dir = point_direction(belly_x, belly_y, x+drawOffset+belly_xoffset, y+belly_yoffset);
+var j_dist = point_distance(belly_x, belly_y, x+drawOffset+belly_xoffset, y+belly_yoffset)
 if(j_dist > belly_limit) //enforcing limit
 {
 	belly_x += lengthdir_x(j_dist-belly_limit, j_dir);
 	belly_y += lengthdir_y(j_dist-belly_limit, j_dir);
 	//resetting j_dist
-	j_dist = point_distance(belly_x, belly_y, repX+belly_xoffset, repY+belly_yoffset);
+	j_dist = point_distance(belly_x, belly_y, x+belly_xoffset, y+belly_yoffset);
 }
 //adding velocity to jiggle
 var j_force = lerp(0, belly_elasticity, j_dist/belly_limit);
@@ -41,7 +42,7 @@ belly_vspeed -= belly_vspeed*belly_damping;
 if(bashActive<=0) {
 	//draw_sprite_part_ext(sPlayerWalk,walkFrame,0,(spritePart+1)*playerSpriteHeight,playerSpriteWidth,playerSpriteHeight,floor(repX-playerSpriteWidth*finScale/2),floor(repY-playerSpriteHeight),finScale,1,c_white,1)
 	draw_sprite_ext(sPlayerJiggleBase,spritePart+1,repX,repY-drawOffset,finScale,1,image_angle,c_white,1)
-	draw_sprite_ext(sPlayerJiggle,spritePart+1,repX,belly_y-drawOffset,finScale,1,image_angle,c_white,1)
+	draw_sprite_ext(sPlayerJiggle,spritePart+1,repX,repY-drawOffset+belly_y-y,finScale,1,image_angle,c_white,1)
 	
 	if (abs(hspeed)>0.2) {
 		walkFrame+=0.06
@@ -60,7 +61,3 @@ if(oPause.menu[4,1]=true) {
 	draw_surface_ext(drawSurf,x-repX,y-repY,1,1,0,c_white,1)
 	
 }
-
-if(!cheat) exit;
-draw_sprite(sPaMilkSpill,2,x+32,y-24)
-draw_sprite(sPaMilkSpill,1,x+32+belly_x,y-24+belly_y)
