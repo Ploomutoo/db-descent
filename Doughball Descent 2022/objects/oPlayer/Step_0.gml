@@ -40,8 +40,7 @@ if(bashActive>0) {
 	soundRand(sndBash)
 	image_index = 1
 	
-	dsVelx = 0.3
-	dsVely = -0.15
+	dsVelx = 0.3; dsVely = -0.15
 	
 	var effect = instance_create_layer(desX+16*hFace,y-16,layer,oPaEffect)
 	effect.sprite_index = sPaBash

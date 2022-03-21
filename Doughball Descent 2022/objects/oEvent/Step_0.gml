@@ -32,18 +32,33 @@ if(cBash) {
 		oTextBox.voice = talkEvent
 		if(choice) {
 		oTextBox.announce(0,event.txAttempt);
-		state++
+		state++;
 		} else {
 		oTextBox.announce(0,event.txDecline);
-		exitEvent();
+		state = 4;
 		}
 	break;
 	case 3:
+	
 		cancelIfLinePresent
-		audio_play_sound(sndEvent,10,0)
-		instance_create_depth(x+80,y,depth,oItemPedestal)
-		exitEvent();
+		oTextBox.voice = talkEvent
+		if(random(1)<=event.eChance()) {
+			if(event.txSuccess != "") oTextBox.announce(0,event.txSuccess);
+			event.success();
+			audio_play_sound(sndEvent,10,0)
+			
+		} else {
+			if(event.txFailure != "") oTextBox.announce(0,event.txFailure);
+			event.failure();
+			audio_play_sound(sndEventBad,10,0)
+		}
+		state++
 	break;
 	
+	case 4:
+	
+		cancelIfLinePresent
+		exitEvent();
+	break;
 	}
 }

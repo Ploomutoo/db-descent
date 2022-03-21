@@ -6,6 +6,7 @@ oCamera.x = oPlayer.x
 state = 0
 dx = 140+oCamera.camWidth/2
 dy = 32
+dim = 0
 
 tilemap_tileset(tileMap,tsGeneric)
 
@@ -28,14 +29,18 @@ switch(0) {
 			return(i);
 		},
 		
-		txSuccess : "",
+		txSuccess : "Miraculously your pliable body oozes\nthrough the passage with ease. The item within is yours!",
 		success : function(){
-			instance_create_depth(x+80,y,depth,oItemPedestal)
+			with(other) instance_create_depth(x+80,y,depth,oItemPedestal)
 		},
 		
-		txFailure : "",
+		txFailure : "Within moments you have firmly\nwedged yourself in the opening. You are left solely with\ntime to reflect and digest",
 		failure : function(){
-			
+			with(oPlayer){
+				
+				weight = max(weight-100,50)
+				popUp(x,y-48,"-100 LBS")
+			}
 		}
 		
 	} break;

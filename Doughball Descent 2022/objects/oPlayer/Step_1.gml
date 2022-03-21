@@ -56,7 +56,7 @@ if (grounded) {
 	
 	if(crushes>0){
 		
-		breakLine(y+2,bbox_left,bbox_right)
+		breakLine(y+2,bbox_left,bbox_right-1)
 		
 		y=round(y/16)*16+1
 		vspeed = -1

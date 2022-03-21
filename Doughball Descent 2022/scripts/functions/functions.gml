@@ -1,3 +1,9 @@
+function popUp(ix,iy,text){
+	var popup = instance_create_depth(ix,iy,0,oPopupText)
+	popup.drawString = text
+	
+}
+
 function markPoint(ix,iy){
 	instance_create_depth(ix,iy,depth,oPaEffect)
 }

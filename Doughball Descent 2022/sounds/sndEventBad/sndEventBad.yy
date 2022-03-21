@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndEvent.wav",
-  "duration": 1.474127,
+  "soundFile": "sndEventBad.wav",
+  "duration": 1.535057,
   "parent": {
     "name": "transition",
     "path": "folders/transition.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sndEvent",
+  "name": "sndEventBad",
   "tags": [],
   "resourceType": "GMSound",
 }
