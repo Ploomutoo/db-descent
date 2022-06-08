@@ -9,8 +9,9 @@ if(sprite_index = sDragon) {
 	sprite_index = sDragon;
 	
 	//irandom(3)
-	if(0=0){
+	if(irandom(3)=0){
 		fireball = -1
+		//soundRand(sndDragonLaugh)
 		//show_debug_message("charge")
 	} else {
 		fireball = 100

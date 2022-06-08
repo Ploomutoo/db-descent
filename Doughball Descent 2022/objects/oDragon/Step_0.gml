@@ -6,7 +6,7 @@ if(harmful){
 		
 		fireball--
 		if(fireball = 0){
-			vspeed = -16;	hspeed = 0
+			vspeed = -10;	hspeed = 0
 			soundRand(sndDragonDash);
 		}
 	}
@@ -17,11 +17,19 @@ if(harmful){
 		speed = 0;
 		
 		fireball = 100
+	} else {
+		vspeed-=0.3
 	}
 	exit;	
 }
 
-if(fireball = -1) {
+if(tilemap_get_at_pixel(tileMap,x,y)!=0) {
+	if(iconAlpha<1) iconAlpha += 0.1
+} else {
+	if(iconAlpha>0) iconAlpha -= 0.05
+}
+
+if(fireball = -1) { //zooming offscreen
 	
 	if(x<0 || x>room_width) exit;
 	

@@ -14,3 +14,5 @@ sinCount = 0
 
 warnHeight = 2+viewHeight/sprite_get_width(sWarning)
 warnWidth = 128/sprite_get_width(sWarning)
+
+iconAlpha = 0

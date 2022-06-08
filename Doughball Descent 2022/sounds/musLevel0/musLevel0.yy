@@ -12,7 +12,7 @@
     "path": "audiogroups/agMusic",
   },
   "soundFile": "musLevel0.wav",
-  "duration": 52.1737862,
+  "duration": 154.450043,
   "parent": {
     "name": "sound",
     "path": "folders/sound.yy",

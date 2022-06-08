@@ -14,7 +14,11 @@ if(harmful) {
 	}
 	
 	for(var i = 1; i<4; i++) {
-		draw_sprite_ext(sprite_index,0,x,y+8*i,1-i/8,1,0,c_white,1-(i+1)/8)
+		draw_sprite_ext(sprite_index,0,x,y-vspeed*i,1-i/8,1,0,c_white,1-(i+1)/8)
 	}
 	draw_self();
+} else {
+	
+	if(sprite_index=sDragon2) draw_sprite_ext(sDragonIcon,image_index,x,y,1,1,0,c_white,iconAlpha)
+	else draw_sprite_ext(sDragonIcon,0,x,y,1,1,0,c_white,iconAlpha)
 }

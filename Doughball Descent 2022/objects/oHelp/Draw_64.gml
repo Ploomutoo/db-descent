@@ -31,6 +31,7 @@ if(screen = 0) {
 	
 	draw_text_outlined(viewWidth/2,230,
 	"Soundtrack by Abstraction (abstractionmusic.com)" +
+	"\nTitle Theme by Bol (@boltummies)" +
 	"\nSound Effects from Zapsplat, Hanna Barbera SFX Library 5, BFXR" +
 	"\nGMRoomPack by YellowAfterlife" +
 	"\nCompassGold Font by Somepx")
