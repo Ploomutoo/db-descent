@@ -7,10 +7,7 @@ globalvar devMode; devMode = false;
 if(devMode) if(file_exists("progress.ini")) file_delete("progress.ini");
 
 autoPause = 0;
-
-if(!audio_group_is_loaded(agMusic)) audio_group_load(agMusic);
-else alarm[0] = 2
-
+playMusic(musLevel0)
 
 paused = false;
 

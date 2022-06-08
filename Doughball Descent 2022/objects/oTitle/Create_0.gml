@@ -7,15 +7,6 @@ room_pack_eval_script = function(code) {
   } 
 }
 
-var xRatio = 0.8*display_get_width()/640
-var yRatio = 0.8*display_get_height()/360
-
-if(xRatio>yRatio) yRatio = xRatio
-else xRatio = yRatio
-
-window_set_size(640*xRatio,360*yRatio)
-alarm[0]=1
-
 cursorOn = 0
 menu[0] = "Play"
 menu[1] = "Help\n& Credits"
