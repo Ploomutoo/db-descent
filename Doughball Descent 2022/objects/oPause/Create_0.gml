@@ -7,8 +7,6 @@ globalvar devMode; devMode = false;
 if(devMode) if(file_exists("progress.ini")) file_delete("progress.ini");
 
 autoPause = 0;
-playMusic(musLevel0)
-
 paused = false;
 
 function settingsReset() {
@@ -67,6 +65,7 @@ function settingsReset() {
 }
 
 settingsReset();
+playMusic(musLevel0);
 
 cursorOn = 0
 deactList = ds_list_create()
