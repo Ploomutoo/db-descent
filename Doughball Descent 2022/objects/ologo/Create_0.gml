@@ -15,6 +15,7 @@ if(xRatio>yRatio) yRatio = xRatio;
 else xRatio = yRatio;
 
 window_set_size(640*xRatio,360*yRatio);
+draw_set_font(fntBig)
 
 alarm[0]=room_speed*3;
 alarm[1]=1;
