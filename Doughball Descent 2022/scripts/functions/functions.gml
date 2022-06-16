@@ -225,7 +225,7 @@ function playMusic(track) {
 	
 	//show_debug_message("Called by "+object_get_name(object_index))
 	
-	if(oPause.menu[1,1]=0) { audio_group_stop_all(agMusic); exit; }
+	if(oPause.menu[1,1]=0) { audio_group_stop_all(agMusic); global.musCurrent = 0; exit; }
 	if(audio_is_playing(track)) exit;
 	
 	audio_group_stop_all(agMusic);

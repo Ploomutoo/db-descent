@@ -1,9 +1,14 @@
 foodTypes = sprite_get_number(sFood)
 room_set_height(rGame,2048)
 
+xpCost = 500
+lvl = 1
+
 items = 0
 cornerX = room_width-48
 cornerY = room_height-48
+calDisplay = 0
+cdSound = 0
 
 with(oBase){
 	x = oTalDraw.cornerX
@@ -22,11 +27,19 @@ with(oBase){
 	oTalDraw.items++
 }
 
+foodTallyOn = 0
+alarm[0] = room_speed/3
+
 //frameSize = (sprite_width+32)/48
+
+/*sinCount = 0
+sinCap = 180
+sinSpeed = 10
+spinScale = 1
+spinTo = 0*/
 
 sinCount = 0
 sinCap = 180
 sinSpeed = 10
-
-spinScale = 1
-spinTo = 0
+spinTo = image_index+1
+spinScale = 0

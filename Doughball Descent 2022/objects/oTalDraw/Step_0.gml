@@ -1,4 +1,32 @@
-if(cRightPressed) {
+//  poo poo pee pee
+if(foodTallyOn<foodTypes) exit;
+
+if(calDisplay<oTally.calGot && !audio_is_playing(cdSound)) {
+	
+	var inc = min(max(ceil((oTally.calGot-calDisplay)/30),7),lvl*170)
+	calDisplay+=inc;
+	if(calDisplay>oTally.calGot) calDisplay = oTally.calGot;
+	
+	xpCost-=inc;
+	if(xpCost<0) {
+		lvl++;
+		xpCost += lvl*500;
+		cdSound = audio_play_sound(sndTally3,5,0)
+		
+		sinCount = 0
+		sinCap = 180
+		sinSpeed = 10
+		spinTo = image_index+1
+		if(spinTo>=image_number) spinTo = 0
+	
+	} else {
+		
+		cdSound = audio_play_sound(sndTally2,0,0)
+		audio_sound_pitch(cdSound,1+lerp(-0.5,0.5,calDisplay/oTally.calGot));
+	}
+}
+
+/*if(cRightPressed) {
 	sinCount = 0
 	sinCap = 180
 	sinSpeed = 10
@@ -12,7 +40,7 @@ if(cLeftPressed) {
 	sinSpeed = 10
 	spinTo = image_index-1
 	if(spinTo<0) spinTo = image_number-1
-}
+}*/
 
 if(sinCount<=sinCap) {
 	sinCount += sinSpeed

@@ -22,6 +22,10 @@ if(keyboard_check(vk_up)) {
 
 if(keyboard_check_pressed(ord("Q"))) {
 	var i = get_integer("Set weight",100)
+	oTally.calGot += i-weight
+	var popup = instance_create_layer(x,y-52,layer,oPopupText)
+	popup.drawString = "+"+string(i-weight)
+	
 	weight = i
 	oSidebarL.dWeight = i
 }
