@@ -66,8 +66,8 @@
     "6": "seqLogo_event_async_system",
   },
   "eventStubScript": {
-    "name": "seqLogo_Events104",
-    "path": "scripts/seqLogo_Events104/seqLogo_Events104.yy",
+    "name": "seqLogoEv",
+    "path": "scripts/seqLogoEv/seqLogoEv.yy",
   },
   "parent": {
     "name": "menuNonObj",

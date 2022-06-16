@@ -4,15 +4,19 @@ cursorOn = 0
 if(autoPause>0) exit;
 
 var terrainLayer = layer_get_id("terrain")
+var backgroundLayer = layer_get_id("laBackground")
 if(paused){ //pause
 	
 	instance_deactivate_all(true)
 	if(terrainLayer!=-1) layer_set_visible("terrain",false)
+	if(backgroundLayer!=-1) layer_set_visible(backgroundLayer,true)
+	
 	
 } else { //unpause
 	
 	instance_activate_all()
 	if(terrainLayer!=-1) layer_set_visible("terrain",true)
+	if(backgroundLayer!=-1) layer_set_visible(backgroundLayer,false)
 		
 	for(var i = 0; i<ds_list_size(deactList); i++){
 		

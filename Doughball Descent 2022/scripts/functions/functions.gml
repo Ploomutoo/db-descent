@@ -231,7 +231,7 @@ function playMusic(track) {
 	audio_group_stop_all(agMusic);
 	
 	currentMusic = track;
-	audio_play_sound(track,-2,1);
+	global.musCurrent = audio_play_sound(track,-2,1);
 	
 	/*var musPrev = asset_get_index("musLevel"+string(trackNum-1))
 	if(musPrev>=0) audio_stop_sound(musPrev)
