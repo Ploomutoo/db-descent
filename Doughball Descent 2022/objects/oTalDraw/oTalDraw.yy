@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "menu+UI",
+    "path": "folders/menu+UI.yy",
   },
   "resourceVersion": "1.0",
   "name": "oTalDraw",

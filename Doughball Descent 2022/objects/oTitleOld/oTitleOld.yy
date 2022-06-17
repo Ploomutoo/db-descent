@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "menuShit",
-    "path": "folders/menuShit.yy",
+    "name": "menu+UI",
+    "path": "folders/menu+UI.yy",
   },
   "resourceVersion": "1.0",
   "name": "oTitleOld",

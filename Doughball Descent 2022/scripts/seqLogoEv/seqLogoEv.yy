@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "menuNonObj",
-    "path": "folders/menuShit/menuNonObj.yy",
+    "path": "folders/menu+UI/menuNonObj.yy",
   },
   "resourceVersion": "1.0",
   "name": "seqLogoEv",

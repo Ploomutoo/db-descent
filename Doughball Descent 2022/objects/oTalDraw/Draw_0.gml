@@ -8,7 +8,7 @@ if(audio_is_playing(sndTally3)) {
 	
 } else {
 	draw_set_color(c_grey);
-	draw_rectangle(x-79,y+84,x+lerp(78,-79,xpCost/(lvl*500)),y+88,0); draw_set_color(c_white);
+	draw_rectangle(x-79,y+84,x+lerp(78,-79,xpCost/(lvl*xpInc)),y+88,0); draw_set_color(c_white);
 	
 }
 

@@ -3,14 +3,14 @@ if(foodTallyOn<foodTypes) exit;
 
 if(calDisplay<oTally.calGot && !audio_is_playing(cdSound)) {
 	
-	var inc = min(max(ceil((oTally.calGot-calDisplay)/30),7),lvl*170)
+	var inc = min(max(ceil((oTally.calGot-calDisplay)/30),7),lvl*xpInc/5)
 	calDisplay+=inc;
 	if(calDisplay>oTally.calGot) calDisplay = oTally.calGot;
 	
 	xpCost-=inc;
 	if(xpCost<0) {
 		lvl++;
-		xpCost += lvl*500;
+		xpCost += lvl*xpInc;
 		cdSound = audio_play_sound(sndTally3,5,0)
 		
 		sinCount = 0

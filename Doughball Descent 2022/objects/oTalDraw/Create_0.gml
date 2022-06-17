@@ -1,7 +1,8 @@
 foodTypes = sprite_get_number(sFood)
 room_set_height(rGame,2048)
 
-xpCost = 500
+#macro xpInc 100
+xpCost = xpInc
 lvl = 1
 
 items = 0

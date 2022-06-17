@@ -11,7 +11,7 @@
   ],
   "parent": {
     "name": "menuNonObj",
-    "path": "folders/menuShit/menuNonObj.yy",
+    "path": "folders/menu+UI/menuNonObj.yy",
   },
   "resourceVersion": "1.2",
   "name": "acJiggle",

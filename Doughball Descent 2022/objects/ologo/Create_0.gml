@@ -3,6 +3,7 @@ show_debug_message("help")
 if(audio_group_is_loaded(agMusic)){
 
     room_goto(rTitle);
+	exit;
 }
 
 canLeaveIntro = false;

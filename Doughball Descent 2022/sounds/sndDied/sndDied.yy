@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndDied.mp3",
-  "duration": 7.653875,
+  "soundFile": "sndDied.wav",
+  "duration": 3.813333,
   "parent": {
     "name": "sound",
     "path": "folders/sound.yy",
