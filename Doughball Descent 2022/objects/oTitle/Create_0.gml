@@ -20,3 +20,6 @@ aPos = 1
 aOutput = 0
 
 fadeIn = -30
+
+objHelp = instance_nearest(0,0,oHelp)
+objLevSel = instance_create_layer(room_width/2,room_height/2,layer,oLevelSelect);

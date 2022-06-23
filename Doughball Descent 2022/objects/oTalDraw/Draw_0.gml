@@ -2,7 +2,7 @@
 draw_sprite_ext(sEnding,image_index,x,y,spinScale,1,0,c_white,1);
 draw_rectangle(x-79,y+84,x+78,y+88,1);
 
-if(audio_is_playing(sndTally3)) {
+if("sndTally2"!=audio_get_name(cdSound) && foodTallyOn=foodTypes) {
 	draw_set_color(c_yellow);
 	draw_rectangle(x-79,y+84,x+78,y+88,0); draw_set_color(c_white);
 	

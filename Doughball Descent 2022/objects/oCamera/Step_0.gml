@@ -21,14 +21,17 @@ if(bgShift = 1) {
 	if (abs(bgyOffset)>bgY) bgyOffset+=bgY
 }
 
+var finX = round(x)
+var finY = round(y)
+
 if(screenShake != 0) {
 	
 	screenShake = -screenShake * 0.8
 	if(abs(screenShake)<0.5) screenShake = 0;
+	
+	if(oPause.menu[2,1]=0) screenShake = 0;
+	else finY += screenShake/5*oPause.menu[2,1]
 }
-
-var finX = round(x)
-var finY = round(y+screenShake)
 
 var vm = matrix_build_lookat(finX,finY,-10,finX,finY,0,0,1,0);
 camera_set_view_mat(camera,vm)

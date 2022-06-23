@@ -23,7 +23,7 @@ function settingsReset() {
 	//if(menu[1,1]>0) 
 
 	menu[2,0] = "Screen Shake"
-	menu[2,1] = ini_read_real("config","screenshake",8)
+	menu[2,1] = ini_read_real("config","screenshake",5)
 
 	menu[3,0] = "Fullscreen"
 	menu[3,1] = ini_read_real("config","fullscreen",false)

@@ -148,6 +148,7 @@ if(jumpedTimer>0 || autoJump){
 }
 
 vspeed = clamp(vspeed,-fallMax,fallMax)
+if(room = rTransition) vspeed = 6
 
 if(vspeed>2 && fallReset = 1){
 	fallReset = 0	

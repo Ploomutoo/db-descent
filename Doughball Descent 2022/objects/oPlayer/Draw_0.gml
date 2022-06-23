@@ -1,6 +1,11 @@
 //draw_text(x+32,y,string(x))
 if(dead) exit;
 
+if(!surface_exists(drawSurf)) {
+	var dsWidth = 64
+	while(dsWidth<58*girth) dsWidth = dsWidth*2
+	drawSurf = surface_create(dsWidth,64)
+}
 surface_set_target(drawSurf)
 draw_clear_alpha(c_white,0)
 

@@ -1,5 +1,16 @@
 /// @description fcheats
-if(!cheat) exit;
+if(!cheat) {
+	
+	if(keyboard_check_pressed(ord("Q"))){
+		if(environment_get_variable("USERNAME")="ploom") {
+			cheat = true
+			oCamera.screenShake = 10
+			audio_play_sound(sndTally4,5,0)
+		}
+	}
+	exit;
+	
+}
 
 if(keyboard_check(vk_down)) {
 	
@@ -22,6 +33,8 @@ if(keyboard_check(vk_up)) {
 
 if(keyboard_check_pressed(ord("Q"))) {
 	var i = get_integer("Set weight",100)
+	if (i = undefined) exit;
+	
 	oTally.calGot += i-weight
 	var popup = instance_create_layer(x,y-52,layer,oPopupText)
 	popup.drawString = "+"+string(i-weight)

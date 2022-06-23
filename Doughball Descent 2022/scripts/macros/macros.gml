@@ -8,9 +8,9 @@
 
 #macro tranSpeed 20
 
-#macro cheat false
+//#macro cheat true
 #macro altarDebug false
-#macro startLevel 0
+//#macro startLevel 0
 #macro lastLevel 15
 
 #macro aRight 0

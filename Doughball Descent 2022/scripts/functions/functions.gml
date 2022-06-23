@@ -101,6 +101,7 @@ function breakBlock(argument0,argument1) {
 			audio_stop_sound(sndBreak)
 			var pSound = audio_play_sound(sndBreak,0,0)
 			audio_sound_pitch(pSound,max(1-0.1*(crushes-crushMax),0.5))
+			
 		break;
 		case 2:
 			tilemap_set_at_pixel(tileMap,6,argument0,argument1)
@@ -123,6 +124,7 @@ function breakBlock(argument0,argument1) {
 			} else bashActive = 10
 		break;
 	}
+	if(tap!=0) oCamera.screenShake+=2
 	return(tap)
 }
 

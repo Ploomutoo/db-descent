@@ -125,8 +125,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "sMaster",
-    "path": "folders/sMaster.yy",
+    "name": "menuNonObj",
+    "path": "folders/menu+UI/menuNonObj.yy",
   },
   "resourceVersion": "1.0",
   "name": "sEndingFullres",

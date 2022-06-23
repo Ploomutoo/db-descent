@@ -1,4 +1,6 @@
-oSidebarL.imprinted = self
+oSidebarL.imprinted = self;
+globalvar cheat;
+cheat = false;
 
 maxSpeed = 3
 weight = 100
