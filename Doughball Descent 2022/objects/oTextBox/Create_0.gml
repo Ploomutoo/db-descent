@@ -3,6 +3,7 @@ function announce(monotoneVoice,text){
 	with(oTextBox) {
 		
 		pitch = 1
+		tmExpire = room_speed*0.7
 		monotone = monotoneVoice
 		
 		storedText = text
@@ -36,6 +37,8 @@ drawHeight = 0
 voice = talkGeneric
 pitch = 1
 monotone = true
+box = true
+tmExpire = -1
 
 x = 140+oCamera.camWidth/2
 y = 16

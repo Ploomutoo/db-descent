@@ -1,10 +1,13 @@
-show_debug_message("help")
+//show_debug_message("help")
 //show_debug_overlay(true)
+
 if(audio_group_is_loaded(agMusic)){
 
     room_goto(rTitle);
 	exit;
 }
+
+window_set_caption("Doughball Descent"+taglines())
 
 canLeaveIntro = false;
 audio_group_load(agMusic);

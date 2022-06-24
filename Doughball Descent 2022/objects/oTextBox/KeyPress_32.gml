@@ -9,6 +9,7 @@ if(string_length(drawText)<string_length(storedText)) {
 		
 		storedText = storedPage[|0]
 		ds_list_delete(storedPage,0)	
+		tmExpire = room_speed*0.7
 		event_user(0)
 		
 	} else {
@@ -16,5 +17,6 @@ if(string_length(drawText)<string_length(storedText)) {
 		voice = talkGeneric
 		storedText = ""
 		drawText = ""
+		tmExpire = -1
 	}
 }

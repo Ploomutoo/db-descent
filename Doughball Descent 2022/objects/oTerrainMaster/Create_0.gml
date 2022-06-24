@@ -94,7 +94,13 @@ loadLevelStructures(level)
 if(area!=0) setAreaCosmetics(area)
 
 ini_open("config.ini")
-if(area>ini_read_real("general","zoneUnlock",1)) ini_write_real("general","zoneUnlock",area)
+if(area>ini_read_real("general","zoneUnlock",1)) {
+	
+	ini_write_real("general","zoneUnlock",area)
+	oTextBox.announce(0,"Shortcut Permanently Unlocked")
+	audio_play_sound(sndTutorial,5,0)
+	with(oTextBox) drawText = storedText
+}
 ini_close();
 
 while(iy<yLimit){
