@@ -93,6 +93,10 @@ area = 0
 loadLevelStructures(level)
 if(area!=0) setAreaCosmetics(area)
 
+ini_open("config.ini")
+if(area>ini_read_real("general","zoneUnlock",1)) ini_write_real("general","zoneUnlock",area)
+ini_close();
+
 while(iy<yLimit){
 	while(ix<xLimit) {
 		var hgiCounter = 0

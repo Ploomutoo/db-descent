@@ -1,5 +1,5 @@
 if(room=rGame){
-	levelsGone++	
+	levelsGone++
 } else if (false){
 	
 	var i = array_length(oTally.itemWeights)-1

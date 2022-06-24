@@ -6,6 +6,11 @@ if (unpauseGrace>0) {
 
 if(cBash) {
 	
+	if(cursorOn>furthestZone) {
+		soundRand(sndLocked)
+		exit;
+	}
+	
 	audio_stop_sound(musLevel0)
 	
 	instance_activate_all()
