@@ -194,7 +194,7 @@ ds_map_destroy(json_rooms_g);
 
 #endregion
 
-oSidebarL.levelText = string(1+level mod 3)+" - "+string(area)
+oSidebarL.levelText = string(area)+" - "+string(1+level mod 3)
 
 if(altarDebug) {
 	show_debug_message("\nAltar Efficacy Log")

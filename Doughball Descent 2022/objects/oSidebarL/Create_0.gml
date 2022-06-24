@@ -1,5 +1,5 @@
 //if(instance_count(oSidebarL)>=2) instance_destroy()
-level = 0
+if (level=undefined) level=0;
 loop = 0
 
 calibrateGameHeight

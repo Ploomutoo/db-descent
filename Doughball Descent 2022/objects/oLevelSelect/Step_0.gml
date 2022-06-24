@@ -9,8 +9,9 @@ if(cBash) {
 	audio_stop_sound(musLevel0)
 	
 	instance_activate_all()
-	instance_create_layer(-280,0,"instances",oSidebarL)
 	level = cursorOn*3
+	instance_create_layer(-280,0,"instances",oSidebarL)
+	
 	var player = instance_create_layer(320,-96,"instances",oPlayer)
 	with(player) altarInstantiate()
 		
