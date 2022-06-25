@@ -5,6 +5,7 @@ function announce(monotoneVoice,text){
 		pitch = 1
 		tmExpire = room_speed*0.7
 		monotone = monotoneVoice
+		box = true
 		
 		storedText = text
 		ds_list_clear(storedPage)
@@ -24,6 +25,7 @@ function announce(monotoneVoice,text){
 				break;
 			}
 		}
+		soundRand(sndTextPick)
 		event_user(0)
 	}
 }

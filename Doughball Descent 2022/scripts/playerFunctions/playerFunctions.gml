@@ -4,7 +4,12 @@ function tutorialPrompt(check,promptText){
 	
 		oTextBox.announce(0,promptText)
 		audio_play_sound(sndTutorial,5,0)
-		with(oTextBox) drawText = storedText
+		with(oTextBox) {
+			
+			drawText = storedText
+			box = false
+			tmExpire = room_speed*1.2
+		}
 	}
 }
 

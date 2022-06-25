@@ -455,6 +455,7 @@
     {"id":{"name":"oiStressEater","path":"objects/oiStressEater/oiStressEater.yy",},"order":14,},
     {"id":{"name":"pickItem","path":"scripts/pickItem/pickItem.yy",},"order":0,},
     {"id":{"name":"oGummyWorm","path":"objects/oGummyWorm/oGummyWorm.yy",},"order":9,},
+    {"id":{"name":"sndTextPick","path":"sounds/sndTextPick/sndTextPick.yy",},"order":20,},
     {"id":{"name":"oGumballer","path":"objects/oGumballer/oGumballer.yy",},"order":4,},
     {"id":{"name":"oTerrainMaster","path":"objects/oTerrainMaster/oTerrainMaster.yy",},"order":0,},
     {"id":{"name":"oTransitionGen","path":"objects/oTransitionGen/oTransitionGen.yy",},"order":6,},

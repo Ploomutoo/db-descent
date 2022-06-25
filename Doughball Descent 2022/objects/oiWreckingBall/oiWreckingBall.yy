@@ -32,7 +32,7 @@
     {"propertyId":{"name":"description","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"More bump per belly!","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"price","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"300","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"image_index","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"10","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"shopkeeperQuote","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"Quite the heft you've got behind that gut. Pick up a Wrecking Ball though and things will really go flying","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"shopkeeperQuote","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"Quite the heft you've got behind that gut. Pick up a Wrecking Ball though and things will\\nreally go flying","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "items",

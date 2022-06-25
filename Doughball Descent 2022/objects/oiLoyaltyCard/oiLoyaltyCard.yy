@@ -30,7 +30,7 @@
     {"propertyId":{"name":"nameTag","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"Loyalty Card","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"description","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"Chance to get an item free!","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"price","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"300","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"shopkeeperQuote","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"You come here quite often, don't you?. A Loyalty Card would suit you nicely, every so\\noften I'll let you take something free of charge","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"shopkeeperQuote","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"You come here quite\\noften, don't you?. A Loyalty Card would suit you nicely, every so\\noften I'll let you take something free of charge","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "items",
