@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sEventCave",
-    "path": "sprites/sEventCave/sEventCave.yy",
+    "name": "sPlayerHurricane",
+    "path": "sprites/sPlayerHurricane/sPlayerHurricane.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,20 +21,18 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":73,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"oParentBashable","path":"objects/oParentBashable/oParentBashable.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "transition",
-    "path": "folders/transition.yy",
+    "name": "itemPeriphery",
+    "path": "folders/items/itemPeriphery.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oEvent",
+  "name": "oHurricane",
   "tags": [],
   "resourceType": "GMObject",
 }

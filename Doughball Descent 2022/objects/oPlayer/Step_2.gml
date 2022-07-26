@@ -42,3 +42,11 @@ if(keyboard_check_pressed(ord("Q"))) {
 	weight = i
 	oSidebarL.dWeight = i
 }
+
+if(keyboard_check_pressed(ord("L"))) {
+	var i = get_integer("Go To Level",1)
+	if (i = undefined || i>14) exit;
+	
+	level = i;
+	y = room_height;
+}

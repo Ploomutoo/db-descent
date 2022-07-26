@@ -32,7 +32,7 @@
     {"propertyId":{"name":"description","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"Fueled food radar","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"price","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"300","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"image_index","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"14","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"shopkeeperQuote","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"You all there buddy?.Maybe some Brain Food will\\nwipe that vacant stare away","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"shopkeeperQuote","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"You all there buddy?. Maybe some Brain Food will\\nwipe that vacant stare away","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "items",

@@ -16,6 +16,7 @@ switch(0) {
 	case 0: //Funny Cave
 	event = {
 		
+		sprite: sEv0,
 		eName : "Tight Cave",
 		txExposition : "A glimmer in the dark catches your eye. "
 		+"The cave passage is narrow\nbut maybe, just maybe?. "
@@ -31,7 +32,8 @@ switch(0) {
 		
 		txSuccess : "Miraculously your pliable body oozes\nthrough the passage with ease. The item within is yours!",
 		success : function(){
-			with(other) instance_create_depth(x+80,y,depth,oItemPedestal)
+			with(oPlayer) instance_create_depth(x+80,y,depth,oItemPedestal);
+			image_index = 1;
 		},
 		
 		txFailure : "Within moments you have firmly\nwedged yourself in the opening. You are left solely with\ntime to reflect and digest",
@@ -40,6 +42,7 @@ switch(0) {
 				
 				weight = max(weight-100,50)
 				popUp(x,y-48,"-100 LBS")
+				image_index = 1;
 			}
 		}
 		
@@ -47,6 +50,7 @@ switch(0) {
 	
 }
 
+sprite_index = event.sprite;
 drawChance = 100*event.eChance()
 if(drawChance>10) drawChance = floor(drawChance)
 show_debug_message(event.eName)

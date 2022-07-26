@@ -64,6 +64,10 @@ belly_limit = 4;
 	wreckingStacks = 0
 	buffetStacks = 0
 	buffetStacks = 0
+	
+	evVal = [-1,-1,-1];
+	// 0: Hi-Ya Hurricane
+	
 #endregion
 altarInstantiate()
 

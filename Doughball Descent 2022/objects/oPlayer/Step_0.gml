@@ -2,14 +2,17 @@
 if(dead) exit
 
 #region Movement
-if((cLeft)&& !(cRight)){
-	hFace = -1
-	hspeed = clamp(hspeed-1,-maxSpeed,2)
-} else if ((cRight) && !(cLeft)){
-	hFace = 1
-	hspeed = clamp(hspeed+1,-2,maxSpeed);
-} else {
-	hspeed = hspeed*0.8;
+if(mobile){
+	
+	if((cLeft)&& !(cRight)){
+		hFace = -1
+		hspeed = clamp(hspeed-1,-maxSpeed,2)
+	} else if ((cRight) && !(cLeft)){
+		hFace = 1
+		hspeed = clamp(hspeed+1,-2,maxSpeed);
+	} else {
+		hspeed = hspeed*0.8;
+	}
 }
 
 var desX = bbox_left+hspeed
@@ -35,18 +38,29 @@ if(hFace=1) desX = bbox_right
 if(bashActive>0) {
 	bashActive--
 	if(bashActive=0) image_index = 0
-} else if(cBash) {
+} else if(cBash && mobile) {
 	bashActive = 20
-	soundRand(sndBash)
 	image_index = 1
-	
 	dsVelx = 0.3; dsVely = -0.15
 	
-	var effect = instance_create_layer(desX+16*hFace,y-16,layer,oPaEffect)
-	effect.sprite_index = sPaBash
-	effect.image_index = 0
-	effect.image_xscale = hFace
-	effect.hspeed = hspeed
+	if(evVal[0]=1) { // Hurricane
+		soundRand(sndHurricane);
+		
+		sprite_index = -1;
+		bashActive = 0;
+		var hur = instance_create_depth(x,y,depth-1,oHurricane)
+		hur.passenger = self;
+		hur.hspeed = 0.8*(hFace+hspeed)
+		mobile = false;
+	} else {
+		soundRand(sndBash);
+		
+		var effect = instance_create_layer(desX+16*hFace,y-16,layer,oPaEffect)
+		effect.sprite_index = sPaBash
+		effect.image_index = 0
+		effect.image_xscale = hFace
+		effect.hspeed = hspeed
+	}
 	
 	if(wreckingStacks>0) {
 		effect = instance_create_layer(desX+10*hFace,y-16,layer,oWreckingProj)

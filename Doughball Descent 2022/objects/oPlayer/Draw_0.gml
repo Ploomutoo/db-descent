@@ -1,5 +1,5 @@
 //draw_text(x+32,y,string(x))
-if(dead) exit;
+if(dead || sprite_index = -1) exit;
 
 if(!surface_exists(drawSurf)) {
 	var dsWidth = 64

@@ -22,6 +22,7 @@ if(string_length(drawText)=string_length(storedText) && tmExpire!=-1) {
 		
 		//soundRand(sndTally)
 		event_perform(ev_keypress,vk_space)
+		with(oEvent) event_user(0)
 	}
 	tmExpire-- 	
 }
