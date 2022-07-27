@@ -103,3 +103,19 @@ function genEvCave(){
 	ix+=15
 	
 }
+
+function genEvRare(){
+	
+	tileMap = layer_tilemap_get_id("terrain")
+	tilemap_set_width(tileMap,room_width)
+	
+	var json_rooms = vaultdataShop()
+	
+	ix = 5
+	iy = 0
+	
+	var name = "vsEventRare"
+	room_pack_load_map(json_rooms[?name], ix*32, iy*32, room_pack_flag_instances);
+	ix+=15
+	
+}

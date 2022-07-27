@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "transition",
-    "path": "folders/transition.yy",
+    "name": "events",
+    "path": "folders/transition/events.yy",
   },
   "resourceVersion": "1.0",
-  "name": "eventStruct",
+  "name": "rareEvMirin",
   "tags": [],
   "resourceType": "GMScript",
 }

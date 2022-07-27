@@ -1,5 +1,6 @@
 drawWidth = 1;
 acPos = 0;
+acRate = 0.05;
 
 dwFrom = 0.5;
 dwTo = 1.5;

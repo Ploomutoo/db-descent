@@ -37,7 +37,7 @@ switch(teIndex) {
 	return(genEvCave)
 	break;
 	case 2: //Not Done
-	return(genEvCave)
+	return(genEvRare)
 	break;
 	case 3:
 	return(genEvCave)

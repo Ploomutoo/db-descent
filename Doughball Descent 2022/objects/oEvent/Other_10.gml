@@ -51,7 +51,9 @@ switch(state) {
 	case 4:
 	
 		cancelIfLinePresent
-		exitEvent();
+		oPlayer.mobile = true;
+		state = -1;
+		event.endFunc();
 	break;
 	
 }

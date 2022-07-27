@@ -51,6 +51,8 @@ if(bashActive>0) {
 		var hur = instance_create_depth(x,y,depth-1,oHurricane)
 		hur.passenger = self;
 		hur.hspeed = 0.8*(hFace+hspeed)
+		hur.storedCrush = crushes;
+		crushes = 0;
 		mobile = false;
 	} else {
 		soundRand(sndBash);
