@@ -1,4 +1,5 @@
 //globalvar forceFreeze; forceFreeze = 0;
+//control S to reset
 
 globalvar currentMusic; currentMusic = musLevel0;
 globalvar txtSpeed;

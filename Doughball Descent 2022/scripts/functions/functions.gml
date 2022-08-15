@@ -84,44 +84,66 @@ function tRound(argument0,argument1){
 	return(floor(argument0/argument1)*argument1)
 }
 
-function breakBlock(argument0,argument1) {
-	var tap = tilemap_get_at_pixel(tileMap,argument0,argument1)
+function breakBlock() { //--!--!--!--!--!--
+	
+	//Argument 0 and 1: X and Y of tile
+	//Argument 2: Accepts string:
+			//"bash"
+			//"breakInvuln"
+			//"noBashdown"
+	var tap = tilemap_get_at_pixel(tileMap,argument[0],argument[1])
+	
+	if(argument_count<2) exit;
+	if(argument_count>2) {
+		var isBash = argument[2];	
+	} else  isBash = false;
 	
 	switch(tap) {
 		case 0:
 		break;
+		
 		case 1:
 		case 6:
 			
-			tilemap_set_at_pixel(tileMap,0,argument0,argument1)
-			with(instance_position(tRound(argument0,32)+16,tRound(argument1,32)-16,oHazBush)) instance_destroy()
-			//createParticles(argument0,argument1,6,sPaRock)
+			if(crushes>0 || isBash) {
+				
+				tilemap_set_at_pixel(tileMap,0,argument[0],argument[1])
+				with(instance_position(tRound(argument[0],32)+16,tRound(argument[1],32)-16,oHazBush)) instance_destroy()
+				//createParticles(argument[0],argument[1],6,sPaRock)
 			
-			//soundRand(sndBreak)
-			audio_stop_sound(sndBreak)
-			var pSound = audio_play_sound(sndBreak,0,0)
-			audio_sound_pitch(pSound,max(1-0.1*(crushes-crushMax),0.5))
+				//soundRand(sndBreak)
+				audio_stop_sound(sndBreak)
+				var pSound = audio_play_sound(sndBreak,0,0)
+				if(!isBash) audio_sound_pitch(pSound,max(1-0.1*(crushes-crushMax),0.5))
+			}
 			
 		break;
 		case 2:
-			tilemap_set_at_pixel(tileMap,6,argument0,argument1)
-			createEffect(floor(argument0/32)*32,floor(argument1/32)*32,sBlockHighlight)
-			//createParticles(argument0,argument1,3,sPaRock)
-			if(y<argument1) crushes = 0
+			tilemap_set_at_pixel(tileMap,6,argument[0],argument[1])
+			createEffect(floor(argument[0]/32)*32,floor(argument[1]/32)*32,sBlockHighlight)
+			//createParticles(argument[0],argument[1],3,sPaRock)
+			if(y<argument[1]) crushes = 0
 			else bashActive = 10
 			
 			soundRand(sndTileDamage)
 		break;
 		case 3:
-			//createParticles(argument0,argument1,3,sPaRock)
+			//createParticles(argument[0],argument[1],3,sPaRock)
 			soundRand(sndTileInvulnerable)
-			if(y<argument1) {
+			if(y<argument[1]) {
 				crushes = 0
 				/*if(weight>500){
-					tilemap_set_at_pixel(tileMap,2,argument0,argument1)
-					createEffect(floor(argument0/32)*32,floor(argument1/32)*32,sBlockHighlight)	
+					tilemap_set_at_pixel(tileMap,2,argument[0],argument[1])
+					createEffect(floor(argument[0]/32)*32,floor(argument[1]/32)*32,sBlockHighlight)	
 				}*/
 			} else bashActive = 10
+		break;
+		case 4:
+			
+			with(instance_position(argument[0],argument[1],oParentTileObject)){
+
+				event_user(0);
+			}
 		break;
 	}
 	if(tap!=0) oCamera.screenShake+=2
@@ -145,12 +167,17 @@ function breakLine(vy,vx1,vx2){
 	//show_debug_message("Break "+string(c1)+" to "+string(c2)+". Width of "+string(i))
 	createParticles((vx1+vx2)/2,vy,6,sPaRock)
 	
+	var deInc = false
 	while(i>0){
 		
 		i--
-		breakBlock(vx1+32*(i),vy)
+		var brokeBlock = breakBlock(vx1+32*(i),vy)
+		if(brokeBlock  = 1 || brokeBlock = 6){
+			deInc = true;
+		}
 
 	}
+	if(deInc) crushes--
 }
 
 function tsCheckEmpty(argument0,argument1) {

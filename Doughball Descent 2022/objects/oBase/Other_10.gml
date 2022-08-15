@@ -1,19 +1,19 @@
-var popup = instance_create_depth(oPlayer.x,oPlayer.y-32,depth-4,oPopupText)
+/*var popup = instance_create_depth(oPlayer.x,oPlayer.y-32,depth-4,oPopupText)
 popup.drawString = nameTag
 
-x = 5
-y = 318
+show_debug_message(string(instance_number(object_index))+" instances")
+if(instance_number(object_index)>1) {
+	
+	with(object_index) if(id!=other.id) {
+	
+	show_debug_message("self "+string(self)+"\nother "+string(other))
+	
+	other.stacks++;
+	oPlayer.items--;
+	instance_destroy();
+	
+	}
+	exit;
+}*/
 
-var i = oPlayer.items
-while(i>=4){
-	y-=32	
-	i-=4
-}
-while(i>0){
-	x+=32
-	i--
-}
-
-oPlayer.items++
-persistent=true
-bought = true
+createEffect(x,y,sPaPoof);

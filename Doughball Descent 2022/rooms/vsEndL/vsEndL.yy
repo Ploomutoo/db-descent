@@ -64,8 +64,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "vaultRooms",
-    "path": "folders/Generation/vaults/vaultRooms.yy",
+    "name": "areaShop",
+    "path": "folders/Generation/vaults/vaultRooms/areaShop.yy",
   },
   "resourceVersion": "1.0",
   "name": "vsEndL",

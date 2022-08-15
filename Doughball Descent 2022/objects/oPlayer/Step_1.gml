@@ -54,14 +54,15 @@ grounded = !tsSpanEmpty(y+1,bbox_left+1,bbox_right-1)
 
 if (grounded) {
 	
-	if(crushes>0){
+	if(vspeed>0){
 		
 		breakLine(y+2,bbox_left,bbox_right-1)
 		
 		y=round(y/16)*16+1
-		vspeed = -1
-		crushes--
 		dsScalex = 1.5; dsScaley = 0.6
+		
+		if(crushes<1) vspeed = 0;
+		else vspeed = -1
 		
 		if(flopStacks>0) bellyFlopSplash(bbox_right-bbox_left+16,flopStacks)
 		
@@ -78,12 +79,13 @@ if (grounded) {
 	}
 } else {
 	
-	if(hTumStacks>0) {
+	
+	if(instance_exists(oiHeliumTum)) {
 		
 		if(cJump && !hTumActive && hTumDuration=-1) {
 			audio_play_sound(sndHTumIn,5,0)
 			vspeed = -1
-			hTumDuration = 30+(hTumStacks-1)*15 
+			hTumDuration = 30+(oiHeliumTum.stacks-1)*15 
 			dsVelx = 0.3; dsScaley = 1.2
 			hTumActive = true;
 		}

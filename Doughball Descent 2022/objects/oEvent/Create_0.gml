@@ -9,9 +9,20 @@ dy = 32
 dim = 0
 
 tilemap_tileset(tileMap,tsGeneric)
-pickEvent();
+
+if(isRare) pickEventRare();
+else pickEvent();
+
+if(!variable_instance_exists(event,"eInit")) show_debug_message("sus")
+else event.eInit();
 
 sprite_index = event.sprite;
-drawChance = 100*event.eChance()
+var cOut = event.eChance();
+drawText = ""
+
+drawChance = 100*cOut[0];
 if(drawChance>10) drawChance = floor(drawChance)
-show_debug_message(event.eName)
+
+if(array_length(cOut)>1) {
+	drawText = cOut[1]
+} else drawText = string(cOut[0])+"%";

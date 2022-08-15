@@ -1,7 +1,18 @@
-bought = false
-image_speed = 0
+bought = false;
+stacks = 0;
+image_speed = 0;
 
-if(instance_exists(oShopkeeper)){
+function mountItem(itemCount) {
 	
-	ds_list_add(oShopkeeper.linePool,shopkeeperQuote)
+	x = 5-280
+	y = 318
+
+	while(itemCount>=4){
+		y-=32	
+		itemCount-=4
+	}
+	while(itemCount>0){
+		x+=32
+		itemCount--
+	}
 }

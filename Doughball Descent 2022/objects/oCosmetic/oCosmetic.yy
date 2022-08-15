@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "sEvCave",
-    "path": "sprites/sEvCave/sEvCave.yy",
+    "name": "sCosCandle",
+    "path": "sprites/sCosCandle/sCosCandle.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oEvent",
-    "path": "objects/oEvent/oEvent.yy",
+    "name": "oParentBashable",
+    "path": "objects/oParentBashable/oParentBashable.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,16 +24,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "transition",
-    "path": "folders/transition.yy",
+    "name": "vaultAssets",
+    "path": "folders/Generation/vaults/vaultAssets.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oEventRare",
+  "name": "oCosmetic",
   "tags": [],
   "resourceType": "GMObject",
 }

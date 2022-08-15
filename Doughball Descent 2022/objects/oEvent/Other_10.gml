@@ -35,7 +35,7 @@ switch(state) {
 	
 		cancelIfLinePresent
 		oTextBox.voice = talkEvent
-		if(random(1)<=event.eChance()) {
+		if(random(1)<=drawChance/100) {
 			if(event.txSuccess != "") oTextBox.announce(0,event.txSuccess);
 			event.success();
 			audio_play_sound(sndEvent,10,0)

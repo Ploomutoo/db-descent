@@ -6,6 +6,6 @@ if(state = 2) {
 	}
 	
 	draw_set_halign(fa_center)
-	draw_text(dx,dy+32,string(drawChance)+"%")
+	draw_text(dx,dy+32,drawText)
 	draw_set_halign(fa_left)
 }

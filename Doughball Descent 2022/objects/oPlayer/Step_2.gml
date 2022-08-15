@@ -6,11 +6,19 @@ if(!cheat) {
 			cheat = true
 			oCamera.screenShake = 10
 			audio_play_sound(sndTally4,5,0)
+			
+			fpsStored = fps_real;
+			fpsNorm = 0;
+			fpsInc = 30;
 		}
 	}
 	exit;
 	
 }
+
+fpsNorm+=fps_real;
+fpsInc--;
+if(fpsInc<1) { fpsInc = 30; fpsStored = fpsNorm/fpsInc; fpsNorm = 0; }
 
 if(keyboard_check(vk_down)) {
 	

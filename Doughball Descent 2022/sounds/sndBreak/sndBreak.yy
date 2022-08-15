@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndBreak.wav",
-  "duration": 0.310329,
+  "duration": 0.305329,
   "parent": {
     "name": "sound",
     "path": "folders/sound.yy",

@@ -1,12 +1,11 @@
 cancelIfLinePresent
 
 if(playerOn && price>0) {
-	if(oPlayer.weight>=price && oPlayer.weight>50){
+	if((oPlayer.weight>=price && oPlayer.weight>50)||cheat){
 		coupon = 0
 		
 		with(oiLoyaltyCard) if(bought) {
-			var post = instance_place(oPlayer.x,oPlayer.y,oShopPost)
-			if(post!=noone) post.coupon++
+			other.coupon++
 		}
 		
 		
@@ -23,7 +22,7 @@ if(playerOn && price>0) {
 			}
 			
 			var roll = irandom(99)
-			show_debug_message("Rolled "+string(roll)+" against "+string(chance))
+			//show_debug_message("Rolled "+string(roll)+" against "+string(chance))
 			
 			if(roll<=chance) with(oPlayer) {
 				var popup = instance_create_layer(x,y-64,layer,oPopupText)

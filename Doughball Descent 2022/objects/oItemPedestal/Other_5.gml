@@ -1,4 +1,4 @@
-if(contained=noone) exit;
+if(item=noone) exit;
 
 //cSprite-=1
 

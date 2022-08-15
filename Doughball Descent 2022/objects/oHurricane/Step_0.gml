@@ -1,7 +1,7 @@
 var acEval = animcurve_channel_evaluate(aChan, acPos);
 acPos += acRate;
 
-image_xscale = lerp(dwFrom,dwTo,acEval);
+image_xscale = lerp(dwFrom,dwTo,acEval)*drawWidth;
 image_yscale = clamp(0.5+0.25/image_xscale,0,1.25)
 
 if(acPos>=1) {
@@ -40,26 +40,21 @@ if(acPos>=1) {
 			
 			checkPos+=hspeed
 			var checkObj = collision_rectangle(checkPos,y-4,x,y-24,oParentBashable,0,false);
-			markPoint(checkPos,y-4); markPoint(checkPos,y-24);
-			with(checkObj) event_user(0);
-			
-		} 
-		else if (checkTile=4) {
-			
-			var checkObj = collision_rectangle(checkPos,y-4,x,y-24,oParentBashable,0,false);
-			if(checkObj != noone && checkObj.object_index = oHazGravel) {
+			//markPoint(checkPos,y-4); markPoint(checkPos,y-24);
+			with(checkObj) {
 				
-				show_debug_message("fucking gravel")
-				if(abs(checkObj.y-yDesired-16)<16) { 
-					with(checkObj) event_user(0);
-					show_debug_message("gravel y: "+string(checkObj.y)+"\nself y: "+string(yDesired-32))
-				}
-
+				if(object_get_parent(object_index)!=oParentTileObject) event_user(0);
 			}
+			
 		} 
 		else {
 		
-			with(oPlayer) breakBlock(checkPos,other.y-16);
+			with(oPlayer) {
+				
+				crushes = 1;
+				breakBlock(checkPos,y-16);
+				crushes = 0;
+			}
 			hspeed = -hspeed;
 		}
 	}

@@ -98,8 +98,9 @@ function genEvCave(){
 	ix = 5
 	iy = 0
 	
-	var name = "vsEventCave"
+	var name = choose("vsEventCave","vsEventCave2");
 	room_pack_load_map(json_rooms[?name], ix*32, iy*32, room_pack_flag_instances);
+	ds_map_destroy(json_rooms);
 	ix+=15
 	
 }
@@ -114,7 +115,7 @@ function genEvRare(){
 	ix = 5
 	iy = 0
 	
-	var name = "vsEventRare"
+	var name = choose("vsEventRare","vsEventRare2");
 	room_pack_load_map(json_rooms[?name], ix*32, iy*32, room_pack_flag_instances);
 	ix+=15
 	

@@ -1,5 +1,5 @@
 var ix = bgTilesX
-var iy = bgTilesY + 1
+var iy = bgTilesY
 
 var modx = x/2 mod bgX
 var mody = y/2 mod bgY

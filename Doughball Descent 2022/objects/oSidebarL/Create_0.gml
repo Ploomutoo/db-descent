@@ -11,3 +11,4 @@ imprinted = noone
 levelText = "Grains - 1"
 
 colorA = c_red
+depth = 100

@@ -1,6 +1,11 @@
-if(true){
+if(cheat){
 	
 	draw_set_halign(fa_right)
+	
+	draw_text_outlined(495,335,"FPS: "+string(floor(fpsStored)))
+	//draw_text_outlined(495,320,"xScale: "+string(image_xscale))
+	//draw_text_outlined(495,305,"Sprite: "+string(spritePart))
+	
 	//draw_text_outlined(495,335,"Girth: "+string(girth))
 	//draw_text_outlined(495,320,"xScale: "+string(image_xscale))
 	//draw_text_outlined(495,305,"Sprite: "+string(spritePart))

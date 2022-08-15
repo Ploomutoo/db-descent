@@ -1,12 +1,14 @@
 depth+=4
-if(item=noone) item = pickItem()
-contained = instance_create_depth(x,y,depth,item)
 
-cSprite = contained.image_index
-cDesc = contained.description
+if(item=noone) item = pickItem();
+item = instance_create_layer(x,y,layer,item)
 
-oPause.deactListAdd(contained)
-//add it to a list on the pause menu idk
+description = item.description
+itemSprite = item.image_index;
+
+var itemInd = item.object_index;
+instance_destroy(item);
+item = itemInd;
 
 sinCount = 0
 playerOn = false

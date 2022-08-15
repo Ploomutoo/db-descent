@@ -49,9 +49,9 @@ if(bashActive>0) {
 		sprite_index = -1;
 		bashActive = 0;
 		var hur = instance_create_depth(x,y,depth-1,oHurricane)
-		hur.passenger = self;
-		hur.hspeed = 0.8*(hFace+hspeed)
-		hur.storedCrush = crushes;
+		hur.passenger = self; hur.hspeed = 0.8*(hFace+hspeed);
+		hur.storedCrush = crushes; hur.drawWidth = image_xscale/1.6;
+		show_debug_message("xscale "+string(image_xscale))
 		crushes = 0;
 		mobile = false;
 	} else {
@@ -73,7 +73,8 @@ if(bashActive>0) {
 
 if(bashActive>15){
 	
-	if (breakBlock(desX+24*hFace,y-16)!=0) createParticles(desX+24*hFace,y-16,6,sPaRock)
+	if (breakBlock(desX+24*hFace,y-16,1)!=0) createParticles(desX+24*hFace,y-16,6,sPaRock)
+
 	
 	//var victim = instance_position(desX+16*hFace,y-16,oParentBashable)
 	var victim = collision_rectangle(x,y-8,desX+24*hFace,y-32,oParentBashable,0,1);

@@ -1,7 +1,7 @@
 event_inherited()
 
 //altarType = irandom(4)
-altarType = altarPick()
+if(altarType=-1) altarType = altarPick();
 event_user(1)
 
 altarText = getAltarName(altarType)

@@ -18,7 +18,7 @@ y += (lookY-y)/6
 
 if(bgShift = 1) {
 	bgyOffset -= 0.5
-	if (abs(bgyOffset)>bgY) bgyOffset+=bgY
+	if (abs(bgyOffset)>bgY/2) bgyOffset+=bgY
 }
 
 var finX = round(x)

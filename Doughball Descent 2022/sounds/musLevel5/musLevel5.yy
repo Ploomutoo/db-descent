@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 2,
-  "volume": 0.6,
+  "volume": 0.7,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -12,7 +12,7 @@
     "path": "audiogroups/agMusic",
   },
   "soundFile": "musLevel5.wav",
-  "duration": 61.43295,
+  "duration": 82.29429,
   "parent": {
     "name": "sound",
     "path": "folders/sound.yy",

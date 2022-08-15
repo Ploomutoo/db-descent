@@ -1,6 +1,12 @@
+#macro evMinChance 0.1
+
 function pickEvent(){
 	script_execute(choose(
-	eventTightCave
+	//eventTightCave,
+	//eventCrackedRock,
+	//eventThornbush,
+	//eventRest,
+	eventTemple
 	));
 }
 

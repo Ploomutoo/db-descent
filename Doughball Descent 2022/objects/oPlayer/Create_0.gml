@@ -1,6 +1,7 @@
 oSidebarL.imprinted = self;
 globalvar cheat;
 cheat = false;
+fpsNorm = 0;
 
 maxSpeed = 3
 weight = 100
@@ -54,9 +55,8 @@ belly_limit = 4;
 
 #region ItemStacks
 	pKneesBonus = 0
-	hTumStacks = 0
-	hTumActive = 0
-	hTumDuration = 0
+	
+	hTumActive = 0;	hTumDuration = 0
 	
 	flopStacks = 0
 	pizzaStacks = 0
@@ -65,7 +65,7 @@ belly_limit = 4;
 	buffetStacks = 0
 	buffetStacks = 0
 	
-	evVal = [1,-1,-1];
+	evVal = [-1,-1,-1];
 	// 0: Hi-Ya Hurricane
 	
 #endregion
@@ -91,7 +91,7 @@ altarInstantiate()
 #region Transition Event Weighting
 
 // Shop, Event, Rare Event, Temple
-teWeight = [12,10,4,2];
+teWeight = [6,8,4,0];
 
 #endregion
 show_debug_message("\nConsole Start")

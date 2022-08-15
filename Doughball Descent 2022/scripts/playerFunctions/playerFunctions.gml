@@ -45,6 +45,7 @@ function progReadAndDone(check){
 
 
 function takeDamage(){
+	//if argument, apply nonlethal
 	
 	if(iframes>0 || cheat) exit
 	
@@ -82,20 +83,22 @@ function takeDamage(){
 	iframes = 60	
 	
 	if(hearts<=0){
-		dead = true;
-		speed = 0
-		createParticles(x,y-16,12,sPaMeat)
-		instance_create_layer(0,0,layer,oPopupDeath)
-		alarm[0] = room_speed*3
-		var corpse = instance_create_layer(x,y,layer,oEnemyCorpse)
-		corpse.direction = direction
-		corpse.speed = 4
-		corpse.vspeed-=3
-		corpse.sprite_index = sPlayerCorpse
-		//corpse.color = global.playerCol
-		corpse.image_index = spritePart+1
-		corpse.image_xscale = girth*hFace
-		corpse.gravity = 0.3	
+		if(argument_count>0 && argument[0]=1) {
+			
+			hearts = 1;
+		} else {
+			
+			dead = true;
+			speed = 0
+			createParticles(x,y-16,12,sPaMeat)
+			instance_create_layer(0,0,layer,oPopupDeath)
+			alarm[0] = room_speed*3
+		
+			var corpse = instance_create_layer(x,y,layer,oEnemyCorpse);
+			corpse.direction = direction; corpse.speed = 4; corpse.vspeed-=3;
+			corpse.sprite_index = sPlayerCorpse; corpse.image_index = spritePart+1
+			corpse.image_xscale = girth*hFace; corpse.gravity = 0.3;
+		}
 	}
 	
 	speed = clamp(speed,-maxSpeed,maxSpeed)

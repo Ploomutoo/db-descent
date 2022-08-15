@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndKevlard.wav",
-  "duration": 0.663345,
+  "duration": 0.658345,
   "parent": {
     "name": "sound",
     "path": "folders/sound.yy",

@@ -73,8 +73,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Generation",
-    "path": "folders/Generation.yy",
+    "name": "transition",
+    "path": "folders/transition.yy",
   },
   "resourceVersion": "1.0",
   "name": "rTransitionOld",

@@ -1,5 +1,5 @@
 if(room=rEvent){
-	show_debug_message("Room Height "+string(room_height))
+	//show_debug_message("Room Height "+string(room_height))
 	script_execute(teScript(option))
 	
 	instance_destroy();
