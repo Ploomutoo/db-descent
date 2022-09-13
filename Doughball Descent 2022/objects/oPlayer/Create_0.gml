@@ -54,19 +54,10 @@ belly_limit = 4;
 #endregion
 
 #region ItemStacks
-	pKneesBonus = 0
-	
+
 	hTumActive = 0;	hTumDuration = 0
-	
-	flopStacks = 0
-	pizzaStacks = 0
-	reboundStacks = 0
-	wreckingStacks = 0
-	buffetStacks = 0
-	buffetStacks = 0
-	
-	evVal = [-1,-1,-1];
-	// 0: Hi-Ya Hurricane
+	evKatsuma = false;
+	//evBlompo = 0;
 	
 #endregion
 altarInstantiate()

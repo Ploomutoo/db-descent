@@ -11,7 +11,7 @@ switch(state) {
 		
 		oPlayer.mobile = false;
 		
-		oTextBox.voice = talkEvent
+		oTextBox.voice = voice
 		oTextBox.announce(0,event.txExposition)
 		state++
 	break;
@@ -22,7 +22,7 @@ switch(state) {
 	break;
 	case 2:
 	
-		oTextBox.voice = talkEvent
+		oTextBox.voice = voice
 		if(choice) {
 		oTextBox.announce(0,event.txAttempt);
 		state++;
@@ -34,7 +34,7 @@ switch(state) {
 	case 3:
 	
 		cancelIfLinePresent
-		oTextBox.voice = talkEvent
+		oTextBox.voice = voice
 		if(random(1)<=drawChance/100) {
 			if(event.txSuccess != "") oTextBox.announce(0,event.txSuccess);
 			event.success();
@@ -43,7 +43,7 @@ switch(state) {
 		} else {
 			if(event.txFailure != "") oTextBox.announce(0,event.txFailure);
 			event.failure();
-			audio_play_sound(sndEventBad,10,0)
+			//audio_play_sound(sndEventBad,10,0)
 		}
 		state++
 	break;

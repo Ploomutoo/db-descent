@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "transition",
-    "path": "folders/transition.yy",
+    "name": "sprites",
+    "path": "folders/transition/sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTransitionGlow",

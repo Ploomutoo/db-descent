@@ -19,8 +19,12 @@ function altarPick() {
 }
 
 function setShopWidth(){ //Perform upon leaving a level
-	room_set_width(rEvent,2000+(oPlayer.buffetStacks*96));
-	show_debug_message("this script is actually called by "+object_get_name(object_index))
+	
+	var buffetStacks = 0;
+	with(oiBuffet) buffetStacks = stacks;
+	
+	room_set_width(rEvent,2000+(buffetStacks*96));
+	//show_debug_message("this script is actually called by "+object_get_name(object_index))
 }
 
 function genShop(){ //Perform in shop room
@@ -32,7 +36,10 @@ function genShop(){ //Perform in shop room
 
 	ix = 5
 	iy = 3
-
+	
+	var buffetStacks = 0;
+	with(oiBuffet) buffetStacks = stacks;
+	
 	#region Section Gen
 		
 		//End L
@@ -59,7 +66,7 @@ function genShop(){ //Perform in shop room
 		
 		// Item Shop
 		name = "vsShopItem"
-		repeat(oPlayer.buffetStacks+irandom_range(2,4)) {
+		repeat(buffetStacks+irandom_range(2,4)) {
 			room_pack_load_map(json_rooms[?name], ix*32, iy*32, room_pack_flag_instances);
 			ix+=3
 		}

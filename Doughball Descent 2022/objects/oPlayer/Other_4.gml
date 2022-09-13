@@ -3,8 +3,6 @@ else crushes = 0
 
 if(!instance_exists(oTextBox)) instance_create_layer(0,0,layer,oTextBox)
 
-//oTextBox.announce("aaaaaa","bbbbbb\nbbbb","cccccccc")
-
 if(room = rGame){
 	
 	#region Spawn Platform

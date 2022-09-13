@@ -6,7 +6,7 @@ event = {
 	
 	sprite: sEvCave,
 	eName : "Temple Entrance",
-	eInit : function() { soundRand(sndAltarUse) },
+	//eInit : function() { soundRand(sndAltarUse) },
 	txExposition : "You come upon the ornate gate of an abandoned temple. "
 	+"You are free to enter at your leisure",
 	txAttempt : "The ancient gate creaks open",
@@ -31,8 +31,11 @@ event = {
 		ds_map_destroy(json_rooms);
 		
 		instance_create_depth(0,0,0,oFlash);
-		bgSprite = sBgClouds;
-		with(oCamera) event_user(0);
+		//show_debug_message("camera count "+string(instance_number(oCamera)))
+		with(oCamera) {
+			bgSprite = sBgClouds;
+			event_user(0);
+		}
 		
 		with(oEvent) visible = false;
 	},

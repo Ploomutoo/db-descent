@@ -12,6 +12,6 @@ function pickEvent(){
 
 function pickEventRare(){
 	script_execute(choose(
-	rareEvMirin
+	rareEvBlompo
 	));
 }

@@ -25,15 +25,13 @@ with(oFood) {
 	}
 }
 
-var pizzaScale = instance_number(oiPizzaScale)
-
-if(pizzaScale>0){
+with(oiPizzaScale) {
 	
 	var i = instance_number(oFood)-1;
 	//show_debug_message(string(i)+" food")
 	while(i>=0) {
 		
-		if(i%10 < pizzaScale) with(instance_find(oFood,i)){
+		if(i%10 < stacks) with(instance_find(oFood,i)){
 			//show_debug_message("pizzafied")
 			sprite_index = sFoodPizza
 			calories = 12

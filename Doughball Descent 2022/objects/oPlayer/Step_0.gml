@@ -43,7 +43,7 @@ if(bashActive>0) {
 	image_index = 1
 	dsVelx = 0.3; dsVely = -0.15
 	
-	if(evVal[0]=1) { // Hurricane
+	if(evKatsuma=1) { // Hurricane
 		soundRand(sndHurricane);
 		
 		sprite_index = -1;
@@ -64,18 +64,22 @@ if(bashActive>0) {
 		effect.hspeed = hspeed
 	}
 	
-	if(wreckingStacks>0) {
+	if(instance_exists(oiWreckingBall)) {
 		effect = instance_create_layer(desX+10*hFace,y-16,layer,oWreckingProj)
 		effect.image_xscale = hFace
-		effect.hspeed = hspeed+hFace*(2+wreckingStacks)
+		effect.hspeed = hspeed+hFace*(2+oiWreckingBall.stacks)
 	}
 }
 
 if(bashActive>15){
 	
-	if (breakBlock(desX+24*hFace,y-16,1)!=0) createParticles(desX+24*hFace,y-16,6,sPaRock)
+	var brokeBlock = breakBlock(desX+24*hFace,y-16,1)
+	if (brokeBlock!=0) {
+		
+		bashActive = 10;
+		createParticles(desX+24*hFace,y-16,6,sPaRock)
+	}
 
-	
 	//var victim = instance_position(desX+16*hFace,y-16,oParentBashable)
 	var victim = collision_rectangle(x,y-8,desX+24*hFace,y-32,oParentBashable,0,1);
 	with(victim) event_user(0)

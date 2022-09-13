@@ -1,6 +1,7 @@
 bought = false;
 stacks = 0;
 image_speed = 0;
+flash = 0;
 
 function mountItem(itemCount) {
 	

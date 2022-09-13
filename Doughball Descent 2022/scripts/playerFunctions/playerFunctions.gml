@@ -139,25 +139,21 @@ function calBonus(calIn){
 	
 	if(calIn=0) return(0)
 	
-	var goldGut = instance_number(oiGoldenGut)
-	calIn+=goldGut*calIn/5
+	// Golden Gut
+	if(instance_exists(oiGoldenGut)) calIn+=oiGoldenGut.stacks*calIn/5
+		
 
-	var stressEater = instance_number(oiStressEater)
+	var stressEater = 0;
+	if(instance_exists(oiStressEater)) stressEater = oiStressEater.stacks;
 	var heartLeft = hearts/heartMax
 	while(stressEater>0){
 		calIn += round(0.5*calIn*(1-heartLeft))
 		stressEater--	
 	}
 	
-	if(reboundStacks>0){
-		var threshold = 100 + reboundStacks*100
-		
-		show_debug_message("Multiplier: "+string((weight-50)/(threshold-50)))
-		var multiplier = clamp(lerp(1.5,1, (weight-50)/(threshold-50)),1,1.5);
-		
-		show_debug_message("Multiplier: "+string(multiplier))
-		calIn =  calIn * multiplier
-	}
+	// Rebound Gains
+	if(instance_exists(oiReboundGains))	calIn = oiReboundGains.foodGet(calIn);
+	
 	
 	if(instance_exists(oComboMeter)){
 		calIn = calIn * (1 + oComboMeter.combo/10)

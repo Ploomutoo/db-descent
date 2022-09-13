@@ -73,8 +73,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "events",
-    "path": "folders/transition/events.yy",
+    "name": "sprites",
+    "path": "folders/transition/sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "srEvMirin",

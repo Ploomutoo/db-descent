@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "shopAssets",
-    "path": "folders/transition/shopAssets.yy",
+    "name": "sprites",
+    "path": "folders/transition/sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sShopDent",

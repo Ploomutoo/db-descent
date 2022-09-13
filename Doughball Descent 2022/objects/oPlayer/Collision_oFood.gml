@@ -14,7 +14,7 @@ if(instance_exists(oTally)){
 	oTally.calGot+=calGet
 }
 
-if(instance_exists(oiComfortFood)) iframes = max(iframes,30 + 30*instance_number(oiComfortFood))
+if(instance_exists(oiComfortFood)) iframes = max(iframes,30 + 30*oiComfortFood.stacks)
 
 with(oComboMeter) event_user(0)
 with(oBrainFood) {

@@ -64,7 +64,7 @@ if (grounded) {
 		if(crushes<1) vspeed = 0;
 		else vspeed = -1
 		
-		if(flopStacks>0) bellyFlopSplash(bbox_right-bbox_left+16,flopStacks)
+		if(instance_exists(oiBellyFlop)) bellyFlopSplash(bbox_right-bbox_left+16,oiBellyFlop.stacks)
 		
 	} else {
 		
@@ -142,7 +142,8 @@ if(jumpedTimer>0 || autoJump){
 	if(grounded) {
 		if(breakOnJump) breakLine(y+2,bbox_left,bbox_right)
 		
-		vspeed = -(4+pKneesBonus)
+		vspeed -= 4;
+		with(oiPowerKnees) other.vspeed -= stacks/2;
 		jumpedTimer = 0
 		crushes = crushMax	
 		

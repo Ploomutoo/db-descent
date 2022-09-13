@@ -8,6 +8,22 @@ function markPoint(ix,iy){
 	instance_create_depth(ix,iy,depth,oPaEffect)
 }
 
+function addItem(item) {
+	
+	var tStacks = instance_number(item);
+	if(tStacks>0) with(item) { stacks++; event_user(0); }
+	else with(instance_create_depth(0,0,0,item)) {
+		
+		mountItem(oPlayer.items);
+		oPlayer.items++;
+		stacks = 1;
+		persistent=true;
+		bought = true;
+		event_user(0);
+		
+	}
+}
+
 function instance_expunge(){
 	if(argument_count>0){
 		with(argument[0]){
@@ -84,6 +100,13 @@ function tRound(argument0,argument1){
 	return(floor(argument0/argument1)*argument1)
 }
 
+enum blockReturn {
+	
+	nothing,
+	deIncrement,
+	setZero
+}
+
 function breakBlock() { //--!--!--!--!--!--
 	
 	//Argument 0 and 1: X and Y of tile
@@ -91,19 +114,19 @@ function breakBlock() { //--!--!--!--!--!--
 			//"bash"
 			//"breakInvuln"
 			//"noBashdown"
-	var tap = tilemap_get_at_pixel(tileMap,argument[0],argument[1])
+	var rVal = blockReturn.nothing; //returned value
 	
 	if(argument_count<2) exit;
 	if(argument_count>2) {
 		var isBash = argument[2];	
 	} else  isBash = false;
 	
-	switch(tap) {
-		case 0:
+	switch(tilemap_get_at_pixel(tileMap,argument[0],argument[1])) {
+		case 0: //Empty
 		break;
 		
-		case 1:
-		case 6:
+		case 1: //Regular Tile
+		case 6: //Damaged Durable Tile
 			
 			if(crushes>0 || isBash) {
 				
@@ -115,30 +138,31 @@ function breakBlock() { //--!--!--!--!--!--
 				audio_stop_sound(sndBreak)
 				var pSound = audio_play_sound(sndBreak,0,0)
 				if(!isBash) audio_sound_pitch(pSound,max(1-0.1*(crushes-crushMax),0.5))
+				return(blockReturn.deIncrement)
 			}
 			
 		break;
-		case 2:
-			tilemap_set_at_pixel(tileMap,6,argument[0],argument[1])
-			createEffect(floor(argument[0]/32)*32,floor(argument[1]/32)*32,sBlockHighlight)
-			//createParticles(argument[0],argument[1],3,sPaRock)
-			if(y<argument[1]) crushes = 0
-			else bashActive = 10
+		case 2: //Durable Tile
+		
+			if(crushes>0 || isBash) {
 			
-			soundRand(sndTileDamage)
+				tilemap_set_at_pixel(tileMap,6,argument[0],argument[1])
+				createEffect(floor(argument[0]/32)*32,floor(argument[1]/32)*32,sBlockHighlight)
+
+				//if(y<argument[1]) crushes = 0
+				//else bashActive = 10
+			
+				soundRand(sndTileDamage)
+				return(blockReturn.setZero)
+			}
 		break;
-		case 3:
-			//createParticles(argument[0],argument[1],3,sPaRock)
+		case 3: //Invulnerable Tile
 			soundRand(sndTileInvulnerable)
-			if(y<argument[1]) {
-				crushes = 0
-				/*if(weight>500){
-					tilemap_set_at_pixel(tileMap,2,argument[0],argument[1])
-					createEffect(floor(argument[0]/32)*32,floor(argument[1]/32)*32,sBlockHighlight)	
-				}*/
-			} else bashActive = 10
+			if(!isBash)	return(blockReturn.setZero);
+			else bashActive = 10;
+			
 		break;
-		case 4:
+		case 4: //Function Tile
 			
 			with(instance_position(argument[0],argument[1],oParentTileObject)){
 
@@ -146,8 +170,8 @@ function breakBlock() { //--!--!--!--!--!--
 			}
 		break;
 	}
-	if(tap!=0) oCamera.screenShake+=2
-	return(tap)
+	
+	return(blockReturn.nothing);
 }
 
 function breakLine(vy,vx1,vx2){
@@ -167,17 +191,27 @@ function breakLine(vy,vx1,vx2){
 	//show_debug_message("Break "+string(c1)+" to "+string(c2)+". Width of "+string(i))
 	createParticles((vx1+vx2)/2,vy,6,sPaRock)
 	
-	var deInc = false
+	var rVal = 0
+	// 0 is no deincrement
+	// 1 is deincrement by 1
+	// 2 is set to 0
 	while(i>0){
 		
 		i--
 		var brokeBlock = breakBlock(vx1+32*(i),vy)
-		if(brokeBlock  = 1 || brokeBlock = 6){
-			deInc = true;
-		}
+		if(brokeBlock > rVal) rVal = brokeBlock;
 
 	}
-	if(deInc) crushes--
+	switch(rVal) {
+		case blockReturn.nothing:
+		break;
+		case blockReturn.deIncrement:
+		crushes--;
+		break;
+		case blockReturn.setZero:
+		crushes = 0;
+		break;
+	}
 }
 
 function tsCheckEmpty(argument0,argument1) {

@@ -1,16 +1,17 @@
 /// @description fcheats
 if(!cheat) {
 	
-	if(keyboard_check_pressed(ord("Q"))){
-		if(environment_get_variable("USERNAME")="ploom") {
-			cheat = true
-			oCamera.screenShake = 10
-			audio_play_sound(sndTally4,5,0)
+	if(keyboard_check_pressed(ord("5"))){
+		
+		cheat = true
+		oCamera.screenShake = 10
+		audio_play_sound(sndTally4,5,0)
+		
+		popUp(x,y-48,"Cheats Enabled")
 			
-			fpsStored = fps_real;
-			fpsNorm = 0;
-			fpsInc = 30;
-		}
+		fpsStored = fps_real;
+		fpsNorm = 0;
+		fpsInc = 30;
 	}
 	exit;
 	
@@ -21,9 +22,6 @@ fpsInc--;
 if(fpsInc<1) { fpsInc = 30; fpsStored = fpsNorm/fpsInc; fpsNorm = 0; }
 
 if(keyboard_check(vk_down)) {
-	
-	if(keyboard_check(vk_shift) && keyboard_check_pressed(vk_down)) y = room_height;
-	
 	y+=16
 	vspeed = 0
 } 
@@ -31,15 +29,9 @@ if(keyboard_check(vk_down)) {
 if(keyboard_check(vk_up)) {
 	y-=16
 	vspeed = 0
-	//iframes = 3
 }
 
-/*if(keyboard_check(ord("Q"))) {
-	if(keyboard_check(vk_shift) && keyboard_check_pressed(ord("Q"))) weight = floor(weight/100+1)*100
-	else weight+=3
-}*/
-
-if(keyboard_check_pressed(ord("Q"))) {
+if(keyboard_check_pressed(ord("1"))) {
 	var i = get_integer("Set weight",100)
 	if (i = undefined) exit;
 	
@@ -51,10 +43,28 @@ if(keyboard_check_pressed(ord("Q"))) {
 	oSidebarL.dWeight = i
 }
 
-if(keyboard_check_pressed(ord("L"))) {
+if(keyboard_check_pressed(ord("2"))) {
+	var i = get_string("Give item","oiHeartbeet")
+	if(string_copy(i,1,2)!="oi") exit;
+	
+	i = asset_get_index(i);
+	if(object_exists(i)) addItem(i)
+	
+}
+if(keyboard_check_pressed(ord("3"))) {
+	if(y<room_height) y = room_height;
+}
+
+if(keyboard_check_pressed(ord("4"))) {
 	var i = get_integer("Go To Level",1)
 	if (i = undefined || i>14) exit;
 	
 	level = i;
 	y = room_height;
+}
+
+if(keyboard_check_pressed(ord("5"))) {
+	
+	popUp(x,y-48,"Cheats Disabled")
+	cheat = false;
 }

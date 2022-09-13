@@ -13,8 +13,10 @@ tilemap_tileset(tileMap,tsGeneric)
 if(isRare) pickEventRare();
 else pickEvent();
 
-if(!variable_instance_exists(event,"eInit")) show_debug_message("sus")
-else event.eInit();
+if(variable_instance_exists(event,"eInit")) event.eInit();
+
+voice = talkEvent;
+if(variable_instance_exists(event,"eVoice")) voice = event.eVoice;
 
 sprite_index = event.sprite;
 var cOut = event.eChance();
