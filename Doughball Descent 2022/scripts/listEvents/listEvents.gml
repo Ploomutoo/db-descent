@@ -6,7 +6,7 @@ function pickEvent(){
 	//eventCrackedRock,
 	//eventThornbush,
 	//eventRest,
-	eventTemple
+	rareEvBlompo
 	));
 }
 

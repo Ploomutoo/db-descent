@@ -1,7 +1,17 @@
 /// @description fcheats
+enum eCheat {
+	empty,
+	toggle,
+	setWeight,
+	finishLevel,
+	gotoStage,
+	giveItem,
+	giveMinion	
+}
+
 if(!cheat) {
 	
-	if(keyboard_check_pressed(ord("5"))){
+	if(keyboard_check_pressed(ord(string(eCheat.toggle)))){
 		
 		cheat = true
 		oCamera.screenShake = 10
@@ -31,7 +41,7 @@ if(keyboard_check(vk_up)) {
 	vspeed = 0
 }
 
-if(keyboard_check_pressed(ord("1"))) {
+if(keyboard_check_pressed(ord(string(eCheat.setWeight)))) {
 	var i = get_integer("Set weight",100)
 	if (i = undefined) exit;
 	
@@ -43,7 +53,7 @@ if(keyboard_check_pressed(ord("1"))) {
 	oSidebarL.dWeight = i
 }
 
-if(keyboard_check_pressed(ord("2"))) {
+if(keyboard_check_pressed(ord(string(eCheat.giveItem)))) {
 	var i = get_string("Give item","oiHeartbeet")
 	if(string_copy(i,1,2)!="oi") exit;
 	
@@ -51,11 +61,11 @@ if(keyboard_check_pressed(ord("2"))) {
 	if(object_exists(i)) addItem(i)
 	
 }
-if(keyboard_check_pressed(ord("3"))) {
+if(keyboard_check_pressed(ord(string(eCheat.finishLevel)))) {
 	if(y<room_height) y = room_height;
 }
 
-if(keyboard_check_pressed(ord("4"))) {
+if(keyboard_check_pressed(ord(string(eCheat.gotoStage)))) {
 	var i = get_integer("Go To Level",1)
 	if (i = undefined || i>14) exit;
 	
@@ -63,8 +73,12 @@ if(keyboard_check_pressed(ord("4"))) {
 	y = room_height;
 }
 
-if(keyboard_check_pressed(ord("5"))) {
+if(keyboard_check_pressed(ord(string(eCheat.toggle)))) {
 	
 	popUp(x,y-48,"Cheats Disabled")
 	cheat = false;
+}
+
+if(keyboard_check_pressed(ord(string(eCheat.giveMinion)))) {
+	minionAdd(x,y);
 }
