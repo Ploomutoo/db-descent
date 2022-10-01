@@ -133,7 +133,6 @@
     {"id":{"name":"tsLevel0","path":"tilesets/tsLevel0/tsLevel0.yy",},"order":6,},
     {"id":{"name":"GMLive_builder","path":"scripts/GMLive_builder/GMLive_builder.yy",},"order":0,},
     {"id":{"name":"sTilesGeneric","path":"sprites/sTilesGeneric/sTilesGeneric.yy",},"order":11,},
-    {"id":{"name":"vaults","path":"scripts/vaults/vaults.yy",},"order":0,},
     {"id":{"name":"sMenuCscheme","path":"sprites/sMenuCscheme/sMenuCscheme.yy",},"order":1,},
     {"id":{"name":"sTiles1","path":"sprites/sTiles1/sTiles1.yy",},"order":1,},
     {"id":{"name":"oBushman","path":"objects/oBushman/oBushman.yy",},"order":1,},

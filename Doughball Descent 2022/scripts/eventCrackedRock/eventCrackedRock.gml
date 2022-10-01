@@ -11,7 +11,7 @@ event = {
 		
 	eChance : function(){
 		var i = 1-100/(oPlayer.weight+50)
-		i = clamp(i,evMinChance,1)
+		i = [clamp(i,evMinChance,1)]
 		return(i);
 	},
 		

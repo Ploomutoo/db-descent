@@ -20,6 +20,7 @@ if(variable_instance_exists(event,"eVoice")) voice = event.eVoice;
 
 sprite_index = event.sprite;
 var cOut = event.eChance();
+//var cOut = 0.5
 drawText = ""
 
 drawChance = 100*cOut[0];

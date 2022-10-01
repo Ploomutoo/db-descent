@@ -1,2 +1,2 @@
-C:/Users/ploom/OneDrive/Desktop/Doughball Descent/rooms/rv*
-C:/Users/ploom/OneDrive/Desktop/Doughball Descent/scripts/vaultIn/vaultIn.gml
+C:/Users/ploom/OneDrive/Desktop/git/db-descent/Doughball Descent 2022/rooms/vs*
+C:/Users/ploom/OneDrive/Desktop/git/db-descent/Doughball Descent 2022/scripts/vaultdataShop/vaultdataShop.gml
