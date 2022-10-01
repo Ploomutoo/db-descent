@@ -4,7 +4,6 @@ loop = 0
 
 calibrateGameHeight
 
-globalvar solidGen; solidGen = false;
 dWeight = 100
 imprinted = noone
 

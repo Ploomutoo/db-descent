@@ -7,6 +7,27 @@ while (i>0){
 	i--
 }
 
+area = 0
+hGen = 0
+hgItems = 0
+loadLevelStructures(level)
+
+if(area!=0) setAreaCosmetics(area)
+
+#region zoneUnlock
+
+	ini_open("config.ini")
+	if(area>ini_read_real("general","zoneUnlock",1)) {
+	
+		ini_write_real("general","zoneUnlock",area)
+		oTextBox.announce(0,"Shortcut Permanently Unlocked")
+		audio_play_sound(sndTutorial,5,0)
+		with(oTextBox) drawText = storedText
+	}
+	ini_close();
+	
+#endregion
+
 #region Base Terrain
 
 ix = 0;
@@ -35,22 +56,18 @@ while(iy<yLimit){
 	
 	while(ix<xLimit) {
 		tilemap_set(tileMap, place1, ix, iy)
-		
-		if(!solidGen) {
 			
-			if(holeCountdown<=0) {
-				tilemap_set(tileMap, place0, ix, iy)
-				holeCountdown = irandom(6)
+		if(holeCountdown<=0) {
+			tilemap_set(tileMap, place0, ix, iy)
+			holeCountdown = irandom(6)
 			
-				if(foodCountdown<=0){
-					instance_create_layer(ix*32+16,iy*32+16,layer,oFood)
-					foodPlaced++
-					foodCountdown = round(plentyMult*irandom_range(12,18))
-				} else foodCountdown--
+			if(foodCountdown<=0){
+				instance_create_layer(ix*32+16,iy*32+16,layer,oFood)
+				foodPlaced++
+				foodCountdown = round(plentyMult*irandom_range(12,18))
+			} else foodCountdown--
 			
-			} else holeCountdown--
-			
-		}
+		} else holeCountdown--
 		
 		if(heartCountdown<=0){
 				instance_create_layer(ix*32,iy*32,layer,oHeartPickup)
@@ -72,9 +89,9 @@ while(iy<yLimit){
 			place0 = 0
 			place1 = 1
 		}
-		invertLayer = irandom(3)
+		invertLayer = irandom(density)
 		
-	} else if (!solidGen) invertLayer--
+	}
 	
 }
 
@@ -85,23 +102,6 @@ while(iy<yLimit){
 //Pass 2
 ix = 0
 iy = 5
-
-hGen = 0
-hgItems = 0
-
-area = 0
-loadLevelStructures(level)
-if(area!=0) setAreaCosmetics(area)
-
-ini_open("config.ini")
-if(area>ini_read_real("general","zoneUnlock",1)) {
-	
-	ini_write_real("general","zoneUnlock",area)
-	oTextBox.announce(0,"Shortcut Permanently Unlocked")
-	audio_play_sound(sndTutorial,5,0)
-	with(oTextBox) drawText = storedText
-}
-ini_close();
 
 while(iy<yLimit){
 	while(ix<xLimit) {

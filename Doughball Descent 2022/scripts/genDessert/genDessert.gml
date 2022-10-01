@@ -87,10 +87,55 @@ function hgGummyWorm() {
 	return(true);
 }
 
+function tileClear(tx,ty) {
+	if(tilemap_get(tileMap,tx,ty) = 4) {
+		
+		var tObj = instance_position(tx*32+16,ty*32+16,oParentTileObject)
+		if(instance_exists(tObj)) instance_destroy(tObj);
+		else show_debug_message("function tile but no object?")
+	}
+	tilemap_set(tileMap, 0, tx, ty)
+}
+
 function hgAxe() {
-	if(tilemap_get_at_pixel(tileMap,ix*32+16,iy*32+16)=0) return(false)
+	//if(tilemap_get_at_pixel(tileMap,ix*32+16,iy*32+16)=0) return(false)
+	if(ix<3 || iy<3) return(false);
 	
-	instance_create_layer(32*ix+16,32*iy+16,layer,oSawAlt)	
+	var i = 0;
+	var i2 = 0;
+	var boxSize = choose(3,5,7);
+	while(boxSize>ix) boxSize-=2;
+	
+	while(i2<4) {
+		switch(i2) {
+			case 0:
+				ix--;
+			break;
+			case 1:
+				iy--;
+			break;
+			case 2:
+				ix++;
+			break;
+			case 3:
+				iy++;
+			break;
+		}
+		tileClear(ix,iy);
+		i++;
+		if(i=boxSize) {
+		 i = 1;
+		 i2++;
+		}
+	}
+	i = ix-floor(boxSize/2);
+	i2 = iy-floor(boxSize/2);
+	tileClear(i,i2);
+	tilemap_set(tileMap,3,i,i2);
+	with(instance_create_layer(32*i+16,32*i2+16,layer,oSawAlt)){
+		chainLength = floor(boxSize/2);
+		chainSpeed = 1+random(3);
+	}
 	return(true);
 }
 	
@@ -107,5 +152,10 @@ function hgEclair() {
 		
 		tilemap_set(tileMap, placeTile, ix, iy+1)
 	}
+	return(true);
+}
+
+function hgDragon() {
+	if(!instance_exists(oDragon)) instance_create_depth(0,0,0,oDragon)
 	return(true);
 }

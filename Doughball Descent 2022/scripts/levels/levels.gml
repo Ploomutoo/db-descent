@@ -126,19 +126,31 @@ function loadLevelStructures(argument0){
 			
 		#endregion
 		case 12:
+			area = 5 //Area 1 and 2 Throwback
+			hgInnit(15,40,hgGravel)
+			hgInnit(90,130,hgSpikes)
+			
+			hgInnit(80,160,hgGummyWorm)
+			
+			hgInnit(60,120,hgBagel)
+			hgInnit(100,200,hgEclair)
+			hgInnit(100,200,hgGumballMan)
+		break;
 		case 13:
+			area = 5 //Area 3 and 4 Throwback
+			hgInnit(10,30,hgGravel)
+			hgInnit(130,200,hgSpikes)
+			
+			hgInnit(50,100,hgGummyWorm)
+			
+			hgInnit(60,120,hgSauce)
+			hgInnit(100,150,hgAxe)
+			hgInnit(150,300,hgFish)
+		break;
 		case 14:
 			area = 5
 			hgInnit(20,40,hgGravel)
-			hgInnit(60,120,hgSauce)
 			hgInnit(90,130,hgSpikes)
-			
-			hgInnit(60,120,hgBagel)
-			hgInnit(40,80,hgAxe)
-			hgInnit(80,160,hgGummyWorm)
-			hgInnit(100,200,hgGumballMan)
-			//hgInnit(100,200,hgEclair)
-			hgInnit(150,300,hgFish)
 			
 		break;
 	}

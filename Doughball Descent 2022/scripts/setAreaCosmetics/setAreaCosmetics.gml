@@ -1,4 +1,5 @@
 function setAreaCosmetics(argument0){
+	density = 3;
 	switch(argument0) {
 		case 1:
 		currentMusic = musLevel1;
@@ -38,6 +39,8 @@ function setAreaCosmetics(argument0){
 		bgUpdate(sBgDessert)
 		oSidebarR.colorA = $ca5fa1
 		oSidebarR.colorB = $c887df
+		
+		density = choose(2,5);
 		
 		break;
 	}

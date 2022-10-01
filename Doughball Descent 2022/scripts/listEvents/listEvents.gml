@@ -2,16 +2,16 @@
 
 function pickEvent(){
 	script_execute(choose(
-	//eventTightCave,
-	//eventCrackedRock,
-	//eventThornbush,
-	//eventRest,
-	rareEvBlompo
+	eventTightCave,
+	eventCrackedRock,
+	eventThornbush,
+	eventRest,
 	));
 }
 
 function pickEventRare(){
 	script_execute(choose(
-	rareEvBlompo
+	rareEvBlompo,
+	rareEvMirin
 	));
 }
