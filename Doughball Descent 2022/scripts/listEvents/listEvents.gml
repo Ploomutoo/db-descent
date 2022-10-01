@@ -5,7 +5,7 @@ function pickEvent(){
 	eventTightCave,
 	eventCrackedRock,
 	eventThornbush,
-	eventRest,
+	eventRest
 	));
 }
 

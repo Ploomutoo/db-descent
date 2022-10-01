@@ -73,8 +73,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "player",
-    "path": "folders/sMaster/player.yy",
+    "name": "!deprecated",
+    "path": "folders/!deprecated.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPlayer",
