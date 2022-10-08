@@ -10,28 +10,36 @@ if(tranLevel!=-1) {
 	
 	if(tranLevel>viewHeight+100){
 		
-		x = 320
-		room_goto(tranRoom);
+		x = 320;
+		setShopWidth()
+		
 		switch(tranRoom) {
 			
-			case rTransition:
-				tranRoom = rEvent;
+			case rChoice:
+			
+				instance_create_layer(0,0,layer,oTransitionGen);
+				
 				x = 190
 				if(!progCheck("tChoiceTutorial")) y = -600
 				else y = -96
-			break;
+				var nextRoom = rEvent;
+				break;
 			
 			case rEvent:
-				tranRoom = rGame;
-				y = 0
-			break;
 			
-			default:
-				tranRoom = rTransition;
+				y = 0
+				var nextRoom = rGame;
+				break;
+				
+			case rGame:
+			
 				y = -96
-			break;
+				var nextRoom = rChoice;
+				break;
 		}
 		
+		room_goto(tranRoom);
+		tranRoom = nextRoom;
 		tranLevel = -1
 	}
 }

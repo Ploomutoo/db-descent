@@ -16,9 +16,8 @@
     {"instances":[
         {"properties":[
             {"propertyId":{"name":"yOffset","path":"objects/oCamera/oCamera.yy",},"objectId":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"value":"-48","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-          ],"isDnd":false,"objectId":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":32.0,"y":0.0,"resourceVersion":"1.0","name":"inst_6E0F32EA","tags":[],"resourceType":"GMRInstance",},
+          ],"isDnd":false,"objectId":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_6E0F32EA","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oTransitionIn","path":"objects/oTransitionIn/oTransitionIn.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":128.0,"y":416.0,"resourceVersion":"1.0","name":"inst_2E640D3C","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"oTransitionGen","path":"objects/oTransitionGen/oTransitionGen.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_2C7CC824","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"tsLevel0","path":"tilesets/tsLevel0/tsLevel0.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":12,"SerialiseHeight":12,"TileSerialiseData":[
 0,0,0,0,0,0,0,0,0,0,0,0,
@@ -39,9 +38,8 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_6E0F32EA","path":"rooms/rTransition/rTransition.yy",},
-    {"name":"inst_2E640D3C","path":"rooms/rTransition/rTransition.yy",},
-    {"name":"inst_2C7CC824","path":"rooms/rTransition/rTransition.yy",},
+    {"name":"inst_6E0F32EA","path":"rooms/rChoice/rChoice.yy",},
+    {"name":"inst_2E640D3C","path":"rooms/rChoice/rChoice.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
@@ -69,7 +67,7 @@
     "path": "folders/transition.yy",
   },
   "resourceVersion": "1.0",
-  "name": "rTransition",
+  "name": "rChoice",
   "tags": [],
   "resourceType": "GMRoom",
 }

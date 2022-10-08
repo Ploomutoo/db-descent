@@ -1,4 +1,5 @@
 //show_debug_message(script_get_name(option[0])+" or "+script_get_name(option[1])+"?")
+if(room != rChoice) exit;
 
 if(x>180) {
 	var op = option[1]

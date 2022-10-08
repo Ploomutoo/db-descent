@@ -17,7 +17,7 @@ event = {
 		
 	txSuccess : "Miraculously your pliable body oozes\nthrough the passage with ease. The item within is yours!",
 	success : function(){
-		with(oPlayer) instance_create_depth(x+80,y,depth,oItemPedestal);
+		with(oPlayer) instance_create_layer(x+80,y,layer,oItemPedestal);
 	},
 		
 	txFailure : "Within moments you have firmly\nwedged yourself in the opening. You are left solely with\ntime to reflect and digest",

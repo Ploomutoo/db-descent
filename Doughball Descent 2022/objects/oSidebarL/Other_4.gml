@@ -10,7 +10,7 @@ if(room = rGame) {
 		level = 0
 		loop++
 	}
-} else if(room = rTransition) {
+} else if(room = rChoice) {
 	
 	calibrateGameHeight
 	

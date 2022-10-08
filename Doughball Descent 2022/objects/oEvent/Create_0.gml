@@ -20,12 +20,15 @@ if(variable_instance_exists(event,"eVoice")) voice = event.eVoice;
 
 sprite_index = event.sprite;
 var cOut = event.eChance();
+show_debug_message("chance is "+string(cOut[0]))
 //var cOut = 0.5
 drawText = ""
 
-drawChance = 100*cOut[0];
+drawChance = cOut[0]*100;
 if(drawChance>10) drawChance = floor(drawChance)
+
+//show_debug_message("chance is "+string(cOut[0]))
 
 if(array_length(cOut)>1) {
 	drawText = cOut[1]
-} else drawText = string(cOut[0])+"%";
+} else drawText = string(drawChance)+"%";

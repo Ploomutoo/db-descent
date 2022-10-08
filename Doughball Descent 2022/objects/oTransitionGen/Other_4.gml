@@ -6,13 +6,19 @@ if(room=rEvent){
 } else {
 	
 	tutorialPrompt("tChoiceTutorial","The tunnel diverges below\nChoose your path");
-	
-	/*
-	if (progReadAndDone("tChoiceTutorial")) {
-	
-		oTextBox.announce(0,"The tunnel diverges below\nChoose your path")
-		audio_play_sound(sndEvent,1,0)
-		with(oTextBox) drawText = storedText
-	}
-	*/
+
+	option = [teDraw(),0]
+	while(option[0]=option[1]) option[1] = teDraw()
+
+	//oPlayer.tranRoom = rEvent;
+	image_alpha = 0
+
+	if(!progCheck("tChoiceTutorial")) oCamera.yOffset = 100
+	else oCamera.yOffset = 0
+
+	setShopWidth()
+	fastMode = false;
+
+	sinCount = 0
+	sinOut = 0
 }

@@ -36,7 +36,7 @@ grav = baseGrav
 fallReset = 0
 
 tranLevel = -1;
-tranRoom = rTransition;
+tranRoom = rChoice;
 dead = false;
 mobile = true;
 

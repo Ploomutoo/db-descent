@@ -2,7 +2,10 @@ if(cheat){
 	
 	draw_set_halign(fa_right)
 	
-	draw_text_outlined(495,335,"FPS: "+string(floor(fpsStored)))
+	draw_text_outlined(495,320,"Room: "+room_get_name(room))
+	draw_text_outlined(495,335,"TranRoom: "+room_get_name(tranRoom))
+	
+	//draw_text_outlined(495,335,"FPS: "+string(floor(fpsStored)))
 	//draw_text_outlined(495,320,"xScale: "+string(image_xscale))
 	//draw_text_outlined(495,305,"Sprite: "+string(spritePart))
 	
