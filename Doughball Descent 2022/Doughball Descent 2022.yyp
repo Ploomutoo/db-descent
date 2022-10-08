@@ -334,7 +334,7 @@
     {"id":{"name":"GMRoomPack","path":"scripts/GMRoomPack/GMRoomPack.yy",},"order":2,},
     {"id":{"name":"musLevel2","path":"sounds/musLevel2/musLevel2.yy",},"order":2,},
     {"id":{"name":"oWreckingProj","path":"objects/oWreckingProj/oWreckingProj.yy",},"order":4,},
-    {"id":{"name":"rTransition","path":"rooms/rTransition/rTransition.yy",},"order":1,},
+    {"id":{"name":"rChoice","path":"rooms/rChoice/rChoice.yy",},"order":1,},
     {"id":{"name":"rEvent","path":"rooms/rEvent/rEvent.yy",},"order":5,},
     {"id":{"name":"sSpin","path":"sprites/sSpin/sSpin.yy",},"order":9,},
     {"id":{"name":"scr_txr_demo_draw_text","path":"scripts/scr_txr_demo_draw_text/scr_txr_demo_draw_text.yy",},"order":7,},
