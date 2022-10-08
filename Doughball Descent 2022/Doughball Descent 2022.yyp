@@ -561,7 +561,6 @@
     {"roomId":{"name":"rIntro","path":"rooms/rIntro/rIntro.yy",},},
     {"roomId":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},},
     {"roomId":{"name":"rGame","path":"rooms/rGame/rGame.yy",},},
-    {"roomId":{"name":"rTransition","path":"rooms/rTransition/rTransition.yy",},},
     {"roomId":{"name":"vgSpikepit","path":"rooms/vgSpikepit/vgSpikepit.yy",},},
     {"roomId":{"name":"v0Template","path":"rooms/v0Template/v0Template.yy",},},
     {"roomId":{"name":"vgShaft","path":"rooms/vgShaft/vgShaft.yy",},},
@@ -611,6 +610,7 @@
     {"roomId":{"name":"v5RageCage","path":"rooms/v5RageCage/v5RageCage.yy",},},
     {"roomId":{"name":"vsEventSplit","path":"rooms/vsEventSplit/vsEventSplit.yy",},},
     {"roomId":{"name":"vsEventJump","path":"rooms/vsEventJump/vsEventJump.yy",},},
+    {"roomId":{"name":"rChoice","path":"rooms/rChoice/rChoice.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"!deprecated","folderPath":"folders/!deprecated.yy","order":183,},

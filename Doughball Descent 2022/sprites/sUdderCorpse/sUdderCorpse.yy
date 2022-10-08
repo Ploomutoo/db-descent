@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sUdderCorpse",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 31,
   "height": 31,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"919018a6-24ca-4b07-a8de-e609e1350327","path":"sprites/sUdderCorpse/sUdderCorpse.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"919018a6-24ca-4b07-a8de-e609e1350327","path":"sprites/sUdderCorpse/sUdderCorpse.yy",},"LayerId":{"name":"120fea37-4799-4798-a90f-dc662426b286","path":"sprites/sUdderCorpse/sUdderCorpse.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sUdderCorpse","path":"sprites/sUdderCorpse/sUdderCorpse.yy",},"resourceVersion":"1.0","name":"919018a6-24ca-4b07-a8de-e609e1350327","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"919018a6-24ca-4b07-a8de-e609e1350327",},
   ],
   "sequence": {
-    "spriteId": {"name":"sUdderCorpse","path":"sprites/sUdderCorpse/sUdderCorpse.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sUdderCorpse",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 4.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"2c9f157c-2906-4a13-aeee-49e3b391a0e0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"919018a6-24ca-4b07-a8de-e609e1350327","path":"sprites/sUdderCorpse/sUdderCorpse.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 5,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sUdderCorpse","path":"sprites/sUdderCorpse/sUdderCorpse.yy",},
-    "resourceVersion": "1.4",
-    "name": "sUdderCorpse",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"120fea37-4799-4798-a90f-dc662426b286","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"120fea37-4799-4798-a90f-dc662426b286","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "zoneMilk",
     "path": "folders/hazardObjects/zoneMilk.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sUdderCorpse",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

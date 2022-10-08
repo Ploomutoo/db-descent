@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sMeatball",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 32,
   "height": 32,
   "textureGroupId": {
@@ -24,15 +28,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0f136a22-9e62-41a4-9692-5ca438532e73","path":"sprites/sMeatball/sMeatball.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0f136a22-9e62-41a4-9692-5ca438532e73","path":"sprites/sMeatball/sMeatball.yy",},"LayerId":{"name":"d75ac3d9-d01e-4723-8a5f-d7908666a3ed","path":"sprites/sMeatball/sMeatball.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sMeatball","path":"sprites/sMeatball/sMeatball.yy",},"resourceVersion":"1.0","name":"0f136a22-9e62-41a4-9692-5ca438532e73","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8973c128-4a9e-464b-9900-1b338e869a0f","path":"sprites/sMeatball/sMeatball.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8973c128-4a9e-464b-9900-1b338e869a0f","path":"sprites/sMeatball/sMeatball.yy",},"LayerId":{"name":"d75ac3d9-d01e-4723-8a5f-d7908666a3ed","path":"sprites/sMeatball/sMeatball.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sMeatball","path":"sprites/sMeatball/sMeatball.yy",},"resourceVersion":"1.0","name":"8973c128-4a9e-464b-9900-1b338e869a0f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0f136a22-9e62-41a4-9692-5ca438532e73",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8973c128-4a9e-464b-9900-1b338e869a0f",},
   ],
   "sequence": {
-    "spriteId": {"name":"sMeatball","path":"sprites/sMeatball/sMeatball.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sMeatball",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -43,10 +45,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"869ec08a-d339-4f4f-b17d-afbac79f5b4d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0f136a22-9e62-41a4-9692-5ca438532e73","path":"sprites/sMeatball/sMeatball.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"98ed7312-a575-4585-9490-925cc8cc8b5a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8973c128-4a9e-464b-9900-1b338e869a0f","path":"sprites/sMeatball/sMeatball.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +64,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sMeatball","path":"sprites/sMeatball/sMeatball.yy",},
-    "resourceVersion": "1.4",
-    "name": "sMeatball",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d75ac3d9-d01e-4723-8a5f-d7908666a3ed","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d75ac3d9-d01e-4723-8a5f-d7908666a3ed","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "zoneMeat",
     "path": "folders/hazardObjects/zoneMeat.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sMeatball",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

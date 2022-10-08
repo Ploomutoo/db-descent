@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sMeatballDessert",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 32,
   "height": 32,
   "textureGroupId": {
@@ -24,15 +28,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"45797bda-d7c7-4224-8432-30265c2950af","path":"sprites/sMeatballDessert/sMeatballDessert.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"45797bda-d7c7-4224-8432-30265c2950af","path":"sprites/sMeatballDessert/sMeatballDessert.yy",},"LayerId":{"name":"f01d6f22-f254-4418-9bf3-026c68e5e053","path":"sprites/sMeatballDessert/sMeatballDessert.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sMeatballDessert","path":"sprites/sMeatballDessert/sMeatballDessert.yy",},"resourceVersion":"1.0","name":"45797bda-d7c7-4224-8432-30265c2950af","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"864970ae-55cc-4408-b548-3b59960abc69","path":"sprites/sMeatballDessert/sMeatballDessert.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"864970ae-55cc-4408-b548-3b59960abc69","path":"sprites/sMeatballDessert/sMeatballDessert.yy",},"LayerId":{"name":"f01d6f22-f254-4418-9bf3-026c68e5e053","path":"sprites/sMeatballDessert/sMeatballDessert.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sMeatballDessert","path":"sprites/sMeatballDessert/sMeatballDessert.yy",},"resourceVersion":"1.0","name":"864970ae-55cc-4408-b548-3b59960abc69","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"45797bda-d7c7-4224-8432-30265c2950af",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"864970ae-55cc-4408-b548-3b59960abc69",},
   ],
   "sequence": {
-    "spriteId": {"name":"sMeatballDessert","path":"sprites/sMeatballDessert/sMeatballDessert.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sMeatballDessert",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -43,10 +45,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"776c2577-28e3-4e85-9849-404a06bb3902","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"45797bda-d7c7-4224-8432-30265c2950af","path":"sprites/sMeatballDessert/sMeatballDessert.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"40825f26-4cd7-4298-a968-d2dd3d409604","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"864970ae-55cc-4408-b548-3b59960abc69","path":"sprites/sMeatballDessert/sMeatballDessert.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +64,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sMeatballDessert","path":"sprites/sMeatballDessert/sMeatballDessert.yy",},
-    "resourceVersion": "1.4",
-    "name": "sMeatballDessert",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f01d6f22-f254-4418-9bf3-026c68e5e053","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f01d6f22-f254-4418-9bf3-026c68e5e053","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "spritesDessert",
     "path": "folders/hazardObjects/zoneDessert/spritesDessert.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sMeatballDessert",
-  "tags": [],
-  "resourceType": "GMSprite",
 }
