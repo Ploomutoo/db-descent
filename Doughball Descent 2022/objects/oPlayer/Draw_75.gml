@@ -1,4 +1,5 @@
 /// @description level transition
+// git push more like shit push
 
 if(tranLevel!=-1) {
 	draw_sprite(sTransition,0,140,viewHeight-tranLevel)
