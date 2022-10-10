@@ -74,7 +74,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "sprites",
-    "path": "folders/transition/sprites.yy",
+    "name": "eventAssets",
+    "path": "folders/transition/eventAssets.yy",
   },
 }

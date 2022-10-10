@@ -38,7 +38,9 @@ switch(teIndex) {
 	break;
 } }
 
-option = teDraw()
+option = [teDraw(),0]
+while(option[0]=option[1]) option[1] = teDraw()
+
 fastMode = false;
 
 sinCount = 0

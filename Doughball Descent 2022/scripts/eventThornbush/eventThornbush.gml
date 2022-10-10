@@ -4,7 +4,7 @@ event = {
 	//Success is getting the berries and refreshing the event
 	//Failure is ending the event and taking (non-lethal) damage
 	
-	sprite: sEvCave,
+	sprite: sEvThornbush,
 	eName : "Thornbush",
 	txExposition : "The light catches seductively upon the shiny\nskin of sweet berries lurking in a thornbush. "
 	+"Your belly growls, but the menacing brambles\nalmost appear to rear up like a snake. "

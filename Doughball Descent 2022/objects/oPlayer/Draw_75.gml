@@ -11,29 +11,40 @@ if(tranLevel!=-1) {
 	
 	if(tranLevel>viewHeight+100){
 		
-		x = 320;
 		setShopWidth()
-		
 		switch(tranRoom) {
 			
 			case rChoice:
 			
-				instance_create_layer(0,0,layer,oTransitionGen);
+				var tg = instance_create_layer(0,0,layer,oTransitionGen);
 				
-				x = 190
-				if(!progCheck("tChoiceTutorial")) y = -600
-				else y = -96
-				var nextRoom = rEvent;
+				if(irandom(1)=0) {
+					
+					x = 512;
+					y = 0;
+					tranRoom = rEvent;
+					tg.option = tg.option[0];
+					var nextRoom = rGame;
+					
+				} else {
+					
+					x = 190
+					if(!progCheck("tChoiceTutorial")) y = -600
+					else y = -96
+					var nextRoom = rEvent;
+				}
 				break;
 			
 			case rEvent:
 			
-				y = 0
+				x = 512;
+				y = 0;
 				var nextRoom = rGame;
 				break;
 				
 			case rGame:
 			
+				x = 320;
 				y = -96
 				var nextRoom = rChoice;
 				break;

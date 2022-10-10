@@ -76,7 +76,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "sprites",
-    "path": "folders/transition/sprites.yy",
+    "name": "shopAssets",
+    "path": "folders/transition/shopAssets.yy",
   },
 }

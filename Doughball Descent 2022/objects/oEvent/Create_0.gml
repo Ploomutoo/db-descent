@@ -1,8 +1,5 @@
 depth+=4
 
-oPlayer.x = x
-oCamera.x = oPlayer.x
-
 state = 0
 dx = 140+oCamera.camWidth/2
 dy = 32

@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "oShopDent",
   "spriteId": {
     "name": "sShopDent",
     "path": "sprites/sShopDent/sShopDent.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -24,19 +28,14 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"tileHealth","path":"objects/oHazFunctionBlock/oHazFunctionBlock.yy",},"objectId":{"name":"oHazFunctionBlock","path":"objects/oHazFunctionBlock/oHazFunctionBlock.yy",},"value":"99","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"tileHealth","path":"objects/oHazFunctionBlock/oHazFunctionBlock.yy",},"objectId":{"name":"oHazFunctionBlock","path":"objects/oHazFunctionBlock/oHazFunctionBlock.yy",},"value":"99",},
   ],
   "parent": {
     "name": "shopAssets",
     "path": "folders/transition/shopAssets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "oShopDent",
-  "tags": [],
-  "resourceType": "GMObject",
 }

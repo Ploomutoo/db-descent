@@ -3,12 +3,11 @@ if(room=rEvent){
 	script_execute(teScript(option))
 	
 	instance_destroy();
-} else {
+} else if(room=rChoice){
 	
+	//show_debug_message("ran non event script")
 	tutorialPrompt("tChoiceTutorial","The tunnel diverges below\nChoose your path");
-
-	option = [teDraw(),0]
-	while(option[0]=option[1]) option[1] = teDraw()
+	visible = true;
 
 	//oPlayer.tranRoom = rEvent;
 	image_alpha = 0
