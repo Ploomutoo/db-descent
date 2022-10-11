@@ -25,7 +25,7 @@ apexTime = 5
 image_speed = 0
 bashActive = 0
 walkFrame = 0
-items = 0
+items = [];
 
 fallMax = 6
 vspeed = fallMax

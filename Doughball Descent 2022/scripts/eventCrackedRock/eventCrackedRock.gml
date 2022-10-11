@@ -1,7 +1,7 @@
 function eventCrackedRock(){
 event = {
 		
-	sprite: sEvCave,
+	sprite: sEvBoulder,
 	eName : "Cracked Stone",
 	txExposition : "A towering boulder stands before you. "
 	+"Its smooth surface is marred by a conspicuous crack. "

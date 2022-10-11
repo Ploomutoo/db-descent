@@ -23,7 +23,7 @@ function setShopWidth(){ //Perform upon leaving a level
 	var buffetStacks = 0;
 	with(oiBuffet) buffetStacks = stacks;
 	
-	room_set_width(rEvent,2000+(buffetStacks*96));
+	room_set_width(rEvent,2048+(buffetStacks*96));
 	//show_debug_message("this script is actually called by "+object_get_name(object_index))
 }
 

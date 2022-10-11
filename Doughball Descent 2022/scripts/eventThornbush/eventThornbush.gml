@@ -30,7 +30,8 @@ event = {
 		}
 		with(other) {
 			state = 0;
-			drawChance = floor(event.eChance()[0]*100)
+			drawChance = floor(event.eChance()[0]*100);
+			drawText = string(drawChance)+"%";
 		}
 	},
 		
@@ -39,6 +40,7 @@ event = {
 		with(oPlayer){
 				
 			takeDamage(1);
+			soundRand(sndPoke)
 			popUp(x,y-48,"OW")
 		}
 	},

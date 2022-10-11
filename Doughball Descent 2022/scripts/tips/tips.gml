@@ -13,10 +13,10 @@ function tip(){
 
 function taglines(){
 	
-	if(irandom(10)<6) return("");
+	//if(irandom(10)<6) return("");
 	
 	return(": "+choose(
-	"65\% More Fat!",
+	"98\% Milkfat",
 	"Jiggly",
 	"Look before you leap",
 	"What the Hell is Mr. Driller",

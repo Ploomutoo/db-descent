@@ -7,7 +7,8 @@ if(audio_group_is_loaded(agMusic)){
 	exit;
 }
 
-window_set_caption("Doughball Descent"+taglines())
+randomize();
+window_set_caption("Doughball Descent")//+taglines())
 
 canLeaveIntro = false;
 audio_group_load(agMusic);

@@ -4,7 +4,7 @@ event = {
 	//Success is getting the berries and refreshing the event
 	//Failure is ending the event and taking (non-lethal) damage
 	
-	sprite: sEvCave,
+	sprite: sEvTemple,
 	eName : "Temple Entrance",
 	//eInit : function() { soundRand(sndAltarUse) },
 	txExposition : "You come upon the ornate gate of an abandoned temple. "

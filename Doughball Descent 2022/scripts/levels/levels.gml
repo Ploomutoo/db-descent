@@ -152,6 +152,15 @@ function loadLevelStructures(argument0){
 			hgInnit(20,40,hgGravel)
 			hgInnit(90,130,hgSpikes)
 			
+			hgInnit(200,400,hgDragon)
+			hgInnit(50,100,hgGummyWorm)
+			
+			hgInnit(200,400,hgBagel)
+			hgInnit(300,600,hgEclair)
+			hgInnit(300,600,hgGumballMan)
+			hgInnit(30,60,hgSauce)
+			hgInnit(200,400,hgAxe)
+			hgInnit(300,600,hgFish)
 		break;
 	}
 }

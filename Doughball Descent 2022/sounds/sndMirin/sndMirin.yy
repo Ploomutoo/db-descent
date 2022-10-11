@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndMirin",
   "conversionMode": 0,
   "compression": 0,
   "volume": 0.74,
@@ -14,11 +17,7 @@
   "soundFile": "sndMirin.mp3",
   "duration": 0.365714,
   "parent": {
-    "name": "events",
-    "path": "folders/transition/events.yy",
+    "name": "eventAssets",
+    "path": "folders/transition/eventAssets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sndMirin",
-  "tags": [],
-  "resourceType": "GMSound",
 }

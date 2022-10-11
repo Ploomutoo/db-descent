@@ -14,14 +14,29 @@ function addItem(item) {
 	if(tStacks>0) with(item) { stacks++; event_user(0); }
 	else with(instance_create_depth(0,0,0,item)) {
 		
-		mountItem(oPlayer.items);
-		oPlayer.items++;
+		var iCount = array_length(oPlayer.items);
+		
+		oPlayer.items[iCount]=self;
+		mountItem(iCount);
+
 		stacks = 1;
 		persistent=true;
 		bought = true;
 		event_user(0);
 		
 	}
+}
+
+function array_find_index(arr, val)
+{
+	for(var i = 0; i < array_length(arr); i++)
+	{
+		if(arr[i] = val)
+		{
+			return i;
+		}
+	}
+	return -1;
 }
 
 function instance_expunge(){

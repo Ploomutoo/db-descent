@@ -1,7 +1,7 @@
 function eventRest(){
 event = {
 		
-	sprite: sEvCave,
+	sprite: sEvRest,
 	eName : "Rest Site",
 	txExposition : "The air is warm around the cozy campfire. "
 	+"A comfy yule log lays nearby. Perhaps a rest is in order",
@@ -14,6 +14,8 @@ event = {
 		
 	txSuccess : "It feels nice to take a load off\nYour will is restored",
 	success : function(){
+		
+		soundRand(sndSafe)
 		with(oPlayer) {
 			if(hearts<heartMax) hearts = heartMax;
 			else soulHearts+=2;

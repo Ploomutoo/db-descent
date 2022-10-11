@@ -4,9 +4,10 @@ function pickEvent(){
 	script_execute(choose(
 	eventTightCave,
 	eventCrackedRock,
-	//eventTemple,
-	eventThornbush//,
-	//eventRest
+	eventTemple,
+	eventThornbush,
+	eventRest//,
+	//eventTrader
 	));
 }
 

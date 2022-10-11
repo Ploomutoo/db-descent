@@ -91,7 +91,10 @@ function tileClear(tx,ty) {
 	if(tilemap_get(tileMap,tx,ty) = 4) {
 		
 		var tObj = instance_position(tx*32+16,ty*32+16,oParentTileObject)
-		if(instance_exists(tObj)) instance_destroy(tObj);
+		if(instance_exists(tObj)) {
+			tObj.onDestroy = false;
+			instance_destroy(tObj);
+		}
 		else show_debug_message("function tile but no object?")
 	}
 	tilemap_set(tileMap, 0, tx, ty)
