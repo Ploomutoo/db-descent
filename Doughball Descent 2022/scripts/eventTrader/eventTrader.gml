@@ -18,26 +18,47 @@ event = {
 		eItem = pickInvItem();
 		if(eItem = noone) {
 			txExposition = txExposition + "Come by again if you\nfind anything interesting"
+			txFailure = "You don't have anything"
 		} else {
 			txExposition = txExposition + "Perhaps you are too, is that\n a "+eItem.nameTag+" betwixt your folds?. "
 			+"I simply must have it,\nfor a fair price!"
+			txFailure = "You don't have a "+eItem.nameTag;
 		}		
 	},
 	eChance : function(){
-		if(eItem = noone) return([0,"No Items"]);
+		
+		if(eItem = noone || !instance_exists(eItem)) return([0,"No Items"]);
 		else return([1,"Trade all "+eItem.nameTag+" Stacks"]);
 	},
 		
 	txSuccess : "Fefefe!",
-	success : function(){
+	success : function()
+	{
+		var iStacks = eItem.stacks
+		show_debug_message("Obj is "+string(eItem)+"\nID is "+string(eItem.id))
 		
-		other.image_index = 0
-		other.image_speed = 0
+		with(eItem)
+		{
+			show_debug_message("Self is "+string(self))
+			removeItem(self);
+		}
 		
-		
+		var newItem = addItem(pickItem());
+		with(newItem) {
+			
+			stacks += iStacks;
+			event_user(0);	
+			
+			popUp(oPlayer.x,oPlayer.y-48,"Got "+string(stacks)+" "+nameTag+"s!")
+		}
+		//show_debug_message(string(oPlayer.items))
 	},
 		
-	txFailure : "Hmm, it seems you\nhaven't a morsel to spare. Come back with more dough\non your bones, serf",
+	txFailure : "Error",
 	failure : function(){ },
-	endFunc : function(){ }		
+	endFunc : function()
+	{ 		
+		other.image_index = 0
+		other.image_speed = 0
+	}		
 } }

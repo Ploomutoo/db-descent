@@ -1,3 +1,8 @@
+function priceScale(priceInp){
+	
+	return(priceInp+20*(oTally.levelsGone-1));
+}
+
 function altarPick() {
 	
 	with(oShopkeeper) {

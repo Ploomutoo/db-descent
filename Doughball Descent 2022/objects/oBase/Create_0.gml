@@ -5,15 +5,9 @@ flash = 0;
 
 function mountItem(itemCount) {
 	
-	x = 5-280
-	y = 318
+	show_debug_message(string(itemCount))
+	
+	x = -275 + 32*(itemCount%4)
+	y = 318	- 32*floor(itemCount/4);
 
-	while(itemCount>=4){
-		y-=32	
-		itemCount-=4
-	}
-	while(itemCount>0){
-		x+=32
-		itemCount--
-	}
 }

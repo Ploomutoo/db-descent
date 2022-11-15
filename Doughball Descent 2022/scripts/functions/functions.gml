@@ -11,8 +11,13 @@ function markPoint(ix,iy){
 function addItem(item) {
 	
 	var tStacks = instance_number(item);
-	if(tStacks>0) with(item) { stacks++; event_user(0); }
-	else with(instance_create_depth(0,0,0,item)) {
+	if(tStacks>0) with(item) { 
+		
+		stacks++; 
+		event_user(0); 
+		return(self);
+		
+	} else with(instance_create_depth(0,0,0,item)) {
 		
 		var iCount = array_length(oPlayer.items);
 		
@@ -24,6 +29,26 @@ function addItem(item) {
 		bought = true;
 		event_user(0);
 		
+		return(self);
+	}
+}
+
+function removeItem(item) {
+	
+	with(oPlayer) {
+		var i = array_find_index(items,item)
+		if(i!=-1) array_delete(items,i,1)
+		
+		//show_debug_message(string(items))
+	}
+	
+	with(item) {
+		event_user(1);
+		instance_destroy();
+	}
+	
+	for(i = array_length(oPlayer.items)-1; i>=0; i--){
+		with(oPlayer.items[i]) mountItem(i);
 	}
 }
 

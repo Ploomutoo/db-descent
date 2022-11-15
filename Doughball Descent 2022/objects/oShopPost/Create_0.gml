@@ -1,7 +1,7 @@
 event_inherited()
 
 item = instance_create_layer(x,y,layer,pickItem())
-price = item.price + 20*(oTally.levelsGone-1)
+price = priceScale(item.price);
 coupon = 0
 
 description = item.description

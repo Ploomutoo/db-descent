@@ -1,6 +1,4 @@
 event_inherited();
-with(oPlayer){
-	heartMax+=2
-	hearts+=2
-	if(hearts>heartMax) hearts=heartMax
-}
+
+oPlayer.heartMax = 3+stacks*2;
+oPlayer.hearts += 2;

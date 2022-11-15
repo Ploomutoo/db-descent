@@ -52,6 +52,8 @@ var invertLayer = 1+irandom(3)
 var place0 = 0
 var place1 = 1
 
+var placeItem = irandom_range(1,3);
+
 while(iy<yLimit){
 	
 	while(ix<xLimit) {
@@ -70,9 +72,15 @@ while(iy<yLimit){
 		} else holeCountdown--
 		
 		if(heartCountdown<=0){
-				instance_create_layer(ix*32,iy*32,layer,oHeartPickup)
+				
 				heartPlaced++
-				heartCountdown = round(protMult*irandom_range(xLimit*yLimit/3,xLimit*yLimit/2))
+				if(placeItem = 0) {
+					instance_create_layer(ix*32,iy*32,layer,oItemPedestal)
+				} else {
+					instance_create_layer(ix*32,iy*32,layer,oHeartPickup)
+					placeItem--;
+				}
+				heartCountdown = round(protMult*irandom_range(xLimit*yLimit/2,xLimit*yLimit/3))
 		} else heartCountdown--
 	
 		ix++

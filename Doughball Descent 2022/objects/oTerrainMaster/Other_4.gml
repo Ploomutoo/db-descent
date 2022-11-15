@@ -8,6 +8,11 @@ with(oParentTileObject) {
 		instance_destroy();
 	}
 }
+with(oItemPedestal) {
+	tilemap_set_at_pixel(tileMap,0,x,y-36)
+	tilemap_set_at_pixel(tileMap,0,x,y-4)
+	tilemap_set_at_pixel(tileMap,3,x+1,y+1)
+}
 
 with(oHazSpike) {
 	sprite_index = asset_get_index("sSpike"+string(oTerrainMaster.area))

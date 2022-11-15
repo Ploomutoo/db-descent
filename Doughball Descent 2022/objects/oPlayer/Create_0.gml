@@ -1,3 +1,5 @@
+instance_create_layer(0,0,layer,oTally);
+
 oSidebarL.imprinted = self;
 globalvar cheat;
 cheat = false;

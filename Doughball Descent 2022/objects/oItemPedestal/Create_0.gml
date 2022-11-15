@@ -12,4 +12,3 @@ item = itemInd;
 
 sinCount = 0
 playerOn = false
-tilemap_set_at_pixel(tileMap,3,x+1,y+1)

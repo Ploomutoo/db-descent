@@ -4,16 +4,27 @@ switch(state) {
 	
 	case -1:
 	break;
-	case 0:		
+	case 0:
+	
 		if(abs(y-oPlayer.y)>2) exit;
 		if(abs(x-oPlayer.x)>48) exit;
 		cancelIfLinePresent
+		
+		var cOut = event.eChance();
+		//show_debug_message("chance is "+string(cOut[0]))
+		drawText = ""
+
+		drawChance = cOut[0]*100;
+		if(drawChance>10) drawChance = floor(drawChance)
+		if(array_length(cOut)>1) {
+			drawText = cOut[1]
+		} else drawText = string(drawChance)+"%";
 		
 		oPlayer.mobile = false;
 		
 		oTextBox.voice = voice
 		oTextBox.announce(0,event.txExposition)
-		state++
+		state++;
 	break;
 	case 1:
 		cancelIfLinePresent

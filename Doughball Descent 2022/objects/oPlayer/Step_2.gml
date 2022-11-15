@@ -1,14 +1,14 @@
 /// @description fcheats
 enum eCheat {
 	empty,
-	toggle,
+	toggle, //1
 	setWeight,
-	finishLevel,
+	finishLevel, //3
 	gotoStage,
-	giveItem,
-	giveMinion	
+	giveItem, //5
+	takeItem,
+	giveMinion //7
 }
-
 if(!cheat) {
 	
 	if(keyboard_check_pressed(ord(string(eCheat.toggle)))){
@@ -61,6 +61,17 @@ if(keyboard_check_pressed(ord(string(eCheat.giveItem)))) {
 	if(object_exists(i)) addItem(i)
 	
 }
+
+if(keyboard_check_pressed(ord(string(eCheat.takeItem)))) {
+	var i = get_string("Remove item","oiHeartbeet")
+	if(string_copy(i,1,2)!="oi") exit;
+	
+	i = asset_get_index(i);
+	with(i) removeItem(self);
+	//if(object_exists(i)) removeItem(i)
+	
+}
+
 if(keyboard_check_pressed(ord(string(eCheat.finishLevel)))) {
 	if(y<room_height) y = room_height;
 }

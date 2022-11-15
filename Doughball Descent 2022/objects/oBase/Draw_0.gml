@@ -3,11 +3,11 @@ if(!bought) exit;
 if(flash>0) {
 	
 	gpu_set_fog(1,c_white,0,0)
-	draw_sprite(sprite_index,image_index,x,y);
+	draw_self()
 	gpu_set_fog(0,c_white,0,0)
 	flash--;
 	
-} else draw_sprite(sprite_index,image_index,x,y);
+} else draw_self();
 
 if(stacks<2) exit;
 
