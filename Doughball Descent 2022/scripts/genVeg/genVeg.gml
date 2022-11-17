@@ -1,4 +1,5 @@
 function hgBush() {
+	
 	if (tilemap_get(tileMap, ix, iy-1)=0 && tilemap_get(tileMap, ix, iy)>0) {
 		//tilemap_set(tileMap, 1, ix, iy)
 		instance_create_layer(ix*32+16,(iy)*32,layer,oHazBush)
@@ -7,6 +8,7 @@ function hgBush() {
 }
 
 function hgShooter() {
+	/*
 	var platWidth = 3+irandom(3)
 	var buildDir = choose(-1,1)
 	
@@ -24,6 +26,7 @@ function hgShooter() {
 		ix+=buildDir
 	}
 	if(buildDir=-1) ix=saveX
+	*/
 	return(true)
 }
 
