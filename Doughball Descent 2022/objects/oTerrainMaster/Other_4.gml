@@ -48,7 +48,11 @@ with(oiPizzaScale) {
 	}
 }
 
-with(oParentEnemy) if(tilemap_get_at_pixel(tileMap,x,y-1)!=0) if(object_index!=oSaw && object_index!=oSawAlt) instance_expunge()
+with(oParentEnemy) 
+{	
+	//event_user(4);
+	if(tilemap_get_at_pixel(tileMap,x,y-1)!=0) if(object_index!=oSaw && object_index!=oSawAlt) instance_expunge()
+}
 with(oSaw) if(tilemap_get_at_pixel(tileMap,x,y-1)=0) instance_expunge()
 
 goombReplace = 1 - power(0.8,loop)

@@ -1,6 +1,7 @@
 if(!active){
 	if(oPlayer.y>y-cullDistance){
-		active = true
+		active = true;
+		event_user(4);
 	} else exit;
 	
 } else if(oPlayer.y>y+cullDistance) {

@@ -7,7 +7,8 @@ enum eCheat {
 	gotoStage,
 	giveItem, //5
 	takeItem,
-	giveMinion //7
+	giveMinion, //7
+	destroyFood
 }
 if(!cheat) {
 	
@@ -92,4 +93,8 @@ if(keyboard_check_pressed(ord(string(eCheat.toggle)))) {
 
 if(keyboard_check_pressed(ord(string(eCheat.giveMinion)))) {
 	minionAdd(x,y);
+}
+
+if(keyboard_check_pressed(ord(string(eCheat.destroyFood)))) {
+	with(oFood) instance_destroy();
 }

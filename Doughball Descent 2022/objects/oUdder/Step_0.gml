@@ -5,12 +5,13 @@ if(turnedCooldown>0)turnedCooldown--
 
 var desX = x+16*image_xscale
 
-if(!tsCheckEmpty(x,y-48)) { playerKill(self); instance_destroy() }
+if(!tsCheckEmpty(x,y-48)) if(distance_to_object(oPlayer)<128)
+{ playerKill(self); instance_destroy() }
 
 if(canFire && image_index>4){
 	canFire = false
 	//audio_sound_pitch(sndSquirt,1+random_range(-0.3,0.3))
-	soundDist(sndSquirt,128)
+	soundDist(sndSquirt,128,512)
 	
 	instance_create_depth(x,y-16,depth-1,oUdderProj)
 }
