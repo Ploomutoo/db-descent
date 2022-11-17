@@ -8,7 +8,6 @@ function hgBush() {
 }
 
 function hgShooter() {
-	/*
 	var platWidth = 3+irandom(3)
 	var buildDir = choose(-1,1)
 	
@@ -26,7 +25,7 @@ function hgShooter() {
 		ix+=buildDir
 	}
 	if(buildDir=-1) ix=saveX
-	*/
+	
 	return(true)
 }
 
