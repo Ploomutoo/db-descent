@@ -1,6 +1,6 @@
 if(room=rGame){
 	levelsGone++
-} else if (false){
+} /*else if (false){
 	
 	var i = array_length(oTally.itemWeights)-1
 	
@@ -10,7 +10,7 @@ if(room=rGame){
 		i--
 	}	
 	
-}
+} */
 
 //show_debug_message("Room is "+room_get_name(room))
 //show_debug_message("Got "+string(foodGot[0])+" rice")

@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "oiReboundGains",
   "spriteId": {
     "name": "sItems",
     "path": "sprites/sItems/sItems.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -24,23 +28,19 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"nameTag","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"Rebound Gains","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"description","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"More nutrition at low weight","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"price","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"300","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"image_index","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"9","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"shopkeeperQuote","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"I know it's disappointing spending\\nyour hard-earned softness here. But with Rebound Gains getting that\\nweight back on you should be easy","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"nameTag","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"Rebound Gains",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"description","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"More nutrition at low weight",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"price","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"300",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"image_index","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"9",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"shopkeeperQuote","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"I know it's disappointing spending\\nyour hard-earned softness here. But with Rebound Gains getting that\\nweight back on you should be easy",},
   ],
   "parent": {
     "name": "items",
     "path": "folders/items/items.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "oiReboundGains",
-  "tags": [],
-  "resourceType": "GMObject",
 }

@@ -7,12 +7,10 @@ levelsGone = 0
 foodTypes = sprite_get_number(sFood)
 
 var i = 0
-while(i<foodTypes){
-	foodGot[i] = 0
-	i++
-}
+foodGot = array_create(foodTypes-1,0);
 
 itemWeights = 0
+itemsGot = ds_list_create();
 
 i = 0
 var i2 = 0

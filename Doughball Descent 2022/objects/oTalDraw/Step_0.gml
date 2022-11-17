@@ -1,5 +1,5 @@
 //  poo poo pee pee
-if(foodTallyOn<foodTypes) exit;
+if(alarm[0]>1) exit;
 
 if(calDisplay<oTally.calGot && !audio_is_playing(cdSound)) {
 	

@@ -11,14 +11,16 @@ function markPoint(ix,iy){
 function addItem(item) {
 	
 	var tStacks = instance_number(item);
-	if(tStacks>0) with(item) { 
-		
+	if(tStacks>0) with(item) 
+	{ 
 		stacks++; 
 		event_user(0); 
+		
+		ds_list_add(oTally.itemsGot,self.image_index)
 		return(self);
 		
-	} else with(instance_create_depth(0,0,0,item)) {
-		
+	} else with(instance_create_depth(0,0,0,item))
+	{
 		var iCount = array_length(oPlayer.items);
 		
 		oPlayer.items[iCount]=self;
@@ -29,6 +31,7 @@ function addItem(item) {
 		bought = true;
 		event_user(0);
 		
+		ds_list_add(oTally.itemsGot,self.image_index)
 		return(self);
 	}
 }

@@ -98,11 +98,15 @@ function takeDamage(){
 			corpse.direction = direction; corpse.speed = 4; corpse.vspeed-=3;
 			corpse.sprite_index = sPlayerCorpse; corpse.image_index = spritePart+1
 			corpse.image_xscale = girth*hFace; corpse.gravity = 0.3;
+			freezeFrame(8);
 		}
+	} else 
+	{
+		freezeFrame(3);
 	}
 	
 	speed = clamp(speed,-maxSpeed,maxSpeed)
-	freezeFrame(3);
+	
 	
 }
 function freezeFrame(frames){

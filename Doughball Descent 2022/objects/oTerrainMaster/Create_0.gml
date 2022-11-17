@@ -17,7 +17,7 @@ if(area!=0) setAreaCosmetics(area)
 #region zoneUnlock
 
 	ini_open("config.ini")
-	if(area>ini_read_real("general","zoneUnlock",1)) {
+	if(area>ini_read_real("general","zoneUnlock", 1)) {
 	
 		ini_write_real("general","zoneUnlock",area)
 		oTextBox.announce(0,"Shortcut Permanently Unlocked")
