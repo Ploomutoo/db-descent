@@ -45,13 +45,14 @@ if(bashActive>0) {
 	
 	if(evKatsuma=1) { // Hurricane
 		soundRand(sndHurricane);
-		
-		sprite_index = -1;
 		bashActive = 0;
+		
 		var hur = instance_create_depth(x,y,depth-1,oHurricane)
 		hur.passenger = self; hur.hspeed = 0.8*(hFace+hspeed);
-		hur.storedCrush = crushes; hur.drawWidth = image_xscale/1.6;
-		show_debug_message("xscale "+string(image_xscale))
+		hur.storedCrush = crushes; hur.drawWidth = (bbox_right-bbox_left)/32;
+		show_debug_message("drawWidth "+string(bbox_right-bbox_left))
+		
+		sprite_index = -1;
 		crushes = 0;
 		mobile = false;
 	} else {

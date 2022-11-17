@@ -11,3 +11,11 @@ var aCurve = animcurve_get(acHurricane)
 aChan = animcurve_get_channel(aCurve,0)
 
 passenger = noone;
+
+function disengage() {
+	passenger.mobile = true;
+	passenger.sprite_index = sPlayerHitbox;
+	passenger.bashActive = 15;
+	passenger.crushes = storedCrush;
+	instance_destroy();	
+}

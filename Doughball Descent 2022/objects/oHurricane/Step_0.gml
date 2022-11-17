@@ -6,14 +6,8 @@ image_yscale = clamp(0.5+0.25/image_xscale,0,1.25)
 
 if(acPos>=1) {
 	
-	if(dwTo = 0.5 && dwFrom = 1.5) {
-		
-		passenger.mobile = true;
-		passenger.sprite_index = sPlayerHitbox;
-		passenger.bashActive = 15;
-		passenger.crushes = storedCrush;
-		instance_destroy();	
-	}
+	if(dwTo = 0.5 && dwFrom = 1.5) disengage();
+
 	
 	image_xscale = dwTo;
 	
