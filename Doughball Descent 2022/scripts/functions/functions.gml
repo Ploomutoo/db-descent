@@ -232,7 +232,8 @@ function breakLine(vy,vx1,vx2){
 	if(c2>c1) i  += c2-c1
 	
 	//show_debug_message("Break "+string(c1)+" to "+string(c2)+". Width of "+string(i))
-	createParticles((vx1+vx2)/2,vy,6,sPaRock)
+	if(crushes>0) createParticles((vx1+vx2)/2,vy,6,sPaRock)
+	else createParticles((vx1+vx2)/2,vy,3,sPaRock)
 	
 	var rVal = 0
 	// 0 is no deincrement

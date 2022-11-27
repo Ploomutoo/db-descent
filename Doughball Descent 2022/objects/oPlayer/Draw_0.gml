@@ -46,8 +46,8 @@ belly_vspeed -= belly_vspeed*belly_damping;
 
 if(bashActive<=0) {
 	//draw_sprite_part_ext(sPlayerWalk,walkFrame,0,(spritePart+1)*playerSpriteHeight,playerSpriteWidth,playerSpriteHeight,floor(repX-playerSpriteWidth*finScale/2),floor(repY-playerSpriteHeight),finScale,1,c_white,1)
-	draw_sprite_ext(sPlayerJiggleBase,spritePart+1,repX,repY-drawOffset,finScale,1,image_angle,c_white,1)
-	draw_sprite_ext(sPlayerJiggle,spritePart+1,repX,repY-drawOffset+belly_y-y,finScale,1,image_angle,c_white,1)
+	draw_sprite_ext(sPlayerJiggleBase,spritePart+1,repX,repY-drawOffset,finScale,1,draw_angle,c_white,1)
+	draw_sprite_ext(sPlayerJiggle,spritePart+1,repX,repY-drawOffset+belly_y-y,finScale,1,draw_angle,c_white,1)
 	
 	if (abs(hspeed)>0.2) {
 		walkFrame+=0.06
@@ -59,10 +59,12 @@ if(bashActive<=0) {
 gpu_set_fog(0,c_white,1,0);
 surface_reset_target()
 
-if(oPause.menu[4,1]=true) {
+if(oPause.menu[settings.squashStretch,1]=true) {
 	draw_surface_ext(drawSurf,x-repX*dsScalex,y-repY*dsScaley,dsScalex,dsScaley,0,c_white,1)
 	
 } else {
 	draw_surface_ext(drawSurf,x-repX,y-repY,1,1,0,c_white,1)
 	
 }
+
+if(cheat) draw_sprite_ext(sprite_index,0,x,y,image_xscale,image_yscale,0,c_white,0.5);

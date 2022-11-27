@@ -50,7 +50,7 @@ if(bashActive>0) {
 		var hur = instance_create_depth(x,y,depth-1,oHurricane)
 		hur.passenger = self; hur.hspeed = 0.8*(hFace+hspeed);
 		hur.storedCrush = crushes; hur.drawWidth = (bbox_right-bbox_left)/32;
-		show_debug_message("drawWidth "+string(bbox_right-bbox_left))
+		//show_debug_message("drawWidth "+string(bbox_right-bbox_left))
 		
 		sprite_index = -1;
 		crushes = 0;
@@ -102,7 +102,7 @@ if(abs(hspeed)<1 || !grounded) {
 	if(drawSin>360) drawSin -= 360
 }
 
-image_angle = 4*dsin(drawSin)
+draw_angle = 4*dsin(drawSin)
 drawOffset = 4*dsin(drawSin*2)
 if(drawOffset<0) drawOffset = drawOffset/4
 

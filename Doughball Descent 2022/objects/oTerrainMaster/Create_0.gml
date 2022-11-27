@@ -74,7 +74,7 @@ while(iy<yLimit){
 		if(heartCountdown<=0){
 				
 				heartPlaced++
-				if(placeItem = 0) {
+				if(placeItem = 0 && irandom(1)=0) {
 					instance_create_layer(ix*32,iy*32,layer,oItemPedestal)
 				} else {
 					instance_create_layer(ix*32,iy*32,layer,oHeartPickup)

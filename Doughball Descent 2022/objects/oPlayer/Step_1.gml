@@ -8,12 +8,13 @@ if(iPushFrames>0) iPushFrames--
 if(weight!=lastWeight) {
 	
 	crushMax = floor(weight/100)*crushMultiplier
+	crushMax = clamp(crushMax,0,16)
 	
 	if(weight<=100) grav = baseGrav
-	else grav = baseGrav + 0.1 *(baseGrav*(weight/100-1))
+	else grav = min(baseGrav + 0.1 *(baseGrav*(weight/100-1)),1)
 	
 	fallMax = 6+(grav-baseGrav)*10
-	if(fallMax>10) fallMax = 10
+	if(fallMax>8) fallMax = 8
 	
 	spritePart = clamp(floor(weight/100)-1,-1,weightStages-2)
 	
@@ -42,7 +43,12 @@ if(weight!=lastWeight) {
 	//			18 px (10 x 1.8) at 200
 	// And So On
 
-	image_xscale = 1.4 + weight/100*0.2
+	image_xscale = 1.5 + weight/100*0.15
+	
+	if(oPause.menu[settings.sizeCap,1]=true) {
+		girth = min(girth,2.3);
+		image_xscale = min(image_xscale,9);
+	}
 	
 	if(tsCheckEmpty(bbox_left,y-16)) x++
 	if(tsCheckEmpty(bbox_right,y-16)) x--
@@ -58,7 +64,7 @@ if (grounded) {
 		
 		breakLine(y+2,bbox_left,bbox_right-1)
 		
-		y=round(y/16)*16+1
+		y=round(y/32)*32+1
 		dsScalex = 1.5; dsScaley = 0.6
 		
 		if(crushes<1) vspeed = 0;

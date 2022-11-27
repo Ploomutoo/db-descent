@@ -19,19 +19,20 @@ for(var i = 0; i<array_length(menu); i++){
 	drawText = drawText + menu[i,0]
 	
 	switch i {
-		case 0:
-		case 1:
-		case 2:
+		case settings.masterVol:
+		case settings.musicVol:
+		case settings.screenShake:
 			drawText = drawText + " - " + string(menu[i,1])
 		break;
 		
-		case 3:
-		case 4:
+		case settings.fullscreen:
+		case settings.squashStretch:
+		case settings.sizeCap:
 			if(menu[i,1]) drawText = drawText + "[On]"
 			else drawText = drawText + "[Off]"
 		break;
 		
-		case tspeedCoord:
+		case settings.textSpeed:
 			if(menu[i,1]=1) drawText+= " - Standard"
 			else if(menu[i,1]=2) drawText+= " - Fast"
 			else if(menu[i,1]=3) drawText+= " - Slow"

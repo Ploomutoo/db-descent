@@ -44,6 +44,8 @@ mobile = true;
 
 #region drawing variables
 //jiggles
+draw_angle = 0;
+
 belly_x = x;
 belly_y = y;
 belly_xoffset = 0;

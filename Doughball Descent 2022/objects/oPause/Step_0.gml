@@ -42,9 +42,9 @@ if(cLeftPressed || cRightPressed){
 	
 	ini_open("config.ini")
 	switch(cursorOn) {
-		case 0:
-		case 1:
-		case 2:
+		case settings.masterVol:
+		case settings.musicVol:
+		case settings.screenShake:
 		
 			var cDir = 1
 			if(cLeftPressed) cDir = -1
@@ -53,37 +53,40 @@ if(cLeftPressed || cRightPressed){
 			menu[cursorOn,1] = clamp(menu[cursorOn,1],0,10)
 			
 			switch(cursorOn) {
-				case 0: ini_write_real("config","volumeMaster",menu[cursorOn,1]) 
+				case settings.masterVol: ini_write_real("config","volumeMaster",menu[cursorOn,1]) 
 				audio_set_master_gain(0,menu[cursorOn,1]/10)
 				audio_stop_sound(pressSound)
 				audio_play_sound(sndFood,0,0)
 				break;
 				
-				case 1: ini_write_real("config","volumeMusic",menu[cursorOn,1])
+				case settings.musicVol: ini_write_real("config","volumeMusic",menu[cursorOn,1])
 				audio_group_set_gain(agMusic,menu[cursorOn,1]/10,0)
 				playMusic(currentMusic)
 				break;
 				
-				case 2: ini_write_real("config","screenshake",menu[cursorOn,1]) 
+				case settings.screenShake: ini_write_real("config","screenshake",menu[cursorOn,1]) 
 				break;
 			}
 			
 		break;
 		
-		case 3:
+		case settings.fullscreen:
 			menu[cursorOn,1] = !menu[cursorOn,1]
 			ini_write_real("config","fullscreen",menu[cursorOn,1])
 			
 			window_set_fullscreen(menu[cursorOn,1])
 		break;
 		
-		case 4:
-		
+		case settings.squashStretch:
 			menu[cursorOn,1] = !menu[cursorOn,1]
 			ini_write_real("config","squashNstretch",menu[cursorOn,1])
 		break;
+		case settings.sizeCap:
+			menu[cursorOn,1] = !menu[cursorOn,1]
+			ini_write_real("config","sizeCap",menu[cursorOn,1])
+		break;
 		
-		case tspeedCoord:
+		case settings.textSpeed:
 		
 			var cDir = 1
 			if(cLeftPressed) cDir = -1
@@ -107,13 +110,13 @@ if(cLeftPressed || cRightPressed){
 	
 if(cBash) {
 	
-	if(cursorOn = optionEnd) event_user(0)
-	if(cursorOn = optionEnd+1) {
-		if(menu[optionEnd+1,1]) goToTally()
+	if(cursorOn = settings.back) event_user(0)
+	if(cursorOn = settings.quit) {
+		if(menu[settings.quit,1]) goToTally()
 		else game_end()
 	}
 	
-	else if (cursorOn = 3) {
+	else if (cursorOn = settings.fullscreen) {
 		menu[cursorOn,1] = !menu[cursorOn,1]
 		ini_open("config.ini")
 		ini_write_real("config","fullscreen",menu[cursorOn,1])
