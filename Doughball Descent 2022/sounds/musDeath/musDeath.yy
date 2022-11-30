@@ -1,7 +1,10 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "musDeath",
   "conversionMode": 0,
   "compression": 2,
-  "volume": 0.5,
+  "volume": 0.3,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -17,8 +20,4 @@
     "name": "sound",
     "path": "folders/sound.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "musDeath",
-  "tags": [],
-  "resourceType": "GMSound",
 }

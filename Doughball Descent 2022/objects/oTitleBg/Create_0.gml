@@ -13,9 +13,11 @@ var pm = matrix_build_projection_ortho(camWidth,camHeight,1,3200);
 camera_set_view_mat(camera,vm);
 camera_set_proj_mat(camera,pm);*/
 
+aPosGet = 0;
 //Beat Get
-beatInterval = 60/115
-beatNext = floor(17/beatInterval)*beatInterval
+beatInterval = room_speed/110
+beatNext = 0
+beatLoop = 0;
 
 // Anim Channel
 
