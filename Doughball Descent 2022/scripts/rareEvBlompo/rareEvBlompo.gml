@@ -14,8 +14,8 @@ event = {
 	txDecline : "Begone then, do not waste my blood sugar\nwith your incessant hobnobbery",
 		
 	eChance : function(){
-		if(oPlayer.hearts<2) return([0,"Not Enough HP"]);
-		else return([1,"Give 1 HP"]);
+		if(oPlayer.heartMax<2) return([0,"Not Enough Max HP"]);
+		else return([1,"Give 1 Max HP"]);
 	},
 		
 	txSuccess : "Marvelous! Have a peasant\nfor your troubles",
@@ -25,7 +25,12 @@ event = {
 		other.image_speed = 0
 		
 		minionAdd(other.x,other.y);
-		with (oPlayer) takeDamage(1);
+		oPlayer.heartMax -= 1;
+		
+		soundRand(sndHurt);
+		oCamera.screenShake = 4
+		
+		freezeFrame(3);
 	},
 		
 	txFailure : "Hmm, it seems you\nhaven't a morsel to spare. Come back with more dough\non your bones, serf",

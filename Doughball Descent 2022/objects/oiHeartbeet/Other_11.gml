@@ -1,2 +1,2 @@
-oPlayer.heartMax = 3;
-if(oPlayer.hearts>3) oPlayer.hearts = 3;
+oPlayer.heartMax -= stacks*2;
+if(oPlayer.hearts<1) oPlayer.hearts = 1;

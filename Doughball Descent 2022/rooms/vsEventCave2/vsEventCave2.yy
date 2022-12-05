@@ -17,9 +17,9 @@
   ],
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"instances","instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1D2C7C0A_1","properties":[],"isDnd":false,"objectId":{"name":"oEvent","path":"objects/oEvent/oEvent.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":448.0,"y":352.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_22496124","properties":[],"isDnd":false,"objectId":{"name":"oEvent","path":"objects/oEvent/oEvent.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":544.0,"y":352.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_610C6B0D","properties":[],"isDnd":false,"objectId":{"name":"oPlayerSpawn","path":"objects/oPlayerSpawn/oPlayerSpawn.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":496.0,"y":80.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3686FF5E","properties":[],"isDnd":false,"objectId":{"name":"oEvent","path":"objects/oEvent/oEvent.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":416.0,"y":352.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_F24327C","properties":[],"isDnd":false,"objectId":{"name":"oEvent","path":"objects/oEvent/oEvent.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":576.0,"y":352.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"blocks","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6937AC4C_1_2","properties":[],"isDnd":false,"objectId":{"name":"ovBrick3","path":"objects/ovBrick3/ovBrick3.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":256.0,"y":352.0,},
@@ -244,8 +244,6 @@
     {"name":"inst_3F387BA8_1","path":"rooms/vsEventCave2/vsEventCave2.yy",},
     {"name":"inst_10177A58_1","path":"rooms/vsEventCave2/vsEventCave2.yy",},
     {"name":"inst_5B0D9E1A_1","path":"rooms/vsEventCave2/vsEventCave2.yy",},
-    {"name":"inst_1D2C7C0A_1","path":"rooms/vsEventCave2/vsEventCave2.yy",},
-    {"name":"inst_22496124","path":"rooms/vsEventCave2/vsEventCave2.yy",},
     {"name":"inst_2A1A8706","path":"rooms/vsEventCave2/vsEventCave2.yy",},
     {"name":"inst_6F124B94","path":"rooms/vsEventCave2/vsEventCave2.yy",},
     {"name":"inst_10B01CE0","path":"rooms/vsEventCave2/vsEventCave2.yy",},
@@ -287,6 +285,8 @@
     {"name":"inst_4C738ACF","path":"rooms/vsEventCave2/vsEventCave2.yy",},
     {"name":"inst_6D402C8A","path":"rooms/vsEventCave2/vsEventCave2.yy",},
     {"name":"inst_610C6B0D","path":"rooms/vsEventCave2/vsEventCave2.yy",},
+    {"name":"inst_3686FF5E","path":"rooms/vsEventCave2/vsEventCave2.yy",},
+    {"name":"inst_F24327C","path":"rooms/vsEventCave2/vsEventCave2.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

@@ -1,9 +1,6 @@
 function eventTemple(){
 event = {
-	
-	//Success is getting the berries and refreshing the event
-	//Failure is ending the event and taking (non-lethal) damage
-	
+		
 	sprite: sEvTemple,
 	eName : "Temple Entrance",
 	//eInit : function() { soundRand(sndAltarUse) },
@@ -48,9 +45,9 @@ event = {
 			//show_debug_message("running killfunct")
 			with(oEvent) instance_destroy();
 		
-		} else with(other){
-			state = 0;
-			dim = 0;
+		} else {
+			other.state = 0;
+			other.dim = 0;
 			
 		}
 	}
