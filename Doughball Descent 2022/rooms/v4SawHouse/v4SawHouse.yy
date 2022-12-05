@@ -17,18 +17,12 @@
   ],
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"instances","instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_11D6B2AD","properties":[
-            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"chainLength","path":"objects/oSaw/oSaw.yy",},"objectId":{"name":"oSaw","path":"objects/oSaw/oSaw.yy",},"value":"1",},
-          ],"isDnd":false,"objectId":{"name":"oSaw","path":"objects/oSaw/oSaw.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":16.0,"y":144.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_73CDDE9B","properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"chainLength","path":"objects/oSaw/oSaw.yy",},"objectId":{"name":"oSaw","path":"objects/oSaw/oSaw.yy",},"value":"2",},
-          ],"isDnd":false,"objectId":{"name":"oSaw","path":"objects/oSaw/oSaw.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":16.0,"y":112.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_441248E6","properties":[
-            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"chainLength","path":"objects/oSaw/oSaw.yy",},"objectId":{"name":"oSaw","path":"objects/oSaw/oSaw.yy",},"value":"1",},
-          ],"isDnd":false,"objectId":{"name":"oSaw","path":"objects/oSaw/oSaw.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":272.0,"y":144.0,},
+          ],"isDnd":false,"objectId":{"name":"oSaw","path":"objects/oSaw/oSaw.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":16.0,"y":144.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4E9EA247","properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"chainLength","path":"objects/oSaw/oSaw.yy",},"objectId":{"name":"oSaw","path":"objects/oSaw/oSaw.yy",},"value":"2",},
-          ],"isDnd":false,"objectId":{"name":"oSaw","path":"objects/oSaw/oSaw.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":272.0,"y":112.0,},
+          ],"isDnd":false,"objectId":{"name":"oSaw","path":"objects/oSaw/oSaw.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":272.0,"y":144.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_15E1C469","properties":[],"isDnd":false,"objectId":{"name":"oFood","path":"objects/oFood/oFood.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":80.0,"y":208.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7320B00C","properties":[],"isDnd":false,"objectId":{"name":"oFood","path":"objects/oFood/oFood.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":112.0,"y":208.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_77B43471","properties":[],"isDnd":false,"objectId":{"name":"oFood","path":"objects/oFood/oFood.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":176.0,"y":208.0,},
@@ -171,9 +165,7 @@
     {"name":"inst_32D081B7","path":"rooms/v4SawHouse/v4SawHouse.yy",},
     {"name":"inst_4CDC5565","path":"rooms/v4SawHouse/v4SawHouse.yy",},
     {"name":"inst_1478E918","path":"rooms/v4SawHouse/v4SawHouse.yy",},
-    {"name":"inst_11D6B2AD","path":"rooms/v4SawHouse/v4SawHouse.yy",},
     {"name":"inst_73CDDE9B","path":"rooms/v4SawHouse/v4SawHouse.yy",},
-    {"name":"inst_441248E6","path":"rooms/v4SawHouse/v4SawHouse.yy",},
     {"name":"inst_4E9EA247","path":"rooms/v4SawHouse/v4SawHouse.yy",},
     {"name":"inst_30FDA143","path":"rooms/v4SawHouse/v4SawHouse.yy",},
     {"name":"inst_49BDCF5","path":"rooms/v4SawHouse/v4SawHouse.yy",},

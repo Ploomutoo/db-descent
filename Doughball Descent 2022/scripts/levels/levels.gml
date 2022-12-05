@@ -103,7 +103,7 @@ function loadLevelStructures(argument0){
 				hgInnit(90,130,hgSpikes)
 				
 				hgInnit(10,25,hgSauce)
-				hgInnit(60,100,hgSaw)
+				hgInnit(100,150,hgSaw)
 				
 				hgInnit(180,300,hgMeatworm)
 				hgInnit(200,350,hgFish)

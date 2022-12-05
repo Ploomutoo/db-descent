@@ -39,7 +39,7 @@ function hgMeatworm() {
 
 function hgSauce() {
 	var veinWidth = 1 + irandom(2) //Temporarily the width of gravel vein
-	var i = 1 + irandom(2)
+	var i = irandom_range(1,2)
 	
 	var explosive = oHazHotSauce
 	if(area = 5) explosive = oTNT
@@ -64,7 +64,7 @@ function hgFish() {
 	var fishPlace = oFish;
 	if(area=5) fishPlace = oTaiyaki;
 	
-	repeat(irandom_range(1,4)) {
+	repeat(irandom_range(1,2+loop)) {
 		instance_create_layer(32*ix,32*workingIy+8,layer,fishPlace)
 		workingIy -= choose(1,2)
 	}
@@ -83,7 +83,7 @@ function hgSaw() {
 	switch(irandom(6)){ 
 		case 0: //2-4 Equidistant, Identical Saws
 			
-			sawCount = irandom_range(2,4)
+			sawCount = irandom_range(2,2+loop)
 			
 			repeat(sawCount) {
 				
@@ -95,28 +95,9 @@ function hgSaw() {
 				
 			}
 			break;
-			
-		case 1: //1 Saw, 1-2 Smaller Saws
+		case 1: //1 Saw
 		case 2:
-
-			sawCount = irandom_range(1,2)
-			
-			repeat(sawCount) {
-				
-				saw[i] = genSaw
-				saw[i].chainAngle = saw[0].chainAngle + irandom_range(45,315)
-				saw[i].chainSpeed = saw[0].chainSpeed
-				saw[i].chainLength = saw[0].chainLength
-				i++
-				
-			}
-			genSaw
-			break;
-			
-		case 3: //1 Saw
-		case 4:
-		case 5:
-		case 6:
+		case 3:
 			genSaw
 			break;
 	}
@@ -146,7 +127,7 @@ function hgHotdogCorridor() {
 		
 		tilemap_set(tileMap, 0, ix, iy-1)
 		
-		if(randReplace=0) { tilemap_set(tileMap, 6, ix, iy); randReplace = irandom_range(1,3); instance_create_depth(32*ix,32*(iy-1),depth,oParagoomba)
+		if(randReplace=0) { tilemap_set(tileMap, 6, ix, iy); randReplace = irandom_range(2,4); instance_create_depth(32*ix,32*(iy-1),depth,oParagoomba)
 		} else { tilemap_set(tileMap, 2, ix, iy); randReplace-- }
 		
 		ix++

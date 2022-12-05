@@ -11,7 +11,7 @@ if(playerOn && price>0) {
 		
 		
 		if(coupon>0) {
-			show_debug_message(string(coupon)+" coupon stacks")
+			//show_debug_message(string(coupon)+" coupon stacks")
 			var i = 1
 			var chance = 0
 		

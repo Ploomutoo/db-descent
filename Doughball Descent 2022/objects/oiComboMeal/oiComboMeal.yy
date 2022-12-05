@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "oiComboMeal",
   "spriteId": {
     "name": "sItems",
     "path": "sprites/sItems/sItems.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -24,22 +28,19 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":11,"eventType":7,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"nameTag","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"Combo Meal","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"description","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"Glut consecutively for bonuses!","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"price","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"350","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"image_index","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"12","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"shopkeeperQuote","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"You know what goes great with food?\\nMore food, of course!. Pick up a Combo Meal and you'll\\nget some bonus for your binging","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"nameTag","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"Combo Meal",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"description","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"Glut consecutively for bonuses!",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"price","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"350",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"image_index","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"12",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"shopkeeperQuote","path":"objects/oBase/oBase.yy",},"objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"value":"You know what goes great with food?\\nMore food, of course!. Pick up a Combo Meal and you'll\\nget some bonus for your binging",},
   ],
   "parent": {
     "name": "items",
     "path": "folders/items/items.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "oiComboMeal",
-  "tags": [],
-  "resourceType": "GMObject",
 }
