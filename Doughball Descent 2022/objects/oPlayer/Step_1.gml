@@ -139,6 +139,30 @@ if (grounded) {
 		}
 	}
 	
+	#region hitReg 
+	#macro fbGrace 4
+	var fallBox = collision_rectangle(bbox_left-fbGrace,y-fbGrace,bbox_right+fbGrace,y+vspeed,oParentEnemy,false,false)
+	if(instance_exists(fallBox)) {
+		dsScalex = 1.5; dsScaley = 0.6
+		if(!fallBox.stompable) {
+			if(iframes>0) exit
+			vspeed = -6
+			takeDamage()
+		} else {
+			//Squash
+			vspeed = -2
+			if(jumpedTimer>0) vspeed = -6
+			soundRand(sndStomp)
+		
+			if(fallBox.calories>0) {
+				playerKill(fallBox);
+				oTally.foesStomped++
+			}
+		
+			instance_destroy(fallBox)		
+		}
+	}
+	#endregion
 }
 
 if(cJump) jumpedTimer = 10

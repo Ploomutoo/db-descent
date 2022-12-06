@@ -12,7 +12,7 @@ enum eCheat {
 }
 if(!cheat) {
 	
-	if(keyboard_check_pressed(ord(string(eCheat.toggle)))){
+	if(keyboard_check_pressed(ord(string(eCheat.toggle)))&&parameter_count()==3&&string_count("GMS2TEMP",parameter_string(2))){
 		
 		cheat = true
 		oCamera.screenShake = 10

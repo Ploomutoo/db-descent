@@ -2,7 +2,7 @@ if(!instance_exists(oTerrainMaster)) exit;
 
 switch(oTerrainMaster.area){
 	case 2:
-		instance_create_depth(x,y,0,oDurSlug)
+		instance_create_depth(x,y,0,oCarrotWorm)
 		break;
 		
 	case 3:
@@ -15,7 +15,7 @@ switch(oTerrainMaster.area){
 			iy-=32;
 			out--;
 		}
-		var create = instance_create_depth(x,iy-32,0,oUdder)
+		instance_create_depth(x,iy-32,0,oUdder)
 		break;
 		
 	case 4:

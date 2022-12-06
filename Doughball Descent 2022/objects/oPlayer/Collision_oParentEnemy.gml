@@ -1,7 +1,12 @@
 if(dead) exit;
-var enemy = other
+//var enemy = other
 
-if(y<enemy.bbox_bottom-1) {
+if(iframes>0) exit
+//Ow
+takeDamage()
+
+	
+/*if(y<enemy.bbox_bottom-1) {
 	if(!enemy.stompable) {
 		if(iframes>0) exit
 		vspeed = -6
@@ -26,5 +31,4 @@ if(y<enemy.bbox_bottom-1) {
 	//hspeed+=enemy.image_xscale*5
 	//image_xscale = -enemy.image_xscale
 	takeDamage()
-}
-
+}*/

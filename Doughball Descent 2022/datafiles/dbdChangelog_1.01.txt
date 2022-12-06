@@ -1,0 +1,29 @@
+Changelog 1.01
+
+-Player bash hitbox height increased
+-Player stomp hitbox extended by 4 in all directions, bottom extended by downward velocity
+
+-Reduced level pedestal spawns by 50%
+-Combo Meal now instantiates properly
+
+World 2 
+-New Enemy! Carrot Worms
+	-Replace 50% of Durian Worms 
+	-Perform a dash periodically
+	-Are stompable!
+-Decreased Durian Worm hitbox
+
+-Fixed softlock-prone vault
+-Added several vaults
+
+World 4
+-Reduced Hot Dogs per cluster by 33%
+
+-Reduced 4-2 Fish Spawnrates
+-Reduced Fish per cluster to 1 to 2 (from 1 to 4)
+
+-Reduced 4-2 Rotary Saw Spawnrates
+-Standardized Saw clusters to be 1 Saw 75% of the time, 2 to (2+loop) Identical Saws 25% of the time
+-Decreased Saw speed
+
+-Reduced Hotsauce cluster size slightly
