@@ -1,15 +1,16 @@
 #macro evMinChance 0.1
 
 function pickEvent(){
-	script_execute(choose(
-	eventTightCave,
+	var eventArr = 
+	[eventTightCave,
 	eventCrackedRock,
-	eventTemple,
+	//eventTemple,
 	eventThornbush,
-	eventRest,
-	eventTrader,
-	eventShrooms
-	));
+	eventRest]
+	
+	if(instance_exists(oBase)) array_push(eventArr,eventShrooms,eventTrader)
+	
+	script_execute(eventArr[irandom(array_length(eventArr)-1)]);
 }
 
 function pickEventRare(){

@@ -6,6 +6,8 @@ Changelog 1.01
 -Reduced level pedestal spawns by 50%
 -Combo Meal now instantiates properly
 
+-Events that require items (Collector and Mushrooms) now only spawn when carrying an item
+
 World 2 
 -New Enemy! Carrot Worms
 	-Replace 50% of Durian Worms 

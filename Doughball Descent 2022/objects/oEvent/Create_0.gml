@@ -6,9 +6,13 @@ dy = 32
 dim = 0
 
 tilemap_tileset(tileMap,tsGeneric)
-
-if(isRare) pickEventRare();
-else pickEvent();
+//show_debug_message(string(evScript));
+if(evScript = noone) {
+	
+	if(isRare) pickEventRare();
+	else pickEvent();
+	
+} else evScript();
 
 if(variable_instance_exists(event,"eInit")) event.eInit();
 

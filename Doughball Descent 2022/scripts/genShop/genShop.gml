@@ -110,7 +110,7 @@ function genEvCave(){
 	ix = 5
 	iy = 0
 	
-	var name = choose("vsEventCave","vsEventCave2","vsEventJump","vsEventSplit");
+	var name = choose(/*"vsEventCave","vsEventCave2","vsEventJump","vsEventSplit",*/"vsEventTempleExt");
 	//show_debug_message("Vault"+name)
 	
 	room_pack_load_map(json_rooms[?name], ix*32, iy*32, room_pack_flag_instances);
@@ -129,7 +129,7 @@ function genEvRare(){
 	ix = 5
 	iy = 0
 	
-	var name = choose("vsEventRare","vsEventRare","vsEventRare2");
+	var name = choose("vsEventRare","vsEventRare2");
 	//show_debug_message("Vault"+name)
 	
 	room_pack_load_map(json_rooms[?name], ix*32, iy*32, room_pack_flag_instances);

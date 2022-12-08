@@ -30,10 +30,13 @@ event = {
 		instance_create_depth(0,0,0,oFlash);
 		//show_debug_message("camera count "+string(instance_number(oCamera)))
 		with(oCamera) {
+			
 			bgSprite = sBgClouds;
 			event_user(0);
+			show_debug_message("cam invoked")
 		}
 		
+		with(oEmpty) instance_destroy();
 		with(oEvent) visible = false;
 	},
 		
@@ -43,8 +46,7 @@ event = {
 		
 		if(other.choice) { 
 			//show_debug_message("running killfunct")
-			with(oEvent) instance_destroy();
-		
+			with(oEvent) instance_destroy();		
 		} else {
 			other.state = 0;
 			other.dim = 0;

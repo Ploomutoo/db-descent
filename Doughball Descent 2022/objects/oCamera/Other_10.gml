@@ -1,3 +1,4 @@
+bgyOffset = 0
 
 bgX = sprite_get_width(bgSprite)
 bgY = sprite_get_height(bgSprite)

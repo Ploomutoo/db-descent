@@ -47,7 +47,7 @@ function progReadAndDone(check){
 function takeDamage(){
 	//if argument, apply nonlethal
 	
-	if(iframes>0 || cheat) exit
+	if(iframes>0 || cheat || tranLevel>-1) exit
 	
 	#region Kevlard
 	var klStacks = instance_number(oiKevlard)
