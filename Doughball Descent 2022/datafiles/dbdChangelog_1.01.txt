@@ -7,6 +7,7 @@ Changelog 1.01
 -Combo Meal now instantiates properly
 
 -Events that require items (Collector and Mushrooms) now only spawn when carrying an item
+-Fixed Temple background bug again??
 
 World 2 
 -New Enemy! Carrot Worms
