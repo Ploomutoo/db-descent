@@ -7,6 +7,39 @@ function hgBush() {
 	} else return(false)
 }
 
+function hgVegWorm() {
+	var platWidth = 3+irandom(6);
+	var dir = choose(1,-1);
+	var ix2 = ix;
+	
+	switch(level%3) {
+		case 0: 
+		var type = oCarrotWorm;
+		break;
+		case 1:
+		var type = choose(oCarrotWorm,oCarrotWorm,oDurSlug);
+		break;
+		case 2:
+		var type = choose(oCarrotWorm,oDurSlug);
+		break;
+	}
+	
+	instance_create_layer(ix*32+16,iy*32+32,layer,type)
+	repeat(platWidth) {
+		if(ix2>=xLimit || ix2<0) 
+		{	
+			dir = -dir;
+			ix2 = ix+dir;
+		}
+		tilemap_set(tileMap, 0, ix2, iy)
+		if(ix2%3=0) instance_create_layer(ix2*32+16,iy*32+32,layer,oHazBush)
+		tilemap_set(tileMap, 2, ix2, iy+1)
+		ix2+=dir
+	}
+	if(platWidth>6) instance_create_layer(ix2*32-48*dir,iy*32+32,layer,type)
+	return(true)
+}
+
 function hgShooter() {
 	var platWidth = 3+irandom(3)
 	var buildDir = choose(-1,1)

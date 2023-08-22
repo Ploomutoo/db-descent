@@ -82,7 +82,7 @@ if(bashActive>15){
 	}
 
 	//var victim = instance_position(desX+16*hFace,y-16,oParentBashable)
-	var victim = collision_rectangle(x,y-4,desX+24*hFace,y-32,oParentBashable,0,1);
+	var victim = collision_rectangle(x,y-4,desX+32*hFace,y-32,oParentBashable,0,1);
 	with(victim) event_user(0)
 	
 	if(instance_exists(victim)) bashActive = 10

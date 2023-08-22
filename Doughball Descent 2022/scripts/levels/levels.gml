@@ -30,7 +30,7 @@ function loadLevelStructures(argument0){
 		#region area 2
 		case 3:
 			area = 2
-			hgInnit(70,100,hgGoomba)
+			hgInnit(70,100,hgVegWorm)
 			hgInnit(40,60,hgGravel)
 			hgInnit(80,120,hgShooter)
 			
@@ -39,7 +39,7 @@ function loadLevelStructures(argument0){
 		break;
 		case 4:
 			area = 2
-			hgInnit(70,100,hgGoomba)
+			hgInnit(70,100,hgVegWorm)
 			hgInnit(40,60,hgGravel)
 			
 			hgInnit(120,240,hgBushManRight)
@@ -47,7 +47,7 @@ function loadLevelStructures(argument0){
 		break;
 		case 5:
 			area = 2
-			hgInnit(70,100,hgGoomba)
+			hgInnit(70,100,hgVegWorm)
 			hgInnit(40,60,hgGravel)
 			hgInnit(70,100,hgShooter)
 			

@@ -17,9 +17,9 @@ if(area!=0) setAreaCosmetics(area)
 #region zoneUnlock
 
 	ini_open("config.ini")
-	if(area>ini_read_real("general","zoneUnlock", 1)) {
+	if(area>ini_read_real("general","zoneUnlock", 2)) {
 	
-		ini_write_real("general","zoneUnlock",area)
+		ini_write_real("general","zoneUnlock",area-1)
 		oTextBox.announce(0,"Shortcut Permanently Unlocked")
 		audio_play_sound(sndTutorial,5,0)
 		with(oTextBox) drawText = storedText

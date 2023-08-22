@@ -1,6 +1,7 @@
 Changelog 1.01
 
 -Player bash hitbox height increased
+-Player bash hitbox width increased from 24 to 32
 -Player stomp hitbox extended by 4 in all directions, bottom extended by downward velocity
 
 -Reduced level pedestal spawns by 50%
@@ -8,6 +9,7 @@ Changelog 1.01
 
 -Events that require items (Collector and Mushrooms) now only spawn when carrying an item
 -Fixed Temple background bug again??
+-Still not sure about that one
 
 World 2 
 -New Enemy! Carrot Worms
@@ -30,3 +32,10 @@ World 4
 -Decreased Saw speed
 
 -Reduced Hotsauce cluster size slightly
+
+Future Plans:
+-(Custom) controller support
+-Key Rebinding
+-4+ items
+
+-Considering making the stage wrap around, less softlocks and no getting cornered
