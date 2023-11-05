@@ -62,6 +62,10 @@ surface_reset_target()
 if(oPause.menu[settings.squashStretch,1]=true) {
 	draw_surface_ext(drawSurf,x-repX*dsScalex,y-repY*dsScaley,dsScalex,dsScaley,0,c_white,1)
 	
+	var dsWidth = surface_get_width(drawSurf)/2
+	if(x+dsWidth>room_width) draw_surface_ext(drawSurf,x-room_width-repX*dsScalex,y-repY*dsScaley,dsScalex,dsScaley,0,c_white,1)
+	else if(x-dsWidth<0) draw_surface_ext(drawSurf,x+room_width-repX*dsScalex,y-repY*dsScaley,dsScalex,dsScaley,0,c_white,1)
+	
 } else {
 	draw_surface_ext(drawSurf,x-repX,y-repY,1,1,0,c_white,1)
 	

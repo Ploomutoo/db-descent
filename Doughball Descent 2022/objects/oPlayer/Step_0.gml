@@ -25,11 +25,13 @@ if(tilemap_get_at_pixel(tileMap,desX,y-2)>0||tilemap_get_at_pixel(tileMap,desX,y
 }
 
 if(desX<0) {
-	hspeed = 0
-	x = x-bbox_left
+	//hspeed = 0
+	//x = x-bbox_left
+	x+=room_width;
 } else if(desX2>room_width){
-	hspeed = 0
-	x = room_width + (x-bbox_right)
+	//hspeed = 0
+	//x = room_width + (x-bbox_right)
+	x-=room_width;
 }
 
 desX = bbox_left

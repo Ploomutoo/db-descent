@@ -4,20 +4,26 @@ if(instance_exists(oPlayer)) {
 	y = lookAt.y
 } else lookAt = noone;
 
-camera = camera_create();
-view_camera[0] = camera;
+//camera = camera_create();
+cam1 = view_camera[0];
+cam2 = view_camera[1];
 
-camWidth = 360;
+view_set_camera(0,cam1)
+view_set_camera(1,cam2)
+
+camWidth = 640;
 camHeight = viewHeight;
 
 var vm = matrix_build_lookat(x,y,-10,x,y,0,0,1,0);
 var pm = matrix_build_projection_ortho(camWidth,camHeight,1,3200);
 
-camera_set_view_mat(camera,vm);
-camera_set_proj_mat(camera,pm);
+camera_set_view_mat(cam1,vm);
+camera_set_proj_mat(cam1,pm);
+
+camera_set_view_mat(cam2,vm);
+camera_set_proj_mat(cam2,pm);
 
 camFocus = false;
-
 screenShake = 0;
 
 bgSprite = sBgRocks
