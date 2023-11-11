@@ -21,7 +21,7 @@ else { //things are broken by leftbounds moving probably should stop using it
 	draw_sprite_ext(bgSprite,0,drawX+modx,y-camHeight/2-mody,1+(c1width+modx)/bgX,(camHeight+mody)/bgY,0,c_white,1)
 	
 	drawX = (c2leftbounds div bgX-1) * bgX
-	draw_sprite_ext(bgSprite,0,drawX+modx,y-camHeight/2-mody,1+(c2width+modx)/bgX,(camHeight+mody)/bgY,0,c_white,1)
+	draw_sprite_ext(bgSprite,0,drawX+modx,y-camHeight/2-mody,1+(c2width+modx)/bgX,(camHeight+mody)/bgY,0,c_red,1)
 	
 }
 /*while(ix>=0){

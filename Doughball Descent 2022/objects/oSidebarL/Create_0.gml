@@ -7,7 +7,7 @@ calibrateGameHeight
 dWeight = 100
 imprinted = noone
 
-levelText = "Grains - 1"
+levelText = ""
 
 colorA = c_red
 depth = 100

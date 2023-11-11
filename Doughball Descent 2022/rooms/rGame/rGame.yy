@@ -22,6 +22,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4200B779","properties":[],"isDnd":false,"objectId":{"name":"oSidebarR","path":"objects/oSidebarR/oSidebarR.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-140.0,"y":0.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2E640D3C","properties":[],"isDnd":false,"objectId":{"name":"oTransitionIn","path":"objects/oTransitionIn/oTransitionIn.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":128.0,"y":416.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3073D769","properties":[],"isDnd":false,"objectId":{"name":"oTextBox","path":"objects/oTextBox/oTextBox.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":176.0,"y":80.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_561F880A","properties":[],"isDnd":false,"objectId":{"name":"oSidebarL","path":"objects/oSidebarL/oSidebarL.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":32.0,"y":32.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":"none","properties":[],},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"terrain","tilesetId":{"name":"tsLevel0","path":"tilesets/tsLevel0/tsLevel0.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":25,"SerialiseHeight":64,"TileCompressedData":[
 -9,-2147483648,-7,0,-12,-2147483648,3,0,-2147483648,-2147483648,-13,0,-9,-2147483648,-15,0,-10,-2147483648,-3,0,-2,-2147483648,-10,0,-7,
@@ -37,6 +38,7 @@
     {"name":"inst_5960FB08","path":"rooms/rGame/rGame.yy",},
     {"name":"inst_2E640D3C","path":"rooms/rGame/rGame.yy",},
     {"name":"inst_3073D769","path":"rooms/rGame/rGame.yy",},
+    {"name":"inst_561F880A","path":"rooms/rGame/rGame.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

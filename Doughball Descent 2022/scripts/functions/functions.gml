@@ -159,6 +159,10 @@ function breakBlock() { //--!--!--!--!--!--
 			//"noBashdown"
 	var rVal = blockReturn.nothing; //returned value
 	
+	//wraparound patch
+	if(argument[0]>room_width) argument[0]-=room_width;
+	else if(argument[0]<0) argument[0]+=room_width;
+	
 	if(argument_count<2) exit;
 	if(argument_count>2) {
 		var isBash = argument[2];	
@@ -269,9 +273,16 @@ function tsSpanEmpty(argument0,argument1,argument2) {
 	///@arg startX
 	///@arg endX
 	//Check left
-	if (tilemap_get_at_pixel(tileMap,argument1,argument0)>0) return(false)
+	
+	if (argument1<0) {
+		if (tilemap_get_at_pixel(tileMap,argument1+room_width,argument0)>0) return(false)
+	} else if (tilemap_get_at_pixel(tileMap,argument1,argument0)>0) return(false)
+	
 	//Check right
-	if (tilemap_get_at_pixel(tileMap,argument2,argument0)>0) return(false)
+	if(argument2>room_width) {
+		if (tilemap_get_at_pixel(tileMap,argument2-room_width,argument0)>0) return(false)
+	} else if (tilemap_get_at_pixel(tileMap,argument2,argument0)>0) return(false)
+	
 	var span = argument2-argument1
 	span = ceil(span/32)-1
 

@@ -44,7 +44,7 @@
     {"id":{"name":"sMenuBashables","path":"sprites/sMenuBashables/sMenuBashables.yy",},"order":0,},
     {"id":{"name":"vaultdataG","path":"scripts/vaultdataG/vaultdataG.yy",},"order":3,},
     {"id":{"name":"eventShrooms","path":"scripts/eventShrooms/eventShrooms.yy",},"order":13,},
-    {"id":{"name":"sIndicators","path":"sprites/sIndicators/sIndicators.yy",},"order":2,},
+    {"id":{"name":"sIndicators","path":"sprites/sIndicators/sIndicators.yy",},"order":21,},
     {"id":{"name":"sPaExplosion","path":"sprites/sPaExplosion/sPaExplosion.yy",},"order":21,},
     {"id":{"name":"oMenuScheme","path":"objects/oMenuScheme/oMenuScheme.yy",},"order":1,},
     {"id":{"name":"sCannonballRed","path":"sprites/sCannonballRed/sCannonballRed.yy",},"order":11,},

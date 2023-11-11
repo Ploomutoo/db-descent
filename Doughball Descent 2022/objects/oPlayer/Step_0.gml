@@ -74,7 +74,7 @@ if(bashActive>0) {
 	}
 }
 
-if(bashActive>15){
+if(bashActive>15){ //bash func
 	
 	var brokeBlock = breakBlock(desX+24*hFace,y-16,1)
 	if (brokeBlock!=0) {
