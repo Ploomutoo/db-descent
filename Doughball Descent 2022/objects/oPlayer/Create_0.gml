@@ -1,6 +1,6 @@
 instance_create_layer(0,0,layer,oTally);
 
-oSidebarL.imprinted = self;
+oSidebarR.imprinted = self;
 globalvar cheat;
 cheat = false;
 fpsNorm = 0;

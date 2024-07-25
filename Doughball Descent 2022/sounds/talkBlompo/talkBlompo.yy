@@ -18,6 +18,6 @@
   "duration": 0.171723,
   "parent": {
     "name": "eventAssets",
-    "path": "folders/transition/eventAssets.yy",
+    "path": "folders/transition/events/eventAssets.yy",
   },
 }

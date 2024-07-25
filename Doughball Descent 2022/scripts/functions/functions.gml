@@ -88,7 +88,7 @@ function goToTally(){
 	
 	instance_activate_object(oTally)
 	
-	instance_destroy(oSidebarL)
+	instance_destroy(oSidebarR)
 	instance_destroy(oSidebarR)
 	instance_destroy()
 	

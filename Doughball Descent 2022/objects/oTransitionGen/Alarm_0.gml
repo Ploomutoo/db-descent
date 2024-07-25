@@ -1,0 +1,1 @@
+oPlayer.tranLevel = 0

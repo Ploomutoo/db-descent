@@ -7,16 +7,18 @@ if(fastMode) {
 	oPlayer.y+=5
 	
 	if(image_alpha<1) image_alpha += 2*(0.01-image_alpha/100)
-	oCamera.yOffset-= 1+image_alpha
+	oCamera.yOffset-= 2+min(5,15/(alarm[0]+1))
+	
 	exit;
 }
 
-if(cDown) {
+if(cDown || cBash) {
+	if(alarm[0]>0) exit;
+	
+	alarm[0] = 30
 	fastMode = true
-	audio_play_sound(sndFastFall,0,0)
+	
 }
 
 if(image_alpha<1) image_alpha += 0.01-image_alpha/100
-oCamera.yOffset-= 1+image_alpha
-
 x=oPlayer.x

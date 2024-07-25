@@ -2,9 +2,9 @@
 // git push more like shit push
 
 if(tranLevel!=-1) {
-	draw_sprite(sTransition,0,140,viewHeight-tranLevel)
+	draw_sprite_ext(sTransition,0,0,viewHeight-tranLevel,dispWidth/sprite_get_width(sTransition),1,0,c_white,1)
 	draw_set_color(c_black)
-	draw_rectangle(140,viewHeight-tranLevel+96,500,viewHeight,0)
+	draw_rectangle(0,viewHeight-tranLevel+96,dispWidth,viewHeight,0)
 	draw_set_color(c_white)
 	
 	tranLevel+=tranSpeed
@@ -18,7 +18,7 @@ if(tranLevel!=-1) {
 			
 				var tg = instance_create_layer(0,0,layer,oTransitionGen);
 				
-				if(irandom(1)=0) {
+				if(false) {
 					
 					x = 512;
 					y = 0;

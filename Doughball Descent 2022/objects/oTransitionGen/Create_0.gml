@@ -45,3 +45,5 @@ fastMode = false;
 
 sinCount = 0
 sinOut = 0
+
+selectionWidth = dispWidth/array_length(option)

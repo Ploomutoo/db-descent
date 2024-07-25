@@ -127,7 +127,7 @@ if(drawOffset<0) drawOffset = drawOffset/4
 
 #endregion
 
-if(tranLevel = -1 && y>room_height+32) {
+if(room != rChoice && tranLevel = -1 && y>room_height+32) {
 	soundRand(sndLevelEnd)
 	setShopWidth()
 	//show_debug_message("Room:"+room_get_name(room))

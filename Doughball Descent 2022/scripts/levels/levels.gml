@@ -162,5 +162,9 @@ function loadLevelStructures(argument0){
 			hgInnit(200,400,hgAxe)
 			hgInnit(300,600,hgFish)
 		break;
+		case 15:
+			area = 6
+			hgInnit(20,40,hgGravel)
+			hgInnit(90,130,hgSpikes)
 	}
 }

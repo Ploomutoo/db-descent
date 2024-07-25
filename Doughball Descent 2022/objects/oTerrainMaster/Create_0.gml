@@ -17,7 +17,7 @@ if(area!=0) setAreaCosmetics(area)
 #region zoneUnlock
 
 	ini_open("config.ini")
-	if(area>ini_read_real("general","zoneUnlock", 2)) {
+	if(area-1>ini_read_real("general","zoneUnlock", 2)) {
 	
 		ini_write_real("general","zoneUnlock",area-1)
 		oTextBox.announce(0,"Shortcut Permanently Unlocked")
@@ -212,7 +212,7 @@ ds_map_destroy(json_rooms_g);
 
 #endregion
 
-oSidebarL.levelText = string(area)+" - "+string(1+level mod 3)
+oSidebarR.levelText = string(area)+" - "+string(1+level mod 3)
 
 if(altarDebug) {
 	show_debug_message("\nAltar Efficacy Log")
@@ -221,4 +221,4 @@ if(altarDebug) {
 	//show_debug_message("\nPlaced "+string(vaultsPlaced)+" vaults over " +string(room_height/32) + " tiles")
 	show_debug_message(string(oPlayer.altarBravery) + " Bravery, " + string(100*vaultsPlaced/yLimit) + "% efficacy")
 }
-if(loop>0) oSidebarL.levelText+=" L"+string(loop)
+if(loop>0) oSidebarR.levelText+=" L"+string(loop)

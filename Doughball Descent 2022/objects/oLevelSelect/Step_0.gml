@@ -15,7 +15,7 @@ if(cBash) {
 	
 	instance_activate_all()
 	level = cursorOn*3
-	instance_create_layer(-280,0,"instances",oSidebarL)
+	instance_create_layer(-280,0,"instances",oSidebarR)
 	
 	var player = instance_create_layer(320,-96,"instances",oPlayer)
 	with(player) altarInstantiate()
