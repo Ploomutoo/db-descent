@@ -7,7 +7,7 @@ function mountItem(itemCount) {
 	
 	show_debug_message(string(itemCount))
 	
-	x = -275 + 32*(itemCount%4)
-	y = 318	- 32*floor(itemCount/4);
+	x = 4 + 32*(itemCount%19)
+	y = viewHeight - 36 - 32*floor(itemCount/19);
 
 }

@@ -5,6 +5,11 @@ audio_listener_position(x, y, 0);
 if(iframes>0) iframes--
 if(iPushFrames>0) iPushFrames--
 
+var output = weightCategories.getProg(weight,weightCategories.stage,weightCategories.dProg); 
+weightCategories.progToNext = output[0]
+weightCategories.dProg		= output[1]
+weightCategories.stage = weightCategories.getStage(weight);
+
 if(weight!=lastWeight) {
 	
 	crushMax = floor(weight/100)*crushMultiplier
@@ -16,7 +21,7 @@ if(weight!=lastWeight) {
 	fallMax = 6+(grav-baseGrav)*10
 	if(fallMax>8) fallMax = 8
 	
-	spritePart = clamp(floor(weight/100)-1,-1,weightStages-2)
+	spritePart = clamp(floor(weight/100)-1,-1,weightCategories.spriteNum-2)
 	
 	belly_damping = 0.1
 	belly_elasticity = 0.5
@@ -175,7 +180,7 @@ if(jumpedTimer>0 || autoJump){
 		vspeed -= 4;
 		with(oiPowerKnees) other.vspeed -= stacks/2;
 		jumpedTimer = 0
-		crushes = crushMax	
+		crushes = weightCategories.crushes[weightCategories.stage]	
 		
 	} else jumpedTimer--
 }
@@ -185,6 +190,6 @@ if(room = rChoice) vspeed = 6
 
 if(vspeed>2 && fallReset = 1){
 	fallReset = 0	
-	crushes = crushMax	
+	crushes = weightCategories.crushes[weightCategories.stage]	
 	//crushes = 0
 }

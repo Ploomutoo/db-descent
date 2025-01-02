@@ -1,12 +1,11 @@
 {
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "playerMacros",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Doughball Descent 2022",
+    "path": "Doughball Descent 2022.yyp",
   },
-  "resourceVersion": "1.0",
-  "name": "playerMacros",
-  "tags": [],
-  "resourceType": "GMScript",
 }

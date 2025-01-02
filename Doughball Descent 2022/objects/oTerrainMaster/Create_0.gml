@@ -212,7 +212,7 @@ ds_map_destroy(json_rooms_g);
 
 #endregion
 
-oSidebarR.levelText = string(area)+" - "+string(1+level mod 3)
+oPlayer.levelText = string(area)+" - "+string(1+level mod 3)
 
 if(altarDebug) {
 	show_debug_message("\nAltar Efficacy Log")
@@ -221,4 +221,4 @@ if(altarDebug) {
 	//show_debug_message("\nPlaced "+string(vaultsPlaced)+" vaults over " +string(room_height/32) + " tiles")
 	show_debug_message(string(oPlayer.altarBravery) + " Bravery, " + string(100*vaultsPlaced/yLimit) + "% efficacy")
 }
-if(loop>0) oSidebarR.levelText+=" L"+string(loop)
+if(loop>0) oPlayer.levelText+=" L"+string(loop)

@@ -5,40 +5,40 @@ function setAreaCosmetics(argument0){
 		currentMusic = musLevel1;
 		tilemap_tileset(tileMap,tsLevel1)
 		bgUpdate(sBgBread)
-		oSidebarR.colorA = $3c6f9e
-		oSidebarR.colorB = $7dd9f0
+		global.colorA = $3c6f9e
+		global.colorB = $7dd9f0
 		
 		break;
 		case 2:
 		currentMusic = musLevel2;
 		tilemap_tileset(tileMap,tsLevel2)
 		bgUpdate(sBgProduce)
-		oSidebarR.colorA = $63b84b
-		oSidebarR.colorB = $3696e0
+		global.colorA = $63b84b
+		global.colorB = $3696e0
 		
 		break;
 		case 3:
 		currentMusic = musLevel3;
 		tilemap_tileset(tileMap,tsLevel3)
 		bgUpdate(sBgCow)
-		oSidebarR.colorA = $ffb196
-		oSidebarR.colorB = $f7e08d
+		global.colorA = $ffb196
+		global.colorB = $f7e08d
 		
 		break;
 		case 4:
 		currentMusic = musLevel4;
 		tilemap_tileset(tileMap,tsLevel4)
 		bgUpdate(sBgMeat)
-		oSidebarR.colorA = $855ac7
-		oSidebarR.colorB = $6875e8
+		global.colorA = $855ac7
+		global.colorB = $6875e8
 		
 		break;
 		case 5:
 		currentMusic = musLevel5;
 		tilemap_tileset(tileMap,tsLevel5)
 		bgUpdate(sBgDessert)
-		oSidebarR.colorA = $ca5fa1
-		oSidebarR.colorB = $c887df
+		global.colorA = $ca5fa1
+		global.colorB = $c887df
 		
 		density = choose(2,5);
 		

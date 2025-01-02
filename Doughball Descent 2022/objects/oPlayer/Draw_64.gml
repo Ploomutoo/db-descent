@@ -1,36 +1,72 @@
-if(cheat){
+if(dead) exit;
+
+draw_set_color(c_white)
+draw_set_halign(fa_left)
+draw_set_font(fntMini)
+var iy = uiSpacing
+var ix = uiSpacing;
+
+#region hearts & arrows
+var hboxScale = (8+heartMax*31+soulHearts*23)/32;
+draw_sprite_ext(sHeartBox,0,ix,iy,hboxScale,1,0,c_white,1);
+var j = heartMax
+ix+=4;
+for(var i = 0; i<j; i++){
 	
-	draw_set_halign(fa_right)
+	if(i>=hearts) draw_sprite(sHearts,1,ix,iy)
+	else draw_sprite(sHearts,0,ix,iy)
 	
-	//draw_text_outlined(495,320,"Room: "+room_get_name(room))
-	//draw_text_outlined(495,335,"TranRoom: "+room_get_name(tranRoom))
-	
-	//draw_text_outlined(495,335,"FPS: "+string(floor(fpsStored)))
-	//draw_text_outlined(495,320,"xScale: "+string(image_xscale))
-	//draw_text_outlined(495,305,"Sprite: "+string(spritePart))
-	
-	//draw_text_outlined(495,335,"Girth: "+string(girth))
-	//draw_text_outlined(495,320,"xScale: "+string(image_xscale))
-	//draw_text_outlined(495,305,"Sprite: "+string(spritePart))
-	//draw_text_outlined(495,305,"Grav: "+string(grav))
-	
-	/*
-	draw_text_outlined(495,335,"vSpeed: "+string(vspeed))
-	draw_text_outlined(495,320,"Grav: "+string(grav))
-	draw_text_outlined(495,305,"FallMax: "+string(fallMax))
-	*/
-	
-	//draw_text_outlined(495,335,"jiggleTo: "+string(dsScalex))
-	//draw_text_outlined(495,320,"jiggleAt: "+string(dsVelx))
-	
-	
-	/*
-	draw_text_outlined(495,335,"Protection: "+string(altarProtection))
-	draw_text_outlined(495,320,"Plenty: "+string(altarPlenty))
-	draw_text_outlined(495,305,"Bravery: "+string(altarBravery))
-	draw_text_outlined(495,290,"Stability: "+string(altarStability))
-	draw_text_outlined(495,275,"Safety: "+string(altarSafety))
-	*/
+	ix+=31;
 	
 }
-draw_set_halign(fa_left)
+j += soulHearts
+while(i<j){
+	draw_sprite(sHearts,2,ix,iy)
+	ix+=23;
+	i++;
+}
+
+//arrows
+ix = uiSpacing;
+iy += 32+uiSpacing/2;
+
+j = weightCategories.crushes[weightCategories.stage];
+ix += (j-1)*19
+for(i = j; i>0; i--){
+	
+	if(i>crushes) draw_sprite(sArrows,0,ix,iy)
+	else if (i=crushes) draw_sprite(sArrows,2,ix,iy)
+	else draw_sprite(sArrows,1,ix,iy)
+	
+	ix-=19;
+	
+}
+
+#endregion
+
+i = crushMax
+iy=uiSpacing;
+ix=dispWidth-uiSpacing-146
+
+draw_sprite(sWeightMeter,0,ix+2,iy)
+draw_sprite_ext(sWeightMeter,1,ix+2,iy,weightCategories.dProg,1,0,c_white,1)
+draw_sprite(sWeightBar,0,ix,iy)
+draw_set_halign(fa_right)
+draw_text(ix-2,iy+5,string(weight));
+draw_sprite(sWeightStage,weightCategories.stage,ix+8,iy+18)
+
+var progress = clamp((y-128)/(room_height-160),0,1)
+drawProg = lerp(0,altometerHeight,progress)
+
+iy += 18 + uiSpacing; //height of sWeightBar
+ix += 59 //width of sWeightStage
+
+ix = dispWidth-uiSpacing
+	
+if(room=rGame) {
+	ix-=16
+	draw_sprite_ext(sAltometer,0,ix,iy,1,1,0,global.colorB,1)
+	draw_sprite(sAltometer,1,ix,iy+drawProg)
+
+	draw_set_halign(fa_left)
+}

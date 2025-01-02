@@ -86,10 +86,7 @@ function goToTally(){
 	currentMusic = musDeath
 	playMusic(currentMusic)
 	
-	instance_activate_object(oTally)
-	
-	instance_destroy(oSidebarR)
-	instance_destroy(oSidebarR)
+	instance_activate_object(oTally)	
 	instance_destroy()
 	
 	room_goto(rTally)
@@ -305,8 +302,8 @@ function createParticles(argument0,argument1,argument2,argument3) {
 		creation = instance_create_depth(argument0,argument1,depth-2,oParticle)
 		creation.sprite_index = argument3
 		
-		if(argument3 = sPaRock) creation.drawCol = oSidebarR.colorA
-		if(argument3 = sPaMeat) creation.drawCol = oSidebarR.colorB
+		if(argument3 = sPaRock) creation.drawCol = global.colorA
+		if(argument3 = sPaMeat) creation.drawCol = global.colorB
 
 		creation.speed = random(2)+2
 		creation.direction = random(360)

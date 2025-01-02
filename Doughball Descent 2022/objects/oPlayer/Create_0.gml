@@ -1,13 +1,84 @@
 instance_create_layer(0,0,layer,oTally);
 
-oSidebarR.imprinted = self;
+#region migrated sidebar functionality
+uiSpacing = 8;
+drawProg=0
+altometerHeight = sprite_get_height(sAltometer)-13;
+mapHeight = round(room_height/32)
+global.colorA = c_red
+global.colorB = c_yellow
+if (level=undefined) level=0;
+loop = 0
+
+#macro calibrateGameHeight room_set_height(rGame,2048+level*512+loop*1024)
+calibrateGameHeight;
+levelText = ""
+#endregion
+
 globalvar cheat;
 cheat = false;
 fpsNorm = 0;
 
-maxSpeed = 3
 weight = 100
+dWeight = weight;	//displayed weight
 lastWeight = 0
+var thresh = [0  ,100,200,400,600,800,1200];
+var count	  = array_length(thresh)-1;
+weightCategories =
+{
+	threshold : thresh,
+	crushes   : [0  ,1,  2,  3,  4,  5	,6   ],
+	stageCount : count,
+	maxStableWeight : thresh[count], //weight at which weight will decay over time
+	spriteNum		: sprite_get_height(sPlayerWalk)/playerSpriteHeight,
+	spriteStageInc  : [0,100,200,300,400,600,800,1000,1200],
+	//weights at which sprites change, should deffo be on the internal stage increments, extras between
+	//there are 9 sprite stages presently starting at 0
+	getStage : function(_weight)
+	{
+		var i = 0;
+		repeat(stageCount-1)
+		{	
+			if(_weight<threshold[i+1]) return(i);
+			i++;
+		}
+		return(stageCount);
+	},
+	stage : 1, //current stage
+	progToNext: 0, //percent progress to next stage
+	dProg : 0, //displayed progress
+	getProg : function(_weight,_stage,_dprog) //generally used with progToNext
+	{		
+		var numerator = _weight - threshold[_stage];
+		//ex 150 lbs: 150 (current weight) - 100 (threshold for current stage) -> 50
+		
+		numerator = numerator / (threshold[_stage+1]-threshold[_stage]);
+		//ex 50 lbs to next ->  50 / 100 (threshold for current stage) - 200 (threshold for next stage)
+		//					50 / 100 -> 0.5 progress to next stage
+		
+		_dprog = _dprog+(numerator-_dprog)/10
+		//ex 0.0 dprog 0.5 numerator
+		// numerator is higher	0.0 + (0.5-0.0)/2  -> 0.25
+		// continuation			0.25+(0.5-0.25)/2-> 0.375 approaching as expected
+		
+		// numerator is lower		1.0  + (0.5-1.0)/2  -> 0.75
+		// continuation			0.75+(0.5-0.75)/2-> 0.635 as expected, is the display broken?
+		
+		if(numerator>=1)
+		{
+			numerator = 0
+			oCamera.screenShake = 10
+			instance_create_depth(oPlayer.x,oPlayer.y-48,-1,oWeightUp)
+			soundRand(sndWeightUp)
+		}
+		var out = [numerator,_dprog];
+		//ex [0.5, 0.0]
+		return(out);
+	}
+};
+if weightCategories.spriteNum != array_length(weightCategories.spriteStageInc) show_error("Sprite num and number of increments should be equal!",0);
+// Sanity check ^
+weightCategories.stage = weightCategories.getStage(weight);
 
 grounded = 0
 crushMax = floor(weight/100)*crushMultiplier
@@ -22,6 +93,7 @@ iframes = 0
 iflash = 0
 iPushFrames = 0
 
+maxSpeed = 3
 jumpedTimer=0
 apexTime = 5
 image_speed = 0
@@ -73,10 +145,7 @@ altarInstantiate()
 	spritePart = 0
 	drawSin = 45
 	drawOffset = 0
-	
-	weightStages = sprite_get_height(sPlayerWalk)/playerSpriteHeight
-	//show_debug_message(string(weightStages)+" Weight Stages!")
-	
+		
 	drawSurf = surface_create(64,64)
 	dsScalex = 1; dsVelx = 0;
 	dsScaley = 1; dsVely = 0;

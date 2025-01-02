@@ -51,7 +51,7 @@ if(keyboard_check_pressed(ord(string(eCheat.setWeight)))) {
 	popup.drawString = "+"+string(i-weight)
 	
 	weight = i
-	oSidebarR.dWeight = i
+	dWeight = i
 }
 
 if(keyboard_check_pressed(ord(string(eCheat.giveItem)))) {
