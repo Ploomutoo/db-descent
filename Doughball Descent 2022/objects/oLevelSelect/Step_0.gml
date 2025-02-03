@@ -16,8 +16,7 @@ if(cBash) {
 	instance_activate_all()
 	level = cursorOn*3
 	
-	var player = instance_create_layer(320,-96,"instances",oPlayer)
-	with(player) altarInstantiate()
+	makePlayer();
 		
 	room_goto(rGame)
 	window_set_cursor(cr_none)

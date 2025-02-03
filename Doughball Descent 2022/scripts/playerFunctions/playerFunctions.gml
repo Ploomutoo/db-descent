@@ -131,7 +131,7 @@ function playerKill(enemy){
 		var popup = instance_create_layer(enemy.x,enemy.y-32,layer,oPopupText)
 		popup.drawString = "+"+string(calGet)
 		
-		with(oComboMeter) event_user(0)
+		event_user(0)
 
 	}
 	
@@ -159,8 +159,8 @@ function calBonus(calIn){
 	if(instance_exists(oiReboundGains))	calIn = oiReboundGains.foodGet(calIn);
 	
 	
-	if(instance_exists(oComboMeter)){
-		calIn = calIn * (1 + oComboMeter.combo/10)
+	if(combo>1){
+		calIn = calIn * (1 + combo/10)
 	}
 	
 	return(ceil(calIn))

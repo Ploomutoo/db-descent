@@ -1,7 +1,7 @@
-if(room=rTitle || room=rTally){
-	menu[settings.quit,0] = "Quit"
-	menu[settings.quit,1] = 0
+/*if(room=rTitle || room=rTally){
+	settings[settings.quit,0] = "Quit"
+	settings[settings.quit,1] = 0
 } else {
-	menu[settings.quit,0] = "End Run"
-	menu[settings.quit,1] = 1
-}
+	settings[settings.quit,0] = "End Run"
+	settings[settings.quit,1] = 1
+}*/

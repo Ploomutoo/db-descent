@@ -50,7 +50,7 @@ if(weight!=lastWeight) {
 
 	image_xscale = 1.5 + weight/100*0.15
 	
-	if(oPause.menu[settings.sizeCap,1]=true) {
+	if(oPause.settings[enSettings.sizeCap,1]=true) {
 		girth = min(girth,2.3);
 		image_xscale = min(image_xscale,9);
 	}
@@ -149,6 +149,8 @@ if (grounded) {
 	var fallBox = collision_rectangle(bbox_left-fbGrace,y-fbGrace,bbox_right+fbGrace,y+vspeed,oParentEnemy,false,false)
 	if(instance_exists(fallBox)) {
 		dsScalex = 1.5; dsScaley = 0.6
+		
+		
 		if(!fallBox.stompable) {
 			if(iframes>0) exit
 			vspeed = -6
@@ -163,7 +165,7 @@ if (grounded) {
 				playerKill(fallBox);
 				oTally.foesStomped++
 			}
-		
+			
 			instance_destroy(fallBox)		
 		}
 	}

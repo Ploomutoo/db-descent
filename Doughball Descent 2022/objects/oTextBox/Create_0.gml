@@ -36,13 +36,12 @@ storedPage = ds_list_create()
 drawWidth = 0
 drawHeight = 0
 
-voice = talkGeneric
+avoice = talkGeneric
 pitch = 1
 monotone = true
 box = true
 tmExpire = -1
 
-x = 140+oCamera.camWidth/2
+x = viewWidth/2
 y = 16
 event_user(0)
-

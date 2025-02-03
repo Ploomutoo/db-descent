@@ -87,8 +87,8 @@ if(view_visible[1]) {
 		screenShake = -screenShake * 0.8
 		if(abs(screenShake)<0.5) screenShake = 0;
 	
-		if(oPause.menu[2,1]=0) screenShake = 0;
-		else finY += screenShake/5*oPause.menu[2,1]
+		if(oPause.settings[2,1]=0) screenShake = 0;
+		else finY += screenShake/5*oPause.settings[2,1]
 	}
 
 	var c1centre = c1leftbounds+c1width/2
@@ -140,8 +140,8 @@ if(view_visible[1]) {
 		screenShake = -screenShake * 0.8
 		if(abs(screenShake)<0.5) screenShake = 0;
 	
-		if(oPause.menu[2,1]=0) screenShake = 0;
-		else finY += screenShake/5*oPause.menu[2,1]
+		if(oPause.settings[2,1]=0) screenShake = 0;
+		else finY += screenShake/5*oPause.settings[2,1]
 	}
 	
 	c1width = camWidth

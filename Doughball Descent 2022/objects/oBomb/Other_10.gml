@@ -1,1 +1,0 @@
-hspeed=oPlayer.hFace*4

@@ -16,7 +16,7 @@ if(instance_exists(oTally)){
 
 if(instance_exists(oiComfortFood)) iframes = max(iframes,30 + 30*oiComfortFood.stacks)
 
-with(oComboMeter) event_user(0)
+event_user(0)
 with(oBrainFood) {
 	active = true
 	alarm[0] = timerSet

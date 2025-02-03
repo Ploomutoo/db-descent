@@ -1,1 +1,0 @@
-if(combo>0) draw_sprite(sprite_index,image_index,470,4)

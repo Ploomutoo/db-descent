@@ -37,7 +37,7 @@ weightCategories =
 	getStage : function(_weight)
 	{
 		var i = 0;
-		repeat(stageCount-1)
+		repeat(stageCount)
 		{	
 			if(_weight<threshold[i+1]) return(i);
 			i++;
@@ -48,11 +48,18 @@ weightCategories =
 	progToNext: 0, //percent progress to next stage
 	dProg : 0, //displayed progress
 	getProg : function(_weight,_stage,_dprog) //generally used with progToNext
-	{		
+	{	
 		var numerator = _weight - threshold[_stage];
 		//ex 150 lbs: 150 (current weight) - 100 (threshold for current stage) -> 50
 		
-		numerator = numerator / (threshold[_stage+1]-threshold[_stage]);
+		if(_stage+1>stageCount)
+		{
+			var out = [0,0];
+			return(out);
+		}
+		
+		var denominator = threshold[_stage+1]-threshold[_stage]
+		numerator = numerator / denominator;
 		//ex 50 lbs to next ->  50 / 100 (threshold for current stage) - 200 (threshold for next stage)
 		//					50 / 100 -> 0.5 progress to next stage
 		
@@ -88,6 +95,10 @@ counterFallEffect = 4
 heartMax = 3
 hearts = heartMax
 soulHearts = 2
+
+canCombo = false
+combo = 0
+comboTime = 120
 
 iframes = 0
 iflash = 0

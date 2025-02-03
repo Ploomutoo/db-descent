@@ -1,3 +1,4 @@
 event_inherited();
 
-if(!instance_exists(oComboMeter)) instance_create_depth(x,y,0,oComboMeter)
+oPlayer.canCombo = true;
+oPlayer.comboTime = 60 + stacks * 60

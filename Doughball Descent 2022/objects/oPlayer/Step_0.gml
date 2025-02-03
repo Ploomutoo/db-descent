@@ -74,20 +74,25 @@ if(bashActive>0) {
 	}
 }
 
-if(bashActive>15){ //bash func
+if(bashActive>=15) //bash func
+{ 
 	
 	var brokeBlock = breakBlock(desX+24*hFace,y-16,1)
 	if (brokeBlock!=0) {
 		
-		bashActive = 10;
+		bashActive = 16;
 		createParticles(desX+24*hFace,y-16,6,sPaRock)
 	}
 
 	//var victim = instance_position(desX+16*hFace,y-16,oParentBashable)
 	var victim = collision_rectangle(x,y-4,desX+32*hFace,y-32,oParentBashable,0,1);
-	with(victim) event_user(0)
 	
-	if(instance_exists(victim)) bashActive = 10
+	
+	if(instance_exists(victim)) 
+	{	
+		victim.funcHurt(self,false)
+		bashActive = 16
+	}
 }
 
 if(mobile = false) speed = 0
@@ -131,5 +136,11 @@ if(room != rChoice && tranLevel = -1 && y>room_height+32) {
 	soundRand(sndLevelEnd)
 	setShopWidth()
 	//show_debug_message("Room:"+room_get_name(room))
+	if(combo>0)
+	{
+		alarm[1] = 0
+		event_perform(ev_alarm,1)
+	}
+	
 	tranLevel = 0;
 }

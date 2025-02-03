@@ -1,2 +1,2 @@
 event_inherited();
-instance_destroy(oComboMeter);
+oPlayer.canCombo = 0;

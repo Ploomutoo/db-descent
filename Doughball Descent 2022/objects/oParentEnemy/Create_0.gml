@@ -8,3 +8,11 @@ stompable = true
 active = false
 
 depth-=1
+
+funcHurt = function _hurt(attacker,isStomp)
+{	
+	playerKill(self);
+	oTally.foesBomped++
+
+	instance_destroy();
+}

@@ -92,6 +92,12 @@ function goToTally(){
 	room_goto(rTally)
 }
 
+function makePlayer()
+{
+	var player = instance_create_layer(320,-96,"instances",oPlayer)
+	with(player) altarInstantiate()
+}
+
 function spawnCorpse(){
 	var corpse = instance_create_depth(x,y,depth,oEnemyCorpse)
 	corpse.direction = point_direction(oPlayer.x,oPlayer.y,x,y)
@@ -340,7 +346,7 @@ function playMusic(track) {
 	
 	//show_debug_message("Called by "+object_get_name(object_index))
 	
-	if(oPause.menu[1,1]=0) { audio_group_stop_all(agMusic); global.musCurrent = 0; exit; }
+	if(oPause.settings[enSettings.musicVol,1]=0) { audio_group_stop_all(agMusic); global.musCurrent = 0; exit; }
 	if(audio_is_playing(track)) exit;
 	
 	audio_group_stop_all(agMusic);
@@ -352,7 +358,7 @@ function playMusic(track) {
 	if(musPrev>=0) audio_stop_sound(musPrev)
 	
 	var musCurrent = asset_get_index("musLevel"+string(trackNum))
-	audio_sound_gain(musCurrent,oPause.menu[1,1]/10,0) 
+	audio_sound_gain(musCurrent,oPause.settings[1,1]/10,0) 
 	if(musCurrent!=-1 && !audio_is_playing(musCurrent)) audio_play_sound(musCurrent,-5,1)*/
 
 }

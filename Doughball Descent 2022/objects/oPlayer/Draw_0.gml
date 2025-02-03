@@ -59,7 +59,7 @@ if(bashActive<=0) {
 gpu_set_fog(0,c_white,1,0);
 surface_reset_target()
 
-if(oPause.menu[settings.squashStretch,1]=true) {
+if(oPause.settings[enSettings.squashStretch,1]=true) {
 	draw_surface_ext(drawSurf,x-repX*dsScalex,y-repY*dsScaley,dsScalex,dsScaley,0,c_white,1)
 	
 	var dsWidth = surface_get_width(drawSurf)/2

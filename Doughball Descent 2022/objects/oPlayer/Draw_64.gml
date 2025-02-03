@@ -48,12 +48,37 @@ i = crushMax
 iy=uiSpacing;
 ix=dispWidth-uiSpacing-146
 
-draw_sprite(sWeightMeter,0,ix+2,iy)
-draw_sprite_ext(sWeightMeter,1,ix+2,iy,weightCategories.dProg,1,0,c_white,1)
-draw_sprite(sWeightBar,0,ix,iy)
-draw_set_halign(fa_right)
-draw_text(ix-2,iy+5,string(weight));
-draw_sprite(sWeightStage,weightCategories.stage,ix+8,iy+18)
+if(weight<weightCategories.maxStableWeight)
+{
+	draw_sprite(sWeightMeter,0,ix+2,iy)
+	draw_sprite_ext(sWeightMeter,1,ix+2,iy,weightCategories.dProg,1,0,c_white,1)
+	draw_sprite(sWeightBar,0,ix,iy)
+
+	draw_set_halign(fa_right)
+	draw_text(ix-2,iy+5,string(weight));
+	draw_sprite(sWeightStage,weightCategories.stage,ix+8,iy+18)
+}
+else 
+{	
+	draw_sprite(sWeightStage,weightCategories.stage,ix+8,iy+18)
+	
+	draw_sprite(sWeightBarOverfull,1,ix,iy)
+	draw_set_halign(fa_center)
+	draw_set_valign(fa_middle)
+	var scale = sqrt(weight)/34.64
+	
+	draw_set_font(fntBase);
+	draw_set_color(c_black);
+	draw_text_transformed(ix+74,iy+13,string(weight),scale,scale,0)
+	draw_text_transformed(ix+74,iy+11,string(weight),scale,scale,0)
+	draw_text_transformed(ix+72,iy+13,string(weight),scale,scale,0)
+	draw_text_transformed(ix+72,iy+11,string(weight),scale,scale,0)
+	draw_set_color(c_white);
+	draw_text_transformed(ix+73,iy+12,string(weight),scale,scale,0)
+	//draw_text_outlined(ix+73,iy+9,string(weight));
+}
+
+if(combo>0) draw_sprite(sComboMeter,combo-1,ix+64,iy+22)
 
 var progress = clamp((y-128)/(room_height-160),0,1)
 drawProg = lerp(0,altometerHeight,progress)
@@ -69,4 +94,5 @@ if(room=rGame) {
 	draw_sprite(sAltometer,1,ix,iy+drawProg)
 
 	draw_set_halign(fa_left)
+	draw_set_valign(fa_top)
 }

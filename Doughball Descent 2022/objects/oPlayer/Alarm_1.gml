@@ -1,3 +1,4 @@
+/// @description  Combo Reset
 //show_debug_message("Time's Up!")
 combo = 0
 image_index = 0

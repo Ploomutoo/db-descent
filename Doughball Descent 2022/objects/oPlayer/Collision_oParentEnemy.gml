@@ -1,13 +1,10 @@
 if(dead) exit;
-//var enemy = other
+var enemy = other
 
-if(iframes>0) exit
-//Ow
-takeDamage()
-
-	
-/*if(y<enemy.bbox_bottom-1) {
-	if(!enemy.stompable) {
+if(y<enemy.bbox_bottom-1) 
+{
+	enemy.funcHurt(self,true)
+	/*if(!enemy.stompable) {
 		if(iframes>0) exit
 		vspeed = -6
 		takeDamage()
@@ -22,13 +19,10 @@ takeDamage()
 			oTally.foesStomped++
 		}
 		
-		instance_destroy(enemy)		
-	}
+		instance_destroy(enemy)*/
 } else {
 	if(iframes>0) exit
 	//Ow
 	vspeed = -10
-	//hspeed+=enemy.image_xscale*5
-	//image_xscale = -enemy.image_xscale
 	takeDamage()
-}*/
+}

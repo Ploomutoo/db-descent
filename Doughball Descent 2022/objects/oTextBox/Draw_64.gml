@@ -5,5 +5,6 @@ if(box) draw_sprite_ext(sprite_index,0,x,y,drawWidth,drawHeight,0,c_white,1)
 
 
 draw_set_halign(fa_center)
+draw_set_font(fntBase)
 draw_text(x,y+2,drawText)
 draw_set_halign(fa_left)

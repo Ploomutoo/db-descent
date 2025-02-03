@@ -3,7 +3,6 @@ if(tick > 0) exit;
 tick = 4;
 
 image_alpha = image_alpha*(image_alpha-0.001);
-show_debug_message(string(image_alpha))
 if(image_alpha<0.1) instance_destroy()
 
 for(var i = array_length(p_array)-1; i>=0; i--)
