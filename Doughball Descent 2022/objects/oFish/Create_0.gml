@@ -16,3 +16,20 @@ if(faceLeft) desSpeed = -desSpeed
 else image_xscale = -image_xscale
 
 hspeed = desSpeed
+
+funcHurt = function _hurt(attacker,isStomp)
+{	
+	if(isStomp)
+	{
+		with(attacker)
+		{
+			if(iframes>0) exit
+			vspeed = -6
+			takeDamage()
+		}
+	}
+	else
+	{
+		speed = -2
+	}
+}

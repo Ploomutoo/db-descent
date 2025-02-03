@@ -1,1 +1,0 @@
-hDir = oPlayer.hFace

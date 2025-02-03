@@ -1,25 +1,10 @@
 if(dead) exit;
 var enemy = other
 
-if(y<enemy.bbox_bottom-1) 
+if(y<enemy.bbox_top+4 && vspeed>=0) 
 {
 	enemy.funcHurt(self,true)
-	/*if(!enemy.stompable) {
-		if(iframes>0) exit
-		vspeed = -6
-		takeDamage()
-	} else {
-		//Squash
-		vspeed = -2
-		if(jumpedTimer>0) vspeed = -6
-		soundRand(sndStomp)
-		
-		if(enemy.calories>0) {
-			playerKill(enemy);
-			oTally.foesStomped++
-		}
-		
-		instance_destroy(enemy)*/
+
 } else {
 	if(iframes>0) exit
 	//Ow

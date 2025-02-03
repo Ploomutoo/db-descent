@@ -150,23 +150,12 @@ if (grounded) {
 	if(instance_exists(fallBox)) {
 		dsScalex = 1.5; dsScaley = 0.6
 		
+		vspeed = -6
+		fallBox.funcHurt(self,true)
 		
-		if(!fallBox.stompable) {
-			if(iframes>0) exit
-			vspeed = -6
-			takeDamage()
-		} else {
-			//Squash
-			vspeed = -2
-			if(jumpedTimer>0) vspeed = -6
+		if(!instance_exists(fallBox))
+		{
 			soundRand(sndStomp)
-		
-			if(fallBox.calories>0) {
-				playerKill(fallBox);
-				oTally.foesStomped++
-			}
-			
-			instance_destroy(fallBox)		
 		}
 	}
 	#endregion

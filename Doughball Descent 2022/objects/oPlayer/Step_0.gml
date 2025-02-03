@@ -74,24 +74,23 @@ if(bashActive>0) {
 	}
 }
 
-if(bashActive>=15) //bash func
+if(bashActive>15) //bash func
 { 
 	
 	var brokeBlock = breakBlock(desX+24*hFace,y-16,1)
 	if (brokeBlock!=0) {
 		
-		bashActive = 16;
+		bashActive = 10;
 		createParticles(desX+24*hFace,y-16,6,sPaRock)
 	}
 
-	//var victim = instance_position(desX+16*hFace,y-16,oParentBashable)
 	var victim = collision_rectangle(x,y-4,desX+32*hFace,y-32,oParentBashable,0,1);
 	
 	
 	if(instance_exists(victim)) 
 	{	
 		victim.funcHurt(self,false)
-		bashActive = 16
+		bashActive = 10
 	}
 }
 

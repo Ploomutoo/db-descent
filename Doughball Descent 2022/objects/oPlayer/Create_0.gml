@@ -88,7 +88,7 @@ if weightCategories.spriteNum != array_length(weightCategories.spriteStageInc) s
 weightCategories.stage = weightCategories.getStage(weight);
 
 grounded = 0
-crushMax = floor(weight/100)*crushMultiplier
+//crushMax = floor(weight/100)*crushMultiplier
 crushes = 1
 counterFallEffect = 4
 

@@ -1,11 +1,22 @@
 event_inherited()
 
-if(!mobile) exit;
-
+if(!mobile)
+{	
+	hspeed = hspeed*0.8
+	var desX = x+sign(hspeed)*24+hspeed
+	if(tsCheckEmpty(desX,y-4))
+	{
+		hspeed = hspeed*-1
+		x+=hspeed
+	}
+	
+	exit;
+}
+	
 if(turnedCooldown>0)turnedCooldown--
 if(image_index<1) exit;
 
-var desX = x+16*image_xscale
+var desX = x+32*image_xscale
 
 if(!tsCheckEmpty(desX,y-4)
   &&tsCheckEmpty(desX,y+4)

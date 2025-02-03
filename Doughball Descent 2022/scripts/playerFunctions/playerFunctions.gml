@@ -94,7 +94,7 @@ function takeDamage(){
 			instance_create_layer(0,0,layer,oPopupDeath)
 			alarm[0] = room_speed*3
 		
-			var corpse = instance_create_layer(x,y,layer,oEnemyCorpse);
+			var corpse = instance_create_layer(x,y-24,layer,oEnemyCorpse);
 			corpse.direction = direction; corpse.speed = 4; corpse.vspeed-=3;
 			corpse.sprite_index = sPlayerCorpse; corpse.image_index = spritePart+1
 			corpse.image_xscale = girth*hFace; corpse.gravity = 0.3;
