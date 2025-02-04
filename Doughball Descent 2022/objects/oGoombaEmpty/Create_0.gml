@@ -27,7 +27,7 @@ switch(oTerrainMaster.area){
 		break;
 		
 	default:
-		instance_create_depth(x,y,0,oBigWorm)
+		instance_create_depth(x,y,0,oGoomba)
 		break;
 		
 }
