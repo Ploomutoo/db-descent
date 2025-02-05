@@ -543,6 +543,7 @@
     {"id":{"name":"oTransitionGen","path":"objects/oTransitionGen/oTransitionGen.yy",},"order":6,},
     {"id":{"name":"sPlayerHurricane","path":"sprites/sPlayerHurricane/sPlayerHurricane.yy",},"order":7,},
     {"id":{"name":"txr_compile_getter","path":"scripts/txr_compile_getter/txr_compile_getter.yy",},"order":2,},
+    {"id":{"name":"noise","path":"scripts/noise/noise.yy",},"order":9,},
     {"id":{"name":"oTalDraw","path":"objects/oTalDraw/oTalDraw.yy",},"order":12,},
     {"id":{"name":"vsEventCave2","path":"rooms/vsEventCave2/vsEventCave2.yy",},"order":1,},
     {"id":{"name":"txr_build_ops","path":"scripts/txr_build_ops/txr_build_ops.yy",},"order":3,},

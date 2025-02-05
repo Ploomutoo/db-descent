@@ -49,40 +49,51 @@ var heartCountdown = round(protMult*irandom_range(64,xLimit*yLimit/3))
 var heartPlaced = 0
 
 var invertLayer = 1+irandom(3)
-var place0 = 0
-var place1 = 1
+var noiseOut = 0
+var place = 0
+var noiseSeed = [irandom(255),irandom(255)]
+
+var noisePeak = [0,256]
+
+var noiseThreshold = 85
 
 var placeItem = irandom_range(1,3);
 
 while(iy<yLimit){
 	
 	while(ix<xLimit) {
-		tilemap_set(tileMap, place1, ix, iy)
-			
-		if(holeCountdown<=0) {
-			tilemap_set(tileMap, place0, ix, iy)
-			holeCountdown = irandom(6)
-			
-			if(foodCountdown<=0){
+		
+		noiseOut = noise(ix+noiseSeed[0],iy+noiseSeed[1],2)
+		if(noiseOut>noiseThreshold) place = 1
+		else place = 0
+		
+		if noiseOut > noisePeak[0] noisePeak[0] = noiseOut
+		else if noiseOut < noisePeak[1] noisePeak[1] = noiseOut
+		
+		tilemap_set(tileMap, place, ix, iy)
+		
+		if(place = 0)
+		{
+			if(foodCountdown<=0)
+			{
 				instance_create_layer(ix*32+16,iy*32+16,layer,oFood)
 				foodPlaced++
 				foodCountdown = round(plentyMult*irandom_range(12,18))
-			} else foodCountdown--
-			
-		} else holeCountdown--
+			} 
+			else foodCountdown--
 		
-		if(heartCountdown<=0){
+			if(heartCountdown<=0){
 				
-				heartPlaced++
-				if(placeItem = 0 && irandom(1)=0) {
-					instance_create_layer(ix*32,iy*32,layer,oItemPedestal)
-				} else {
-					instance_create_layer(ix*32,iy*32,layer,oHeartPickup)
-					placeItem--;
-				}
-				heartCountdown = round(protMult*irandom_range(xLimit*yLimit/2,xLimit*yLimit/3))
-		} else heartCountdown--
-	
+					heartPlaced++
+					if(placeItem = 0 && irandom(1)=0) {
+						instance_create_layer(ix*32,iy*32,layer,oItemPedestal)
+					} else {
+						instance_create_layer(ix*32,iy*32,layer,oHeartPickup)
+						placeItem--;
+					}
+					heartCountdown = round(protMult*irandom_range(xLimit*yLimit/2,xLimit*yLimit/3))
+			} else heartCountdown--
+		}
 		ix++
 	}
 	ix = 0;
@@ -102,7 +113,7 @@ while(iy<yLimit){
 	}
 	
 }
-
+show_debug_message("Max output is "+ string(noisePeak[0])+", Min output is "+string(noisePeak[1]))
 #endregion
 
 #region Algorithmic Hazards
@@ -213,6 +224,7 @@ ds_map_destroy(json_rooms_g);
 #endregion
 
 oPlayer.levelText = string(area)+" - "+string(1+level mod 3)
+show_debug_message("Levelgen took "+string(delta_time)+" microseconds")
 
 if(altarDebug) {
 	show_debug_message("\nAltar Efficacy Log")
