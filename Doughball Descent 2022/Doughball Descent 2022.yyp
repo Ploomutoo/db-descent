@@ -313,6 +313,7 @@
     {"id":{"name":"scr_txr_demo_assert","path":"scripts/scr_txr_demo_assert/scr_txr_demo_assert.yy",},"order":3,},
     {"id":{"name":"talkEvent","path":"sounds/talkEvent/talkEvent.yy",},"order":8,},
     {"id":{"name":"oUdder","path":"objects/oUdder/oUdder.yy",},"order":1,},
+    {"id":{"name":"oPretzelSpikes","path":"objects/oPretzelSpikes/oPretzelSpikes.yy",},"order":11,},
     {"id":{"name":"sFish","path":"sprites/sFish/sFish.yy",},"order":12,},
     {"id":{"name":"sndGumballToss","path":"sounds/sndGumballToss/sndGumballToss.yy",},"order":40,},
     {"id":{"name":"txr_action_write","path":"scripts/txr_action_write/txr_action_write.yy",},"order":2,},

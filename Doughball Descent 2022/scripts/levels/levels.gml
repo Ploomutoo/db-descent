@@ -194,7 +194,7 @@ function loadLevelStructures(argument0)
 		hgInnit(70,100,hgBigWorm)
 		hgInnit(50,70 ,hgRay)
 		hgInnit(20,40 ,hgBouncy)
-		hgInnit(90,130,hgSpikes)
+		hgInnit(90,130,hgAllSpikes)
 		hgInnit(60,90,hgBagel)
 		density = "sparse"
 		break;

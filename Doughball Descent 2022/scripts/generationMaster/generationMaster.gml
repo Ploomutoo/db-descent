@@ -87,3 +87,21 @@ function hgBouncy() {
 	}
 	return(true)
 }
+
+function hgAllSpikes() {
+	var veinWidth = 1 + irandom(2) //Temporarily the width of gravel vein
+	var i = 1 + irandom(2)
+	while (veinWidth>0){
+		while(i>0){
+			var tmg = tilemap_get(tileMap,ix+veinWidth,iy+i)>0
+			if(tmg=0) {
+				tilemap_set(tileMap,0,ix+veinWidth,iy+i)
+				instance_create_layer(32*(ix+veinWidth),32*(iy+i),layer,oPretzelSpikes)
+			}
+			i--
+		}
+		i = 1 + irandom(2)
+		veinWidth--
+	}
+	return(true)
+}
