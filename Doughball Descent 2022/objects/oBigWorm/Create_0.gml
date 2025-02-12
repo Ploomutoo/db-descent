@@ -4,6 +4,8 @@ mobile = true
 
 funcHurt = function _hurt(attacker,isStomp)
 {	
+	
+	isHarmful = false;
 	if(isStomp)
 	{	
 		if(attacker.weight>300 && attacker.crushes>=1)
@@ -21,12 +23,13 @@ funcHurt = function _hurt(attacker,isStomp)
 				crushes = 0
 				vspeed = -6
 			}
-			alarm[0] = room_speed/2
+			alarm[0] = room_speed
 		}
 	}
 	else
 	{
-		alarm[0] = room_speed/3
+		alarm[0] = room_speed
+		if(!mobile) exit;
 	}
 	
 	hspeed = sign(x-attacker.x)

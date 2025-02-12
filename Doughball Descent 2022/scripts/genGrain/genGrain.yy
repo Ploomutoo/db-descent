@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "genGeneric",
+  "name": "genGrain",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

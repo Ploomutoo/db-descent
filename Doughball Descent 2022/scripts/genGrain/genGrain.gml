@@ -10,39 +10,6 @@ function hgGoomba() {
 	}
 	return(true)
 }
-
-function hgSpikes() {
-	
-	if (tilemap_get(tileMap, ix, iy-1)=0 && tilemap_get(tileMap, ix, iy)>0) {
-		repeat(irandom_range(1,4)){
-			
-			tilemap_set(tileMap, 3, ix, iy)
-			tilemap_set(tileMap, 0, ix, iy-1)
-			instance_create_layer(ix*32+16,(iy)*32,layer,oHazSpike)
-			ix++
-			
-		}
-		return(true)
-	} else return(false)
-}
-
-function hgGravel() {
-	var veinWidth = 1 + irandom(2) //Temporarily the width of gravel vein
-	var i = 1 + irandom(2)
-	while (veinWidth>0){
-		while(i>0){
-			var tmg = tilemap_get(tileMap,ix+veinWidth,iy+i)>0
-			if(tmg>0 && tmg!=4) {
-				instance_create_layer(32*(ix+veinWidth),32*(iy+i),layer,oHazGravel)
-				//instance_create_layer(32*(ix+veinWidth),32*(iy+i),layer,oThumbtack)
-			}
-			i--
-		}
-		i = 1 + irandom(2)
-		veinWidth--
-	}
-	return(true)
-}
 	
 function hgBagel() {
 	var platWidth = 5+irandom(3)
@@ -71,4 +38,29 @@ function hgBagel() {
 	return(true);
 }
 
+function hgBigWorm() {
+	var platWidth = 3+irandom(3)
+	
+	instance_create_layer(ix*32+16,iy*32+32,layer,oBigWorm)
+	repeat(platWidth) {
+		if(ix>=xLimit) ix = 0
+		tilemap_set(tileMap, 0, ix, iy)
+		tilemap_set(tileMap, 0, ix, iy-1)
+		tilemap_set(tileMap, 2, ix, iy+1)
+		ix++
+	}
+	return(true)
+}
 
+function hgRay() {
+	var platWidth = 3+irandom(5)
+	
+	instance_create_layer(ix*32+16,iy*32+16,layer,oRay)
+	repeat(platWidth) {
+		if(ix>=xLimit) break
+		tilemap_set(tileMap, 0, ix, iy)
+		tilemap_set(tileMap, 0, ix, iy-1)
+		ix++
+	}
+	return(true)
+}

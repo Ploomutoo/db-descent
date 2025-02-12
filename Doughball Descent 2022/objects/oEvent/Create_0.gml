@@ -1,7 +1,7 @@
 depth+=4
 
 state = 0
-dx = 140+oCamera.camWidth/2
+dx = dispWidth/2
 dy = 32
 dim = 0
 

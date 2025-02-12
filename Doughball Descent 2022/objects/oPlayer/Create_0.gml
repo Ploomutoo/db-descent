@@ -108,7 +108,10 @@ maxSpeed = 3
 jumpedTimer=0
 apexTime = 5
 image_speed = 0
+
 bashActive = 0
+extraBashFrames = 3;
+
 walkFrame = 0
 items = [];
 
@@ -117,6 +120,13 @@ vspeed = fallMax
 
 #macro baseGrav 0.2
 grav = baseGrav
+
+function loGrav(newGravity,duration)
+{
+	//Duration in seconds, please
+	grav = newGravity;
+	alarm[2] = duration*room_speed;
+}
 
 fallReset = 0
 

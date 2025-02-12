@@ -30,3 +30,4 @@ function coUp() {
 
 #macro cUp cJump
 #macro cDown keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down)
+#macro cDownHeld keyboard_check(ord("S")) || keyboard_check(vk_down)

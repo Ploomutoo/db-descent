@@ -15,22 +15,24 @@ if(mobile){
 	}
 }
 
+if(x>room_width) x-=room_width
+else if (x<0) x+=room_width
+
 var desX = bbox_left+hspeed
 if(hspeed>0) desX = bbox_right+hspeed
 
 var desX2= bbox_right+hspeed
+
+if(desX>room_width) desX-=room_width
+if(desX<0) desX += room_width
 
 if(tilemap_get_at_pixel(tileMap,desX,y-2)>0||tilemap_get_at_pixel(tileMap,desX,y-32)>0){
 	hspeed = 0;	
 }
 
 if(desX<0) {
-	//hspeed = 0
-	//x = x-bbox_left
 	x+=room_width;
 } else if(desX2>room_width){
-	//hspeed = 0
-	//x = room_width + (x-bbox_right)
 	x-=room_width;
 }
 
@@ -39,7 +41,11 @@ if(hFace=1) desX = bbox_right
 
 if(bashActive>0) {
 	bashActive--
-	if(bashActive=0) image_index = 0
+	if(bashActive=0) 
+	{
+		image_index = 0
+		extraBashFrames = 3;
+	}
 } else if(cBash && mobile) {
 	bashActive = 20
 	image_index = 1
@@ -74,7 +80,7 @@ if(bashActive>0) {
 	}
 }
 
-if(bashActive>15) //bash func
+if(bashActive>=15) //bash func
 { 
 	
 	var brokeBlock = breakBlock(desX+24*hFace,y-16,1)
@@ -90,7 +96,14 @@ if(bashActive>15) //bash func
 	if(instance_exists(victim)) 
 	{	
 		victim.funcHurt(self,false)
-		bashActive = 10
+		
+		if(extraBashFrames>0)
+		{
+			bashActive = 16;
+			extraBashFrames--;
+		}
+		
+		
 	}
 }
 
@@ -134,7 +147,7 @@ if(drawOffset<0) drawOffset = drawOffset/4
 if(room != rChoice && tranLevel = -1 && y>room_height+32) {
 	soundRand(sndLevelEnd)
 	setShopWidth()
-	//show_debug_message("Room:"+room_get_name(room))
+
 	if(combo>0)
 	{
 		alarm[1] = 0

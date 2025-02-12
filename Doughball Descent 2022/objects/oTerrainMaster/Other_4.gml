@@ -22,6 +22,15 @@ with(oHazSpike) {
 	}
 }
 
+with(oHazBouncy) {
+	image_index = oTerrainMaster.area-1
+	if(tilemap_get_at_pixel(tileMap,x,y+16)=0 || tilemap_get_at_pixel(tileMap,x,y-16)>0){
+		onDestroy = false
+		instance_destroy();
+	}
+}
+
+
 with(oFood) {
 	image_index+=4*(oTerrainMaster.area-1)
 	if(tilemap_get_at_pixel(tileMap,x,y)=3){

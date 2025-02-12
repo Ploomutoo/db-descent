@@ -10,7 +10,8 @@ while (i>0){
 area = 0
 hGen = 0
 hgItems = 0
-loadLevelStructures(level)
+var load = loadLevelStructures(level)
+//load 0 is octave, load 1 is threshold
 
 if(area!=0) setAreaCosmetics(area)
 
@@ -37,8 +38,6 @@ xLimit = tilemap_get_width(tileMap)
 yLimit = ceil(room_height/32) //tilemap_get_height(tileMap)
 tilemap_set_height(tileMap,yLimit)
 
-var holeCountdown = irandom(6)
-
 var plentyMult= power(0.8,oPlayer.altarPlenty)
 var foodCountdown = round(plentyMult*irandom_range(12,18))
 var foodPlaced = 0
@@ -53,9 +52,7 @@ var noiseOut = 0
 var place = 0
 var noiseSeed = [irandom(255),irandom(255)]
 
-var noisePeak = [0,256]
-
-var noiseThreshold = 85
+var noiseThreshold = load[1]
 
 var placeItem = irandom_range(1,3);
 
@@ -63,13 +60,10 @@ while(iy<yLimit){
 	
 	while(ix<xLimit) {
 		
-		noiseOut = noise(ix+noiseSeed[0],iy+noiseSeed[1],2)
+		noiseOut = noise(ix+noiseSeed[0],iy+noiseSeed[1],load[0])
 		if(noiseOut>noiseThreshold) place = 1
 		else place = 0
-		
-		if noiseOut > noisePeak[0] noisePeak[0] = noiseOut
-		else if noiseOut < noisePeak[1] noisePeak[1] = noiseOut
-		
+				
 		tilemap_set(tileMap, place, ix, iy)
 		
 		if(place = 0)
@@ -113,7 +107,6 @@ while(iy<yLimit){
 	}
 	
 }
-show_debug_message("Max output is "+ string(noisePeak[0])+", Min output is "+string(noisePeak[1]))
 #endregion
 
 #region Algorithmic Hazards
