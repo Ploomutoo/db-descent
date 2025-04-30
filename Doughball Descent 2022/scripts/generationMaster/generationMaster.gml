@@ -18,6 +18,11 @@ function hgInnit(argument1,argument2,argument3){
 	hgItems ++
 }
 
+function hgOnce(argument0)
+{
+	hGenOnce[array_length(hGenOnce)] = argument0;
+}
+
 function hgIncrement(argument0) {
 	if(hGen[argument0,0]<=0){
 		
@@ -51,6 +56,24 @@ function hgGravel() {
 			if(tmg>0 && tmg!=4) {
 				instance_create_layer(32*(ix+veinWidth),32*(iy+i),layer,oHazGravel)
 				//instance_create_layer(32*(ix+veinWidth),32*(iy+i),layer,oThumbtack)
+			}
+			i--
+		}
+		i = 1 + irandom(2)
+		veinWidth--
+	}
+	return(true)
+}
+
+function hgBounceBlock() {
+	var veinWidth = 1 + irandom(2)
+	var i = 1 + irandom(2)
+	while (veinWidth>0){
+		while(i>0){
+			var tmg = tilemap_get(tileMap,ix+veinWidth,iy+i)>0
+			if(tmg>0 && tmg!=4) {
+				var inst = instance_create_layer(16+32*(ix+veinWidth),16+32*(iy+i),layer,oBouncyBlock)
+				inst.image_index = area-1
 			}
 			i--
 		}

@@ -213,10 +213,9 @@ function breakBlock() { //--!--!--!--!--!--
 			
 		break;
 		case 4: //Function Tile
-			
-			with(instance_position(argument[0],argument[1],oParentTileObject)){
-
-				event_user(0);
+			var functionObj = instance_position(argument[0],argument[1],oParentTileObject)
+			with(functionObj){
+				hitFunc(isBash);
 			}
 		break;
 	}
@@ -240,7 +239,11 @@ function breakLine(vy,vx1,vx2){
 	
 	//show_debug_message("Break "+string(c1)+" to "+string(c2)+". Width of "+string(i))
 	if(crushes>0) createParticles((vx1+vx2)/2,vy,6,sPaRock)
-	else createParticles((vx1+vx2)/2,vy,3,sPaRock)
+	else 
+	{ 
+		createParticles((vx1+vx2)/2,vy,3,sPaRock); 
+		//return(false); 
+	}
 	
 	var rVal = 0
 	// 0 is no deincrement
@@ -266,7 +269,21 @@ function breakLine(vy,vx1,vx2){
 }
 
 function tsCheckEmpty(argument0,argument1) {
-	if(tilemap_get_at_pixel(tileMap,argument0,argument1)>0) return(true)
+	//confusingly returns false for empty and true for filled
+	//why did you do that, past me?
+	var _tile = tilemap_get_at_pixel(tileMap,argument0,argument1)
+	
+	if(_tile = 4)
+	{	
+		argument0 = 32*floor(argument0/32)
+		argument1 = 32*floor(argument1/32)
+		
+		var tileObj = instance_position(argument0+16,argument1+16,oParentTileObject)
+		if(tileObj = noone) { return (false); show_debug_message("No tile object found"); }
+		else if(tileObj.collide = true) return (true)
+		else return (false)
+	}
+	else if(_tile>0) return(true)
 	else return(false)
 }
 	
@@ -278,19 +295,19 @@ function tsSpanEmpty(argument0,argument1,argument2) {
 	//Check left
 	
 	if (argument1<0) {
-		if (tilemap_get_at_pixel(tileMap,argument1+room_width,argument0)>0) return(false)
-	} else if (tilemap_get_at_pixel(tileMap,argument1,argument0)>0) return(false)
+		if (tsCheckEmpty(argument1+room_width,argument0)>0) return(false)
+	} else if (tsCheckEmpty(argument1,argument0)>0) return(false)
 	
 	//Check right
 	if(argument2>room_width) {
-		if (tilemap_get_at_pixel(tileMap,argument2-room_width,argument0)>0) return(false)
-	} else if (tilemap_get_at_pixel(tileMap,argument2,argument0)>0) return(false)
+		if (tsCheckEmpty(argument2-room_width,argument0)>0) return(false)
+	} else if (tsCheckEmpty(argument2,argument0)>0) return(false)
 	
 	var span = argument2-argument1
 	span = ceil(span/32)-1
 
 	while(span>0){
-		if (tilemap_get_at_pixel(tileMap,argument1+32*span,argument0)>0) return(false)
+		if (tsCheckEmpty(argument1+32*span,argument0)>0) return(false)
 		span--
 	}
 	

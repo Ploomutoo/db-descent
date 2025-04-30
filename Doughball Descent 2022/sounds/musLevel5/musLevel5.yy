@@ -1,7 +1,10 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "musLevel5",
   "conversionMode": 0,
   "compression": 2,
-  "volume": 0.7,
+  "volume": 0.4,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -17,8 +20,4 @@
     "name": "sound",
     "path": "folders/sound.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "musLevel5",
-  "tags": [],
-  "resourceType": "GMSound",
 }

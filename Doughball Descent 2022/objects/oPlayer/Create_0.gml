@@ -109,8 +109,12 @@ jumpedTimer=0
 apexTime = 5
 image_speed = 0
 
+aquatic = false;
+
 bashActive = 0
 extraBashFrames = 3;
+
+collisionHeight = 24
 
 walkFrame = 0
 items = [];

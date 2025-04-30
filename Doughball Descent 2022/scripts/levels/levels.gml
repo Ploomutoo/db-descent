@@ -11,7 +11,7 @@ function loadLevelStructures(argument0)
 		#region area 1
 		case 0:
 			area = 1
-			theme = choose("a1_basic","a2_bouncehouse")
+			theme = "a1_basic";
 		break;
 		case 1:
 			area = 1
@@ -25,12 +25,8 @@ function loadLevelStructures(argument0)
 		#region area 2
 		case 3:
 			area = 2
-			hgInnit(70,100,hgVegWorm)
-			hgInnit(40,60,hgGravel)
-			hgInnit(80,120,hgShooter)
+			theme = "b1_bouncehouse"; //temp
 			
-			hgInnit(2,10,hgBush)
-			hgInnit(100,150,hgSpikes)
 		break;
 		case 4:
 			area = 2
@@ -55,10 +51,7 @@ function loadLevelStructures(argument0)
 		
 			case 6:
 				area = 3
-				hgInnit(20,40,hgGravel)
-				hgInnit(70,100,hgUdder)
-				hgInnit(90,130,hgSpikes)
-				hgInnit(60,120,hgMilkSpiller)
+				theme= "c1_basic"
 			break;
 			case 7:
 				area = 3
@@ -147,7 +140,8 @@ function loadLevelStructures(argument0)
 			hgInnit(20,40,hgGravel)
 			hgInnit(90,130,hgSpikes)
 			
-			hgInnit(200,400,hgDragon)
+			//hgInnit(200,400,hgDragon)
+			hgOnce(hgDragon)
 			hgInnit(50,100,hgGummyWorm)
 			
 			hgInnit(200,400,hgBagel)
@@ -168,7 +162,6 @@ function loadLevelStructures(argument0)
 	{
 		case "a1_basic":
 		hgInnit(70,100,hgGoomba)
-		hgInnit(70,100,hgBigWorm)
 		hgInnit(20,40,hgGravel)
 		hgInnit(90,130,hgSpikes)
 		density = "standard"
@@ -194,9 +187,37 @@ function loadLevelStructures(argument0)
 		hgInnit(70,100,hgBigWorm)
 		hgInnit(50,70 ,hgRay)
 		hgInnit(20,40 ,hgBouncy)
-		hgInnit(90,130,hgAllSpikes)
 		hgInnit(60,90,hgBagel)
 		density = "sparse"
+		break;
+		
+		case "b1_basic":
+		hgInnit(70,100,hgVegWorm)
+		hgInnit(40,60,hgGravel)
+		hgInnit(80,120,hgShooter)
+		hgInnit(2,10,hgBush)
+		hgInnit(100,150,hgSpikes)
+		density = "5050"
+		
+		break;
+		
+		case "b1_bouncehouse":
+		hgInnit(100,120,hgVegWorm)
+		hgInnit(60,80,hgGravel)
+		hgInnit(80,120,hgShooter)
+		
+		hgOnce(hgCotw)
+		hgInnit(100,150,hgSpikes)
+		density = "sparse"
+		break;
+		
+		case "c1_basic":
+		hgInnit(20,40,hgGravel)
+		hgInnit(70,100,hgUdder)
+		hgInnit(90,130,hgSpikes)
+		hgInnit(40,80,hgBounceBlock)
+		hgInnit(60,120,hgMilkSpiller)
+		hgInnit(100,140,hgMilkBlock)
 		break;
 	}
 	

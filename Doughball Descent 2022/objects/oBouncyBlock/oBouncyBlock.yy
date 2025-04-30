@@ -1,0 +1,42 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "oBouncyBlock",
+  "spriteId": {
+    "name": "sBouncyBlock",
+    "path": "sprites/sBouncyBlock/sBouncyBlock.yy",
+  },
+  "solid": false,
+  "visible": true,
+  "managed": true,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "oHazFunctionBlock",
+    "path": "objects/oHazFunctionBlock/oHazFunctionBlock.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 1,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,},
+  ],
+  "properties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"collide","path":"objects/oParentTileObject/oParentTileObject.yy",},"objectId":{"name":"oParentTileObject","path":"objects/oParentTileObject/oParentTileObject.yy",},"value":"False",},
+  ],
+  "parent": {
+    "name": "hazardObjects",
+    "path": "folders/hazardObjects.yy",
+  },
+}

@@ -26,7 +26,7 @@ var desX2= bbox_right+hspeed
 if(desX>room_width) desX-=room_width
 if(desX<0) desX += room_width
 
-if(tilemap_get_at_pixel(tileMap,desX,y-2)>0||tilemap_get_at_pixel(tileMap,desX,y-32)>0){
+if(tsCheckEmpty(desX,y-2)||tsCheckEmpty(desX,y-collisionHeight)>0){
 	hspeed = 0;	
 }
 

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMTileSet",
+  "resourceVersion": "1.0",
+  "name": "tsLevel0",
   "spriteId": {
     "name": "sTiles0",
     "path": "sprites/sTiles0/sTiles0.yy",
@@ -43,8 +46,4 @@
     "name": "tiles",
     "path": "folders/Generation/tiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "tsLevel0",
-  "tags": [],
-  "resourceType": "GMTileSet",
 }

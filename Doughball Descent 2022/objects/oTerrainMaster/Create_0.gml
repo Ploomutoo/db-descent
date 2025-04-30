@@ -10,6 +10,9 @@ while (i>0){
 area = 0
 hGen = 0
 hgItems = 0
+
+hGenOnce[0] = 0
+
 var load = loadLevelStructures(level)
 //load 0 is octave, load 1 is threshold
 
@@ -108,7 +111,12 @@ while(iy<yLimit){
 	
 }
 #endregion
-
+#region Place once items
+	for(var i = array_length(hGenOnce)-1; i>0; i--)
+	{
+		hGenOnce[i]();
+	}
+#endregion
 #region Algorithmic Hazards
 
 //Pass 2
@@ -129,7 +137,6 @@ while(iy<yLimit){
 	iy++
 }
 #endregion
-
 #region Vaults
 
 vcLower = 20 + (80/(oPlayer.altarBravery+1))

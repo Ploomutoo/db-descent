@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndBounce.mp3",
-  "duration": 0.261224,
+  "soundFile": "sndBounce.wav",
+  "duration": 0.23229,
   "parent": {
     "name": "sound",
     "path": "folders/sound.yy",

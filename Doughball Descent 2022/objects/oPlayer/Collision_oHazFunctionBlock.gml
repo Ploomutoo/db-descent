@@ -1,6 +1,6 @@
 if(vspeed>0 && crushes>0)  {
 	
-	with(other) event_user(0)
+	other.hitFunc(false)
 	if(!other.collide) exit;
 	
 	crushes--

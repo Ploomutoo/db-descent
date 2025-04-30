@@ -7,6 +7,10 @@ function hgBush() {
 	} else return(false)
 }
 
+function hgCotw() {
+	instance_create_layer(0,0,layer,oCotwSpawner)
+}
+
 function hgVegWorm() {
 	var platWidth = 3+irandom(6);
 	var dir = choose(1,-1);

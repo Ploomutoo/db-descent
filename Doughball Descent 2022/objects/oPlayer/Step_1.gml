@@ -62,8 +62,17 @@ if(weight!=lastWeight) {
 }
 
 grounded = !tsSpanEmpty(y+1,bbox_left+1,bbox_right-1)
+if(instance_place(x,y,oMilkBlock)!=noone) aquatic = true
+else aquatic = false;
 
-if (grounded) {
+if (aquatic)
+{
+	if(grounded) vspeed=min(vspeed,0)
+	else vspeed=clamp(vspeed+grav/2,-fallMax/2,fallMax/2)
+	
+	if(vspeed<0) if(!tsSpanEmpty(y-collisionHeight,bbox_left+2,bbox_right-2)) vspeed = 1 //hit head
+}
+else if (grounded) {
 	
 	if(vspeed>0){
 		
@@ -108,7 +117,7 @@ if (grounded) {
 		if(!cJumpDown) vspeed = vspeed*0.7
 		vspeed+=baseGrav //Use Base Gravity when Ascending to preserve Jump Apex
 		
-		if(!tsSpanEmpty(y-30,bbox_left+2,bbox_right-2))	vspeed = 2 //hit head
+		if(!tsSpanEmpty(y-collisionHeight,bbox_left+2,bbox_right-2))	vspeed = 2 //hit head
 		
 	} else if(apexTime>0) {
 		
@@ -163,8 +172,18 @@ if (grounded) {
 
 if(cJump) jumpedTimer = 10
 
-if(jumpedTimer>0 || autoJump){
+if(aquatic && jumpedTimer>0)
+{
+	audio_play_sound(sndSwim,0,0)
+	dsScalex = 1.5; dsScaley = 0.6
+	vspeed -= 4;
+	//with(oiPowerKnees) other.vspeed -= stacks/2;
+	jumpedTimer = 0
+	crushes = 0
 	
+} 
+else if(jumpedTimer>0 || autoJump)
+{
 	if(grounded) {
 		if(breakOnJump) breakLine(y+2,bbox_left,bbox_right)
 		

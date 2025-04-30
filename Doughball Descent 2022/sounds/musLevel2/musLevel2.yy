@@ -1,7 +1,10 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "musLevel2",
   "conversionMode": 0,
   "compression": 2,
-  "volume": 0.5,
+  "volume": 0.6,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,14 +14,10 @@
     "name": "agMusic",
     "path": "audiogroups/agMusic",
   },
-  "soundFile": "musLevel2.wav",
-  "duration": 70.60109,
+  "soundFile": "musLevel2.ogg",
+  "duration": 70.84247,
   "parent": {
     "name": "sound",
     "path": "folders/sound.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "musLevel2",
-  "tags": [],
-  "resourceType": "GMSound",
 }
