@@ -1,6 +1,6 @@
 if(vspeed>0 && crushes>0)  {
 	
-	other.hitFunc(false)
+	if(instance_exists(other)) other.hitFunc(false,self)
 	if(!other.collide) exit;
 	
 	crushes--

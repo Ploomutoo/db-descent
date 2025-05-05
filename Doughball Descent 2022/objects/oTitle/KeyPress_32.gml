@@ -18,8 +18,8 @@ switch(cursorOn){
 		
 	break;
 	case 2: //settings
-		
-		pauseUnpause();
+		//show_debug_message("made it this far")
+		with(oPause) event_user(0)
 		
 	break;
 	case 3: //quit

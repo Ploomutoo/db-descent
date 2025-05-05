@@ -1,0 +1,2 @@
+tFunc();
+instance_destroy();

@@ -136,6 +136,8 @@ fallReset = 0
 
 tranLevel = -1;
 tranRoom = rChoice;
+endHeight = -1;
+
 dead = false;
 mobile = true;
 
@@ -181,6 +183,7 @@ altarInstantiate()
 
 // Shop, Event, Rare Event, Temple
 teWeight = [6,8,4,0];
+roomGrav = -1;
 
 #endregion
 show_debug_message("\nConsole Start")

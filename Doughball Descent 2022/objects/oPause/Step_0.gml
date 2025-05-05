@@ -52,10 +52,12 @@ else
 			}
 		}
 	
-		if(keyboard_check_pressed(vk_escape)) escPressed = true;
+		if(keyboard_check_pressed(vk_escape) && room!=oTitle) escPressed = true;
+		
 		if(escPressed)
 		{
-			event_user(0)
+			if(!paused) event_user(0)
+			else event_user(2)
 		}
 	}
 	else
@@ -151,9 +153,10 @@ else
 						mode = "toplevel";
 						cursorOn = 0;
 						current_menu_size = array_length(menu_main)-1
-						event_user(0)
+						event_user(2)
 						
 						room_goto(rGame)
+						level = global.chosenStart;
 					}
 					else //reallyquit
 					{	

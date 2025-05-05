@@ -1,1 +1,0 @@
-oPlayer.vspeed = -10

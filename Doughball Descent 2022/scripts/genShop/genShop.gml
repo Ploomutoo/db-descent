@@ -110,7 +110,9 @@ function genEvCave(){
 	ix = 5
 	iy = 0
 	
-	var name = choose("vsEventCave","vsEventCave2","vsEventJump","vsEventSplit","vsEventTempleExt");
+	var name = choose("vsEventCave","vsEventCave2","vsEventJump","vsEventSplit","vsEventTempleExt","vsCollectathon");
+	if(cheat) name = "vsCollectathon";
+	
 	//show_debug_message("Vault"+name)
 	
 	room_pack_load_map(json_rooms[?name], ix*32, iy*32, room_pack_flag_instances);

@@ -79,7 +79,7 @@ else
 }
 
 if(combo>0) draw_sprite(sComboMeter,combo-1,ix+64,iy+22)
-if(cheat) draw_text(ix+64,iy+22,"Grounded: "+string(grounded));
+if(cheat) draw_text(ix+64,iy+22,"endHeight: "+string(endHeight));
 
 var progress = clamp((y-128)/(room_height-160),0,1)
 drawProg = lerp(0,altometerHeight,progress)

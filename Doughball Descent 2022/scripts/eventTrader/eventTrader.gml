@@ -35,7 +35,7 @@ event = {
 	success : function()
 	{
 		var iStacks = eItem.stacks
-		show_debug_message("Obj is "+string(eItem)+"\nID is "+string(eItem.id))
+		//show_debug_message("Obj is "+string(eItem)+"\nID is "+string(eItem.id))
 		
 		with(eItem)
 		{

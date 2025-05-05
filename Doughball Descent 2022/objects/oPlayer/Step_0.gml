@@ -144,9 +144,10 @@ if(drawOffset<0) drawOffset = drawOffset/4
 
 #endregion
 
-if(room != rChoice && tranLevel = -1 && y>room_height+32) {
+if(room != rChoice && tranLevel = -1 && y>endHeight) {
 	soundRand(sndLevelEnd)
 	setShopWidth()
+	endHeight = -1
 
 	if(combo>0)
 	{

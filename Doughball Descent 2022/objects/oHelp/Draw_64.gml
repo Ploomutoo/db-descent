@@ -31,7 +31,7 @@ if(screen = 0) {
 	
 	draw_text_outlined(viewWidth/2,230,
 	"Soundtrack by Abstraction (abstractionmusic.com)" +
-	"\nArea 5 Theme by Toffee (@spleeeep)" +
+	"\nArea 2 & 5 Theme by Toffee (@spleeeep)" +
 	"\nSound Effects from Zapsplat, Hanna Barbera SFX Library 5, BFXR" +
 	"\nGMRoomPack by YellowAfterlife" +
 	"\nCompassGold Font by Somepx")

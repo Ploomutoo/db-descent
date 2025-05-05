@@ -34,3 +34,5 @@ sinCap = 180
 sinSpeed = 10
 spinTo = image_index+1
 spinScale = 0
+
+with(oBase) instance_destroy()

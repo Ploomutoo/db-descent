@@ -5,6 +5,8 @@ paused = false;
 zonePreviews = [sBgBread,sBgProduce,sBgCow,sBgMeat,sBgDessert];
 zoneWorm = [sGoomba,sDurSlug,sUdder,sGoombaPara,sGummyWorm];
 
+global.chosenStart = 0;
+
 ini_open("config.ini")
 furthestZone = ini_read_real("general","zoneUnlock",1)-1
 

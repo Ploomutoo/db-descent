@@ -1,5 +1,4 @@
 /// @description level transition
-// git push more like shit push
 
 if(tranLevel!=-1) {
 	draw_sprite_ext(sTransition,0,0,viewHeight-tranLevel,dispWidth/sprite_get_width(sTransition),1,0,c_white,1)

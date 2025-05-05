@@ -366,6 +366,7 @@
     {"id":{"name":"sDragonIcon","path":"sprites/sDragonIcon/sDragonIcon.yy",},"order":18,},
     {"id":{"name":"sndEnemDie","path":"sounds/sndEnemDie/sndEnemDie.yy",},"order":8,},
     {"id":{"name":"sWeightStage","path":"sprites/sWeightStage/sWeightStage.yy",},"order":2,},
+    {"id":{"name":"vsCollectathon","path":"rooms/vsCollectathon/vsCollectathon.yy",},"order":8,},
     {"id":{"name":"acHurricane","path":"animcurves/acHurricane/acHurricane.yy",},"order":13,},
     {"id":{"name":"sndStompOld","path":"sounds/sndStompOld/sndStompOld.yy",},"order":43,},
     {"id":{"name":"sndPeaShot","path":"sounds/sndPeaShot/sndPeaShot.yy",},"order":14,},
@@ -513,6 +514,7 @@
     {"id":{"name":"vaultdata5","path":"scripts/vaultdata5/vaultdata5.yy",},"order":9,},
     {"id":{"name":"v2SnakePit","path":"rooms/v2SnakePit/v2SnakePit.yy",},"order":31,},
     {"id":{"name":"sPaLeaves","path":"sprites/sPaLeaves/sPaLeaves.yy",},"order":15,},
+    {"id":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},"order":18,},
     {"id":{"name":"sMilkTop","path":"sprites/sMilkTop/sMilkTop.yy",},"order":6,},
     {"id":{"name":"sPaRock","path":"sprites/sPaRock/sPaRock.yy",},"order":3,},
     {"id":{"name":"seqLogo","path":"sequences/seqLogo/seqLogo.yy",},"order":13,},
@@ -687,6 +689,7 @@
     {"roomId":{"name":"v2ShootingGallery","path":"rooms/v2ShootingGallery/v2ShootingGallery.yy",},},
     {"roomId":{"name":"v2SnakePit","path":"rooms/v2SnakePit/v2SnakePit.yy",},},
     {"roomId":{"name":"vsEventTempleExt","path":"rooms/vsEventTempleExt/vsEventTempleExt.yy",},},
+    {"roomId":{"name":"vsCollectathon","path":"rooms/vsCollectathon/vsCollectathon.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"!deprecated","folderPath":"folders/!deprecated.yy","order":7,},

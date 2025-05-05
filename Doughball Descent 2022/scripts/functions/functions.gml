@@ -214,9 +214,7 @@ function breakBlock() { //--!--!--!--!--!--
 		break;
 		case 4: //Function Tile
 			var functionObj = instance_position(argument[0],argument[1],oParentTileObject)
-			with(functionObj){
-				hitFunc(isBash);
-			}
+			if (instance_exists(functionObj)) functionObj.hitFunc(isBash,self);
 		break;
 	}
 	
@@ -227,9 +225,6 @@ function breakLine(vy,vx1,vx2){
 	///@arg y
 	///@arg x1
 	///@arg x2
-	//show_debug_message("Breaking "+string(vx1)+", "+string(vy)+" to "+string(vx2)+", "+string(vy))
-		
-	//var width = ceil((abs(vx2-vx1))/32)-1
 	
 	var c1 = floor(vx1/32)
 	var c2 = floor(vx2/32)

@@ -15,6 +15,7 @@ if(cBash) {
 	
 	instance_activate_all()
 	level = cursorOn*3
+	global.chosenStart = level;
 	
 	makePlayer();
 		

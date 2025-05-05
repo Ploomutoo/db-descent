@@ -1,6 +1,10 @@
 if(weight>=100) crushes = 1
 else crushes = 0
 
+roomGrav = -1;
+
+if(endHeight=-1) endHeight = room_height+32
+
 if(!instance_exists(oTextBox)) instance_create_layer(0,0,layer,oTextBox)
 
 if(room = rGame){

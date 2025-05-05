@@ -1,4 +1,4 @@
 if(!on) exit;
 
-with(other) event_user(0)
+other._hurt(self,false)
 on = false

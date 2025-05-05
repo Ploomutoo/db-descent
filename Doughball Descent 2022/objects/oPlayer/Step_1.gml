@@ -83,9 +83,7 @@ else if (grounded) {
 		
 		if(crushes<1) vspeed = 0;
 		else vspeed = -1
-		
-		if(instance_exists(oiBellyFlop)) bellyFlopSplash(bbox_right-bbox_left+16,oiBellyFlop.stacks)
-		
+				
 	} else {
 		
 		if(!fallReset) {
@@ -189,13 +187,17 @@ else if(jumpedTimer>0 || autoJump)
 		
 		vspeed -= 4;
 		with(oiPowerKnees) other.vspeed -= stacks/2;
+		if(instance_exists(oiBellyFlop)) bellyFlopSplash(bbox_right-bbox_left+16,oiBellyFlop.stacks)
+		
 		jumpedTimer = 0
 		crushes = weightCategories.crushes[weightCategories.stage]	
 		
 	} else jumpedTimer--
 }
 
-vspeed = clamp(vspeed,-fallMax,fallMax)
+if(roomGrav!=-1) vspeed = clamp(vspeed,-fallMax,roomGrav)
+else vspeed = clamp(vspeed,-fallMax,fallMax)
+
 if(room = rChoice) vspeed = 6
 
 if(vspeed>2 && fallReset = 1){
