@@ -9,7 +9,7 @@ if(!paused) {
 		}
 		exit;
 	}
-	if(keyboard_check_pressed(vk_escape)) event_user(0);
+	if(keyboard_check_pressed(vk_escape) && room!=rTitle) event_user(0);
 
 }
 else
@@ -52,7 +52,7 @@ else
 			}
 		}
 	
-		if(keyboard_check_pressed(vk_escape) && room!=oTitle) escPressed = true;
+		if(keyboard_check_pressed(vk_escape)) escPressed = true;
 		
 		if(escPressed)
 		{
@@ -176,6 +176,8 @@ else
 				mode = "toplevel";
 				cursorOn = 0;
 				current_menu_size = array_length(menu_main)-1
+				
+				if(room=rTitle) event_user(2);
 			}
 	}
 	if(keyboard_check_pressed(vk_lcontrol) && keyboard_check_pressed(ord("S"))) 
@@ -190,3 +192,5 @@ else
 		exit;
 	}
 }
+
+toggledThisFrame = false;

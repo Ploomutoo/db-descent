@@ -113,6 +113,7 @@ function loadLevelStructures(argument0)
 				break;
 			
 		#endregion
+		#region area 5
 		case 12:
 			area = 5 //Area 1 and 2 Throwback
 			hgInnit(15,40,hgGravel)
@@ -151,6 +152,8 @@ function loadLevelStructures(argument0)
 			hgInnit(200,400,hgAxe)
 			hgInnit(300,600,hgFish)
 		break;
+		#endregion
+		
 		case 15:
 			area = 6
 			hgInnit(20,40,hgGravel)
@@ -160,6 +163,8 @@ function loadLevelStructures(argument0)
 	
 	switch(theme)
 	{
+		#region area 1
+		
 		case "a1_basic":
 		hgInnit(70,100,hgGoomba)
 		hgInnit(20,40,hgGravel)
@@ -190,35 +195,44 @@ function loadLevelStructures(argument0)
 		hgInnit(60,90,hgBagel)
 		density = "sparse"
 		break;
+		#endregion
+		#region area 2 - veg
 		
-		case "b1_basic":
-		hgInnit(70,100,hgVegWorm)
-		hgInnit(40,60,hgGravel)
-		hgInnit(80,120,hgShooter)
-		hgInnit(2,10,hgBush)
-		hgInnit(100,150,hgSpikes)
-		density = "5050"
-		
+		case "b1_basic": 
+			hgInnit(70,100,hgVegWorm)
+			hgInnit(40,60,hgGravel)
+			hgInnit(80,120,hgShooter)
+			hgInnit(2,10,hgBush)
+			hgInnit(100,150,hgSpikes)
+			density = "5050"
 		break;
 		
 		case "b1_bouncehouse":
-		hgInnit(100,120,hgVegWorm)
-		hgInnit(60,80,hgGravel)
-		hgInnit(80,120,hgShooter)
-		
-		hgOnce(hgCotw)
-		hgInnit(100,150,hgSpikes)
-		density = "sparse"
+			hgInnit(100,120,hgVegWorm)
+			hgInnit(60,80,hgGravel)
+			hgInnit(80,120,hgShooter)
+			hgOnce(hgCotw)
+			hgInnit(100,150,hgSpikes)
+			density = "sparse"
 		break;
+		#endregion
+		#region area 3 - dairy
 		
 		case "c1_basic":
-		hgInnit(20,40,hgGravel)
-		hgInnit(70,100,hgUdder)
-		hgInnit(90,130,hgSpikes)
-		hgInnit(40,80,hgBounceBlock)
-		hgInnit(60,120,hgMilkSpiller)
-		hgInnit(100,140,hgMilkBlock)
+			hgInnit(20,40,hgGravel)
+			hgInnit(70,100,hgUdder)
+			hgInnit(90,130,hgSpikes)
+			hgInnit(40,80,hgBounceBlock)
+			hgInnit(60,120,hgMilkSpiller)
+			hgInnit(100,140,hgMilkBlock)
 		break;
+		#endregion
+		#region area 4 - meat
+		
+		#endregion
+		#region area 5 - dessert
+		
+		#endregion
 	}
 	
 	switch(density)

@@ -1,5 +1,5 @@
 /// @description unpause
-if(!paused) exit;
+if(!paused || toggledThisFrame) exit;
 
 paused = false
 cursorOn = 0
@@ -28,5 +28,6 @@ if(mode="toplevel")
 			i--;
 		}
 	}
-	
 }
+
+toggledThisFrame = true;

@@ -96,7 +96,7 @@ function tileClear(tx,ty) {
 			instance_destroy(tObj);
 		}
 		else show_debug_message("function tile but no object?")
-	}
+	}	
 	tilemap_set(tileMap, 0, tx, ty)
 }
 

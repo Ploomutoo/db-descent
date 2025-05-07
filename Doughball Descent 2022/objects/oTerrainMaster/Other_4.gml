@@ -15,10 +15,16 @@ with(oItemPedestal) {
 }
 
 with(oHazSpike) {
-	sprite_index = asset_get_index("sSpike"+string(oTerrainMaster.area))
-	if(tilemap_get_at_pixel(tileMap,x,y-16)!=0 || tilemap_get_at_pixel(tileMap,x,y+16)!=3){
+
+	if(tilemap_get_at_pixel(tileMap,x,y-16)!=0 || tilemap_get_at_pixel(tileMap,x,y+16)!=3)
+	{
 		onDestroy = false
 		instance_destroy();
+	}
+	else
+	{
+		sprite_index = asset_get_index("sSpike"+string(oTerrainMaster.area))
+		if(sprite_index=-1) sprite_index = asset_get_index("sSpike"+string(irandom_range(1,5)))
 	}
 }
 

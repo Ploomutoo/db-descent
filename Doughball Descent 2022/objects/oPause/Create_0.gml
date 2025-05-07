@@ -9,6 +9,7 @@ if(devMode) if(file_exists("progress.ini")) file_delete("progress.ini");
 
 autoPause = 0;
 paused = false;
+toggledThisFrame = false;
 
 mode =	"toplevel"
 //		"settings"

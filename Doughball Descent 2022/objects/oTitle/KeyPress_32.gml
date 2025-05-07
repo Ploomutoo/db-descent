@@ -19,7 +19,13 @@ switch(cursorOn){
 	break;
 	case 2: //settings
 		//show_debug_message("made it this far")
-		with(oPause) event_user(0)
+		with(oPause) 
+		{
+			event_user(0)
+			mode = "settings";
+			cursorOn = 0;
+			current_menu_size = array_length(settings)-1
+		}
 		
 	break;
 	case 3: //quit

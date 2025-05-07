@@ -11,7 +11,7 @@
 //#macro cheat true
 #macro altarDebug false
 //#macro startLevel 0
-#macro lastLevel 15
+#macro lastLevel 16
 
 #macro aRight 0
 #macro aUp 90
