@@ -89,11 +89,21 @@ if(bashActive>=15) //bash func
 		bashActive = 10;
 		createParticles(desX+24*hFace,y-16,6,sPaRock)
 	}
-
-	var victim = collision_rectangle(x,y-4,desX+32*hFace,y-32,oParentBashable,0,1);
+	var check_x = [x,desX+32*hFace]
+	var victim = collision_rectangle(check_x[0],y-4,check_x[1],y-32,oParentBashable,0,1);
+	if(victim=noone)
+	{
+		if(check_x[1]>room_width)
+		{
+			victim = collision_rectangle(0,y-4,check_x[1]-room_width,y-32,oParentBashable,0,1);
+		}
+		else if(check_x[1]<0)
+		{
+			victim = collision_rectangle(room_width,y-4,check_x[1]+room_width,y-32,oParentBashable,0,1);
+		}
+	}
 	
-	
-	if(instance_exists(victim)) 
+	if(instance_exists(victim))   
 	{	
 		victim.funcHurt(self,false)
 		

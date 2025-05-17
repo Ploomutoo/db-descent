@@ -74,7 +74,7 @@ if(keyboard_check_pressed(ord(string(eCheat.takeItem)))) {
 }
 
 if(keyboard_check_pressed(ord(string(eCheat.finishLevel)))) {
-	if(y<room_height) y = room_height;
+	if(y<endHeight) y = endHeight;
 }
 
 if(keyboard_check_pressed(ord(string(eCheat.gotoStage)))) {

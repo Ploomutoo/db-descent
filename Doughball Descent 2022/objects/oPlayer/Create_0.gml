@@ -181,8 +181,8 @@ altarInstantiate()
 
 #region Transition Event Weighting
 
-// Shop, Event, Rare Event, Temple
-teWeight = [6,8,4,0];
+// Shop, Event, Rare Event, Temple, Cornucopia, Campfire, Arena, Trans Rights
+teWeight = [6,10,3,3,8,50,5,0.1];
 roomGrav = -1;
 
 #endregion

@@ -1,8 +1,10 @@
 if(room=rEvent){
 	//show_debug_message("Room Height "+string(room_height))
-	script_execute(teScript(option))
+	var _teScript = teScript(option)
 	
+	script_execute(_teScript[0],_teScript[1])
 	instance_destroy();
+	
 } else if(room=rChoice){
 	
 	//show_debug_message("ran non event script")

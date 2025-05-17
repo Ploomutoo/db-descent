@@ -7,7 +7,7 @@ levelsGone = 0
 foodTypes = sprite_get_number(sFood)
 
 var i = 0
-foodGot = array_create(foodTypes-1,0);
+foodGot = array_create(foodTypes,0);
 
 itemWeights = 0
 itemsGot = ds_list_create();

@@ -28,6 +28,11 @@ with(oHazSpike) {
 	}
 }
 
+with(oBouncyBlock)
+{
+	image_index = other.area-1
+}
+
 with(oHazBouncy) {
 	image_index = oTerrainMaster.area-1
 	if(tilemap_get_at_pixel(tileMap,x,y+16)=0 || tilemap_get_at_pixel(tileMap,x,y-16)>0){

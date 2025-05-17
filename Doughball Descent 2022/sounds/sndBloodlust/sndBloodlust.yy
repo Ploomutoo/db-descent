@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndBloodlust",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndBloodlust.wav",
-  "duration": 0.424728,
+  "duration": 0.419728,
   "parent": {
     "name": "sound",
     "path": "folders/sound.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sndBloodlust",
-  "tags": [],
-  "resourceType": "GMSound",
 }

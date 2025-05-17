@@ -17,7 +17,7 @@
   "soundFile": "sndBad.wav",
   "duration": 0.88771,
   "parent": {
-    "name": "transition",
-    "path": "folders/transition.yy",
+    "name": "eventAssets",
+    "path": "folders/transition/events/eventAssets.yy",
   },
 }

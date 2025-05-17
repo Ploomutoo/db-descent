@@ -74,7 +74,7 @@ function hgFish() {
 #macro genSaw instance_create_layer(32*ix+17,32*iy+16,layer,oSaw)
 function hgSaw() {
 	if(iy<6) return(false)
-	if(tilemap_get_at_pixel(tileMap,ix*32+16,iy*32+16)=0) return(false)
+	//if(tilemap_get_at_pixel(tileMap,ix*32+16,iy*32+16)=0) return(false)
 	
 	var saw
 	var sawCount 
@@ -101,7 +101,7 @@ function hgSaw() {
 			genSaw
 			break;
 	}
-	
+	tilemap_set(tileMap,2,ix,iy)
 	return(true)
 }
 

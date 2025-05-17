@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndBoom",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndBoom.wav",
-  "duration": 0.494206,
+  "duration": 0.489206,
   "parent": {
     "name": "sound",
     "path": "folders/sound.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sndBoom",
-  "tags": [],
-  "resourceType": "GMSound",
 }

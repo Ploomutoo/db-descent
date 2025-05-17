@@ -63,7 +63,7 @@ while(iy<yLimit){
 	
 	while(ix<xLimit) {
 		
-		noiseOut = noise(ix+noiseSeed[0],iy+noiseSeed[1],load[0])
+		noiseOut = noise(floor(ix/load[2])+noiseSeed[0],floor(iy/load[3])+noiseSeed[1],load[0])
 		if(noiseOut>noiseThreshold) place = 1
 		else place = 0
 				

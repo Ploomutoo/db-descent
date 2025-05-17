@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sndEvent",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -14,11 +17,7 @@
   "soundFile": "sndEvent.wav",
   "duration": 1.474127,
   "parent": {
-    "name": "transition",
-    "path": "folders/transition.yy",
+    "name": "eventAssets",
+    "path": "folders/transition/events/eventAssets.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sndEvent",
-  "tags": [],
-  "resourceType": "GMSound",
 }

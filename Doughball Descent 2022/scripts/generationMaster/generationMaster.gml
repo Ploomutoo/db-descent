@@ -73,7 +73,6 @@ function hgBounceBlock() {
 			var tmg = tilemap_get(tileMap,ix+veinWidth,iy+i)>0
 			if(tmg>0 && tmg!=4) {
 				var inst = instance_create_layer(16+32*(ix+veinWidth),16+32*(iy+i),layer,oBouncyBlock)
-				inst.image_index = area-1
 			}
 			i--
 		}
@@ -126,5 +125,21 @@ function hgAllSpikes() {
 		i = 1 + irandom(2)
 		veinWidth--
 	}
+	return(true)
+}
+	
+function hgShaft() 
+{
+	var _iy = iy
+	var _height = irandom_range(3,6)
+	repeat(_height)
+	{
+		tilemap_set(tileMap, 0, ix, _iy)
+		_iy--;
+		if(_iy<0) break;
+	}
+	var _milk = instance_create_layer((1+ix)*32,(1+iy)*32,layer,oMilkBlock)
+	_milk.image_xscale = 32/_milk.sprite_width
+	_milk.image_yscale = _height*32/_milk.sprite_height
 	return(true)
 }

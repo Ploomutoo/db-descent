@@ -1,5 +1,6 @@
 //teWeight stored in oPlayer
-function teDraw() {
+function teDraw() 
+{
 	with(oPlayer){
 		
 	var i = array_length(teWeight)
@@ -20,23 +21,43 @@ function teDraw() {
 	return(i)
 	}
 }
-
 function teScript(teIndex) {
-switch(teIndex) {
 	
-	case 0:
-	return(genShop)
-	break;
-	case 1:
-	return(genEvCave)
-	break;
-	case 2: 
-	return(genEvRare)
-	break;
-	case 3:
-	return(genEvCave)
-	break;
-} }
+	var out = [genShop,0]
+	switch(teIndex) 
+	{
+		case 0:
+		out = [genShop,0]
+		break;
+		
+		case 1:
+		out = [genEvCave,0]
+		break;
+		
+		case 2: 
+		out = [genEvRare,0]
+		break;
+		
+		case 3: //temple
+		out = [genGeneric,"vsEventTempleExt"]
+		break;
+		
+		case 4: //cornucopia
+		out = [genGeneric,"vsCollectathon"]
+		break;
+		
+		case 5: //campfire
+		out = [genGeneric,"vsRestsite1"]
+		//out = [genGeneric,"vsCollectathon"]
+		break;
+		
+		case 6: //arena
+		case 7: //easter egg
+		out = [genGeneric,"vsEventTemple"]
+		break;
+	} 
+	return(out)
+}
 
 option = [teDraw(),0]
 while(option[0]=option[1]) option[1] = teDraw()

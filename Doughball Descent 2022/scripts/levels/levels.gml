@@ -11,42 +11,39 @@ function loadLevelStructures(argument0)
 		#region area 1
 		case 0:
 			area = 1
-			theme = "a1_basic";
+			theme = "a_intro";
 		break;
 		case 1:
 			area = 1
-			theme = choose("a2_basic","a2_bouncehouse")
+			theme = choose(
+			"a2_basic",
+			"a_bouncehouse")
 		break;
 		case 2:
 			area = 1
-			theme = choose("a3_basic","a2_bouncehouse")
+			theme = choose(
+			"a3_basic",
+			"a_bouncehouse")
 		break;
 		#endregion
+		
 		#region area 2
 		case 3:
 			area = 2
-			theme = "b1_bouncehouse"; //temp
+			theme = "b1_basic";
 			
 		break;
 		case 4:
 			area = 2
-			hgInnit(70,100,hgVegWorm)
-			hgInnit(40,60,hgGravel)
-			
-			hgInnit(120,240,hgBushManRight)
-			hgInnit(120,240,hgBushManLeft)
+			theme = "b2_basic";
 		break;
 		case 5:
 			area = 2
-			hgInnit(70,100,hgVegWorm)
-			hgInnit(40,60,hgGravel)
-			hgInnit(70,100,hgShooter)
-			
-			hgInnit(150,250,hgBushManRight)
-			hgInnit(150,250,hgBushManLeft)
-			hgInnit(100,150,hgSpikes)
+			theme = "b3_basic";
 		break;
+		
 		#endregion
+		
 		#region area 3
 		
 			case 6:
@@ -55,19 +52,11 @@ function loadLevelStructures(argument0)
 			break;
 			case 7:
 				area = 3
-				hgInnit(40,60,hgGravel)
-				hgInnit(90,130,hgUdder)
-				hgInnit(90,130,hgSpikes)
-				hgInnit(700,1000,hgPirate)
-				hgInnit(90,180,hgMilkSpiller)
+				theme = "c2_basic"
 			break;
 			case 8:
 				area = 3
-				hgInnit(20,40,hgGravel)
-				hgInnit(60,80,hgUdder)
-				hgInnit(90,130,hgSpikes)
-				hgInnit(300,500,hgPirate)
-				hgInnit(60,120,hgMilkSpiller)
+				theme = "c3_basic"
 			break;
 			
 		#endregion
@@ -75,43 +64,27 @@ function loadLevelStructures(argument0)
 		
 			case 9:
 				area = 4
-				hgInnit(20,40,hgGravel)
-				hgInnit(20,40,hgSauce)
-				hgInnit(60,120,hgHotdogCorridor)
-				hgInnit(90,130,hgSpikes)
-				hgInnit(200,350,hgMeatworm)
-				hgInnit(300,400,hgFish)
+				theme = choose(
+				"d1_basic",
+				"d_wet"
+				)
+				//theme = "d_saws-n-dogs"
 				break;
-				
-			case 10: //Add Saws
-					 //Increase Frequency of Sauce
-					 //Decrease Frequency of Hotdogs, MeatWorms, Fish
+			case 10: 
 				area = 4
-				hgInnit(20,40,hgGravel)
-				hgInnit(90,130,hgSpikes)
-				
-				hgInnit(10,25,hgSauce)
-				hgInnit(100,150,hgSaw)
-				
-				hgInnit(180,300,hgMeatworm)
-				hgInnit(200,350,hgFish)
-				hgInnit(90,160,hgHotdogCorridor)
-				
+				theme = choose(
+				"d2_basic",
+				"d_wet",
+				"d_saws-n-dogs"
+				)
 				break;
-			case 11: //Increase Frequency of MeatWorms, Spikes
-					 //Decrease Frequency of Saws
+			case 11: 
 				area = 4
-				hgInnit(20,40,hgGravel)
-				hgInnit(90,130,hgSpikes)
-				hgInnit(10,25,hgSauce)
-				hgInnit(90,160,hgHotdogCorridor)
-				hgInnit(200,350,hgFish)
-				
-				hgInnit(100,150,hgSaw)
-				
-				hgInnit(80,160,hgMeatworm)
+				theme = choose(
+				"d3_basic",
+				"d_saws-n-dogs"
+				)
 				break;
-			
 		#endregion
 		#region area 5
 		case 12:
@@ -154,7 +127,7 @@ function loadLevelStructures(argument0)
 		break;
 		#endregion
 		
-		case 15:
+		case 15: 
 			area = 6
 			hgInnit(20,40,hgGravel)
 			hgInnit(90,130,hgSpikes)
@@ -165,13 +138,13 @@ function loadLevelStructures(argument0)
 	{
 		#region area 1
 		
-		case "a1_basic":
+		case "a_intro":
 		hgInnit(70,100,hgGoomba)
+		hgInnit(150,300,hgBigWorm)
 		hgInnit(20,40,hgGravel)
 		hgInnit(90,130,hgSpikes)
 		density = "standard"
 		break;
-		
 		case "a2_basic":
 		hgInnit(60,90,hgGoomba)
 		hgInnit(40,60,hgGravel)
@@ -179,7 +152,6 @@ function loadLevelStructures(argument0)
 		hgInnit(90,130,hgSpikes)
 		density = "dense"
 		break;
-		
 		case "a3_basic":
 		hgInnit(50,70,hgGoomba)
 		hgInnit(20,40,hgGravel)
@@ -188,7 +160,7 @@ function loadLevelStructures(argument0)
 		density = "ultradense"
 		break;
 		
-		case "a2_bouncehouse":
+		case "a_bouncehouse":
 		hgInnit(70,100,hgBigWorm)
 		hgInnit(50,70 ,hgRay)
 		hgInnit(20,40 ,hgBouncy)
@@ -205,6 +177,21 @@ function loadLevelStructures(argument0)
 			hgInnit(2,10,hgBush)
 			hgInnit(100,150,hgSpikes)
 			density = "5050"
+		break;
+		case "b2_basic":
+			hgInnit(70,100,hgVegWorm)
+			hgInnit(40,60,hgGravel)
+			hgInnit(120,240,hgBushManRight)
+			hgInnit(120,240,hgBushManLeft)
+		break;
+		case "b3_basic":
+			hgInnit(70,100,hgVegWorm)
+			hgInnit(40,60,hgGravel)
+			hgInnit(70,100,hgShooter)
+			
+			hgInnit(150,250,hgBushManRight)
+			hgInnit(150,250,hgBushManLeft)
+			hgInnit(100,150,hgSpikes)
 		break;
 		
 		case "b1_bouncehouse":
@@ -226,9 +213,72 @@ function loadLevelStructures(argument0)
 			hgInnit(60,120,hgMilkSpiller)
 			hgInnit(100,140,hgMilkBlock)
 		break;
+		case "c2_basic":
+			hgInnit(40,60,hgGravel)
+			hgInnit(90,130,hgUdder)
+			hgInnit(90,130,hgSpikes)
+			hgInnit(700,1000,hgPirate)
+			hgInnit(90,180,hgMilkSpiller)
+		break;
+		case "c3_basic":
+			hgInnit(20,40,hgGravel)
+			hgInnit(60,80,hgUdder)
+			hgInnit(90,130,hgSpikes)
+			hgInnit(300,500,hgPirate)
+			hgInnit(60,120,hgMilkSpiller)
+		break;		
 		#endregion
 		#region area 4 - meat
+		case "d1_basic":
+			hgInnit(20,40,hgGravel)
+			hgInnit(20,40,hgSauce)
+			hgInnit(60,120,hgHotdogCorridor)
+			hgInnit(90,130,hgSpikes)
+			hgInnit(200,350,hgMeatworm)
+			hgInnit(300,400,hgFish)
+			hgInnit(100,140,hgShaft)
+		break;
+		case "d2_basic":	//Add Saws
+							//Increase Frequency of Sauce
+							//Decrease Frequency of Hotdogs, MeatWorms, Fish
+			hgInnit(20,40,hgGravel)
+			hgInnit(90,130,hgSpikes)
+			hgInnit(10,25,hgSauce)
+			hgInnit(100,150,hgSaw)
+			hgInnit(180,300,hgMeatworm)
+			hgInnit(200,350,hgFish)
+			hgInnit(90,160,hgHotdogCorridor)
 		
+		break;
+		case "d3_basic":	//Increase Frequency of MeatWorms, Spikes
+							//Decrease Frequency of Saws
+			hgInnit(20,40,hgGravel)
+			hgInnit(90,130,hgSpikes)
+			hgInnit(10,25,hgSauce)
+			hgInnit(90,160,hgHotdogCorridor)
+			hgInnit(200,350,hgFish)
+			hgInnit(100,150,hgSaw)
+			hgInnit(80,160,hgMeatworm)
+		break;
+		case "d_wet":
+			hgInnit(20,40,hgGravel)
+			hgInnit(20,40,hgSauce)
+			hgInnit(60,120,hgHotdogCorridor)
+			hgInnit(90,130,hgSpikes)
+			hgInnit(200,350,hgMeatworm)
+			hgInnit(300,400,hgFish)
+			hgInnit(100,140,hgMilkBlock)
+			hgInnit(100,140,hgShaft)
+			density = "tunnels"
+		break;
+		case "d_saws-n-dogs":
+			hgInnit(20,40,hgGravel)
+			hgInnit(90,130,hgSpikes)
+			hgInnit(80,100,hgSaw)
+			hgInnit(180,300,hgMeatworm)
+			hgInnit(90,160,hgHotdogCorridor)
+			density = "tunnels"
+		break;
 		#endregion
 		#region area 5 - dessert
 		
@@ -238,27 +288,39 @@ function loadLevelStructures(argument0)
 	switch(density)
 	{
 		case "sparse":
-		out = [1,72]
+		out = [1,72,1,1]
 		break;
 		
 		case "semisparse":
-		out = [2,100]
+		out = [2,100,1,1]
 		break;
 		
 		case "5050":
-		out = [2,90]
+		out = [2,90,1,1]
+		break;
+		
+		case "cityblocks":
+		out = [2,90,2,2]
+		break;
+		
+		case "tunnels":
+		out = [1,60,3.5,1]
+		break;
+		
+		case "chutes":
+		out = [1,60,1,3.5]
 		break;
 		
 		case "dense":
-		out = [2,72]
+		out = [2,72,1,1]
 		break;
 		
 		case "ultradense":
-		out = [4,100]
+		out = [4,100,1,1]
 		break;
 		
 		default: //"standard"
-		out = [2,85]				
+		out = [2,85,1,1]				
 		break;
 	}
 	

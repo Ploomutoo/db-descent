@@ -13,4 +13,6 @@ if(cBash) {
 	item = noone;
 	soundRand(sndAltarUse);
 	playerOn = false;
+	
+	instance_destroy();
 }

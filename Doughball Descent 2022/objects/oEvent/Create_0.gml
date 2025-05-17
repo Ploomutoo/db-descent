@@ -5,8 +5,7 @@ dx = dispWidth/2
 dy = 32
 dim = 0
 
-//tilemap_tileset(tileMap,tsGeneric)
-//show_debug_message(string(evScript));
+
 if(evScript = noone) {
 	
 	if(isRare) pickEventRare();

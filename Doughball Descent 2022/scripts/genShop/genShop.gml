@@ -110,8 +110,8 @@ function genEvCave(){
 	ix = 5
 	iy = 0
 	
-	var name = choose("vsEventCave","vsEventCave2","vsEventJump","vsEventSplit","vsEventTempleExt","vsCollectathon");
-	if(cheat) name = "vsCollectathon";
+	var name = choose("vsEventCave","vsEventCave2","vsEventJump","vsEventSplit","vsCollectathon","vsEventTempleExt");
+	//if(cheat) name = "vsCollectathon";
 	
 	//show_debug_message("Vault"+name)
 	
@@ -138,4 +138,25 @@ function genEvRare(){
 	ds_map_destroy(json_rooms);
 	ix+=15
 	
+}
+
+function genGeneric(structure){
+	
+	tileMap = layer_tilemap_get_id("terrain")
+	tilemap_set_width(tileMap,room_width)
+	
+	var json_rooms = vaultdataShop()
+	var load_room = json_rooms[?structure]
+	var load_height = load_room[? "roomSettings"][? "Height"]
+	room_set_height(room,load_height)
+	oPlayer.endHeight = load_height+64
+	
+	ix = 5
+	iy = 0
+	
+	room_pack_load_map(load_room, ix*32, iy*32, room_pack_flag_instances);
+	show_debug_message(string(load_height))
+	ds_map_destroy(json_rooms);
+	ds_map_destroy(load_room);
+	ix+=15
 }
