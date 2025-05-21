@@ -30,7 +30,7 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"evScript","path":"objects/oEvent/oEvent.yy",},"objectId":{"name":"oEvent","path":"objects/oEvent/oEvent.yy",},"value":"eventCrackedRock",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"evScript","path":"objects/oEvent/oEvent.yy",},"objectId":{"name":"oEvent","path":"objects/oEvent/oEvent.yy",},"value":"eventAdventurer",},
   ],
   "parent": {
     "name": "events",

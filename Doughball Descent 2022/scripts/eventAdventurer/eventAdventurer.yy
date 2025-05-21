@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "events",
-    "path": "folders/Scripts/events.yy",
+    "path": "folders/transition/events.yy",
   },
 }
