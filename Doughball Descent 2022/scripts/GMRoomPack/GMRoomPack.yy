@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "GMRoomPack",
   "isCompatibility": false,
+  "isDnD": false,
   "parent": {
     "name": "Extensions",
     "path": "folders/Extensions.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "GMRoomPack",
-  "tags": [],
-  "resourceType": "GMScript",
 }
