@@ -46,17 +46,27 @@ switch(state) {
 	
 		cancelIfLinePresent
 		oTextBox.voice = voice
-		if(random(1)<=drawChance/100) {
+		if (drawChance<0)
+		{
+			oPlayer.mobile = true;
+			event.endFunc();
+			state = -1;
+		}
+		else if(random(1)<=drawChance/100) 
+		{
 			if(event.txSuccess != "") oTextBox.announce(0,event.txSuccess);
 			event.success();
 			audio_play_sound(sndEvent,10,0)
+			state++
 			
-		} else {
+		} 
+		else 
+		{
 			if(event.txFailure != "") oTextBox.announce(0,event.txFailure);
 			event.failure();
 			//audio_play_sound(sndEventBad,10,0)
-		}
-		state++
+			state++
+		}	
 	break;
 	
 	case 4:

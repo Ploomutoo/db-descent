@@ -26,7 +26,7 @@
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"execute_shell_simple.yy","constants":[],"copyToTargets":-1,"filename":"execute_shell_simple.yy","final":"","functions":[],"init":"","kind":4,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
   ],
   "gradleinject": "",
-  "hasConvertedCodeInjection": false,
+  "hasConvertedCodeInjection": true,
   "helpfile": "",
   "HTML5CodeInjection": "",
   "html5Props": false,

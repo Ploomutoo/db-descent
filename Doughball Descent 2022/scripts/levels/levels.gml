@@ -17,13 +17,15 @@ function loadLevelStructures(argument0)
 			area = 1
 			theme = choose(
 			"a2_basic",
-			"a_bouncehouse")
+			"a_bouncehouse",
+			"a_bigworm")
 		break;
 		case 2:
 			area = 1
 			theme = choose(
 			"a3_basic",
-			"a_bouncehouse")
+			"a_bouncehouse",
+			"a_bigworm")
 		break;
 		#endregion
 		
@@ -161,12 +163,19 @@ function loadLevelStructures(argument0)
 		break;
 		
 		case "a_bouncehouse":
-		hgInnit(70,100,hgBigWorm)
 		hgInnit(50,70 ,hgRay)
 		hgInnit(20,40 ,hgBouncy)
 		hgInnit(60,90,hgBagel)
 		density = "sparse"
 		break;
+		case "a_bigworm":
+		hgInnit(60,90,hgGoomba)
+		hgInnit(70,100,hgBigWorm)
+		hgInnit(60,90,hgBagel)
+		hgInnit(60,90,hgSpikes)
+		density = "5050"
+		break;
+		
 		#endregion
 		#region area 2 - veg
 		
