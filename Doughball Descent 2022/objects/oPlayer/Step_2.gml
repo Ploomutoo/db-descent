@@ -78,8 +78,8 @@ if(keyboard_check_pressed(ord(string(eCheat.finishLevel)))) {
 }
 
 if(keyboard_check_pressed(ord(string(eCheat.gotoStage)))) {
-	var i = get_integer("Go To Level",1)
-	if (i = undefined || i>14) exit;
+	var i = get_integer("Go To Level","")
+	if (i = undefined || i>15) exit;
 	
 	level = i;
 	y = room_height;

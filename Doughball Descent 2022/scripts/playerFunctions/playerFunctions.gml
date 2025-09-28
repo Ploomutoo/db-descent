@@ -149,7 +149,7 @@ function calBonus(calIn){
 
 	var stressEater = 0;
 	if(instance_exists(oiStressEater)) stressEater = oiStressEater.stacks;
-	var heartLeft = sToonHeart/heartMax
+	var heartLeft = hearts/heartMax
 	while(stressEater>0){
 		calIn += round(0.5*calIn*(1-heartLeft))
 		stressEater--	

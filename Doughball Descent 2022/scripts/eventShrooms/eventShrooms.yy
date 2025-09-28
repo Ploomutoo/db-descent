@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "eventShrooms",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "events",
-    "path": "folders/transition/events.yy",
+  "$GMScript":"v1",
+  "%Name":"eventShrooms",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"eventShrooms",
+  "parent":{
+    "name":"events",
+    "path":"folders/transition/events.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

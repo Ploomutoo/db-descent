@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "rareEvBlompo",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "events",
-    "path": "folders/transition/events.yy",
+  "$GMScript":"v1",
+  "%Name":"rareEvBlompo",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"rareEvBlompo",
+  "parent":{
+    "name":"events",
+    "path":"folders/transition/events.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

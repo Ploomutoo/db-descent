@@ -159,6 +159,6 @@ function hgEclair() {
 }
 
 function hgDragon() {
-	if(!instance_exists(oDragon)) instance_create_depth(0,0,0,oDragon)
+	instance_create_depth(0,0,0,oDragon)
 	return(true);
 }

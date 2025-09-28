@@ -92,9 +92,9 @@ grounded = 0
 crushes = 1
 counterFallEffect = 4
 
-heartMax = 3
+heartMax = 6
 hearts = heartMax
-soulHearts = 2
+soulHearts = 0
 
 canCombo = false
 combo = 0
@@ -177,12 +177,14 @@ altarInstantiate()
 	dsScalex = 1; dsVelx = 0;
 	dsScaley = 1; dsVely = 0;
 	
+	heartDraw = 0
+	
 #endregion
 
 #region Transition Event Weighting
 
 // Shop, Event, Rare Event, Temple, Cornucopia, Campfire, Arena, Trans Rights
-teWeight = [6,10,3,3,8,50,5,0.1];
+teWeight = [6,10,3,3,8,4,5,0.1];
 roomGrav = -1;
 
 #endregion

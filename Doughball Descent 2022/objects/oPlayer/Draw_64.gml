@@ -7,16 +7,20 @@ var iy = uiSpacing
 var ix = uiSpacing;
 
 #region hearts & arrows
-var hboxScale = (8+heartMax*31+soulHearts*23)/32;
-draw_sprite_ext(sHeartBox,0,ix,iy,hboxScale,1,0,c_white,1);
-var j = heartMax
 ix+=4;
-for(var i = 0; i<j; i++){
+heartDraw += 0.1
+if(heartDraw>4) heartDraw-=4
+
+var _heartscale = 0.5
+
+var j = heartMax
+for(var i = 0; i<j; i+=2){
 	
-	if(i>=hearts) draw_sprite(sHearts,1,ix,iy)
-	else draw_sprite(sHearts,0,ix,iy)
+	if(i<hearts-1) draw_sprite_ext(sToonHeart,heartDraw+i/8,ix,iy,_heartscale,_heartscale,0,c_white,1)
+	else if(i<hearts) draw_sprite_ext(sToonHeartHalf,heartDraw+i/8,ix,iy,_heartscale,_heartscale,0,c_white,1)
+	else draw_sprite_ext(sToonHeartEmpty,0,ix,iy,_heartscale,_heartscale,0,c_white,1)
 	
-	ix+=31;
+	ix+=64*_heartscale;
 	
 }
 j += soulHearts

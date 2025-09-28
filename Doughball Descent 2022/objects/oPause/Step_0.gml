@@ -97,7 +97,7 @@ else
 					break;
 		
 					case enSettings.fullscreen:
-						enSettings[cursorOn,1] = !settings[cursorOn,1]
+						settings[cursorOn,1] = !settings[cursorOn,1]
 						ini_write_real("config","fullscreen",settings[cursorOn,1])
 			
 						window_set_fullscreen(settings[cursorOn,1])

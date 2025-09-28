@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "pickItem",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "items",
-    "path": "folders/items.yy",
+  "$GMScript":"v1",
+  "%Name":"pickItem",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"pickItem",
+  "parent":{
+    "name":"items",
+    "path":"folders/items.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

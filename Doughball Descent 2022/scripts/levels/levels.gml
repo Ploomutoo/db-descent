@@ -70,7 +70,6 @@ function loadLevelStructures(argument0)
 				"d1_basic",
 				"d_wet"
 				)
-				//theme = "d_saws-n-dogs"
 				break;
 			case 10: 
 				area = 4
@@ -131,6 +130,7 @@ function loadLevelStructures(argument0)
 		
 		case 15: 
 			area = 6
+			hgOnce(hgAnubis)
 			hgInnit(20,40,hgGravel)
 			hgInnit(90,130,hgSpikes)
 	}
@@ -164,7 +164,7 @@ function loadLevelStructures(argument0)
 		
 		case "a_bouncehouse":
 		hgInnit(50,70 ,hgRay)
-		hgInnit(20,40 ,hgBouncy)
+		hgInnit(20,40 ,hgBounceBlock)
 		hgInnit(60,90,hgBagel)
 		density = "sparse"
 		break;
@@ -297,43 +297,97 @@ function loadLevelStructures(argument0)
 	switch(density)
 	{
 		case "sparse":
-		out = [1,72,1,1]
+		out = {
+			octave : 1,
+			threshold : 72,
+			xscale : 1,
+			yscale : 1,
+			thresholdTough : -1
+		}
 		break;
 		
 		case "semisparse":
-		out = [2,100,1,1]
+		out = {
+			octave : 2,
+			threshold : 100,
+			xscale : 1,
+			yscale : 1,
+			thresholdTough : -1
+		}
 		break;
 		
 		case "5050":
-		out = [2,90,1,1]
+		out = {
+			octave : 2,
+			threshold : 90,
+			xscale : 1,
+			yscale : 1,
+			thresholdTough : -1
+		}
 		break;
 		
 		case "cityblocks":
-		out = [2,90,2,2]
+		out = {
+			octave : 2,
+			threshold : 90,
+			xscale : 2,
+			yscale : 2,
+			thresholdTough : -1
+		}
 		break;
 		
 		case "tunnels":
-		out = [1,60,3.5,1]
+		out = {
+			octave : 1,
+			threshold : 60,
+			xscale : 4,
+			yscale : 1,
+			thresholdTough : 80
+		}
 		break;
 		
 		case "chutes":
-		out = [1,60,1,3.5]
+		out = {
+			octave : 1,
+			threshold : 60,
+			xscale : 1,
+			yscale : 4,
+			thresholdTough : 80
+		}
 		break;
 		
 		case "dense":
-		out = [2,72,1,1]
+		out = {
+			octave : 2,
+			threshold : 72,
+			xscale : 1,
+			yscale : 1,
+			thresholdTough : 96
+		}
 		break;
 		
 		case "ultradense":
-		out = [4,100,1,1]
+		out = {
+			octave : 4,
+			threshold : 100,
+			xscale : 1,
+			yscale : 1,
+			thresholdTough : 120
+		}
 		break;
 		
 		default: //"standard"
-		out = [2,85,1,1]				
+		out = {
+			octave : 2,
+			threshold : 85,
+			xscale : 1,
+			yscale : 1,
+			thresholdTough : 100
+		}
 		break;
 	}
 	
 	
 	return(out)
-	//out 0 is octave, out 1 is threshold
+	//out 0 is octave, out 1 is threshold, out 2 is xscale, out 3 is yscale, 4 is hard threshold
 }

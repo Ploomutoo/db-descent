@@ -105,7 +105,7 @@ if(bashActive>=15) //bash func
 	
 	if(instance_exists(victim))   
 	{	
-		victim.funcHurt(self,false)
+		with(victim) funcHurt(self,false)
 		
 		if(extraBashFrames>0)
 		{

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "vaultdata2",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "vaults",
-    "path": "folders/Generation/vaults.yy",
+  "$GMScript":"v1",
+  "%Name":"vaultdata2",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"vaultdata2",
+  "parent":{
+    "name":"vaults",
+    "path":"folders/Generation/vaults.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

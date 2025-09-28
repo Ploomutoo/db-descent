@@ -23,25 +23,31 @@ function setAreaCosmetics(argument0){
 		bgUpdate(sBgCow)
 		global.colorA = $ffb196
 		global.colorB = $f7e08d
-		
 		break;
+		
 		case 4:
 		currentMusic = musLevel4;
 		tilemap_tileset(tileMap,tsLevel4)
 		bgUpdate(sBgMeat)
 		global.colorA = $855ac7
 		global.colorB = $6875e8
-		
 		break;
+		
 		case 5:
 		currentMusic = musLevel5;
 		tilemap_tileset(tileMap,tsLevel5)
 		bgUpdate(sBgDessert)
 		global.colorA = $ca5fa1
 		global.colorB = $c887df
-		
 		density = choose(2,5);
+		break;
 		
+		case 6:
+		currentMusic = musLevel6;
+		tilemap_tileset(tileMap,tsLevel6)
+		bgUpdate(sBgAnkh)
+		global.colorA = $d9b23d
+		global.colorB = $ba7f27
 		break;
 	}
 	playMusic(currentMusic)

@@ -50,12 +50,9 @@ var heartCountdown = round(protMult*irandom_range(64,xLimit*yLimit/3))
 //xLimit*yLimit/3+irandom(xLimit*yLimit/2))
 var heartPlaced = 0
 
-var invertLayer = 1+irandom(3)
 var noiseOut = 0
 var place = 0
 var noiseSeed = [irandom(255),irandom(255)]
-
-var noiseThreshold = load[1]
 
 var placeItem = irandom_range(1,3);
 
@@ -63,8 +60,8 @@ while(iy<yLimit){
 	
 	while(ix<xLimit) {
 		
-		noiseOut = noise(floor(ix/load[2])+noiseSeed[0],floor(iy/load[3])+noiseSeed[1],load[0])
-		if(noiseOut>noiseThreshold) place = 1
+		noiseOut = noise(floor(ix/load.xscale)+noiseSeed[0],floor(iy/load.yscale)+noiseSeed[1],load.octave)
+		if(noiseOut>load.threshold) place = 1
 		else place = 0
 				
 		tilemap_set(tileMap, place, ix, iy)
@@ -95,20 +92,6 @@ while(iy<yLimit){
 	}
 	ix = 0;
 	iy++
-	
-	if(invertLayer<=0){
-		
-		if(place0 = 0) {
-			place0 = 1
-			place1 = 0
-		} else {
-			place0 = 0
-			place1 = 1
-		}
-		invertLayer = irandom(density)
-		
-	}
-	
 }
 #endregion
 #region Place once items

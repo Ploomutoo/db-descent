@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"musLevel6",
+  "audioGroupId":{
+    "name":"agMusic",
+    "path":"audiogroups/agMusic",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":2,
+  "conversionMode":0,
+  "duration":28.05551,
+  "name":"musLevel6",
+  "parent":{
+    "name":"sound",
+    "path":"folders/sound.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"musLevel6.mp3",
+  "type":0,
+  "volume":1.0,
+}

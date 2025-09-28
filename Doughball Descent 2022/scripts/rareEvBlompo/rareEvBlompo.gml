@@ -14,7 +14,7 @@ event = {
 	txDecline : "Begone then, do not waste my blood sugar\nwith your incessant hobnobbery",
 		
 	eChance : function(){
-		if(oPlayer.heartMax<2) return([0,"Not Enough Max HP"]);
+		if(oPlayer.heartMax<3) return([0,"Not Enough Max HP"]);
 		else return([1,"Give 1 Max HP"]);
 	},
 		
@@ -25,7 +25,7 @@ event = {
 		other.image_speed = 0
 		
 		minionAdd(other.x,other.y);
-		oPlayer.heartMax -= 1;
+		oPlayer.heartMax -= 2;
 		
 		soundRand(sndHurt);
 		oCamera.screenShake = 4

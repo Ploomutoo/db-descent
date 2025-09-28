@@ -82,7 +82,7 @@ function hgBounceBlock() {
 	return(true)
 }
 
-function hgBouncy() {
+/*function hgBouncy() {
 	var endVein = ix + 1 + irandom(4) //Temporarily the width of bouncy vein
 	var i = 0;
 	
@@ -108,7 +108,7 @@ function hgBouncy() {
 		ix++
 	}
 	return(true)
-}
+}*/
 
 function hgAllSpikes() {
 	var veinWidth = 1 + irandom(2) //Temporarily the width of gravel vein
@@ -142,4 +142,10 @@ function hgShaft()
 	_milk.image_xscale = 32/_milk.sprite_width
 	_milk.image_yscale = _height*32/_milk.sprite_height
 	return(true)
+}
+
+function hgAnubis() 
+{
+	instance_create_depth(0,0,0,oAnubis)
+	return(true);
 }

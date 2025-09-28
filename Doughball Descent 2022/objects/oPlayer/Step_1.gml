@@ -153,7 +153,7 @@ else if (grounded) {
 	
 	#region hitReg 
 	#macro fbGrace 4
-	var fallBox = collision_rectangle(bbox_left-fbGrace,y-fbGrace,bbox_right+fbGrace,y+vspeed,oParentEnemy,false,false)
+	var fallBox = collision_rectangle(bbox_left-fbGrace,y-fbGrace,bbox_right+fbGrace,y+vspeed,oParentBashable,false,false)
 	if(instance_exists(fallBox)) {
 		dsScalex = 1.5; dsScaley = 0.6
 		

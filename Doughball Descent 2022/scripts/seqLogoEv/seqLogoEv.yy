@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "seqLogoEv",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "menuNonObj",
-    "path": "folders/menu+UI/menuNonObj.yy",
+  "$GMScript":"v1",
+  "%Name":"seqLogoEv",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"seqLogoEv",
+  "parent":{
+    "name":"menuNonObj",
+    "path":"folders/menu+UI/menuNonObj.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

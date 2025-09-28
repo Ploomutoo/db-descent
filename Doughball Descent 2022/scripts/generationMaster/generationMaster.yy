@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "generationMaster",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Generation",
-    "path": "folders/Generation.yy",
+  "$GMScript":"v1",
+  "%Name":"generationMaster",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"generationMaster",
+  "parent":{
+    "name":"Generation",
+    "path":"folders/Generation.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
