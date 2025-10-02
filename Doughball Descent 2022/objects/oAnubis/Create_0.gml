@@ -21,6 +21,7 @@ funcHurt = function _hurt(attacker,isStomp)
 	}
 	state = anubisState.stun
 	sprite_index = anubisStun
+	soundRand(sndAnubisPain)
 	alarm[0] = 30
 }
 

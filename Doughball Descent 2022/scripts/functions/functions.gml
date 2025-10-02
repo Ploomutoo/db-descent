@@ -38,24 +38,25 @@ function addItem(item) {
 
 function removeItem(item) {
 	
-	with(oPlayer) {
-		var i = array_find_index(items,item)
+	with(oPlayer) 
+	{
+		var i = _array_find_index(items,item)
 		if(i!=-1) array_delete(items,i,1)
-		
-		//show_debug_message(string(items))
 	}
 	
-	with(item) {
+	with(item) 
+	{
 		event_user(1);
 		instance_destroy();
 	}
 	
-	for(i = array_length(oPlayer.items)-1; i>=0; i--){
+	for(i = array_length(oPlayer.items)-1; i>=0; i--)
+	{
 		with(oPlayer.items[i]) mountItem(i);
 	}
 }
 
-function array_find_index(arr, val)
+function _array_find_index(arr, val)
 {
 	for(var i = 0; i < array_length(arr); i++)
 	{

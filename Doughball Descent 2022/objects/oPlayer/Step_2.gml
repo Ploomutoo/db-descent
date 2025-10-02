@@ -8,7 +8,8 @@ enum eCheat {
 	giveItem, //5
 	takeItem,
 	giveMinion, //7
-	destroyFood
+	destroyFood,
+	overrideDensity
 }
 if(!cheat) {
 	
@@ -68,7 +69,7 @@ if(keyboard_check_pressed(ord(string(eCheat.takeItem)))) {
 	if(string_copy(i,1,2)!="oi") exit;
 	
 	i = asset_get_index(i);
-	with(i) removeItem(self);
+	with(i) removeItem(object_index);
 	//if(object_exists(i)) removeItem(i)
 	
 }
@@ -82,7 +83,7 @@ if(keyboard_check_pressed(ord(string(eCheat.gotoStage)))) {
 	if (i = undefined || i>15) exit;
 	
 	level = i;
-	y = room_height;
+	tranLevel = viewHeight+100
 }
 
 if(keyboard_check_pressed(ord(string(eCheat.toggle)))) {
@@ -97,4 +98,10 @@ if(keyboard_check_pressed(ord(string(eCheat.giveMinion)))) {
 
 if(keyboard_check_pressed(ord(string(eCheat.destroyFood)))) {
 	with(oFood) instance_destroy();
+}
+
+
+if(keyboard_check_pressed(ord(string(eCheat.overrideDensity)))) {
+	var i = get_string("Override density to?","")
+	global.densityOverride = i	
 }

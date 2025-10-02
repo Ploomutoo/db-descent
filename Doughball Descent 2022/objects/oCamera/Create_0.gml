@@ -6,7 +6,6 @@ if(instance_exists(oPlayer)) {
 	y = lookAt.y
 } else lookAt = noone;
 
-//camera = camera_create();
 cam1 = view_camera[0];
 cam2 = view_camera[1];
 

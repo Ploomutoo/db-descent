@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"sndHeart",
+  "%Name":"sndAnubisPain",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,17 +9,17 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.40786847,
-  "name":"sndHeart",
+  "duration":0.55566895,
+  "name":"sndAnubisPain",
   "parent":{
-    "name":"sound",
-    "path":"folders/sound.yy",
+    "name":"zoneBoss",
+    "path":"folders/hazardObjects/zoneBoss.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndHeart.wav",
+  "soundFile":"sndAnubisPain.mp3",
   "type":0,
   "volume":1.0,
 }

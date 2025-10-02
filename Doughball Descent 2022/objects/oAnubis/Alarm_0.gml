@@ -18,6 +18,7 @@ switch(state)
 		state = anubisState.punch
 		sprite_index = anubisAtk
 		image_index  = 0
+		soundRand(sndAnubisPunch)
 		break;
 		case 2:
 		state = anubisState.summonFire

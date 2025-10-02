@@ -7,12 +7,12 @@ danger = false
 
 funcHurt = function _hurt(attacker,isBash)
 {
-	if(isBash)
+	if(!isBash)
 	{
 		hDir = oPlayer.hFace
 	}
 	else
 	{
-		attacker.vspeed = -6	
+		//attacker.vspeed = -6	
 	}
 }

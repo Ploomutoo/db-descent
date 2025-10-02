@@ -293,7 +293,9 @@ function loadLevelStructures(argument0)
 		
 		#endregion
 	}
+	if(global.densityOverride!="") density = global.densityOverride
 	
+	show_debug_message("Density preset: "+density)
 	switch(density)
 	{
 		case "sparse":
@@ -302,7 +304,7 @@ function loadLevelStructures(argument0)
 			threshold : 72,
 			xscale : 1,
 			yscale : 1,
-			thresholdTough : -1
+			thresholdTough : 100
 		}
 		break;
 		
@@ -312,7 +314,7 @@ function loadLevelStructures(argument0)
 			threshold : 100,
 			xscale : 1,
 			yscale : 1,
-			thresholdTough : -1
+			thresholdTough : 120
 		}
 		break;
 		
@@ -322,7 +324,7 @@ function loadLevelStructures(argument0)
 			threshold : 90,
 			xscale : 1,
 			yscale : 1,
-			thresholdTough : -1
+			thresholdTough : 120
 		}
 		break;
 		
@@ -332,7 +334,7 @@ function loadLevelStructures(argument0)
 			threshold : 90,
 			xscale : 2,
 			yscale : 2,
-			thresholdTough : -1
+			thresholdTough : 120
 		}
 		break;
 		
@@ -362,7 +364,7 @@ function loadLevelStructures(argument0)
 			threshold : 72,
 			xscale : 1,
 			yscale : 1,
-			thresholdTough : 96
+			thresholdTough : 120
 		}
 		break;
 		
@@ -382,7 +384,7 @@ function loadLevelStructures(argument0)
 			threshold : 85,
 			xscale : 1,
 			yscale : 1,
-			thresholdTough : 100
+			thresholdTough : 120
 		}
 		break;
 	}

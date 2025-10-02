@@ -61,7 +61,8 @@ while(iy<yLimit){
 	while(ix<xLimit) {
 		
 		noiseOut = noise(floor(ix/load.xscale)+noiseSeed[0],floor(iy/load.yscale)+noiseSeed[1],load.octave)
-		if(noiseOut>load.threshold) place = 1
+		if(load.thresholdTough != -1 && noiseOut > load.thresholdTough) place = 2
+		else if(noiseOut>load.threshold) place = 1
 		else place = 0
 				
 		tilemap_set(tileMap, place, ix, iy)

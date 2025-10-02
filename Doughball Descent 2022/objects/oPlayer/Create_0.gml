@@ -7,6 +7,7 @@ altometerHeight = sprite_get_height(sAltometer)-13;
 mapHeight = round(room_height/32)
 global.colorA = c_red
 global.colorB = c_yellow
+global.densityOverride = ""
 if (level=undefined) level=0;
 loop = 0
 

@@ -110,13 +110,19 @@ function genEvCave(){
 	ix = 5
 	iy = 0
 	
-	var name = choose("vsEventCave","vsEventCave2","vsEventJump","vsEventSplit","vsCollectathon","vsEventTempleExt");
-	//if(cheat) name = "vsCollectathon";
-	
+	var name = choose("vsEventCave","vsEventCave2","vsEventJump","vsEventSplit",
+	"vsCollectathon","vsEventTempleExt");
+
 	//show_debug_message("Vault"+name)
+	var load_room = json_rooms[?name]
+	room_pack_load_map(load_room, ix*32, iy*32, room_pack_flag_instances);
 	
-	room_pack_load_map(json_rooms[?name], ix*32, iy*32, room_pack_flag_instances);
+	var load_height = load_room[? "roomSettings"][? "Height"]
+	room_set_height(room,load_height)
+	oPlayer.endHeight = load_height+64
+	
 	ds_map_destroy(json_rooms);
+	ds_map_destroy(load_room);
 	ix+=15
 	
 }
