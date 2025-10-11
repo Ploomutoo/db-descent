@@ -1,4 +1,4 @@
-with(oPlayer) if(hearts<heartMax) hearts=min(heartMax,hearts+2)
+with(oPlayer) if(hearts<heartMax) hearts=min(heartMax,hearts+other.healValue)
 else {
 	var get = calBonus(50)
 	weight+=get

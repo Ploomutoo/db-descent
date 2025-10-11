@@ -19,11 +19,12 @@ if(image_index<1) exit;
 var desX = x+32*image_xscale
 
 if(!tsCheckEmpty(desX,y-4)
-  &&tsCheckEmpty(desX,y+4)
-  &&x+image_xscale<room_width
-  &&x+image_xscale>0)
+  &&tsCheckEmpty(desX,y+4))
 {
 	x+=image_xscale*(1/image_index)
+	
+	if(x>room_width) x -= room_width
+	else if(x<0) x += room_width
 } 
 else 
 {

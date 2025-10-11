@@ -1,5 +1,2 @@
 event_inherited();
-
-with(shoot) {
-	instance_destroy();	
-}
+if(shoot != undefined && shoot != noone) instance_destroy(shoot)

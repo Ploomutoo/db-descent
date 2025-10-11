@@ -8,7 +8,9 @@
   ],
   "managed":true,
   "name":"oHazBush",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oParentBashable","path":"objects/oParentBashable/oParentBashable.yy",},"propertyId":{"name":"canStomp","path":"objects/oParentBashable/oParentBashable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
+  ],
   "parent":{
     "name":"zoneVeg",
     "path":"folders/hazardObjects/zoneVeg.yy",

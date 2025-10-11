@@ -267,6 +267,9 @@ function breakLine(vy,vx1,vx2){
 function tsCheckEmpty(argument0,argument1) {
 	//confusingly returns false for empty and true for filled
 	//why did you do that, past me?
+	if(argument0>room_width) argument0 -= room_width
+	else if(argument0<0) argument0 += room_width
+	
 	var _tile = tilemap_get_at_pixel(tileMap,argument0,argument1)
 	
 	if(_tile = 4)

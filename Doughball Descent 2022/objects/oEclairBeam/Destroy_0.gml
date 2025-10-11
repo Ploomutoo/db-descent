@@ -1,0 +1,1 @@
+if(childBeam != noone) instance_destroy(childBeam)

@@ -71,8 +71,8 @@ if(view_visible[1]) {
 	
 		view_set_xport(1,camWidth)
 		view_set_wport(1,0)
-		c2leftbounds = 0;
-		c2rightbounds= 0;
+		c2leftbounds = -1;
+		c2rightbounds= -1;
 		c2width = 0;
 	}
 

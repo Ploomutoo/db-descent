@@ -10,7 +10,7 @@ funcHurt = function _hurt(attacker,isStomp)
 	}
 	else
 	{
-		hspeed = 5*attacker.hFace
+		hspeed = 5*oPlayer.hFace
 		reflected = true
 	}
 }

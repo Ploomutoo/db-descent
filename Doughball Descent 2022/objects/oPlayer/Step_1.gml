@@ -153,18 +153,27 @@ else if (grounded) {
 	
 	#region hitReg 
 	#macro fbGrace 4
-	var fallBox = collision_rectangle(bbox_left-fbGrace,y-fbGrace,bbox_right+fbGrace,y+vspeed,oParentBashable,false,false)
-	if(instance_exists(fallBox)) {
-		dsScalex = 1.5; dsScaley = 0.6
-		
-		vspeed = -6
-		fallBox.funcHurt(self,true)
-		
-		if(!instance_exists(fallBox))
+	var fallBox = ds_list_create()
+	collision_rectangle_list(bbox_left-fbGrace,y-fbGrace,bbox_right+fbGrace,y+vspeed,oParentBashable,0,0,fallBox,0)
+	for(var i = 0; i < ds_list_size(fallBox); i++)
+	{
+		if(instance_exists(fallBox[| i])) 
 		{
-			soundRand(sndStomp)
+			if(fallBox[| i].canStomp) 
+			{
+				dsScalex = 1.5; dsScaley = 0.6
+		
+				vspeed = -6
+				fallBox[| i].funcHurt(self,true)
+		
+				if(!instance_exists(fallBox[| i]))
+				{
+					soundRand(sndStomp)
+				}
+			}
 		}
 	}
+	ds_list_destroy(fallBox)
 	#endregion
 }
 

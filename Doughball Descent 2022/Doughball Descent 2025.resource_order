@@ -6,7 +6,6 @@
   "ResourceOrderSettings":[
     {"name":"acHurricane","order":13,"path":"animcurves/acHurricane/acHurricane.yy",},
     {"name":"acJiggle","order":1,"path":"animcurves/acJiggle/acJiggle.yy",},
-    {"name":"execute_shell_simple","order":3,"path":"extensions/execute_shell_simple/execute_shell_simple.yy",},
     {"name":"fntBase","order":41,"path":"fonts/fntBase/fntBase.yy",},
     {"name":"fntBig","order":10,"path":"fonts/fntBig/fntBig.yy",},
     {"name":"fntTitle","order":18,"path":"fonts/fntTitle/fntTitle.yy",},
@@ -33,6 +32,7 @@
     {"name":"oDurSlug","order":2,"path":"objects/oDurSlug/oDurSlug.yy",},
     {"name":"oEclair","order":25,"path":"objects/oEclair/oEclair.yy",},
     {"name":"oEclairBeam","order":26,"path":"objects/oEclairBeam/oEclairBeam.yy",},
+    {"name":"oEclairBeamWrap","order":45,"path":"objects/oEclairBeamWrap/oEclairBeamWrap.yy",},
     {"name":"oEmpty","order":10,"path":"objects/oEmpty/oEmpty.yy",},
     {"name":"oEnemyCorpse","order":10,"path":"objects/oEnemyCorpse/oEnemyCorpse.yy",},
     {"name":"oEvAdventurer","order":2,"path":"objects/oEvAdventurer/oEvAdventurer.yy",},
@@ -202,6 +202,7 @@
     {"name":"vsEventTempleExt","order":7,"path":"rooms/vsEventTempleExt/vsEventTempleExt.yy",},
     {"name":"vsFallArea","order":5,"path":"rooms/vsFallArea/vsFallArea.yy",},
     {"name":"vsRestsite1","order":9,"path":"rooms/vsRestsite1/vsRestsite1.yy",},
+    {"name":"vsRestsite2","order":10,"path":"rooms/vsRestsite2/vsRestsite2.yy",},
     {"name":"vsShopHealth","order":6,"path":"rooms/vsShopHealth/vsShopHealth.yy",},
     {"name":"vsShopItem","order":7,"path":"rooms/vsShopItem/vsShopItem.yy",},
     {"name":"vsShopkeeper","order":8,"path":"rooms/vsShopkeeper/vsShopkeeper.yy",},

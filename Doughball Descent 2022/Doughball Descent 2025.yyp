@@ -95,7 +95,6 @@
   "resources":[
     {"id":{"name":"acHurricane","path":"animcurves/acHurricane/acHurricane.yy",},},
     {"id":{"name":"acJiggle","path":"animcurves/acJiggle/acJiggle.yy",},},
-    {"id":{"name":"execute_shell_simple","path":"extensions/execute_shell_simple/execute_shell_simple.yy",},},
     {"id":{"name":"fntBase","path":"fonts/fntBase/fntBase.yy",},},
     {"id":{"name":"fntBig","path":"fonts/fntBig/fntBig.yy",},},
     {"id":{"name":"fntMini","path":"fonts/fntMini/fntMini.yy",},},
@@ -126,6 +125,7 @@
     {"id":{"name":"oDurSlug","path":"objects/oDurSlug/oDurSlug.yy",},},
     {"id":{"name":"oEclair","path":"objects/oEclair/oEclair.yy",},},
     {"id":{"name":"oEclairBeam","path":"objects/oEclairBeam/oEclairBeam.yy",},},
+    {"id":{"name":"oEclairBeamWrap","path":"objects/oEclairBeamWrap/oEclairBeamWrap.yy",},},
     {"id":{"name":"oEmpty","path":"objects/oEmpty/oEmpty.yy",},},
     {"id":{"name":"oEnemyCorpse","path":"objects/oEnemyCorpse/oEnemyCorpse.yy",},},
     {"id":{"name":"oEvAdventurer","path":"objects/oEvAdventurer/oEvAdventurer.yy",},},
@@ -307,6 +307,7 @@
     {"id":{"name":"vsEventTempleExt","path":"rooms/vsEventTempleExt/vsEventTempleExt.yy",},},
     {"id":{"name":"vsFallArea","path":"rooms/vsFallArea/vsFallArea.yy",},},
     {"id":{"name":"vsRestsite1","path":"rooms/vsRestsite1/vsRestsite1.yy",},},
+    {"id":{"name":"vsRestsite2","path":"rooms/vsRestsite2/vsRestsite2.yy",},},
     {"id":{"name":"vsShopHealth","path":"rooms/vsShopHealth/vsShopHealth.yy",},},
     {"id":{"name":"vsShopItem","path":"rooms/vsShopItem/vsShopItem.yy",},},
     {"id":{"name":"vsShopkeeper","path":"rooms/vsShopkeeper/vsShopkeeper.yy",},},
@@ -818,6 +819,7 @@
     {"roomId":{"name":"v1BigHeist","path":"rooms/v1BigHeist/v1BigHeist.yy",},},
     {"roomId":{"name":"v5RageCage","path":"rooms/v5RageCage/v5RageCage.yy",},},
     {"roomId":{"name":"vsRestsite1","path":"rooms/vsRestsite1/vsRestsite1.yy",},},
+    {"roomId":{"name":"vsRestsite2","path":"rooms/vsRestsite2/vsRestsite2.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[

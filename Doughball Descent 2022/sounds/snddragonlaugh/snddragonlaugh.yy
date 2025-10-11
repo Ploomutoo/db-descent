@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.470998,
+  "duration":1.4709977,
   "name":"sndDragonLaugh",
   "parent":{
     "name":"zoneDessert",

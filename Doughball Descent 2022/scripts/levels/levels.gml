@@ -209,6 +209,7 @@ function loadLevelStructures(argument0)
 			hgInnit(80,120,hgShooter)
 			hgOnce(hgCotw)
 			hgInnit(100,150,hgSpikes)
+			hgInnit(80,120 ,hgBounceBlock)
 			density = "sparse"
 		break;
 		#endregion

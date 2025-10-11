@@ -4,9 +4,7 @@
   "eventList":[],
   "managed":true,
   "name":"oEvRestFake",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEvent","path":"objects/oEvent/oEvent.yy",},"propertyId":{"name":"evScript","path":"objects/oEvent/oEvent.yy",},"resource":{"name":"eventRest","path":"scripts/eventRest/eventRest.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"eventRest",},
-  ],
+  "overriddenProperties":[],
   "parent":{
     "name":"events",
     "path":"folders/transition/events.yy",
