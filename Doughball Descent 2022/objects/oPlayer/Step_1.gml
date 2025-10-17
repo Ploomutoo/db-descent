@@ -97,15 +97,28 @@ else if (grounded) {
 	}
 } else {
 	
-	
-	if(instance_exists(oiHeliumTum)) {
-		
-		if(cJump && !hTumActive && hTumDuration=-1) {
-			audio_play_sound(sndHTumIn,5,0)
-			vspeed = -1
-			hTumDuration = 30+(oiHeliumTum.stacks-1)*15 
-			dsVelx = 0.3; dsScaley = 1.2
-			hTumActive = true;
+	if(cJump)
+	{
+		var item = instance_find(oiHotwings,0)
+		if(item != noone && item.hotwingJumps > 0) 
+		{
+			soundRand(sndDragonDash)
+			createEffect(bbox_right,y-64,sHotwingEffect)
+			var fx = createEffect(bbox_left,y-64,sHotwingEffect)
+			fx.image_xscale = -1
+			vspeed = -10
+			item.hotwingJumps --;
+		}
+		else if(instance_exists(oiHeliumTum)) 
+		{
+			if(!hTumActive && hTumDuration=-1) 
+			{
+				audio_play_sound(sndHTumIn,5,0)
+				vspeed = -1
+				hTumDuration = 30+(oiHeliumTum.stacks-1)*15 
+				dsVelx = 0.3; dsScaley = 1.2
+				hTumActive = true;
+			}
 		}
 	}
 	

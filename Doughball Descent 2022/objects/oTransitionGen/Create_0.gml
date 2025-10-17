@@ -47,7 +47,7 @@ function teScript(teIndex) {
 		break;
 		
 		case 5: //campfire
-		out = [genGeneric,"vsRestsite1"]
+		out = [genGeneric,choose("vsRestsite1","vsRestsite2")]
 		//out = [genGeneric,"vsCollectathon"]
 		break;
 		

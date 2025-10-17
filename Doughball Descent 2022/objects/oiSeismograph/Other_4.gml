@@ -1,0 +1,1 @@
+seismoStacks = stacks*4

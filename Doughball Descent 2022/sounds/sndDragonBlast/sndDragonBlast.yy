@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.854082,
+  "duration":0.85408163,
   "name":"sndDragonBlast",
   "parent":{
     "name":"zoneDessert",

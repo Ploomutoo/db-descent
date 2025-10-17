@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":2.232,
+  "duration":2.1855555,
   "name":"sndAltarUse",
   "parent":{
     "name":"sound",

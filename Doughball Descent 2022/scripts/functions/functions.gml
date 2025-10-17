@@ -151,6 +151,7 @@ enum blockReturn {
 	
 	nothing,
 	deIncrement,
+	deIncSeismo,
 	setZero
 }
 
@@ -209,9 +210,34 @@ function breakBlock() { //--!--!--!--!--!--
 		break;
 		case 3: //Invulnerable Tile
 			soundRand(sndTileInvulnerable)
-			if(!isBash)	return(blockReturn.setZero);
-			else bashActive = 10;
-			
+			var itemSeismo = instance_find(oiSeismograph,0)
+			if(itemSeismo != noone && itemSeismo.seismoStacks > 0)
+			{
+				var _marker = instance_position(argument[0],argument[1],oSeismicMarker)
+				if(_marker != noone)
+				{
+					instance_destroy(_marker)
+					
+					tilemap_set_at_pixel(tileMap,0,argument[0],argument[1])
+					soundRand(sndMetalbreak)
+					
+					var _spike = instance_position(argument[0],floor(argument[1]/32)*32-2,oHazSpike)
+					if(_spike != noone) instance_destroy(_spike)
+					
+					if(isBash) with(instance_find(oiSeismograph,0)) seismoStacks--;
+					else return(blockReturn.deIncSeismo)
+				}
+				else
+				{
+					instance_create_depth(floor(argument[0]/32)*32,floor(argument[1]/32)*32,depth,oSeismicMarker)
+					return(blockReturn.setZero)
+				}
+			}
+			else
+			{
+				if(!isBash)	return(blockReturn.setZero);
+				else bashActive = 10;
+			}	
 		break;
 		case 4: //Function Tile
 			var functionObj = instance_position(argument[0],argument[1],oParentTileObject)
@@ -257,6 +283,10 @@ function breakLine(vy,vx1,vx2){
 		break;
 		case blockReturn.deIncrement:
 		crushes--;
+		break;
+		case blockReturn.deIncSeismo:
+		crushes--;
+		with(instance_find(oiSeismograph,0)) seismoStacks--;
 		break;
 		case blockReturn.setZero:
 		crushes = 0;

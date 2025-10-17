@@ -1,47 +1,28 @@
 var endpoint
 if(facing = 1) 
 {
-	if(oCamera.c2leftbounds = -1) //no looping
+	endpoint = oCamera.c1rightbounds
+	//if(endpoint > x) endpoint = oCamera.c2rightbounds
+	image_xscale = (endpoint-x)/sprite_get_width(sprite_index)
+	
+	if(endpoint = room_width)
 	{
-		endpoint = oCamera.c1rightbounds
-		image_xscale = (endpoint-x)/sprite_get_width(sprite_index)
-	}
-	else if(oCamera.c1leftbounds = 0) //pane 1 is on right
-	{
-		endpoint = room_width
-		image_xscale = (endpoint-x)/sprite_get_width(sprite_index)
-		if(childBeam = noone) childBeam = instance_create_depth(0,y,depth,oEclairBeamWrap)
-		endpoint = oCamera.c1rightbounds
-		childBeam.image_xscale = endpoint/sprite_get_width(sprite_index)
-	}
-	else //pane 1 is on left
-	{
-		endpoint = room_width
-		image_xscale = (endpoint-x)/sprite_get_width(sprite_index)
-		if(childBeam = noone) childBeam = instance_create_depth(0,y,depth,oEclairBeamWrap)
+		if(childBeam = noone) childBeam = instance_create_depth(0,y,depth,oEclairBeamWrap)	
 		endpoint = oCamera.c2rightbounds
 		childBeam.image_xscale = endpoint/sprite_get_width(sprite_index)
 	}
 }
 else if(facing = -1)
 {
-	if(oCamera.c2leftbounds = -1) //no looping
+	endpoint = oCamera.c1leftbounds
+	//if(endpoint < x) endpoint = oCamera.c2leftbounds
+	image_xscale = (endpoint-x)/sprite_get_width(sprite_index)
+	
+	if(endpoint = 0)
 	{
-		endpoint = oCamera.c1leftbounds
-		image_xscale = (endpoint-x)/sprite_get_width(sprite_index)
-	}
-	else if(oCamera.c1leftbounds = 0) //pane 1 is on right
-	{
-		endpoint = 0
-		image_xscale = (endpoint-x)/sprite_get_width(sprite_index)
-		if(childBeam = noone) childBeam = instance_create_depth(0,y,depth,oEclairBeamWrap)
-		endpoint = oCamera.c1leftbounds
-		childBeam.image_xscale = endpoint/sprite_get_width(sprite_index)
-	}
-	else //pane 1 is on left
-	{
-		endpoint = oCamera.c1leftbounds
-		image_xscale = (endpoint-x)/sprite_get_width(sprite_index)
+		if(childBeam = noone) childBeam = instance_create_depth(room_width,y,depth,oEclairBeamWrap)	
+		endpoint = oCamera.c2leftbounds
+		childBeam.image_xscale = (endpoint-room_width)/sprite_get_width(sprite_index)
 	}
 }
 

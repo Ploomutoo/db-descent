@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.242676,
+  "duration":0.24267574,
   "name":"sndDonutSharp",
   "parent":{
     "name":"zoneDessert",

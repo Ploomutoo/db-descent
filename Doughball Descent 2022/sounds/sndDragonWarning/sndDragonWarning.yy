@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.145873,
+  "duration":0.14587301,
   "name":"sndDragonWarning",
   "parent":{
     "name":"zoneDessert",

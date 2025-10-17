@@ -15,6 +15,9 @@ switch(state) {
 		drawText = ""
 
 		drawChance = cOut[0]*100;
+		var luckyCharm = instance_find(oiLuckycharm,0)
+		if(drawChance != 0 && luckyCharm != noone) drawChance += luckyCharm.stacks
+		
 		if(drawChance>10) drawChance = floor(drawChance)
 		if(array_length(cOut)>1) {
 			drawText = cOut[1]

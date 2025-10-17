@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":2.453855,
+  "duration":2.4538548,
   "name":"sndDragonDash",
   "parent":{
     "name":"zoneDessert",

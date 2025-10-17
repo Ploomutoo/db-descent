@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.408662,
+  "duration":0.40866214,
   "name":"sndAxeSwing",
   "parent":{
     "name":"zoneDessert",
