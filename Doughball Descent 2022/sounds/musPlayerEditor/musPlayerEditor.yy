@@ -1,16 +1,16 @@
 {
   "$GMSound":"",
-  "%Name":"sndSwim",
+  "%Name":"musPlayerEditor",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"agMusic",
+    "path":"audiogroups/agMusic",
   },
   "bitDepth":1,
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.14004534,
-  "name":"sndSwim",
+  "duration":30.902857,
+  "name":"musPlayerEditor",
   "parent":{
     "name":"sound",
     "path":"folders/sound.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndSwim.mp3",
+  "soundFile":"musPlayerEditor.mp3",
   "type":0,
   "volume":1.0,
 }

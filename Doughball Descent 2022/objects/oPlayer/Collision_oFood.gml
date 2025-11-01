@@ -13,6 +13,15 @@ if(instance_exists(oTally)){
 	//show_debug_message("Got "+string(oTally.foodGot[other.image_index])+" of "+string(other.image_index))
 	oTally.calGot+=calGet
 }
+var _guard = instance_find(oiGuardGrain,0)
+with(_guard)
+{
+	if(guardGrainCooldown>0)
+	{
+		guardGrainCooldown -= calGet
+		if(guardGrainCooldown<1) flash = 15
+	}
+}
 
 if(instance_exists(oiComfortFood)) iframes = max(iframes,30 + 30*oiComfortFood.stacks)
 

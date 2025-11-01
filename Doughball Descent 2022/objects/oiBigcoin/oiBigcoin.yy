@@ -1,15 +1,18 @@
 {
   "$GMObject":"",
   "%Name":"oiBigcoin",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"oiBigcoin",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"nameTag","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Luck-o-Charm",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"description","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Better event luck",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"price","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"300",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"image_index","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"20",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"shopkeeperQuote","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Want to tip the scales in your favor?. Try some luck-o-charms",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"nameTag","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Bigcoin",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"description","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Food value flux",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"price","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"200",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"image_index","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"22",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"shopkeeperQuote","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"I'm scared of Bigcoin",},
   ],
   "parent":{
     "name":"items",

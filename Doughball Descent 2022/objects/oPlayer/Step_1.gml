@@ -97,7 +97,7 @@ else if (grounded) {
 	}
 } else {
 	
-	if(cJump)
+	if(jumpedTimer > -10 && cJump)
 	{
 		var item = instance_find(oiHotwings,0)
 		if(item != noone && item.hotwingJumps > 0) 
@@ -214,8 +214,9 @@ else if(jumpedTimer>0 || autoJump)
 		jumpedTimer = 0
 		crushes = weightCategories.crushes[weightCategories.stage]	
 		
-	} else jumpedTimer--
+	} 
 }
+if(jumpedTimer > -100) jumpedTimer--
 
 if(roomGrav!=-1) vspeed = clamp(vspeed,-fallMax,roomGrav)
 else vspeed = clamp(vspeed,-fallMax,fallMax)

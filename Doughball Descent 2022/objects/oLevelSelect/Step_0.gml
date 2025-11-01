@@ -18,6 +18,7 @@ if(cBash) {
 	global.chosenStart = level;
 	
 	makePlayer();
+	instantiateFood();
 		
 	room_goto(rGame)
 	window_set_cursor(cr_none)

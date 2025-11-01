@@ -50,21 +50,29 @@ function takeDamage(){
 	if(iframes>0 || cheat || tranLevel>-1) exit
 	
 	#region Kevlard
-	var klStacks = instance_number(oiKevlard)
-	var damNegate = 0
-	var roll = 1
 	
-	if(klStacks>0) {
-		damNegate+=min(weight,500)/20
-		klStacks--
-		while(klStacks>0){
-			damNegate+=min(weight,500)/100
-			klStacks-=1
+		var klStacks = instance_number(oiKevlard)
+		var damNegate = 0
+		var roll = 1
+	
+		if(klStacks>0) {
+			damNegate+=min(weight,500)/20
+			klStacks--
+			while(klStacks>0){
+				damNegate+=min(weight,500)/100
+				klStacks-=1
+			}
+			var roll = irandom(99)
+			//show_debug_message("Rolled "+string(roll)+" against "+string(damNegate))
 		}
-		var roll = irandom(99)
-		//show_debug_message("Rolled "+string(roll)+" against "+string(damNegate))
-	}
 	#endregion
+	var _ggrain = instance_find(oiGuardGrain,0)
+	if(_ggrain != noone && _ggrain.guardGrainCooldown < 1)
+	{
+		damNegate = 1
+		_ggrain.guardGrainCooldown = choose(300,400,500)
+		_ggrain.flash = 15
+	}
 	
 	if(roll<=damNegate){
 		var popup = instance_create_layer(x,y-32,layer,oPopupText)
