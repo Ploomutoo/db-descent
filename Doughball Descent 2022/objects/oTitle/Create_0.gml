@@ -9,9 +9,10 @@ room_pack_eval_script = function(code) {
 
 cursorOn = 0
 menu[0] = "Play"
-menu[1] = "Help\n& Credits"
+menu[1] = "Help & Credits"
 menu[2] = "Settings"
-menu[3] = "Quit"
+menu[3] = "Editor"
+menu[4] = "Quit"
 
 aCurve = animcurve_get(acJiggle)
 aChannel = animcurve_get_channel(aCurve,0)

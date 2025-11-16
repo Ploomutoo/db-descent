@@ -47,13 +47,12 @@ belly_vspeed -= belly_vspeed*belly_damping;
 if(bashActive<=0) {
 	if(aquatic)
 	{
-		draw_sprite_part_ext(sPlayerSwim,image_index,0,(spritePart+1)*46,50,46,repX-25*finScale,repY-46-drawOffset,finScale,1,c_white,1)
+		draw_sprite_part_ext(playerSprites.swim,image_index,0,(spritePart+1)*46,50,46,repX-25*finScale,repY-46-drawOffset,finScale,1,c_white,1)
 	}
 	else
 	{
-		//draw_sprite_part_ext(sPlayerWalk,walkFrame,0,(spritePart+1)*playerSpriteHeight,playerSpriteWidth,playerSpriteHeight,floor(repX-playerSpriteWidth*finScale/2),floor(repY-playerSpriteHeight),finScale,1,c_white,1)
-		draw_sprite_ext(sPlayerJiggleBase,spritePart+1,repX,repY-drawOffset,finScale,1,draw_angle,c_white,1)
-		draw_sprite_ext(sPlayerJiggle,spritePart+1,repX,repY-drawOffset+belly_y-y,finScale,1,draw_angle,c_white,1)
+		draw_sprite_ext(playerSprites.base,spritePart+1,repX,repY-drawOffset,finScale,1,draw_angle,c_white,1)
+		draw_sprite_ext(playerSprites.jiggle,spritePart+1,repX,repY-drawOffset+belly_y-y,finScale,1,draw_angle,c_white,1)
 	
 		if (abs(hspeed)>0.2) {
 			walkFrame+=0.06
@@ -61,7 +60,7 @@ if(bashActive<=0) {
 		}
 	}
 	
-} else draw_sprite_part_ext(sPlayerBump,image_index,0,(spritePart+1)*46,50,46,repX-25*finScale,repY-46-drawOffset,finScale,1,c_white,1)
+} else draw_sprite_part_ext(playerSprites.bump,image_index,0,(spritePart+1)*46,50,46,repX-25*finScale,repY-46-drawOffset,finScale,1,c_white,1)
 
 gpu_set_fog(0,c_white,1,0);
 surface_reset_target()

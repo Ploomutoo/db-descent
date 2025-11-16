@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.09458,
+  "duration":0.0945805,
   "name":"sndTextPick",
   "parent":{
     "name":"menuNonObj",

@@ -33,7 +33,7 @@
     "left":2,
     "resourceType":"GMNineSliceData",
     "resourceVersion":"2.0",
-    "right":0,
+    "right":1,
     "tileMode":[
       0,
       0,

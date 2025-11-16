@@ -5,11 +5,11 @@
   "managed":true,
   "name":"oiGastrolith",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"nameTag","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Luck-o-Charm",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"description","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Better event luck",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"price","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"300",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"image_index","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"20",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"shopkeeperQuote","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Want to tip the scales in your favor?. Try some luck-o-charms",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"nameTag","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Gastrolith",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"description","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"More crushes!",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"price","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"250",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"image_index","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"25",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"shopkeeperQuote","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Need rock solid\\ndigestion?. Try a Gastrolith!. It'll at least\\nmake you heavier",},
   ],
   "parent":{
     "name":"items",
