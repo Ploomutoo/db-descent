@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.626939,
+  "duration":0.58839005,
   "name":"sndBash",
   "parent":{
     "name":"sound",

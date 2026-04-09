@@ -182,6 +182,16 @@ function breakBlock() { //--!--!--!--!--!--
 			
 			if(crushes>0 || isBash) {
 				
+				if(alarm[3]>0) 
+				{ //Zev Frenzy Effect
+					var popup = instance_create_layer(argument[0],argument[1],layer,oPopupText)
+					var calGet = 3
+					var find = instance_find(osZev,0)
+					if(find!=noone) calGet+=(find.stacks-1)
+					popup.drawString = "+"+string(calGet)
+					weight+=calGet
+				}
+				
 				tilemap_set_at_pixel(tileMap,0,argument[0],argument[1])
 				with(instance_position(tRound(argument[0],32)+16,tRound(argument[1],32)-16,oHazBush)) instance_destroy()
 				//createParticles(argument[0],argument[1],6,sPaRock)

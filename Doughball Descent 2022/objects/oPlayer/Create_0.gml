@@ -185,7 +185,16 @@ altarInstantiate()
 #region Transition Event Weighting
 
 // Shop, Event, Rare Event, Temple, Cornucopia, Campfire, Arena, Trans Rights
-teWeight = [6,10,3,3,8,4,0,0.1];
+teWeight = [
+6, //shop
+12, //event
+3, //rare
+3, //temple
+5, //corn
+3, //campfire
+0, //arena
+0.1 //trans
+];
 roomGrav = -1;
 
 ini_open("PlayerSprites/dewey.ini")
@@ -198,6 +207,12 @@ playerSprites =
 	dead :		sprite_add(ini_read_string("Sprites","Dead",working_directory + "PlayerSprites/dewey_dead.png"),9,0,0,25,28),
 }
 ini_close()
+
+if(!sprite_exists(playerSprites.base))		playerSprites.base = sPlayerJiggleBase
+if(!sprite_exists(playerSprites.jiggle))	playerSprites.jiggle = sPlayerJiggle
+if(!sprite_exists(playerSprites.bump))		playerSprites.bump = sPlayerBump
+if(!sprite_exists(playerSprites.swim))		playerSprites.swim = sPlayerSwim
+if(!sprite_exists(playerSprites.dead))		playerSprites.dead = sPlayerCorpse
 
 #endregion
 show_debug_message("\nConsole Start")

@@ -21,3 +21,7 @@ else hspeed+=bbox_left*/
 
 
 if(tsCheckEmpty(desX,y-4)) instance_destroy()
+
+
+if(x>room_width) x-=room_width
+else if(x<0) x+=room_width

@@ -94,8 +94,7 @@ function genShop(){ //Perform in shop room
 	
 	#endregion
 	
-	//show_debug_message("Shop Generated "+string(ix*32)+" wide")
-	//show_debug_message("Room Width is "+string(room_width))
+	if(!instance_exists(oShopkeeper)) show_debug_message("shop gen failed")
 	// and when you're done:
 	ds_map_destroy(json_rooms);
 }
@@ -110,8 +109,7 @@ function genEvCave(){
 	ix = 5
 	iy = 0
 	
-	var name = choose("vsEventCave","vsEventCave2","vsEventJump","vsEventSplit",
-	"vsCollectathon","vsEventTempleExt");
+	var name = choose("vsEventCave","vsEventCave2","vsEventJump","vsEventSplit");
 
 	//show_debug_message("Vault"+name)
 	var load_room = json_rooms[?name]

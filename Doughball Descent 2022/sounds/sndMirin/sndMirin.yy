@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.365714,
+  "duration":0.33786848,
   "name":"sndMirin",
   "parent":{
     "name":"eventAssets",

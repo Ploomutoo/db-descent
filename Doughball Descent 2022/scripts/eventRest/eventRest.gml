@@ -12,7 +12,7 @@ event = {
 		return([1,"Heal to Full"]);
 	},
 		
-	txSuccess : "It feels nice to take a load off\nYour will is restored",
+	txSuccess : "It feels nice to take a load off/nYour will is restored",
 	success : function(){
 		
 		soundRand(sndSafe)

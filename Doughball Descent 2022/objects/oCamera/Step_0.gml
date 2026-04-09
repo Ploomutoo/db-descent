@@ -3,22 +3,24 @@ var lookY;
 
 if(view_visible[1]) {
 	
-	if(lookAt!=noone) {
-		lookX = lookAt.x
-		lookY = lookAt.y+yOffset
-		if(camFocus){
-			lookX += (mouse_x-lookX)/8;
-			lookY += (mouse_y-lookY)/8;
+	if(!lockCam)
+	{
+		if(lookAt!=noone) {
+			lookX = lookAt.x
+			lookY = lookAt.y+yOffset
+			if(camFocus){
+				lookX += (mouse_x-lookX)/8;
+				lookY += (mouse_y-lookY)/8;
+			}
+		} else {
+			lookX = room_width/2
+			lookY = room_height/2
 		}
-	} else {
-		lookX = room_width/2
-		lookY = room_height/2
+
+		//x += (lookX-x)/6
+		y += (lookY-y)/6
+		x = lookX;
 	}
-
-	//x += (lookX-x)/6
-	y += (lookY-y)/6
-	x = lookX;
-
 	//var c1leftbounds, c1rightbounds, c2leftbounds, c2rightbounds;
 	c1leftbounds = x-camWidth/2
 	c1rightbounds= x+camWidth/2

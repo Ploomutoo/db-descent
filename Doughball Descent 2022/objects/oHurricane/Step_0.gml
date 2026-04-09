@@ -21,36 +21,32 @@ if(acPos>=1) {
 	
 	if(hspeed>0) var checkPos = bbox_right
 	else var checkPos = bbox_left
+	
+	if(checkPos>room_width) checkPos -= room_width
+	else if(checkPos<0) checkPos += room_width
+	
+	var checkTile= tilemap_get_at_pixel(tileMap,checkPos,y-16);
 		
-	if(checkPos>room_width || checkPos<0) {
-	
-		hspeed = -hspeed;
-	
-	} else {
-	
-		var checkTile= tilemap_get_at_pixel(tileMap,checkPos,y-16);
-		
-		if(checkTile=0) {
+	if(checkTile=0) {
 			
-			checkPos+=hspeed
-			var checkObj = collision_rectangle(checkPos,y-4,x,y-24,oParentBashable,0,false);
-			//markPoint(checkPos,y-4); markPoint(checkPos,y-24);
-			with(checkObj) {
+		checkPos+=hspeed
+		var checkObj = collision_rectangle(checkPos,y-4,x,y-24,oParentBashable,0,false);
+		//markPoint(checkPos,y-4); markPoint(checkPos,y-24);
+		with(checkObj) {
 				
-				if(object_get_parent(object_index)!=oParentTileObject) event_user(0);
-			}
-			
-		} 
-		else {
-		
-			with(oPlayer) {
-				
-				crushes = 1;
-				breakBlock(checkPos,y-16);
-				crushes = 0;
-			}
-			hspeed = -hspeed;
+			if(object_get_parent(object_index)!=oParentTileObject) event_user(0);
 		}
+			
+	} 
+	else {
+		
+		with(oPlayer) {
+				
+			crushes = 1;
+			breakBlock(checkPos,y-16);
+			crushes = 0;
+		}
+		hspeed = -hspeed;
 	}
 	
 

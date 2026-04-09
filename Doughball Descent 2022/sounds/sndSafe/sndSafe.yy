@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.430431,
+  "duration":1.4304309,
   "name":"sndSafe",
   "parent":{
     "name":"eventAssets",

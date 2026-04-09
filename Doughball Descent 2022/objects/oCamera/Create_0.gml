@@ -41,6 +41,7 @@ bgTilesY = 1+ceil(viewHeight/bgY)
 bgShift = 0
 bgyOffset = 0
 
+lockCam = false
 }
 
 cameraMain();

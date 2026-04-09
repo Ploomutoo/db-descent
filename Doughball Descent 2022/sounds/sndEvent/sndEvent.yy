@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.474127,
+  "duration":1.4741269,
   "name":"sndEvent",
   "parent":{
     "name":"eventAssets",

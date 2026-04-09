@@ -5,8 +5,11 @@ if(image_index>3) exit;
 
 var desX = x+16*image_xscale
 
-if(!tsCheckEmpty(desX,y-4)&&tsCheckEmpty(desX,y+4)&&x+image_xscale<room_width&&x+image_xscale>0){
+if(!tsCheckEmpty(desX,y-4)&&tsCheckEmpty(desX,y+4)){
 	x+=image_xscale*(4/(image_index+1))
+	
+	if(x>room_width) x-=room_width
+	else if(x<0) x+=room_width
 } else {
 	if(turnedCooldown<=0){
 		image_xscale = image_xscale*-1

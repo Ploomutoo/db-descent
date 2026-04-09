@@ -1,12 +1,18 @@
 if(item = noone) exit;
 
 playerOn = false;
-if(abs(y-oPlayer.y)>32) exit;
-if(abs(x-oPlayer.x+16)>32) exit;
+with(oPlayer)
+{
+	var nearest = instance_nearest(x,y,oItemPedestal)	
+	with(nearest)
+	{
+		if(abs(y-oPlayer.y)>32) exit;
+		if(abs(x-oPlayer.x+16)>32) exit;
+		playerOn = true;
+	}
+}
 
-playerOn = true;
-
-if(cBash) {
+if(playerOn && cBash) {
 	
 	addItem(item);
 	

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.672018,
+  "duration":0.6720182,
   "name":"sndHurricane",
   "parent":{
     "name":"itemPeriphery",

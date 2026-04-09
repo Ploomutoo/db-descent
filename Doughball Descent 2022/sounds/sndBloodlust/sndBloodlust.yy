@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.419728,
+  "duration":0.4197279,
   "name":"sndBloodlust",
   "parent":{
     "name":"sound",

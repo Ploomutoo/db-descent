@@ -57,7 +57,7 @@ if(keyboard_check_pressed(ord(string(eCheat.setWeight)))) {
 
 if(keyboard_check_pressed(ord(string(eCheat.giveItem)))) {
 	var i = get_string("Give item","oiHeartbeet")
-	if(string_copy(i,1,2)!="oi") exit;
+	if(string_copy(i,1,2)!="oi" && string_copy(i,1,2)!="os") exit;
 	
 	i = asset_get_index(i);
 	if(object_exists(i)) addItem(i)
@@ -66,7 +66,7 @@ if(keyboard_check_pressed(ord(string(eCheat.giveItem)))) {
 
 if(keyboard_check_pressed(ord(string(eCheat.takeItem)))) {
 	var i = get_string("Remove item","oiHeartbeet")
-	if(string_copy(i,1,2)!="oi") exit;
+	if(string_copy(i,1,2)!="oi" && string_copy(i,1,2)!="os") exit;
 	
 	i = asset_get_index(i);
 	with(i) removeItem(object_index);

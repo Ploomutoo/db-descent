@@ -1,6 +1,6 @@
 with(oPlayer) if(hearts<heartMax) hearts=min(heartMax,hearts+other.healValue)
 else {
-	var get = calBonus(50)
+	var get = calBonus(25)
 	weight+=get
 	var popup = instance_create_layer(x,y-30,layer,oPopupText)
 	popup.drawString = "+"+string(get)

@@ -7,11 +7,8 @@ if(state>=2 && image_index>2){
 	
 	vspeed = -3*image_yscale
 	
-	//var checkPoint = y-24*image_yscale
-	
 	if(tsCheckEmpty(x,y-24*image_yscale)){
 		
-		//markPoint(x,checkPoint)
 		state = irandom_range(-3,-1)
 		
 		soundDist(sndGummyLand,32,192)
@@ -49,8 +46,11 @@ if(state>=2 && image_index>2){
 
 	var desX = x+16*image_xscale
 
-	if(!tsCheckEmpty(desX,y-4*image_yscale)&&tsCheckEmpty(desX,y+4*image_yscale)&&x+image_xscale<room_width&&x+image_xscale>0){
+	if(!tsCheckEmpty(desX,y-4*image_yscale)&&tsCheckEmpty(desX,y+4*image_yscale)){
 		x+=image_xscale/(1+image_index)
+		
+		if(x>room_width) x-=room_width
+		else if(x<0) x+=room_width
 	} else {
 		if(turnedCooldown<=0){
 			image_xscale = image_xscale*-1

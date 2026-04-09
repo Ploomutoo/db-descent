@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"eventBat",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"eventBat",
+  "parent":{
+    "name":"events",
+    "path":"folders/transition/events.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

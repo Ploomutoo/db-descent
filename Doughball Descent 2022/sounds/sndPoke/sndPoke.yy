@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.201979,
+  "duration":0.20199546,
   "name":"sndPoke",
   "parent":{
     "name":"eventAssets",

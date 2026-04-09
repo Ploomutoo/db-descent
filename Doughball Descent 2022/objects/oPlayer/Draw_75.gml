@@ -1,6 +1,7 @@
 /// @description level transition
 
-if(tranLevel!=-1) {
+if(tranLevel>-1) 
+{
 	draw_sprite_ext(sTransition,0,0,viewHeight-tranLevel,dispWidth/sprite_get_width(sTransition),1,0,c_white,1)
 	draw_set_color(c_black)
 	draw_rectangle(0,viewHeight-tranLevel+96,dispWidth,viewHeight,0)
