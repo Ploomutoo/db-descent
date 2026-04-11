@@ -3,52 +3,48 @@ event = {
 		
 	sprite: sEvFairyShrine,
 	eName : "Fairy Shrine",
-	txExposition : "A bat is perched on a strange outgrowth. "
-	+"It chitters faintly, something about blood?",
-	txAttempt : "You offer your blood to the bat. It drinks greedily!",
-	txDecline : "You'd prefer to  hang onto your blood, actually",
-		
+	txExposition : "Fairies flitter around an old shrine. It is customary to leave such shrines\nan offering",
+	txAttempt : "You place some food at the base of the shrine",
+	txDecline : "You clutch your supplies greedily, hungrily",
 	eChance : function(){
-		if(oPlayer.hearts<2) return([0,"No HP"]);
-		else return([1,"Give Blood"]);
+		if(oPlayer.weight<125) return([0,"No Food"]);
+		else return([1,"Give Food"]);
 	},
-		
-	txSuccess : "The bat smiles contentedly,\npresenting you with a gift!",
+	txSuccess : "A fairy flutters lazily to your side,\njoining you on your journey",
 	success : function(){
-		image_index = 1
-		soundRand(sndBloodlust)
 		with(oPlayer)
 		{
-			var heartsSpent = hearts-1
-			while(heartsSpent > 0)
-			{
-				if(heartsSpent >= 3)
-				{
-					instance_create_layer(x+32+floor(heartsSpent/3)*48,y,layer,oItemPedestal);
-					heartsSpent-=3
-				}
-				else
-				{
-					heartsSpent-=1
-					weight += 25
-					popUp(x,y-48-8*heartsSpent,"+25")
-				}
-			}
-			hearts = 1
-			instance_create_layer(x+80,y,layer,oItemPedestal);
+			weight-=25
+			instance_create_layer(x,y,layer,oFairy)
 		}
 	},
-		
-	txFailure : "But you didn't have enough blood to give",
-	failure : function(){
-		with(oPlayer){
-
-		}
-	},
+	txFailure : "But you didn't have enough food to give",
+	failure : function(){},
 	endFunc : function(){
 		with(other) 
 		{
 			image_speed = 0
 		}
-	}		
+	},	
+	eInit : function() {
+		if(instance_exists(oFairy))
+		{
+			txExposition = "Your fairy friend flutters over to the shrine. With a shimmering light, a gift is left for you!" 
+			
+			eChance = function() {
+				instance_destroy(oFairy)
+				with(other)
+				{
+					instance_create_layer(x+64,y,layer_get_id("Instances"),oItemPedestal);
+					
+					image_speed = 0
+					state = 4
+					oTextBox.storedText = ""
+					event_user(0)
+					state = -2
+				}
+				return([-1])
+			}
+		}
+	}
 }}

@@ -10,19 +10,7 @@ switch(state) {
 		if(abs(x-oPlayer.x)>48) exit;
 		cancelIfLinePresent
 		
-		var cOut = event.eChance();
-		//show_debug_message("chance is "+string(cOut[0]))
-		drawText = ""
-
-		drawChance = cOut[0]*100;
-		var luckyCharm = instance_find(oiLuckycharm,0)
-		if(drawChance != 0 && luckyCharm != noone) drawChance += luckyCharm.stacks
-		
-		if(drawChance>10) drawChance = floor(drawChance)
-		if(array_length(cOut)>1) {
-			drawText = cOut[1]
-		} else drawText = string(drawChance)+"%";
-		
+		if(variable_instance_exists(event,"eInit")) event.eInit();
 		oPlayer.mobile = false;
 		
 		oTextBox.voice = voice
@@ -31,7 +19,19 @@ switch(state) {
 	break;
 	case 1:
 		cancelIfLinePresent
+		
 		choice = 1
+		var cOut = event.eChance();
+		drawText = ""
+
+		drawChance = cOut[0]*100;
+		var luckyCharm = instance_find(oiLuckycharm,0)
+		if(drawChance > 0 && luckyCharm != noone) drawChance += luckyCharm.stacks
+		
+		if(drawChance>10) drawChance = floor(drawChance)
+		if(array_length(cOut)>1) {
+			drawText = cOut[1]
+		} else drawText = string(drawChance)+"%";
 		state++
 	break;
 	case 2:

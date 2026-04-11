@@ -1,5 +1,5 @@
 function announce(monotoneVoice,text){
-	
+	if(text = "") exit;
 	with(oTextBox) {
 		
 		pitch = 1

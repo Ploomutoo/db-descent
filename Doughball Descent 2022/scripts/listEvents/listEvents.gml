@@ -6,7 +6,8 @@ function pickEvent(){
 	eventCrackedRock,
 	//eventTemple,
 	eventThornbush,
-	eventBat]
+	eventBat,
+	eventFairyShrine]
 	
 	if(instance_exists(oBase)) array_push(eventArr,eventShrooms,eventTrader)
 	

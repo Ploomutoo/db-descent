@@ -8,7 +8,7 @@ enum eCheat {
 	giveItem, //5
 	takeItem,
 	giveMinion, //7
-	destroyFood,
+	cheatRoom,
 	overrideDensity
 }
 if(!cheat) {
@@ -96,8 +96,9 @@ if(keyboard_check_pressed(ord(string(eCheat.giveMinion)))) {
 	minionAdd(x,y);
 }
 
-if(keyboard_check_pressed(ord(string(eCheat.destroyFood)))) {
-	with(oFood) instance_destroy();
+if(keyboard_check_pressed(ord(string(eCheat.cheatRoom)))) {
+	if(y<endHeight) y = endHeight;
+	tranRoom = rCheat
 }
 
 

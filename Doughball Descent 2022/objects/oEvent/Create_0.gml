@@ -13,10 +13,9 @@ if(evScript = noone) {
 	
 } else evScript();
 
-if(variable_instance_exists(event,"eInit")) event.eInit();
-
 voice = talkEvent;
 if(variable_instance_exists(event,"eVoice")) voice = event.eVoice;
+drawChance = -1
 
 sprite_index = event.sprite;
 //var cOut = 0.5

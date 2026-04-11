@@ -48,6 +48,13 @@ if(tranLevel>-1)
 				y = -96
 				var nextRoom = rChoice;
 				break;
+				
+			default:
+			
+				x = 512;
+				y = 0;
+				var nextRoom = rGame;
+				break;
 		}
 		
 		room_goto(tranRoom);

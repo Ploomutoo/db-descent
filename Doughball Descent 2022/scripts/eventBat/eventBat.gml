@@ -35,7 +35,6 @@ event = {
 				}
 			}
 			hearts = 1
-			instance_create_layer(x+80,y,layer,oItemPedestal);
 		}
 	},
 		
