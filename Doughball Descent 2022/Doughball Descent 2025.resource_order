@@ -203,8 +203,6 @@
     {"name":"v4Skull","order":20,"path":"rooms/v4Skull/v4Skull.yy",},
     {"name":"v5GummyHell","order":21,"path":"rooms/v5GummyHell/v5GummyHell.yy",},
     {"name":"v5RageCage","order":41,"path":"rooms/v5RageCage/v5RageCage.yy",},
-    {"name":"vdeprecatedHeart","order":22,"path":"rooms/vdeprecatedHeart/vdeprecatedHeart.yy",},
-    {"name":"vdeprecatedRageCage","order":23,"path":"rooms/vdeprecatedRageCage/vdeprecatedRageCage.yy",},
     {"name":"vgCross","order":24,"path":"rooms/vgCross/vgCross.yy",},
     {"name":"vgFunnyRandom","order":25,"path":"rooms/vgFunnyRandom/vgFunnyRandom.yy",},
     {"name":"vgMoat","order":26,"path":"rooms/vgMoat/vgMoat.yy",},

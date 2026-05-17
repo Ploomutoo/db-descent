@@ -18,4 +18,9 @@ hitFunc = function(isBash,executor)
 		}
 	}
 	soundRand(sndGummyLand)
+	wobble = 2
 }
+
+wobble = 1
+wobDelta = 0
+wobDeltaDelta = 0.05
