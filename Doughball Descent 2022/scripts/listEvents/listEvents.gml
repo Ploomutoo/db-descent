@@ -4,7 +4,6 @@ function pickEvent(){
 	var eventArr = 
 	[eventTightCave,
 	eventCrackedRock,
-	//eventTemple,
 	eventThornbush,
 	eventBat,
 	eventFairyShrine]
