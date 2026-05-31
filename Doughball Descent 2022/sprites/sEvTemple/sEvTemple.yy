@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sEvTemple",
   "bboxMode":0,
   "bbox_bottom":63,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"8c0f7e3d-db2d-4f1f-a00e-c5b73005d0da","name":"8c0f7e3d-db2d-4f1f-a00e-c5b73005d0da","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8c0f7e3d-db2d-4f1f-a00e-c5b73005d0da","name":"8c0f7e3d-db2d-4f1f-a00e-c5b73005d0da","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

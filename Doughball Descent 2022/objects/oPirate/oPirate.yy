@@ -28,8 +28,8 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"cannonCooldown","filters":[],"listItems":[],"multiselect":false,"name":"cannonCooldown","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"120","varType":1,},
-    {"$GMObjectProperty":"v1","%Name":"cullDistance","filters":[],"listItems":[],"multiselect":false,"name":"cullDistance","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"320","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"cannonCooldown","filters":[],"listItems":[],"multiselect":false,"name":"cannonCooldown","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"120","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"cullDistance","filters":[],"listItems":[],"multiselect":false,"name":"cullDistance","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"320","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

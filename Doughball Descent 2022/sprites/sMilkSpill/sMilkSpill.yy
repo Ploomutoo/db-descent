@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sMilkSpill",
   "bboxMode":2,
   "bbox_bottom":28,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"39b8ca04-fa31-4bdd-a75f-fedc03f7a373","name":"39b8ca04-fa31-4bdd-a75f-fedc03f7a373","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"39b8ca04-fa31-4bdd-a75f-fedc03f7a373","name":"39b8ca04-fa31-4bdd-a75f-fedc03f7a373","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

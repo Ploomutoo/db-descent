@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sTextLocations",
   "bboxMode":0,
   "bbox_bottom":65,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0ed243fa-12c6-4ab2-a4b2-825f3d19e8af","name":"0ed243fa-12c6-4ab2-a4b2-825f3d19e8af","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0ed243fa-12c6-4ab2-a4b2-825f3d19e8af","name":"0ed243fa-12c6-4ab2-a4b2-825f3d19e8af","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sConnector",
   "bboxMode":2,
   "bbox_bottom":22,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0d89903c-9b8a-4fe4-beff-e02bc28d8408","name":"0d89903c-9b8a-4fe4-beff-e02bc28d8408","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0d89903c-9b8a-4fe4-beff-e02bc28d8408","name":"0d89903c-9b8a-4fe4-beff-e02bc28d8408","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

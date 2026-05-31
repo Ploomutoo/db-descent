@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sBush",
   "bboxMode":2,
   "bbox_bottom":31,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"b5bc362b-5cb3-4939-9409-bfa9cfa9b6fb","name":"b5bc362b-5cb3-4939-9409-bfa9cfa9b6fb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"4509b770-5d8c-4fbd-bcf2-048ee9ba5ccb","name":"4509b770-5d8c-4fbd-bcf2-048ee9ba5ccb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b5bc362b-5cb3-4939-9409-bfa9cfa9b6fb","name":"b5bc362b-5cb3-4939-9409-bfa9cfa9b6fb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4509b770-5d8c-4fbd-bcf2-048ee9ba5ccb","name":"4509b770-5d8c-4fbd-bcf2-048ee9ba5ccb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

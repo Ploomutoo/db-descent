@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sMeatballDessert",
   "bboxMode":0,
   "bbox_bottom":25,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"45797bda-d7c7-4224-8432-30265c2950af","name":"45797bda-d7c7-4224-8432-30265c2950af","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"864970ae-55cc-4408-b548-3b59960abc69","name":"864970ae-55cc-4408-b548-3b59960abc69","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"45797bda-d7c7-4224-8432-30265c2950af","name":"45797bda-d7c7-4224-8432-30265c2950af","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"864970ae-55cc-4408-b548-3b59960abc69","name":"864970ae-55cc-4408-b548-3b59960abc69","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

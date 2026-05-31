@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sPopupDeath",
   "bboxMode":0,
   "bbox_bottom":80,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"ddf57eab-5c8e-4b0e-baf0-d57f36ef72b4","name":"ddf57eab-5c8e-4b0e-baf0-d57f36ef72b4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ddf57eab-5c8e-4b0e-baf0-d57f36ef72b4","name":"ddf57eab-5c8e-4b0e-baf0-d57f36ef72b4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

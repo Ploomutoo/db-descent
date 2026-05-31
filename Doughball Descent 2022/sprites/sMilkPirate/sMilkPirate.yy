@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sMilkPirate",
   "bboxMode":0,
   "bbox_bottom":31,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"13387b5f-492f-4869-b13b-d639514b106e","name":"13387b5f-492f-4869-b13b-d639514b106e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"0060fbb6-5daa-4a51-9f94-e744e1c6f457","name":"0060fbb6-5daa-4a51-9f94-e744e1c6f457","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"13387b5f-492f-4869-b13b-d639514b106e","name":"13387b5f-492f-4869-b13b-d639514b106e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0060fbb6-5daa-4a51-9f94-e744e1c6f457","name":"0060fbb6-5daa-4a51-9f94-e744e1c6f457","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

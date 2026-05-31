@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sAltometer",
   "bboxMode":0,
   "bbox_bottom":63,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d57421e4-cb2b-4eee-abc5-0bf5ebb7b8df","name":"d57421e4-cb2b-4eee-abc5-0bf5ebb7b8df","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"14d07013-3966-4f8c-babe-9f4cb97f8b37","name":"14d07013-3966-4f8c-babe-9f4cb97f8b37","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d57421e4-cb2b-4eee-abc5-0bf5ebb7b8df","name":"d57421e4-cb2b-4eee-abc5-0bf5ebb7b8df","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"14d07013-3966-4f8c-babe-9f4cb97f8b37","name":"14d07013-3966-4f8c-babe-9f4cb97f8b37","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

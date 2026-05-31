@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sWeightMeter",
   "bboxMode":0,
   "bbox_bottom":15,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"9b9ca86d-d8fa-4919-b2d5-50245ee88de2","name":"9b9ca86d-d8fa-4919-b2d5-50245ee88de2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a23cf4ca-ef9e-4932-a35e-65ba90537937","name":"a23cf4ca-ef9e-4932-a35e-65ba90537937","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"9b9ca86d-d8fa-4919-b2d5-50245ee88de2","name":"9b9ca86d-d8fa-4919-b2d5-50245ee88de2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a23cf4ca-ef9e-4932-a35e-65ba90537937","name":"a23cf4ca-ef9e-4932-a35e-65ba90537937","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

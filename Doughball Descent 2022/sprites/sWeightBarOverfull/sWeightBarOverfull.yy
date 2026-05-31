@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sWeightBarOverfull",
   "bboxMode":0,
   "bbox_bottom":39,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"24cd48d4-f3d0-4254-9ec2-58853e86e317","name":"24cd48d4-f3d0-4254-9ec2-58853e86e317","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"544be9e0-ee61-43c8-81f9-fc5bfef53bff","name":"544be9e0-ee61-43c8-81f9-fc5bfef53bff","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"24cd48d4-f3d0-4254-9ec2-58853e86e317","name":"24cd48d4-f3d0-4254-9ec2-58853e86e317","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"544be9e0-ee61-43c8-81f9-fc5bfef53bff","name":"544be9e0-ee61-43c8-81f9-fc5bfef53bff","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

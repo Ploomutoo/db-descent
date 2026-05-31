@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sHotSauce",
   "bboxMode":2,
   "bbox_bottom":29,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"e469a07d-cec5-427d-af0d-6bb275d66713","name":"e469a07d-cec5-427d-af0d-6bb275d66713","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"72193b05-7b5c-4338-a133-2c078df8417a","name":"72193b05-7b5c-4338-a133-2c078df8417a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e469a07d-cec5-427d-af0d-6bb275d66713","name":"e469a07d-cec5-427d-af0d-6bb275d66713","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"72193b05-7b5c-4338-a133-2c078df8417a","name":"72193b05-7b5c-4338-a133-2c078df8417a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

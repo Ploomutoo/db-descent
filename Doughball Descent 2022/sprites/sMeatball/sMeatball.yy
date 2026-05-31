@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sMeatball",
   "bboxMode":0,
   "bbox_bottom":25,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0f136a22-9e62-41a4-9692-5ca438532e73","name":"0f136a22-9e62-41a4-9692-5ca438532e73","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8973c128-4a9e-464b-9900-1b338e869a0f","name":"8973c128-4a9e-464b-9900-1b338e869a0f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0f136a22-9e62-41a4-9692-5ca438532e73","name":"0f136a22-9e62-41a4-9692-5ca438532e73","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8973c128-4a9e-464b-9900-1b338e869a0f","name":"8973c128-4a9e-464b-9900-1b338e869a0f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

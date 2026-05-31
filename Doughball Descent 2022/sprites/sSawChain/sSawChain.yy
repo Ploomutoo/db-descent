@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sSawChain",
   "bboxMode":0,
   "bbox_bottom":7,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"92af5d6f-6b81-4acc-8cf6-9307e6e93165","name":"92af5d6f-6b81-4acc-8cf6-9307e6e93165","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"92af5d6f-6b81-4acc-8cf6-9307e6e93165","name":"92af5d6f-6b81-4acc-8cf6-9307e6e93165","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

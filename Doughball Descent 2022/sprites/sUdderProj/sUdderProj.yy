@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sUdderProj",
   "bboxMode":0,
   "bbox_bottom":10,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"c0009b06-c7ab-4cc4-8ebd-7e6440ce645d","name":"c0009b06-c7ab-4cc4-8ebd-7e6440ce645d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c0009b06-c7ab-4cc4-8ebd-7e6440ce645d","name":"c0009b06-c7ab-4cc4-8ebd-7e6440ce645d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

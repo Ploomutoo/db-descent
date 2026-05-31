@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sCannonballPurple",
   "bboxMode":0,
   "bbox_bottom":24,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7ea2c559-545a-40b2-a5d6-7282cb79ac19","name":"7ea2c559-545a-40b2-a5d6-7282cb79ac19","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a820aee1-c373-4465-a72d-5b83b9578cf5","name":"a820aee1-c373-4465-a72d-5b83b9578cf5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7ea2c559-545a-40b2-a5d6-7282cb79ac19","name":"7ea2c559-545a-40b2-a5d6-7282cb79ac19","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a820aee1-c373-4465-a72d-5b83b9578cf5","name":"a820aee1-c373-4465-a72d-5b83b9578cf5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

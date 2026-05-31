@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"sTaiyaki",
   "bboxMode":2,
   "bbox_bottom":36,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"6adc762d-8bd9-44a3-97cc-ad8ab8fb8872","name":"6adc762d-8bd9-44a3-97cc-ad8ab8fb8872","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"79d65ed6-ce11-42d7-b107-d1526d913838","name":"79d65ed6-ce11-42d7-b107-d1526d913838","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6adc762d-8bd9-44a3-97cc-ad8ab8fb8872","name":"6adc762d-8bd9-44a3-97cc-ad8ab8fb8872","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"79d65ed6-ce11-42d7-b107-d1526d913838","name":"79d65ed6-ce11-42d7-b107-d1526d913838","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
