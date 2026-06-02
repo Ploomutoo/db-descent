@@ -5,18 +5,19 @@ enum anubisState
 	lineupV,
 	punch,
 	summonFire,
-	castBalls
+	castBalls,
+	fattening,
+	fattened
 }
 funcHurt = function _hurt(attacker,isStomp)
 {	
-	if(state = anubisState.stun) exit;
+	if(state = anubisState.stun || state = anubisState.fattening) exit;
 	if(isStomp)
 	{
 		yDesired = y + 64
 	}
 	else
 	{
-		//show_debug_message("bashed")
 		xDesired = x - sign(oPlayer.x-x)*96
 	}
 	state = anubisState.stun
@@ -24,6 +25,8 @@ funcHurt = function _hurt(attacker,isStomp)
 	soundRand(sndAnubisPain)
 	alarm[0] = 30
 }
+
+offerings = 0
 
 xDesired = 0
 yDesired = 0
@@ -33,3 +36,30 @@ facing = 1
 alarm[0] = 240
 
 castOffset = 96
+fallSpeed  = 3
+layer = layer_create(depth-100,"anubis")
+
+function enterFattening()
+{
+	if(state = anubisState.fattening || state = anubisState.fattened) exit;
+	
+	offerings++
+	
+	if(offerings >= 3)
+	{
+		soundRand(sndBurp)
+		state = anubisState.fattening
+		sprite_index = sAnubisFatten
+		image_index = 0
+		castOffset = 0
+	}
+	else
+	{
+		soundRand(sndFood)	
+	}
+}
+
+function fattenEnd()
+{
+	with(oPlayer) if(y<endHeight) y = endHeight
+}

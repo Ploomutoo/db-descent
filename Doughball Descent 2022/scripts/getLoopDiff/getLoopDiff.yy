@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"getLoopDiff",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"getLoopDiff",
+  "parent":{
+    "name":"zoneBoss",
+    "path":"folders/hazardObjects/zoneBoss.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

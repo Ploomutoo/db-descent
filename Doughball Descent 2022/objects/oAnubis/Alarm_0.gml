@@ -49,7 +49,7 @@ switch(state)
 	
 	case anubisState.summonFire:
 	soundRand(sndCast)
-	instance_create_depth(oPlayer.x,oPlayer.y+128,depth,oGhostfire)
+	instance_create_layer(oPlayer.x,oPlayer.y+128,layer,oGhostfire)
 	toLineupH()
 	break;
 	
@@ -63,8 +63,9 @@ switch(state)
 	else 
 	{
 		soundRand(sndCast)
-		var ball = instance_create_depth(x,y,depth,oGhostball)
+		var ball = instance_create_layer(x,y,layer,oGhostball)
 		ball.facing = facing
+		ball.image_xscale = facing
 		sprite_index = anubisBlast
 		alarm[0] = 30
 	}

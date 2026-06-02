@@ -15,6 +15,7 @@ if(cBash) {
 	
 	instance_activate_all()
 	level = cursorOn*3
+	if(keyboard_check(vk_shift)) level = 15
 	global.chosenStart = level;
 	
 	makePlayer();

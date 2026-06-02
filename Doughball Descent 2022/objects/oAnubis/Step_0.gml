@@ -22,8 +22,33 @@ switch(state)
 		castOffset -= 1
 	break;
 	
+	case anubisState.fattening:
+		image_xscale = facing
+		xDesired = oPlayer.x - 240*facing
+		yDesired = oPlayer.y
+		
+		if(image_index > image_number-1) 
+		{
+			state = anubisState.fattened
+			sprite_index = sAnubisFat
+			soundRand(sndBash)
+		}
+	break;
+	
+	case anubisState.fattened:
+		image_xscale = facing
+		xDesired = oPlayer.x - 240*facing
+		yDesired = oPlayer.y - castOffset
+		
+		castOffset -= fallSpeed
+		fallSpeed += 0.1
+		
+		if(castOffset<-600) fattenEnd()
+	break;
+	
 	default:
 	break;
 }
-x += (xDesired-x)/20
+
+x += getLoopDiff(x,xDesired)/20
 y += (yDesired-y)/20

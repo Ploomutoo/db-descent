@@ -12,6 +12,7 @@ heartDraw += 0.1
 if(heartDraw>4) heartDraw-=4
 
 var _heartscale = 0.5
+var _arrowscale = 0.5
 
 var j = heartMax
 for(var i = 0; i<j; i+=2){
@@ -25,8 +26,8 @@ for(var i = 0; i<j; i+=2){
 }
 j += soulHearts
 while(i<j){
-	draw_sprite(sHearts,2,ix,iy)
-	ix+=23;
+	draw_sprite_ext(sToonHeartShield,heartDraw+i/8,ix,iy,_heartscale,_heartscale,0,c_white,1)
+	ix+=64*_heartscale;
 	i++;
 }
 
@@ -35,14 +36,14 @@ ix = uiSpacing;
 iy += 32+uiSpacing/2;
 
 j = weightCategories.crushes[weightCategories.stage];
-ix += (j-1)*19
+ix += (j-1)*48*_arrowscale
 for(i = j; i>0; i--){
 	
-	if(i>crushes) draw_sprite(sArrows,0,ix,iy)
-	else if (i=crushes) draw_sprite(sArrows,2,ix,iy)
-	else draw_sprite(sArrows,1,ix,iy)
+	if(i>crushes) draw_sprite_ext(sToonArrowEmpty,heartDraw+i/8,ix,iy,_arrowscale,_arrowscale,0,c_white,1)
+	else if (i=crushes) draw_sprite_ext(sToonArrowActive,heartDraw+i/8,ix,iy,_arrowscale,_arrowscale,0,c_white,1)
+	else draw_sprite_ext(sToonArrow,heartDraw+i/8,ix,iy,_arrowscale,_arrowscale,0,c_white,1)
 	
-	ix-=19;
+	ix-=48*_arrowscale;
 	
 }
 

@@ -8,8 +8,13 @@ if(!active){
 	instance_destroy()
 }
 
-if(oPlayer.x>x) hspeed+=0.2
-else if(oPlayer.x<=x) hspeed-=0.2
+var _diff = getLoopDiff(x,oPlayer.x)
+
+if(_diff>0) hspeed+=0.2
+else if(_diff<0) hspeed-=0.2
+
+if(x>room_width) x -= room_width
+else if(x<0) x += room_width
 
 hspeed = clamp(hspeed,-5,5)
 image_angle=hspeed*3

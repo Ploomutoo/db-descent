@@ -37,11 +37,11 @@ function loadLevelStructures(argument0)
 		break;
 		case 4:
 			area = 2
-			theme = "b2_basic";
+			theme = choose("b2_basic","b1_bouncehouse");
 		break;
 		case 5:
 			area = 2
-			theme = "b3_basic";
+			theme = choose("b3_basic","b1_bouncehouse");
 		break;
 		
 		#endregion
@@ -131,8 +131,14 @@ function loadLevelStructures(argument0)
 		case 15: 
 			area = 6
 			hgOnce(hgAnubis)
+			hgInnit(100,250,hgAxe)
+			hgInnit(100,250,hgSaw)
+			hgInnit(100,250,hgMilkSpiller)
+			hgInnit(100,250,hgMilkBlock)
+			hgInnit(90,150,hgOffering)
 			hgInnit(20,40,hgGravel)
 			hgInnit(90,130,hgSpikes)
+			hgInnit(40,80,hgBounceBlock)
 	}
 	
 	

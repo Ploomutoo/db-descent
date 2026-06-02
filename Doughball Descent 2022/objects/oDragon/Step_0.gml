@@ -55,7 +55,10 @@ if(fireball = -1) { //zooming offscreen
 	exit;
 }
 
-var angDiff = point_direction(x,y,oPlayer.x,oPlayer.y);
+if(x>room_width) x -= room_width
+else if(x<0) x += room_width
+
+var angDiff = pointDirLooping(x,y,oPlayer.x,oPlayer.y);
 angDiff = angle_difference(aimDir,angDiff)
 
 if(angDiff>0) aimDir -= 5

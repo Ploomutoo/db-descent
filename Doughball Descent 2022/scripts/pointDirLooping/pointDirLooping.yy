@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"pointDirLooping",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"pointDirLooping",
+  "parent":{
+    "name":"zoneDessert",
+    "path":"folders/hazardObjects/zoneDessert.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

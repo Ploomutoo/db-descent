@@ -239,7 +239,7 @@ function breakBlock() { //--!--!--!--!--!--
 				}
 				else
 				{
-					instance_create_depth(floor(argument[0]/32)*32,floor(argument[1]/32)*32,depth,oSeismicMarker)
+					instance_create_layer(floor(argument[0]/32)*32,floor(argument[1]/32)*32,layer,oSeismicMarker)
 					return(blockReturn.setZero)
 				}
 			}

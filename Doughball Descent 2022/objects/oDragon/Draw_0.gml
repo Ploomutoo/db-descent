@@ -1,0 +1,1 @@
+drawLoop(x,y,sprite_index)

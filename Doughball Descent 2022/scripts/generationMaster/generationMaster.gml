@@ -1,4 +1,4 @@
-function hgInnit(argument1,argument2,argument3){
+function hgInnit(_resetMin,_resetMax,_function){
 	///@arg resetMin
 	///@arg resetMax
 	///@arg function
@@ -7,11 +7,11 @@ function hgInnit(argument1,argument2,argument3){
 	hGen[hgItems,0] = 0
 	
 	//Reset Min
-	hGen[hgItems,1] = argument1*loopMultiplier
+	hGen[hgItems,1] = _resetMin*loopMultiplier
 	//Reset Max
-	hGen[hgItems,2] = argument2*loopMultiplier
+	hGen[hgItems,2] = _resetMax*loopMultiplier
 	//Function to Execute
-	hGen[hgItems,3] = argument3
+	hGen[hgItems,3] = _function
 	
 	//Set Counter
 	hGen[hgItems,0] = irandom_range(hGen[hgItems,1],hGen[hgItems,2])
@@ -146,6 +146,15 @@ function hgShaft()
 
 function hgAnubis() 
 {
-	instance_create_depth(0,0,0,oAnubis)
+	instance_create_layer(0,0,layer,oAnubis)
+	return(true);
+}
+
+function hgOffering() 
+{
+	if(layer_exists("anubis"))
+	{
+		instance_create_layer(32*ix-16,32*iy-16,"anubis",oAnubisPickup)
+	}
 	return(true);
 }
