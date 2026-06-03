@@ -35,5 +35,5 @@
     "path":"sprites/sTileController/sTileController.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

@@ -197,6 +197,9 @@ teWeight = [
 ];
 roomGrav = -1;
 
+weightTicktop = 60
+weightTickdown = weightTicktop
+
 ini_open("PlayerSprites/dewey.ini")
 playerSprites = 
 {

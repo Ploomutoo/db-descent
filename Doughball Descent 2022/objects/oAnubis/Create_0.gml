@@ -61,5 +61,6 @@ function enterFattening()
 
 function fattenEnd()
 {
+	if(!steam_get_achievement("Jackal of All Trades!")) steam_set_achievement("Jackal of All Trades!")
 	with(oPlayer) if(y<endHeight) y = endHeight
 }

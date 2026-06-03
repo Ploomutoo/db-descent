@@ -146,5 +146,3 @@ if(altarDebug) {
 	show_debug_message(string(oPlayer.altarStability)+" Stability, "+string(100*gravRemoved/gravTotal)+"% of gravel removed");
 }
 #endregion
-
-instance_destroy();

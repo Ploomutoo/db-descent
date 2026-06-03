@@ -10,6 +10,16 @@ weightCategories.progToNext = output[0]
 weightCategories.dProg		= output[1]
 weightCategories.stage = weightCategories.getStage(weight);
 
+if(weight>weightCategories.maxStableWeight)
+{
+	weightTickdown--;
+	if(weightTickdown = 0)
+	{
+		weightTickdown = weightTicktop	
+		weight--;
+	}
+}
+
 if(weight!=lastWeight) {
 	
 	crushMax = floor(weight/100)*crushMultiplier
