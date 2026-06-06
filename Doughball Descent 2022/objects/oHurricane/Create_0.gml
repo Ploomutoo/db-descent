@@ -12,7 +12,8 @@ aChan = animcurve_get_channel(aCurve,0)
 
 passenger = noone;
 
-function disengage() {
+function disengage() 
+{
 	passenger.mobile = true;
 	passenger.sprite_index = sPlayerHitbox;
 	passenger.bashActive = 15;

@@ -18,7 +18,7 @@ if(mobile){
 if(x>room_width) x-=room_width
 else if (x<0) x+=room_width
 
-var desX = bbox_left+hspeed
+desX = bbox_left+hspeed
 if(hspeed>0) desX = bbox_right+hspeed
 
 var desX2= bbox_right+hspeed
@@ -40,80 +40,25 @@ desX = bbox_left
 if(hFace=1) desX = bbox_right
 
 if(bashActive>0) {
+	
+	funcBash(bashActive)
+	
 	bashActive--
 	if(bashActive=0) 
 	{
+		funcBashend()
+		
 		image_index = 0
 		extraBashFrames = 3;
 	}
 } else if(cBash && mobile) {
-	bashActive = 20
-	image_index = 1
-	dsVelx = 0.3; dsVely = -0.15
 	
-	if(evKatsuma=1) { // Hurricane
-		soundRand(sndHurricane);
-		bashActive = 0;
-		
-		var hur = instance_create_depth(x,y,depth-1,oHurricane)
-		hur.passenger = self; hur.hspeed = 0.8*(hFace+hspeed);
-		hur.storedCrush = crushes; hur.drawWidth = (bbox_right-bbox_left)/32;
-		//show_debug_message("drawWidth "+string(bbox_right-bbox_left))
-		
-		sprite_index = -1;
-		crushes = 0;
-		mobile = false;
-	} else {
-		soundRand(sndBash);
-		
-		var effect = instance_create_layer(desX+16*hFace,y-16,layer,oPaEffect)
-		effect.sprite_index = sPaBash
-		effect.image_index = 0
-		effect.image_xscale = hFace
-		effect.hspeed = hspeed
-	}
-	
-	if(instance_exists(oiWreckingBall)) {
-		effect = instance_create_layer(desX+10*hFace,y-16,layer,oWreckingProj)
-		effect.image_xscale = hFace
-		effect.hspeed = hspeed+hFace*(2+oiWreckingBall.stacks)
-	}
-}
-
-if(bashActive>=15) //bash func
-{ 
-	
-	var brokeBlock = breakBlock(desX+24*hFace,y-16,1)
-	if (brokeBlock!=0) {
-		
-		bashActive = 10;
-		createParticles(desX+24*hFace,y-16,6,sPaRock)
-	}
-	var check_x = [x,desX+32*hFace]
-	var victim = collision_rectangle(check_x[0],y-4,check_x[1],y-32,oParentBashable,0,1);
-	if(victim=noone)
+	funcBashinit()
+	if(instance_exists(oiWreckingBall)) 
 	{
-		if(check_x[1]>room_width)
-		{
-			victim = collision_rectangle(0,y-4,check_x[1]-room_width,y-32,oParentBashable,0,1);
-		}
-		else if(check_x[1]<0)
-		{
-			victim = collision_rectangle(room_width,y-4,check_x[1]+room_width,y-32,oParentBashable,0,1);
-		}
-	}
-	
-	if(instance_exists(victim))   
-	{	
-		with(victim) funcHurt(self,false)
-		
-		if(extraBashFrames>0)
-		{
-			bashActive = 16;
-			extraBashFrames--;
-		}
-		
-		
+		var wreckProj = instance_create_layer(desX+10*hFace,y-16,layer,oWreckingProj)
+		wreckProj.image_xscale = hFace
+		wreckProj.hspeed = hspeed+hFace*(2+oiWreckingBall.stacks)
 	}
 }
 

@@ -1,6 +1,12 @@
 unpauseGrace = 3;
 cursorOn = 0;
 paused = false;
+state = 0
+
+playerChars = ["Dewey","Choux","Chunk","Calorie"]
+pcSprites	= [sCharselectDewey,sCharselectChoux,sCharselectChunk,sCharselectCalorie]
+
+chosenChar = 0
 
 zonePreviews = [sBgBread,sBgProduce,sBgCow,sBgMeat,sBgDessert];
 zoneWorm = [sGoomba,sDurSlug,sUdder,sGoombaPara,sGummyWorm];

@@ -4,6 +4,9 @@ acPos += acRate;
 image_xscale = lerp(dwFrom,dwTo,acEval)*drawWidth;
 image_yscale = clamp(0.5+0.25/image_xscale,0,1.25)
 
+if(x>room_width) x-=room_width
+else if(x<0) x+=room_width
+
 if(acPos>=1) {
 	
 	if(dwTo = 0.5 && dwFrom = 1.5) disengage();
@@ -32,9 +35,9 @@ if(acPos>=1) {
 		checkPos+=hspeed
 		var checkObj = collision_rectangle(checkPos,y-4,x,y-24,oParentBashable,0,false);
 		//markPoint(checkPos,y-4); markPoint(checkPos,y-24);
-		with(checkObj) {
-				
-			if(object_get_parent(object_index)!=oParentTileObject) event_user(0);
+		with(checkObj) 
+		{
+			if(object_get_parent(object_index)!=oParentTileObject) funcHurt(self,false)
 		}
 			
 	} 

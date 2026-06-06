@@ -112,8 +112,13 @@ image_speed = 0
 
 aquatic = false;
 
+desX = 0
 bashActive = 0
 extraBashFrames = 3;
+
+funcBashinit = bashinitDewey
+funcBash = bashDewey
+funcBashend = bashendDewey
 
 collisionHeight = 24
 
@@ -158,12 +163,9 @@ belly_limit = 4;
 #endregion
 
 #region ItemStacks
-
-	hTumActive = 0;	hTumDuration = 0
-	evKatsuma = false;
-	//evBlompo = 0;
-	
+hTumActive = 0;	hTumDuration = 0
 #endregion
+
 altarInstantiate()
 
 #region Display
@@ -199,23 +201,6 @@ roomGrav = -1;
 
 weightTicktop = 60
 weightTickdown = weightTicktop
-
-ini_open("PlayerSprites/dewey.ini")
-playerSprites = 
-{
-	base :		sprite_add(ini_read_string("Sprites","Base",working_directory + "PlayerSprites/dewey_idle_base.png"),9,0,0,23,46),
-	jiggle :	sprite_add(ini_read_string("Sprites","Base-Jiggle",working_directory + "PlayerSprites/dewey_idle_jiggle.png"),9,0,0,23,46),
-	bump :		sprite_add(ini_read_string("Sprites","Bump",working_directory + "PlayerSprites/dewey_bump.png"),1,0,0,0,0),
-	swim :		sprite_add(ini_read_string("Sprites","Swim",working_directory + "PlayerSprites/dewey_swim.png"),1,0,0,0,0),
-	dead :		sprite_add(ini_read_string("Sprites","Dead",working_directory + "PlayerSprites/dewey_dead.png"),9,0,0,25,28),
-}
-ini_close()
-
-if(!sprite_exists(playerSprites.base))		playerSprites.base = sPlayerJiggleBase
-if(!sprite_exists(playerSprites.jiggle))	playerSprites.jiggle = sPlayerJiggle
-if(!sprite_exists(playerSprites.bump))		playerSprites.bump = sPlayerBump
-if(!sprite_exists(playerSprites.swim))		playerSprites.swim = sPlayerSwim
-if(!sprite_exists(playerSprites.dead))		playerSprites.dead = sPlayerCorpse
 
 #endregion
 show_debug_message("\nConsole Start")

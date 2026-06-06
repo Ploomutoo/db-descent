@@ -96,7 +96,50 @@ function goToTally(){
 function makePlayer()
 {
 	var player = instance_create_layer(320,-96,"instances",oPlayer)
-	with(player) altarInstantiate()
+	var _char  = playerChars[chosenChar]
+	with(player) 
+	{
+		altarInstantiate()
+		switch(_char)
+		{
+			case "Dewey":
+			case "Chunk":
+			funcBashinit = bashinitDewey
+			funcBash = bashDewey
+			funcBashend = bashendDewey
+			break;
+			
+			default:
+			funcBashinit = bashinitKatsuma
+			funcBash = bashKatsuma
+			funcBashend = bashendKatsuma
+			break;
+		}
+		var path = program_directory+"PlayerSprites/"+_char
+		show_debug_message(path)
+		ini_open(path+"char.ini")
+		
+		playerSprites = 
+		{
+			base :		sprite_add(ini_read_string("Sprites","Base",path+"idle_base.png"),
+			9,0,0,23,46),
+			jiggle :	sprite_add(ini_read_string("Sprites","Base-Jiggle",path+"idle_jiggle.png"),
+			9,0,0,23,46),
+			bump :		sprite_add(ini_read_string("Sprites","Bump",path+"bump.png"),
+			1,0,0,0,0),
+			swim :		sprite_add(ini_read_string("Sprites","Swim",path+"swim.png"),
+			1,0,0,0,0),
+			dead :		sprite_add(ini_read_string("Sprites","Dead",path+"dead.png"),
+			9,0,0,25,28),
+		}
+		ini_close()
+
+		if(!sprite_exists(playerSprites.base))		{ playerSprites.base = sPlayerJiggleBase; show_debug_message("Player sprite fallback!") }
+		if(!sprite_exists(playerSprites.jiggle))	playerSprites.jiggle = sPlayerJiggle
+		if(!sprite_exists(playerSprites.bump))		playerSprites.bump = sPlayerBump
+		if(!sprite_exists(playerSprites.swim))		playerSprites.swim = sPlayerSwim
+		if(!sprite_exists(playerSprites.dead))		playerSprites.dead = sPlayerCorpse
+	}
 }
 
 function spawnCorpse(){
