@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.899932,
+  "duration":0.89993197,
   "exportDir":"",
   "name":"sndHTumIn",
   "parent":{

@@ -41,13 +41,16 @@ belly_y += belly_vspeed;
 belly_hspeed -= belly_hspeed*belly_damping*2;
 belly_vspeed -= belly_vspeed*belly_damping;
 
-//draw_circle(belly_x, belly_y, 5, false);
 #endregion
 
 if(bashActive<=0) {
 	if(aquatic)
 	{
-		draw_sprite_part_ext(playerSprites.swim,image_index,0,(spritePart+1)*46,50,46,repX-25*finScale,repY-46-drawOffset,finScale,1,c_white,1)
+		draw_sprite_ext(playerSprites.swim,spritePart+1,repX,repY-drawOffset,finScale,1,0,c_white,1)
+	}
+	else if(flying > 0)
+	{
+		draw_sprite_ext(playerSprites.flight,spritePart+1,repX,repY-drawOffset,finScale,1,0,c_white,1)
 	}
 	else
 	{
@@ -60,7 +63,7 @@ if(bashActive<=0) {
 		}
 	}
 	
-} else draw_sprite_part_ext(playerSprites.bump,image_index,0,(spritePart+1)*46,50,46,repX-25*finScale,repY-46-drawOffset,finScale,1,c_white,1)
+} else draw_sprite_ext(playerSprites.bump,spritePart+1,repX,repY-drawOffset,finScale,1,0,c_white,1)
 
 gpu_set_fog(0,c_white,1,0);
 surface_reset_target()

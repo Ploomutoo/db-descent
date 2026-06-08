@@ -74,6 +74,11 @@ if(weight!=lastWeight) {
 grounded = !tsSpanEmpty(y+1,bbox_left+1,bbox_right-1)
 if(instance_place(x,y,oMilkBlock)!=noone) aquatic = true
 else aquatic = false;
+if(flying>0) 
+{
+	flying--;
+	if(flying=0) audio_stop_sound(flySound)
+}
 
 if (aquatic)
 {
@@ -107,21 +112,25 @@ else if (grounded) {
 	}
 } else {
 	
-	if(jumpedTimer > -10 && cJump)
+	if(cJumpDown)
 	{
-		var item = instance_find(oiHotwings,0)
-		if(item != noone && item.hotwingJumps > 0) 
+		if(jumpedTimer > -10 && cJump) //double tap
 		{
-			soundRand(sndDragonDash)
-			createEffect(bbox_right,y-64,sHotwingEffect)
-			var fx = createEffect(bbox_left,y-64,sHotwingEffect)
-			fx.image_xscale = -1
-			vspeed = -10
-			item.hotwingJumps --;
+			var item = instance_find(oiHotwings,0)
+			if(item != noone && item.hotwingJumps > 0) 
+			{
+				soundRand(sndDragonDash)
+				createEffect(bbox_right,y-64,sHotwingEffect)
+				var fx = createEffect(bbox_left,y-64,sHotwingEffect)
+				fx.image_xscale = -1
+				vspeed = -10
+				item.hotwingJumps --;
+			}
 		}
-		else if(instance_exists(oiHeliumTum)) 
+		else if(cJump) 
 		{
-			if(!hTumActive && hTumDuration=-1) 
+			var item = instance_find(oiHeliumTum,0)
+			if(item != noone && !hTumActive && hTumDuration=-1) 
 			{
 				audio_play_sound(sndHTumIn,5,0)
 				vspeed = -1
@@ -130,7 +139,19 @@ else if (grounded) {
 				hTumActive = true;
 			}
 		}
+		
+		if(poweredFlight && vspeed>0)
+		{
+			if(weight>weightCategories.minweight)
+			{
+				weight--;
+				flying = 5
+				if(!audio_is_playing(flySound)) flySound = audio_play_sound(sndJetpack,0,1)
+				vspeed-=1
+			}
+		}
 	}
+	
 	
 	if(vspeed<0) {
 		
@@ -222,7 +243,7 @@ else if(jumpedTimer>0 || autoJump)
 		if(instance_exists(oiBellyFlop)) bellyFlopSplash(bbox_right-bbox_left+16,oiBellyFlop.stacks)
 		
 		jumpedTimer = 0
-		crushes = weightCategories.crushes[weightCategories.stage]	
+		crushes = weightCategories.stage	
 		
 	} 
 }
@@ -235,6 +256,6 @@ if(room = rChoice) vspeed = 6
 
 if(vspeed>2 && fallReset = 1){
 	fallReset = 0	
-	crushes = weightCategories.crushes[weightCategories.stage]	
+	crushes = weightCategories.stage	
 	//crushes = 0
 }

@@ -52,6 +52,36 @@ function bashendDewey()
 	
 }
 
+
+
+function bashinitChoux()
+{
+	bashActive = 20
+	
+	soundRand(sndHTumIn);
+	bashActive = 0;
+		
+	var bash = instance_create_layer(x,y-16,layer,oPuffbash)
+	bash.drawSprite = playerSprites.puffbash
+	bash.passenger = self;
+	bash.storedCrush = crushes;
+	bash.hFace = hFace
+		
+	sprite_index = -1;
+	crushes = 0;
+	mobile = false;
+}
+function bashChoux(_bashCounter)
+{
+	
+}
+function bashendChoux()
+{
+	
+}
+
+
+
 function bashinitKatsuma()
 {
 	bashActive = 20

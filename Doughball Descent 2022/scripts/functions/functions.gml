@@ -1,3 +1,22 @@
+function commasToArray(_string)
+{
+	var _out = []
+	var _i,_number
+	while(_string!="")
+	{
+		for(_i = 0; string_char_at(_string,_i)!="," && _i<string_length(_string); _i++)
+		{
+			//idk lol
+		}
+		_number = string_copy(_string,0,_i)
+		array_push(_out,string_digits(_number))
+		
+		_string = string_delete(_string,0,_i)
+	}
+	show_debug_message(string(_out))
+	return(_out)
+}
+
 function popUp(ix,iy,text){
 	var popup = instance_create_depth(ix,iy,0,oPopupText)
 	popup.drawString = text
@@ -93,55 +112,6 @@ function goToTally(){
 	room_goto(rTally)
 }
 
-function makePlayer()
-{
-	var player = instance_create_layer(320,-96,"instances",oPlayer)
-	var _char  = playerChars[chosenChar]
-	with(player) 
-	{
-		altarInstantiate()
-		switch(_char)
-		{
-			case "Dewey":
-			case "Chunk":
-			funcBashinit = bashinitDewey
-			funcBash = bashDewey
-			funcBashend = bashendDewey
-			break;
-			
-			default:
-			funcBashinit = bashinitKatsuma
-			funcBash = bashKatsuma
-			funcBashend = bashendKatsuma
-			break;
-		}
-		var path = program_directory+"PlayerSprites/"+_char
-		show_debug_message(path)
-		ini_open(path+"char.ini")
-		
-		playerSprites = 
-		{
-			base :		sprite_add(ini_read_string("Sprites","Base",path+"idle_base.png"),
-			9,0,0,23,46),
-			jiggle :	sprite_add(ini_read_string("Sprites","Base-Jiggle",path+"idle_jiggle.png"),
-			9,0,0,23,46),
-			bump :		sprite_add(ini_read_string("Sprites","Bump",path+"bump.png"),
-			1,0,0,0,0),
-			swim :		sprite_add(ini_read_string("Sprites","Swim",path+"swim.png"),
-			1,0,0,0,0),
-			dead :		sprite_add(ini_read_string("Sprites","Dead",path+"dead.png"),
-			9,0,0,25,28),
-		}
-		ini_close()
-
-		if(!sprite_exists(playerSprites.base))		{ playerSprites.base = sPlayerJiggleBase; show_debug_message("Player sprite fallback!") }
-		if(!sprite_exists(playerSprites.jiggle))	playerSprites.jiggle = sPlayerJiggle
-		if(!sprite_exists(playerSprites.bump))		playerSprites.bump = sPlayerBump
-		if(!sprite_exists(playerSprites.swim))		playerSprites.swim = sPlayerSwim
-		if(!sprite_exists(playerSprites.dead))		playerSprites.dead = sPlayerCorpse
-	}
-}
-
 function spawnCorpse(){
 	var corpse = instance_create_depth(x,y,depth,oEnemyCorpse)
 	corpse.direction = point_direction(oPlayer.x,oPlayer.y,x,y)
@@ -214,7 +184,7 @@ function breakBlock() { //--!--!--!--!--!--
 	if(argument_count<2) exit;
 	if(argument_count>2) {
 		var isBash = argument[2];	
-	} else  isBash = false;
+	} else var isBash = false;
 	
 	switch(tilemap_get_at_pixel(tileMap,argument[0],argument[1])) {
 		case 0: //Empty
@@ -223,7 +193,7 @@ function breakBlock() { //--!--!--!--!--!--
 		case 1: //Regular Tile
 		case 6: //Damaged Durable Tile
 			
-			if(crushes>0 || isBash) {
+			if(isBash || crushes>0) {
 				
 				if(alarm[3]>0) 
 				{ //Zev Frenzy Effect
@@ -249,7 +219,7 @@ function breakBlock() { //--!--!--!--!--!--
 		break;
 		case 2: //Durable Tile
 		
-			if(crushes>0 || isBash) {
+			if(isBash || crushes>0) {
 			
 				tilemap_set_at_pixel(tileMap,6,argument[0],argument[1])
 				createEffect(floor(argument[0]/32)*32,floor(argument[1]/32)*32,sBlockHighlight)

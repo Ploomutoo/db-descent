@@ -35,7 +35,7 @@ while(i<j){
 ix = uiSpacing;
 iy += 32+uiSpacing/2;
 
-j = weightCategories.crushes[weightCategories.stage];
+j = weightCategories.stage;
 ix += (j-1)*48*_arrowscale
 for(i = j; i>0; i--){
 	

@@ -301,8 +301,6 @@ function loadLevelStructures(argument0)
 		#endregion
 	}
 	if(global.densityOverride!="") density = global.densityOverride
-	
-	show_debug_message("Density preset: "+density)
 	switch(density)
 	{
 		case "sparse":

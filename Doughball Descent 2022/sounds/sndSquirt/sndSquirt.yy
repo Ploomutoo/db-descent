@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.312,
+  "duration":0.31346938,
   "exportDir":"",
   "name":"sndSquirt",
   "parent":{

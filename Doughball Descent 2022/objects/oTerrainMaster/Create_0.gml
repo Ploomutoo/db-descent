@@ -210,11 +210,4 @@ ds_map_destroy(json_rooms_g);
 oPlayer.levelText = string(area)+" - "+string(1+level mod 3)
 show_debug_message("Levelgen took "+string(delta_time)+" microseconds")
 
-if(altarDebug) {
-	show_debug_message("\nAltar Efficacy Log")
-	show_debug_message(string(oPlayer.altarPlenty) + " Plenty, " + string(100*foodPlaced/yLimit) + "% efficacy")
-	show_debug_message(string(oPlayer.altarProtection) + " Protection; "+string(heartPlaced)+" Hearts")
-	//show_debug_message("\nPlaced "+string(vaultsPlaced)+" vaults over " +string(room_height/32) + " tiles")
-	show_debug_message(string(oPlayer.altarBravery) + " Bravery, " + string(100*vaultsPlaced/yLimit) + "% efficacy")
-}
 if(loop>0) oPlayer.levelText+=" L"+string(loop)

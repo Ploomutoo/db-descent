@@ -23,7 +23,7 @@ fpsNorm = 0;
 weight = 100
 dWeight = weight;	//displayed weight
 lastWeight = 0
-var thresh = [0  ,100,200,400,600,800,1200];
+var thresh = [0,100,200,400,600,800,1200];
 var count	  = array_length(thresh)-1;
 weightCategories =
 {
@@ -31,7 +31,8 @@ weightCategories =
 	crushes   : [0  ,1,  2,  3,  4,  5	,6   ],
 	stageCount : count,
 	maxStableWeight : thresh[count], //weight at which weight will decay over time
-	spriteNum		: sprite_get_height(sPlayerWalk)/playerSpriteHeight,
+	minweight : 50,
+	spriteNum		: 9,
 	spriteStageInc  : [0,100,200,300,400,600,800,1000,1200],
 	//weights at which sprites change, should deffo be on the internal stage increments, extras between
 	//there are 9 sprite stages presently starting at 0
@@ -162,9 +163,10 @@ belly_damping = 0.1;
 belly_limit = 4;
 #endregion
 
-#region ItemStacks
 hTumActive = 0;	hTumDuration = 0
-#endregion
+poweredFlight = false
+flying = 0
+flySound = 0
 
 altarInstantiate()
 

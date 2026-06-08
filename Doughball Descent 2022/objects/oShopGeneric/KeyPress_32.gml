@@ -1,7 +1,7 @@
 cancelIfLinePresent
 
 if(playerOn && price>0) {
-	if((oPlayer.weight>=price && oPlayer.weight>50)||cheat){
+	if((oPlayer.weight>=price && oPlayer.weight>oPlayer.weightCategories.minweight)||cheat){
 		coupon = 0
 		
 		with(oiLoyaltyCard) if(bought) {
@@ -31,10 +31,10 @@ if(playerOn && price>0) {
 				oTextBox.voice = oShopkeeper.voice
 				oTextBox.announce(0,"This one's on me, cheers");
 				
-			} else oPlayer.weight = max(oPlayer.weight-price,50)
+			} else oPlayer.weight = max(oPlayer.weight-price,oPlayer.weightCategories.minweight)
 			
 		} else {
-			oPlayer.weight = max(oPlayer.weight-price,50)
+			oPlayer.weight = max(oPlayer.weight-price,oPlayer.weightCategories.minweight)
 		}
 		
 		soundRand(sndItem)

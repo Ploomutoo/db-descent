@@ -159,7 +159,6 @@ function genGeneric(structure){
 	iy = 0
 	
 	room_pack_load_map(load_room, ix*32, iy*32, room_pack_flag_instances);
-	show_debug_message(string(load_height))
 	ds_map_destroy(json_rooms);
 	ds_map_destroy(load_room);
 	ix+=15

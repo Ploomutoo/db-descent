@@ -33,7 +33,6 @@ event = {
 			
 			bgSprite = sBgClouds;
 			event_user(0);
-			show_debug_message("cam invoked")
 		}
 		
 		with(oEmpty) instance_destroy();

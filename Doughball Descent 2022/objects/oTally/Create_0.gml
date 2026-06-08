@@ -1,8 +1,6 @@
 steamFurthest = steam_get_stat_int("furthest_zone")
 steamFoodgot = steam_get_stat_int("food_got")
 
-show_debug_message("Steamfurthest "+string(steamFurthest))
-
 foodGot[0] = 0
 calGot = 0
 foesStomped = 0

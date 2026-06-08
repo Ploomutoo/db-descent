@@ -10,7 +10,7 @@
   "compression":2,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":65.15653,
+  "duration":0.0,
   "exportDir":"",
   "name":"musLevel4",
   "parent":{
