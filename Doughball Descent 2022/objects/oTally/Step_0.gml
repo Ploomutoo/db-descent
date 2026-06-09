@@ -1,1 +1,1 @@
-steam_update()
+if(global.steam) steam_update()

@@ -1,9 +1,10 @@
-function makePlayer()
+function makePlayer(_char)
 {
 	var player = instance_create_layer(320,-96,"instances",oPlayer)
-	var _char  = playerChars[chosenChar]
 	with(player) 
 	{
+		character = _char
+		
 		altarInstantiate()
 		var path = working_directory+"PlayerSprites/"+_char+"/"
 		show_debug_message(path)

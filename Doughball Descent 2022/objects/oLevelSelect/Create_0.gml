@@ -5,6 +5,13 @@ state = 0
 
 playerChars = ["Dewey","Choux","Chunk","Calorie"]
 pcSprites	= [sCharselectDewey,sCharselectChoux,sCharselectChunk,sCharselectCalorie]
+ini_open("progress.ini")
+pcUnlocks	= [1,
+ini_read_real("charUnlocks","Choux",0),
+ini_read_real("charUnlocks","Chunk",0),
+ini_read_real("charUnlocks","Calorie",0)]
+ini_close()
+pcLockedtext = ["","Beat Zone 2","Beat Zone 3","Beat Zone 4"]
 
 chosenChar = 0
 

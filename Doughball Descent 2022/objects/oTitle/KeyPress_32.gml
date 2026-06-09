@@ -27,10 +27,7 @@ switch(cursorOn){
 		}
 		
 	break;
-	case 3:
-		room_goto(rEditor)
-	break;
-	case 4: //quit
+	case 3: //quit
 	
 		game_end();
 		

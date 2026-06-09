@@ -143,12 +143,12 @@ else
 					{
 						audio_stop_all()
 						instance_activate_all()
-	
+						var whatCharacter = oPlayer.character
 						instance_destroy(oTally)	
 						instance_destroy(oPlayer)
 						with(oBase) instance_destroy();
 						
-						makePlayer();
+						makePlayer(whatCharacter);
 						
 						mode = "toplevel";
 						cursorOn = 0;

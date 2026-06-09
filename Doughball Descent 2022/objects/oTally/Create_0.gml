@@ -1,5 +1,10 @@
-steamFurthest = steam_get_stat_int("furthest_zone")
-steamFoodgot = steam_get_stat_int("food_got")
+global.steam = true
+
+if(global.steam)
+{
+	steamFurthest = steam_get_stat_int("furthest_zone")
+	steamFoodgot = steam_get_stat_int("food_got")
+}
 
 foodGot[0] = 0
 calGot = 0

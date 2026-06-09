@@ -10,20 +10,31 @@ if(state = 0)
 	draw_set_alpha(1)
 	
 	var charCount = array_length(playerChars)
-	var _y 
+	var _y, _text, _color
 	for(var i = 0; i < charCount; i++)
 	{
+		_color = c_white
+		if(pcUnlocks[i] = 0)
+		{
+			_text = pcLockedtext[i]
+			_color = c_black
+		}
+		else
+		{
+			_text = playerChars[i]
+		}
+		
 		if(i = cursorOn) 
 		{
 			_y = room_height/2-16
 			draw_set_halign(fa_center)
-			draw_text(100+(room_width-100)*i/charCount,_y + sprite_get_height(pcSprites[i])/2,playerChars[i])
+			draw_text(100+(room_width-100)*i/charCount,_y + sprite_get_height(pcSprites[i])/2,_text)
 		}
 		else _y = room_height/2
 		
-		draw_sprite(pcSprites[i],0,
+		draw_sprite_ext(pcSprites[i],0,
 		100+(room_width-100)*i/charCount,
-		_y)
+		_y,1,1,0,_color,1)
 	}
 	draw_set_color(c_white)
 }

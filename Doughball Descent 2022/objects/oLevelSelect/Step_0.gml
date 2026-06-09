@@ -7,9 +7,16 @@ if (unpauseGrace>0) {
 if(cBash) {
 	if(state = 0)
 	{
-		chosenChar = cursorOn
-		state = 1
-		cursorOn = 0
+		if(pcUnlocks[cursorOn] > 0)
+		{
+			chosenChar = cursorOn
+			state = 1
+			cursorOn = 0
+		}
+		else
+		{
+			soundRand(sndBad)	
+		}
 	}
 	else if(state = 1)
 	{
@@ -25,7 +32,7 @@ if(cBash) {
 		//if(keyboard_check(vk_shift)) level = 15
 		global.chosenStart = level;
 	
-		makePlayer();
+		makePlayer(playerChars[chosenChar]);
 		instantiateFood();
 		
 		room_goto(rGame)

@@ -10,13 +10,18 @@ event = {
 	txDecline : "You decide not to entertain\nthe creature's offerings",
 		
 	eChance : function(){
-		if(oPlayer.evKatsuma=1) return([0]);
+		if(oPlayer.funcBashinit=bashinitKatsuma) return([0]);
 		else return([1,"Receive Alternate Bash"]);
 	},
 		
 	txSuccess : "A strange energy fills your doughy body",
 	success : function(){
-		oPlayer.evKatsuma = 1
+		with(oPlayer)
+		{
+			funcBashinit = bashinitKatsuma
+			funcBash = bashKatsuma
+			funcBashend = bashendKatsuma
+		}
 		other.image_index = 1
 		audio_play_sound(sndMirin,0,0)
 		oCamera.screenShake = 4

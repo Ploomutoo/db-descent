@@ -36,6 +36,7 @@ storedPage = ds_list_create()
 drawWidth = 0
 drawHeight = 0
 
+voice  = talkGeneric
 avoice = talkGeneric
 pitch = 1
 monotone = true
