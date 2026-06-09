@@ -15,7 +15,8 @@ event = {
 		
 	txSuccess : "The bat smiles contentedly,\npresenting you with a gift!",
 	success : function(){
-		image_index = 1
+		other.image_index = 1
+		other.image_speed = 0
 		soundRand(sndBloodlust)
 		with(oPlayer)
 		{
@@ -44,10 +45,8 @@ event = {
 
 		}
 	},
-	endFunc : function(){
-		with(other) 
-		{
-			image_speed = 0
-		}
+	endFunc : function()
+	{
+		
 	}		
 } }

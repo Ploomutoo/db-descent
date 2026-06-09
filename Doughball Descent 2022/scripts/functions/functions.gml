@@ -331,7 +331,7 @@ function tsCheckEmpty(argument0,argument1) {
 		argument1 = 32*floor(argument1/32)
 		
 		var tileObj = instance_position(argument0+16,argument1+16,oParentTileObject)
-		if(tileObj = noone) { return (false); show_debug_message("No tile object found"); }
+		if(tileObj = noone) return (false)
 		else if(tileObj.collide = true) return (true)
 		else return (false)
 	}

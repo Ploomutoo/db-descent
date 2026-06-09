@@ -6,7 +6,11 @@ hitFunc = function(isBash,executor)
 	
 	with(executor)
 	{
-		if(isBash) hspeed = -hFace*5
+		if(isBash) 
+		{
+			if(x>other.x) hspeed = 5
+			else hspeed = -5
+		}
 		else if(vspeed>0)
 		{
 			if(y>other.y || cDownHeld) return(0)
