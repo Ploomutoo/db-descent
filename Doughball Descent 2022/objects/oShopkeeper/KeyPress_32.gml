@@ -10,7 +10,7 @@ if(oTextBox.storedText != "") {
 }
 
 
-#macro cancelIfLinePresent if(oTextBox.storedText != "") exit;
+#macro cancelIfLinePresent if(oTextBox.storedText != "") exit
 
 oTextBox.voice = voice
 //oTextBox.announce(0,choose("Greetings, squirt","Welcome, valued customer","'Sup, tubster","Hello again, Dewey")+". "+choose("Nice gut, it'd look better\n on me though","I was like you once\nBut I traded my legs for arms","Be careful out there","Stay a while, will ya?"))

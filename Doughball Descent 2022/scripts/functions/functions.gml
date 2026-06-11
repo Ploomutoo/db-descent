@@ -212,7 +212,7 @@ function breakBlock() { //--!--!--!--!--!--
 				//soundRand(sndBreak)
 				audio_stop_sound(sndBreak)
 				var pSound = audio_play_sound(sndBreak,0,0)
-				if(!isBash) audio_sound_pitch(pSound,max(1-0.1*(crushes-crushMax),0.5))
+				if(!isBash) audio_sound_pitch(pSound,max(1-0.1*(crushes-weightCategories.stage),0.5))
 				return(blockReturn.deIncrement)
 			}
 			

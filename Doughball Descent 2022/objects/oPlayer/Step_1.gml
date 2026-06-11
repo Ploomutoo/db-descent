@@ -21,10 +21,7 @@ if(weight>weightCategories.maxStableWeight)
 }
 
 if(weight!=lastWeight) {
-	
-	crushMax = floor(weight/100)*crushMultiplier
-	crushMax = clamp(crushMax,0,16)
-	
+		
 	if(weight<=100) grav = baseGrav
 	else grav = min(baseGrav + 0.1 *(baseGrav*(weight/100-1)),1)
 	
@@ -243,7 +240,7 @@ else if(jumpedTimer>0 || autoJump)
 		if(instance_exists(oiBellyFlop)) bellyFlopSplash(bbox_right-bbox_left+16,oiBellyFlop.stacks)
 		
 		jumpedTimer = 0
-		crushes = weightCategories.stage	
+		crushes = weightCategories.assessCrushes()	
 		
 	} 
 }
@@ -256,6 +253,6 @@ if(room = rChoice) vspeed = 6
 
 if(vspeed>2 && fallReset = 1){
 	fallReset = 0	
-	crushes = weightCategories.stage	
+	crushes = weightCategories.assessCrushes()	
 	//crushes = 0
 }

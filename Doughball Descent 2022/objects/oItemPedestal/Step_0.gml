@@ -14,6 +14,8 @@ with(oPlayer)
 
 if(playerOn && cBash) {
 	
+	cancelIfLinePresent;
+	
 	addItem(item);
 	
 	item = noone;

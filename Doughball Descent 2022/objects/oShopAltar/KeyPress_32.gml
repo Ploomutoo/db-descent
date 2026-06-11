@@ -1,3 +1,5 @@
+cancelIfLinePresent
+
 var _indulgence = instance_find(oiIndulgence,0)
 if(_indulgence != noone && _indulgence.indulgenceStacks > 0)
 {
@@ -14,10 +16,10 @@ if(_indulgence != noone && _indulgence.indulgenceStacks > 0)
 }
 else if(playerOn && price>0 && oPlayer.mobile) 
 {
-	if(oPlayer.weight>=price && oPlayer.weight>50)
+	if(oPlayer.weight>=price && oPlayer.weight>oPlayer.weightCategories.minweight)
 	{
 		oPlayer.weight-=price
-		if(oPlayer.weight<50) oPlayer.weight = 50
+		if(oPlayer.weight<oPlayer.weightCategories.minweight) oPlayer.weight = oPlayer.weightCategories.minweight
 		
 		var _offering = instance_find(oiOffering,0)
 		if(_offering != noone)

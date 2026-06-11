@@ -18,7 +18,7 @@ function makePlayer(_char)
 		weightCategories.spriteStageInc = stagesArr
 		
 		var stages = array_length(stagesArr)
-		weightCategories.stageCount = stages
+		weightCategories.stageCount = array_length(weightstagesArr)-1
 		var weightstages = array_length(weightstagesArr)
 		
 		var originBase		= [ini_read_real("Base","OffsetX",23),ini_read_real("Base","OffsetY",46)]

@@ -18,7 +18,7 @@ hitFunc = function(isBash,executor)
 			//y+=vspeed;
 			grounded = false;
 			loGrav(0.1,0.5)
-			crushes  = crushMax
+			//crushes  = oPlayer.weightCategories.stage
 		}
 	}
 	soundRand(sndGummyLand)

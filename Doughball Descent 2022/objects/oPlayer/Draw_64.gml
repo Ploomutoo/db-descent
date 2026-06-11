@@ -35,7 +35,7 @@ while(i<j){
 ix = uiSpacing;
 iy += 32+uiSpacing/2;
 
-j = weightCategories.stage;
+j = weightCategories.assessCrushes();
 ix += (j-1)*48*_arrowscale
 for(i = j; i>0; i--){
 	
@@ -49,7 +49,6 @@ for(i = j; i>0; i--){
 
 #endregion
 
-i = crushMax
 iy=uiSpacing;
 ix=dispWidth-uiSpacing-146
 

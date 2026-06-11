@@ -29,6 +29,14 @@ weightCategories =
 {
 	threshold : thresh,
 	crushes   : [0  ,1,  2,  3,  4,  5	,6   ],
+	assessCrushes : function()
+	{
+		var out = stage
+		var _item = instance_find(oiGastrolith,0)
+		if(_item!=noone) out += _item.stacks
+		
+		return(out)
+	},
 	stageCount : count,
 	maxStableWeight : thresh[count], //weight at which weight will decay over time
 	minweight : 50,
@@ -90,7 +98,7 @@ if weightCategories.spriteNum != array_length(weightCategories.spriteStageInc) s
 weightCategories.stage = weightCategories.getStage(weight);
 
 grounded = 0
-//crushMax = floor(weight/100)*crushMultiplier
+
 crushes = 1
 counterFallEffect = 4
 
