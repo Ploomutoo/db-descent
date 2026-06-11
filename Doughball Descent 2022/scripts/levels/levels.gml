@@ -240,7 +240,7 @@ function loadLevelStructures(argument0)
 			hgInnit(20,40,hgGravel)
 			hgInnit(60,80,hgUdder)
 			hgInnit(90,130,hgSpikes)
-			hgInnit(300,500,hgPirate)
+			hgInnit(500,700,hgPirate)
 			hgInnit(60,120,hgMilkSpiller)
 		break;		
 		#endregion
