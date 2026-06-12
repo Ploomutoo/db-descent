@@ -76,6 +76,7 @@ switch(state) {
 	
 		cancelIfLinePresent
 		oPlayer.mobile = true;
+		oPlayer.itemPedestalDisallowed = 5
 		state = -1;
 		event.endFunc();
 	break;

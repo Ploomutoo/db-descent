@@ -112,3 +112,9 @@ if(room != rChoice && tranLevel = -1 && y>endHeight) {
 	
 	tranLevel = 0;
 }
+
+if(itemPedestalDisallowed>0)
+{
+	var _textbox = instance_find(oTextBox,0)
+	if(_textbox != noone && _textbox.storedText = "")  itemPedestalDisallowed--
+}

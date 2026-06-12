@@ -88,4 +88,6 @@ settingsReset();
 playMusic(musLevel0);
 
 cursorOn = 0
+playerObj = noone
+itemCursorOn = 0
 deactList = ds_list_create()

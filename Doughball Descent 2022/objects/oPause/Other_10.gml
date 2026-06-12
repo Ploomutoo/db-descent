@@ -4,6 +4,9 @@ if(paused || toggledThisFrame) exit;
 
 paused = true
 cursorOn = 0
+playerObj = instance_find(oPlayer,0)
+itemCursorOn = 0
+//if(player = noone) show_debug_message("No player found")
 if(autoPause>0) exit;
 
 var terrainLayer = layer_get_id("terrain")

@@ -43,6 +43,8 @@ monotone = true
 box = true
 tmExpire = -1
 
+linePressBuffer = 3
+
 x = viewWidth/2
 y = 16
 event_user(0)

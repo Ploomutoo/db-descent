@@ -1,13 +1,12 @@
 function makePlayer(_char)
 {
-	var player = instance_create_layer(320,-96,"instances",oPlayer)
+	var player = instance_create_layer(320,-96,"instanceFront",oPlayer)
 	with(player) 
 	{
 		character = _char
 		
 		altarInstantiate()
 		var path = working_directory+"PlayerSprites/"+_char+"/"
-		show_debug_message(path)
 		ini_open(path+"char.ini")
 			
 		var stagesArr = commasToArray(ini_read_string("Global","Visualthresholds",

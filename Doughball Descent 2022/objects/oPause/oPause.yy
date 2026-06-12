@@ -16,8 +16,8 @@
   "name":"oPause",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"menu+UI",
+    "path":"folders/menu+UI.yy",
   },
   "parentObjectId":null,
   "persistent":true,

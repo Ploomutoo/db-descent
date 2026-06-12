@@ -48,7 +48,7 @@ event = {
 			weight-=nutrition;
 			popUp(x,y-48,"-"+string(nutrition))
 		}
-		with(other) instance_create_layer(x+64,y,layer_get_id("instances"),oItemPedestal);
+		spawnItemAtPlayer()
 	},
 	endFunc : function(){
 		with(other) if(state=-1) { 

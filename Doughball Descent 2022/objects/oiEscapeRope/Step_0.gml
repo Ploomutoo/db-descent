@@ -15,10 +15,11 @@ if(escapeTimer>0)
 	escapeTimer--
 	if(escapeTimer = 0)
 	{
-		soundRand(sndThankYou)
+		//soundRand(sndThankYou)
 		instance_create_depth(oPlayer.x,oPlayer.y-200,depth,oEscapeHook)
 		
-		removeItem(self)
+		if(stacks<2) removeItem(self)
+		else stacks--;
 		escapeTimer = -1
 	}
 }

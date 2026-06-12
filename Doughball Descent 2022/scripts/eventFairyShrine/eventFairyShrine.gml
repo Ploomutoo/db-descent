@@ -33,10 +33,9 @@ event = {
 			
 			eChance = function() {
 				instance_destroy(oFairy)
+				spawnItemAtPlayer()
 				with(other)
-				{
-					instance_create_layer(x+64,y,layer_get_id("Instances"),oItemPedestal);
-					
+				{		
 					image_speed = 0
 					state = 4
 					oTextBox.storedText = ""

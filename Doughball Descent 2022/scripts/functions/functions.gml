@@ -13,7 +13,6 @@ function commasToArray(_string)
 		
 		_string = string_delete(_string,0,_i)
 	}
-	show_debug_message(string(_out))
 	return(_out)
 }
 
@@ -57,9 +56,10 @@ function addItem(item) {
 
 function removeItem(item) {
 	
+	var i
 	with(oPlayer) 
 	{
-		var i = _array_find_index(items,item)
+		i = _array_find_index(items,item)
 		if(i!=-1) array_delete(items,i,1)
 	}
 	

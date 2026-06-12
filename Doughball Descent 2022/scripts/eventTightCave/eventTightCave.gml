@@ -16,9 +16,7 @@ event = {
 	},
 		
 	txSuccess : "Miraculously your pliable body oozes\nthrough the passage with ease. The item within is yours!",
-	success : function(){
-		with(oPlayer) instance_create_layer(x+80,y,layer,oItemPedestal);
-	},
+	success : spawnItemAtPlayer,
 		
 	txFailure : "Within moments you have firmly\nwedged yourself in the opening. You are left solely with\ntime to reflect and digest",
 	failure : function(){

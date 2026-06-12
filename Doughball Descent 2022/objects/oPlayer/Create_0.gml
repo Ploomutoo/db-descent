@@ -212,5 +212,7 @@ roomGrav = -1;
 weightTicktop = 60
 weightTickdown = weightTicktop
 
+itemPedestalDisallowed = 0
+
 #endregion
 show_debug_message("\nConsole Start")

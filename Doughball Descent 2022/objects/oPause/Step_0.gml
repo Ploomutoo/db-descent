@@ -51,7 +51,21 @@ else
 				break;
 			}
 		}
-	
+		
+		if(playerObj != noone)
+		{
+			if(cLeftPressed) 
+			{
+				itemCursorOn--;
+				if(itemCursorOn<0) itemCursorOn = array_length(playerObj.items)-1
+			}
+			else if(cRightPressed) 
+			{
+				itemCursorOn++;
+				if(itemCursorOn>=array_length(playerObj.items)) itemCursorOn = 0
+			}
+		}
+		
 		if(keyboard_check_pressed(vk_escape)) escPressed = true;
 		
 		if(escPressed)
@@ -59,6 +73,7 @@ else
 			if(!paused) event_user(0)
 			else event_user(2)
 		}
+		
 	}
 	else
 	{

@@ -4,7 +4,7 @@ item = instance_create_layer(x,y,layer,pickItem())
 price = priceScale(item.price);
 coupon = 0
 
-description = item.description
+description = item.nameTag + "\n" + item.description
 itemSprite = item.image_index;
 
 if(instance_exists(oShopkeeper)){

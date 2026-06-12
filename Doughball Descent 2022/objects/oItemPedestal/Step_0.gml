@@ -15,6 +15,7 @@ with(oPlayer)
 if(playerOn && cBash) {
 	
 	cancelIfLinePresent;
+	if(oPlayer.itemPedestalDisallowed > 0) exit;
 	
 	addItem(item);
 	

@@ -45,7 +45,7 @@ function enterFattening()
 	
 	offerings++
 	
-	if(offerings >= 3)
+	if(offerings >= 3+loop*2)
 	{
 		soundRand(sndBurp)
 		state = anubisState.fattening

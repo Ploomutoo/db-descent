@@ -38,7 +38,6 @@ if(room = rGame) {
 	//audio_stop_sound(musTransition)
 	iwGravitate()
 	level++	
-	show_debug_message("level++")
 	if(level>lastLevel-1){
 		level = 0
 		loop++

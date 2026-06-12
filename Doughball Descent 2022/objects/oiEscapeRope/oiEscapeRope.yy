@@ -10,10 +10,10 @@
   "name":"oiEscapeRope",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"nameTag","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Escape Rope",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"description","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Consumable level skip",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"description","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Hold E to skip a level",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"price","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"300",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"image_index","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"29",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"shopkeeperQuote","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Shit going down?\\nTry skippin town. Try an Escape Rope",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBase","path":"objects/oBase/oBase.yy",},"propertyId":{"name":"shopkeeperQuote","path":"objects/oBase/oBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Shit going down?\\nTry skippin town.  Use an Escape Rope\\nwith E",},
   ],
   "parent":{
     "name":"items",

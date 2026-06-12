@@ -1,3 +1,8 @@
+function spawnItemAtPlayer()
+{
+	with(oPlayer) instance_create_layer(x,y,layer,oItemPedestal);
+}
+
 function eventCrackedRock(){
 event = {
 		
@@ -16,9 +21,7 @@ event = {
 	},
 		
 	txSuccess : "You strike the boulder with your entire\nweight shattering it to pieces",
-	success : function(){
-		with(oPlayer) instance_create_layer(x,y,layer,oItemPedestal);
-	},
+	success : spawnItemAtPlayer,
 		
 	txFailure : "You bounce off of the boulder\nits surface unscathed. You, however are bruised\nslightly by the effort",
 	failure : function(){

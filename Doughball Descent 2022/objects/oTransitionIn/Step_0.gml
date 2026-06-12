@@ -1,2 +1,7 @@
 y-=tranSpeed
-if(y<=-100) instance_destroy()
+if(y<=-300) 
+{
+	textOffset -= toRate;
+	toRate += 0.5
+	if(textOffset<-16) instance_destroy()
+}

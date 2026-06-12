@@ -13,7 +13,9 @@ draw_set_font(fntBig)
 switch (mode)
 {
 	case "toplevel":
+	
 	var iy = viewHeight/6+array_length(menu_main)*32;
+	draw_set_valign(fa_top)
 	for (var i = array_length(menu_main)-1; i>=0; i--)
 	{	
 		var drawText = menu_main[i];
@@ -22,6 +24,32 @@ switch (mode)
 		draw_text_outlined(viewWidth/2,iy,drawText)
 		iy-=32;
 	}
+	draw_sprite(sDeweyPause,0,500,180)
+	if(playerObj!=noone)
+	{
+		var _itemList = playerObj.items
+		if(array_length(_itemList)>0)
+		{
+			var _spacing = 48
+			var ix
+			for(var i = 0; i < array_length(_itemList); i++)
+			{
+				ix = i%5
+				iy = floor(i/5)
+				draw_sprite(_itemList[i].sprite_index,_itemList[i].image_index,16+ix*_spacing,16+iy*_spacing)
+				if(i = itemCursorOn)
+				{
+					draw_set_color(c_yellow)
+					draw_rectangle(16+ix*_spacing,16+iy*_spacing,48+ix*_spacing,48+iy*_spacing,1)
+				}
+			}
+			draw_set_font(fntMini)
+			draw_set_halign(fa_left)
+			draw_set_valign(fa_bottom)
+			draw_text_ext(16,viewHeight-16,_itemList[itemCursorOn].nameTag+"\n"+_itemList[itemCursorOn].description,16,96)
+		}
+	}
+	//draw_sprite(sCursor,0,mouse_x,mouse_y)
 	break;
 	
 	case "settings":
@@ -57,9 +85,10 @@ switch (mode)
 			break;
 		}
 	
-		draw_text_outlined(viewWidth/2,viewHeight/6+32*i,drawText)
+		draw_text_outlined(viewWidth/2-100,viewHeight/6+32*i,drawText)
 	}
 	#endregion
+	draw_sprite(sDeweySettings,0,500,180)
 	break;
 	
 	case "reallyrestart":
